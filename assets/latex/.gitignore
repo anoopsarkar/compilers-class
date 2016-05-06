@@ -1,0 +1,17 @@
+*.nav 
+*.out 
+*.snm
+*.vrb
+*.nav
+*.out
+*.bbl
+*.aux
+*.log
+*.blg
+*.toc
+*.qry
+*.synctex.gz
+hmm.pdf
+lm.pdf
+prob.pdf
+linearmodels.pdf
