@@ -23,7 +23,7 @@ Discussion Board
 : [on Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/discussion/)
 
 Time and place
-: Tuesdays 2:30-4:20, Thursdays 2:30-3:20, AQ 3150
+: Tuesdays 11:30-1:20 BLU 9660, Thursdays 11:30-12:20 BLU 9660
 
 Calendar
 : [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
