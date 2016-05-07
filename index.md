@@ -2,7 +2,7 @@
 layout: default
 img: temeraire
 img_link: "https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools"
-caption: "First published in 1986, the Dragon book is widely regarded as the classic compiler textbook. Image from [Temeraire](https://en.wikipedia.org/wiki/Temeraire_(series))."
+caption: "First published in 1986, [the Dragon book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools) is widely regarded as the classic compiler textbook. Image from [Temeraire](https://en.wikipedia.org/wiki/Temeraire_(series))."
 title: Course Information
 active_tab: main_page 
 ---
