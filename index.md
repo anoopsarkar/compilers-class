@@ -2,7 +2,7 @@
 layout: default
 img: temeraire
 img_link: "https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools"
-caption: "First published in 1986, the Dragon book is widely regarded as the classic compiler textbook. Image from [Temeraire](https://en.wikipedia.org/wiki/Temeraire_(series))."
+caption: "First published in 1986, [the Dragon book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools) is widely regarded as the classic compiler textbook. Image from [Temeraire](https://en.wikipedia.org/wiki/Temeraire_(series))."
 title: Course Information
 active_tab: main_page 
 ---
@@ -27,7 +27,7 @@ Time and place
 
 Calendar
 : [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
-: Subscribe to this URL in your calendaring app, instead of saving the file and adding it manually.
+: Subscribe to this URL in your calendaring app instead of saving the file and adding it manually.
 
 Textbook
 : No required textbook. Online readings provided in Syllabus.
