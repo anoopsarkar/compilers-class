@@ -17,7 +17,7 @@ Instructor
 
 Teaching Assistant
 : [Maryam Siahbani](http://www.cs.sfu.ca/~msiahban/personal/)
-: Office Hours: TBA
+: Office Hours: ASB9838.1 Mondays 9:30-10:30
 
 Discussion Board
 : [on Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/discussion/)
