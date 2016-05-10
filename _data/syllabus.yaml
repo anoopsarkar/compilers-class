@@ -1,5 +1,20 @@
-past:
-  - 
-    date: May 10
-    title: Course introduction
-    reading:
+- title: "Week 1 - Introduction to Compilers"
+  notes:
+    - title: "IN1: Evangelize Compilers"
+      url: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/edit?usp=sharing"
+    - title: "IN2: Trusting Trust"
+      url: "https://docs.google.com/presentation/d/1EzhhZDXzUS-HTcUuic1eA01HD0i7sdAvZDbqiXGt3Zs/edit?usp=sharing"
+      video: "https://www.youtube.com/watch?v=6Fhy6cMaClk"
+    - title: "IN3: What is a Compiler?"
+      url: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/edit?usp=sharing"
+    - title: "IN4: Stages of a Compiler"
+      url: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/edit?usp=sharing"
+  links:
+    - title: "Rich Programmer Food"
+      url: "http://steve-yegge.blogspot.ca/2007/06/rich-programmer-food.html"
+      author: "Steve Yegge"
+      citation: "2007"
+    - title: "Unnatural Language Processing"
+      url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/Aho-SSST-Talk-Clipped.pdf"
+      author: "Alfred Aho"
+      citation: "Invited Keynote Talk, SSST-3, NAACL HLT, 2009."
