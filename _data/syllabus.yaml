@@ -1,4 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
+  tag: week1
+  current: true
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/edit?usp=sharing"
@@ -10,6 +12,8 @@
     - title: "IN4: Stages of a Compiler"
       url: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/edit?usp=sharing"
   links:
+    - title: "Chapter 1 of the Dragon Book"
+      url: textbook.html
     - title: "Rich Programmer Food"
       url: "http://steve-yegge.blogspot.ca/2007/06/rich-programmer-food.html"
       author: "Steve Yegge"
@@ -31,3 +35,8 @@
       video: "https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20160510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160510T233152Z&X-Amz-Expires=14400&X-Amz-SignedHeaders=host&X-Amz-Signature=62edec45df6af516ae2c9f3da4441cfb4db3def79cc8527190a91fe54df036f4"
     - title: "Duff device"
       url: "assets/demos/duff-a.c"
+- title: "Week 2 - Lexical Analysis"
+  tag: week2
+  current: false
+  notes:
+  links:
