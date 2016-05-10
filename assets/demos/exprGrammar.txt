@@ -1,0 +1,6 @@
+e e PLUS t
+e t
+t t TIMES f
+t f
+f LPAREN e RPAREN
+f ID

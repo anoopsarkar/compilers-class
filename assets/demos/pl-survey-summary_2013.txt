@@ -1,0 +1,30 @@
+Results: 12 replies (not including mine)
+
+Java 
+hate: //
+like: ////
+meh: //
+
+C/C++:
+hate: 
+like: ////
+
+JS:
+hate: //
+like: /
+
+Ruby:
+hate: //
+like: 
+
+Python:
+hate:
+like: ///
+
+Prolog:
+hate: /
+like: 
+
+Perl:
+hate: //
+like: /

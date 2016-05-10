@@ -1,0 +1,7 @@
+t f
+t t TIMES f
+t c LPAR t RPAR
+f ID
+f ID PLUSPLUS
+f LPAR t RPAR
+c ID

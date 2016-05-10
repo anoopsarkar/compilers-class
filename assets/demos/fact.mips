@@ -1,0 +1,48 @@
+	.data
+nl:	
+	.asciiz "\n"
+	.text
+	.globl main
+main:
+        nop # 24 bytes is min size for activation records in MIPS
+	subu	$sp, $sp, 24
+	sw	$ra, 16($sp)    # store the return address
+
+        nop # registers $a0, $a1, $a2, $a3 are stored/restored automatically
+
+	li	$a0, 10         # call function fact with arg $a0
+	jal	fact
+
+	move	$a0, $v0        # print_int $a0 (system call)
+        li 	$v0, 1
+        syscall
+
+        li 	$v0, 4          # print_string "\n" (system call)
+        la 	$a0, nl
+        syscall
+
+	lw	$ra, 16($sp)    # restore the return address
+	addiu	$sp, $sp, 24
+	jr	$ra             # resume execution from location in $ra (back to OS)
+
+fact:
+	subu	$sp, $sp, 32
+	sw	$ra, 20($sp)    # store the return address
+	sw	$s0, 16($sp)    # save local $s0 to avoid clobber
+
+	move	$s0, $a0
+	bgtz	$s0, $L2        # goto $L2 if arg is > 0
+	li	$v0, 1          # return 1 if arg is <= 0
+	jr	$L1
+
+$L2:
+	subu	$a0, $s0, 1     # new arg to fact is arg-1
+	jal	fact
+	mul	$v0, $s0, $v0   # note that $s0 is saved and restored
+
+$L1:
+	lw	$ra, 20($sp)    # restore the return address
+	lw	$s0, 16($sp)    # restore $s0
+	addiu	$sp, $sp, 32
+	jr	$ra             # resume execution from location in $ra
+

@@ -1,0 +1,27 @@
+      01426   COMPIL SCA     CEOF,4   
+      01427          SCA     OPONST,0 
+      01430          AXC     00,3     
+      01431          AXC     100,2    
+      01432          CAL     =1 
+      01433          SLW     BUF2     
+      01434          STZ     IFLG     
+      01435          STZ     JFLG     
+      01436   ADVANC ZET     IFLG     
+      01437          TRA     AN1
+      01440          TSX     GETCHA,4 
+      01441          LAS     SLCHR    
+      01442          TRA     *+2
+      01443          TRA     SL1
+      01444          ZET     CPLFLG   
+      01445          STZ     NSCHA    
+      01446          STZ     CPLFLG   
+      01447   IO1    ZET     VFLG     
+      01450          TRA     AD1
+      01451          TXL     CH1,1,-126     
+      01452          TXL     RP0,1,-125     
+      01453          TXL     OR1,1,-124     
+      01454          TXL     LP1,1,-123     
+      01455          TXL     CH1,1,-43
+      01456          TXL     ST1,1,-42
+      01457          TXL     RP1,1,-41
+      01460          TXL     LP1,1,-40

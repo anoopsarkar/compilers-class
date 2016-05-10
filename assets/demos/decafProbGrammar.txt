@@ -1,0 +1,83 @@
+0.142857142857143 arith_op +
+0.142857142857143 arith_op -
+0.142857142857143 arith_op *
+0.142857142857143 arith_op /
+0.142857142857143 arith_op <<
+0.142857142857143 arith_op >>
+0.142857142857143 arith_op ROT
+1 assign lvalue = expr
+0.5 assign_comma_list assign
+0.5 assign_comma_list assign , assign_comma_list
+0.25 bin_op arith_op
+0.25 bin_op rel_op
+0.25 bin_op eq_op
+0.25 bin_op cond_op
+1 block { var_decl_list statement_list }
+0.5 bool_constant TRUE
+0.5 bool_constant FALSE
+0.5 callout_arg expr
+0.5 callout_arg STRINGCONSTANT
+0.5 callout_arg_comma_list
+0.5 callout_arg_comma_list , callout_arg callout_arg_comma_list
+1 class_name ID
+0.5 cond_op &&
+0.5 cond_op ||
+0.333333333333333 constant INTCONSTANT
+0.333333333333333 constant CHARCONSTANT
+0.333333333333333 constant bool_constant
+0.5 eq_op ==
+0.5 eq_op !=
+0.142857142857143 expr lvalue
+0.142857142857143 expr method_call
+0.142857142857143 expr constant
+0.142857142857143 expr expr bin_op expr
+0.142857142857143 expr - expr
+0.142857142857143 expr ! expr
+0.142857142857143 expr ( expr )
+0.5 expr_comma_list expr
+0.5 expr_comma_list expr , expr_comma_list
+0.5 field_decl type var_comma_list ;
+0.5 field_decl type ID = constant ;
+0.5 field_decl_list field_decl field_decl_list
+0.5 field_decl_list
+0.5 id_comma_list ID
+0.5 id_comma_list ID , id_comma_list
+1 id_def type ID
+0.5 id_spec ID
+0.5 id_spec ID [ INTCONSTANT ]
+0.5 lvalue ID
+0.5 lvalue ID [ expr ]
+1 method_call method_name ( expr_comma_list )
+1 method_decl return_type ID ( param_comma_list ) block
+0.5 method_decl_list method_decl method_decl_list
+0.5 method_decl_list
+1 method_name ID
+0.5 opt_expr expr
+0.5 opt_expr
+0.5 param_comma_list id_def
+0.5 param_comma_list id_def , param_comma_list
+1 program CLASS class_name { field_decl_list method_decl_list }
+0.25 rel_op <
+0.25 rel_op >
+0.25 rel_op <=
+0.25 rel_op >=
+0.5 return_type type
+0.5 return_type VOID
+0.111111111111111 statement assign ;
+0.111111111111111 statement method_call ;
+0.111111111111111 statement IF ( expr ) block
+0.111111111111111 statement WHILE ( expr ) block
+0.111111111111111 statement FOR ( assign_comma_list ; expr ; expr_comma_list ) block
+0.111111111111111 statement RETURN opt_expr ;
+0.111111111111111 statement BREAK ;
+0.111111111111111 statement CONTINUE ;
+0.111111111111111 statement block
+0.5 statement_list statement statement_list
+0.5 statement_list
+0.5 type INT
+0.5 type BOOL
+0.5 var_comma_list id_spec
+0.5 var_comma_list id_spec , var_comma_list
+1 var_decl type id_comma_list ;
+0.5 var_decl_list var_decl var_decl_list
+0.5 var_decl_list

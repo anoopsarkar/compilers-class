@@ -1,0 +1,58 @@
+= tokens AND JOHN CRIED LAUGHED BILL
+= nonterminals np v vp s
+= start s
+= 0 top s
+= 1 s np vp
+= 2 s s AND s
+= 3 vp v
+= 4 vp vp AND vp
+= 5 v LAUGHED
+= 6 v CRIED
+= 7 np JOHN
+= 8 np BILL
+% 0
+0 top \. s 
+1 s \. np vp 
+2 s \. s AND s 
+7 np \. JOHN 
+8 np \. BILL 
+% 1
+7 np JOHN \. 
+% 2
+8 np BILL \. 
+% 3
+1 s np \. vp 
+3 vp \. v 
+4 vp \. vp AND vp 
+5 v \. LAUGHED 
+6 v \. CRIED 
+% 4
+0 top s \. 
+2 s s \. AND s 
+% 5
+6 v CRIED \. 
+% 6
+5 v LAUGHED \. 
+% 7
+3 vp v \. 
+% 8
+1 s np vp \. 
+4 vp vp \. AND vp 
+% 9
+1 s \. np vp 
+2 s \. s AND s 
+2 s s AND \. s 
+7 np \. JOHN 
+8 np \. BILL 
+% 10
+3 vp \. v 
+4 vp vp AND \. vp 
+4 vp \. vp AND vp 
+5 v \. LAUGHED 
+6 v \. CRIED 
+% 11
+2 s s AND s \. 
+2 s s \. AND s 
+% 12
+4 vp vp \. AND vp 
+4 vp vp AND vp \. 

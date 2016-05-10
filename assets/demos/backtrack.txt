@@ -1,0 +1,17 @@
+S -> a S a
+S -> a a
+
+a a a a a a a
+(1) S -> a S a  | a a a a a a $  | 0
+(2) S -> a S a  | a a a a a $ | 1
+(3) S -> a S a  | a a a a $ | 2
+(4) S -> a S a  | a a a $ | 3
+(5) S -> a S a  | a a $ | 4
+(6) S -> a S a  | a $ | 5
+(7) S -> a S a  | $ | 6
+fail, backtrack to (6)
+(6) S -> a a | a $ | 5
+(7) S -> a a | $ | 6
+fail, backtrack to (5)
+(5) S -> a a | a a $ | 4
+

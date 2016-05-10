@@ -1,0 +1,50 @@
+# See Section A.5 (Memory Usage) in the spim documentation (cod-appa.pdf)
+# Anoop Sarkar
+# anoop at cs.sfu.ca
+
+	.data
+nl:
+	.asciiz "\n"
+	.text
+	.globl main
+main:
+        # Initialize the values that need to be 
+        # stored into heap memory
+	li 	$t0, 10
+	li 	$t1, 112
+
+        # Start storing the data we need to save to the heap from
+        # address 0x10010000 (a higher offset than the global variables)
+
+        # Note that load and store only have 16-bit offsets
+        # so we need two instructions to get the heap address right
+        lui 	$s0, 0x1001
+	sw 	$t0, 0x0000($s0)
+
+        # We reuse the $s0 value in this case, usually we would need
+        # to reload $s0 with the offset value
+	sw 	$t1, 0x0004($s0)
+
+        # Now load the values from the heap into the registers $a0 and $a1
+        # We can store the memory locations in the symbol table, or
+        # this same idiom can be used to "spill" register values to the
+        # heap when we run out of registers.
+	lw 	$a0, 0x0000($s0)
+	lw 	$a1, 0x0004($s0)
+
+        # And print them out, $a0 is the register used for print_int
+	li 	$v0, 1
+	syscall
+	li 	$v0, 4
+	la 	$a0, nl
+	syscall
+	move 	$a0, $a1
+	li 	$v0, 1
+	syscall
+
+        # Print the newline and we are done
+	li 	$v0, 4
+	la 	$a0, nl
+	syscall
+	jr 	$ra
+

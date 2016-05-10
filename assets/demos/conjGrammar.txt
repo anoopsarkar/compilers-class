@@ -1,0 +1,8 @@
+s np vp
+s s AND s
+vp v
+vp vp AND vp
+v LAUGHED
+v CRIED
+np JOHN
+np BILL

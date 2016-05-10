@@ -1,0 +1,5 @@
+e e ADD t
+e t
+t t MUL f
+t f
+f VAR

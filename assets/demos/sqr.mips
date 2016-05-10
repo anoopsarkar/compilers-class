@@ -1,0 +1,54 @@
+# int sqr(int x) {
+#  if (x > 1) 
+#    x = sqr(x-1)+x+x-1;
+#  return x;
+# }
+#
+	.data
+nl:	
+	.asciiz "\n"
+	.text
+	.globl main
+main:
+        nop                     # 24 bytes is min size for activation records in MIPS
+	subu    $sp, $sp, 24
+	sw      $ra, 16($sp)    # store the return address
+
+        nop                     # registers $a0, $a1, $a2, $a3 are stored/restored automatically
+
+	li	$a0, 10         # call function fact with arg $a0
+	jal	sqr
+
+	move	$a0, $v0        # print_int $a0 (system call)
+        li 	$v0, 1
+        syscall
+
+        li 	$v0, 4          # print_string "\n" (system call)
+        la 	$a0, nl
+        syscall
+
+	lw	$ra, 16($sp)    # restore the return address
+	addiu	$sp, $sp, 24
+	jr	$ra             # resume execution from location in $ra (back to OS)
+
+sqr:
+	subu	$sp, $sp, 24    # allocate stack frame
+	slti	$t0, $a0, 2
+        beq     $t0, $0, else
+        move    $v0, $a0
+        j       rtn
+else:
+        sw      $ra, 20($sp)
+        nop                     # no local variables, so no need to store caller $fp
+        sw      $a0, 0($sp)
+        subu    $a0, $a0, 1
+        jal     sqr
+        lw      $a0, 0($sp)
+        lw      $ra, 20($sp)
+        add     $v0, $v0, $a0
+        add     $v0, $v0, $a0
+        subu    $v0, $v0, 1
+rtn:
+        addiu   $sp, $sp, 24
+        jr      $ra
+
