@@ -1,0 +1,15 @@
+C/C++: ////////////////////////////
+Java: //////
+Python: /////
+Haskell: //
+Perl: /
+C#: /
+Swift: /
+Matlab: /
+Lisp: 
+Javascript/EczemaScript: 
+Golang:
+Fortran:
+Objective C:
+Ruby: 
+R:
