@@ -7,6 +7,8 @@ title: Syllabus
 active_tab: syllabus
 ---
 
+## Syllabus
+
 <style type="text/css">
     .bs-example{
         margin: 20px;
