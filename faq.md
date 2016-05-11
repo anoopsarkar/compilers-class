@@ -7,7 +7,7 @@ title: FAQ
 active_tab: faq
 ---
 
-## Frequently Asked Questions
+## (in) Frequently Asked Questions
 
 ### Email policy
 
@@ -16,7 +16,7 @@ active_tab: faq
 
 ### Homework submission policies
 
-* For homework policies, see the Homeworks section
+* For homework policies, see the Homework section
 
 ### Exams
 
