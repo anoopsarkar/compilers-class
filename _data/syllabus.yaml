@@ -3,14 +3,18 @@
   current: true
   notes:
     - title: "IN1: Evangelize Compilers"
-      url: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/edit?usp=sharing"
+      url: "assets/lectures/IN1- Evangelize Compilers.pdf"
+      presenter: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/edit?usp=sharing"
     - title: "IN2: Trusting Trust"
-      url: "https://docs.google.com/presentation/d/1EzhhZDXzUS-HTcUuic1eA01HD0i7sdAvZDbqiXGt3Zs/edit?usp=sharing"
+      url: "assets/lectures/IN2- Trusting Trust.pdf"
+      presenter: "https://docs.google.com/presentation/d/1EzhhZDXzUS-HTcUuic1eA01HD0i7sdAvZDbqiXGt3Zs/edit?usp=sharing"
       video: "https://www.youtube.com/watch?v=6Fhy6cMaClk"
     - title: "IN3: What is a Compiler?"
-      url: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/edit?usp=sharing"
+      url: "assets/lectures/IN3-\ What\ is\ a\ Compiler-.pdf"
+      presenter: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/edit?usp=sharing"
     - title: "IN4: Stages of a Compiler"
-      url: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/edit?usp=sharing"
+      url: "assets/lectures/IN4- Stages of a Compiler.pdf"
+      presenter: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/edit?usp=sharing"
   links:
     - title: "Chapter 1 of the Dragon Book"
       url: textbook.html
