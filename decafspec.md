@@ -32,13 +32,13 @@ Here is an example Decaf program:
 
             // print_int is part of the standard input-output library
             print_int(z);
-            }
+        }
 
-            // function that computes the greatest common divisor
-            int gcd(int a, int b) {
-                if (b == 0) { return(a); }
-                else { return( gcd(b, a % b) ); }
-            }
+        // function that computes the greatest common divisor
+        int gcd(int a, int b) {
+            if (b == 0) { return(a); }
+            else { return( gcd(b, a % b) ); }
+        }
     }
 
 Notation
