@@ -2,7 +2,7 @@
 layout: default
 img: knuthpaper
 img_link: "https://en.wikipedia.org/wiki/LR_parser"
-caption: "LR parsers were invented by Donald Knuth in 1965. He proved that LR parsers were the most general-purpose parsers possible that are efficient in the worst case."
+caption: "LR parsers were invented by Donald Knuth in 1965."
 title: FAQ
 active_tab: faq
 ---
