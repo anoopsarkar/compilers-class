@@ -2,7 +2,7 @@
 layout: default
 img: okrentbook
 img_link: "http://inthelandofinventedlanguages.com/"
-caption: "In the Land of Invented Languages is a book by Anita Okrent about some of the nearly nine hundred invented languages."
+caption: "**In the Land of Invented Languages** is a book by Anita Okrent about some of the nearly nine hundred languages invented for human communication."
 title: Decaf Specification
 active_tab: homework
 ---
