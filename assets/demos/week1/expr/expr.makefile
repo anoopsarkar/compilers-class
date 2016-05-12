@@ -13,7 +13,7 @@ $(targets): %: %.y
 	@echo "output file:" $@
 	bison -o$@.tab.c -d $<
 	flex -o$@.lex.c $@.lex
-	gcc -o $(bindir)/$@ $@.tab.c $@.lex.c -l$(yacclib) -l$(lexlib)
+	gcc -w -o $(bindir)/$@ $@.tab.c $@.lex.c -l$(yacclib) -l$(lexlib)
 	$(rm) $@.tab.c $@.tab.h $@.lex.c
 
 test: $(targets) $(cpptargets)

@@ -18,11 +18,13 @@
     - title: "IN3: What is a Compiler?"
       url: "assets/lectures/IN3-\ What\ is\ a\ Compiler-.pdf"
       presenter: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/edit?usp=sharing"
+    - title: "Dynamic linking"
+      url: "assets/demos/week1/dylib.zip"
     - title: "IN4: Stages of a Compiler"
       url: "assets/lectures/IN4- Stages of a Compiler.pdf"
       presenter: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/edit?usp=sharing"
-    - title: "Dynamic linking"
-      url: "assets/demos/week1/dylib.zip"
+    - title: "Lexing and parsing demo"
+      url: "assets/demos/week1/expr.zip"
   links:
     - title: "Chapter 1 of the Dragon Book"
       url: textbook.html
