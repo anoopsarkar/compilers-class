@@ -32,12 +32,11 @@ active_tab: faq
 
 ### Academic Honesty
 
-Some examples of unacceptable behaviour:
-
-* Handing in assignments that are not 100% your own work (in design, implementation, wording, etc.), without proper citation. There must be a README file in your submission with citations to any external code used.
-* Using any unpermitted resources during an exam.
-* Looking at, or attempting to look at, another student's paper during an exam.
-* Submitting work that has been submitted before, for any course at any institution.
+* Some examples of unacceptable behaviour:
+    * Handing in assignments that are not 100% your own work (in design, implementation, wording, etc.), without proper citation. There must be a README file in your submission with citations to any external code used.
+    * Using any unpermitted resources during an exam.
+    * Looking at, or attempting to look at, another student's paper during an exam.
+    * Submitting work that has been submitted before, for any course at any institution.
 * If you are unclear on what academic honesty is, see Simon Fraser University's [Policy S10-01](https://www.sfu.ca/policies/gazette/student/s10-01.html).
 * All instances of academic dishonesty will be dealt with very severely.
 * In general, minimum requested penalties will be as follows:
