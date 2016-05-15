@@ -37,8 +37,8 @@ Textbook
 Grading
 : Submit homework source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/)
 
+* Setup homework: (2%)
 * Four programming homeworks. Due dates: TBA (60% total)
 * In class midterm: Date TBA (18%)
 * Final exam: Aug 15 8:30am-11:30am. Location: TBA (20%)
-* Badges: (2%)
 
