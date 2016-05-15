@@ -24,6 +24,7 @@ Discussion Board
 
 Time and place
 : Tuesdays 11:30-1:20 BLU 9660, Thursdays 11:30-12:20 BLU 9660
+: May 10, 2016 to Aug 2, 2016
 
 Calendar
 : [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
