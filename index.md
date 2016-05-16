@@ -27,8 +27,9 @@ Time and place
 : May 10, 2016 to Aug 2, 2016
 
 Calendar
+: [View Calendar](https://courses.cs.sfu.ca/calendar/)
 : [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
-: Subscribe to this URL in your calendaring app instead of saving the file and adding it manually.
+: Subscribe to the URL in your calendaring app rather than saving the file and adding it manually.
 
 Textbook
 : No required textbook. Online readings provided in Syllabus.
