@@ -54,7 +54,11 @@
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/week2/LEX1- Intro to Regexps.pdf"
       presenter: "https://docs.google.com/presentation/d/1QJ62ipZbktaArGnoyc6WupBiL6QCjg_jrmZ-MfFQOgM/edit?usp=sharing"
+    - title: "Adhoc Scanner"
+      url: "assets/demos/week2/adhocScanner.c"
     - title: "LEX2: Regular Expressions"
       url: "assets/lectures/week2/LEX2- Regular Expressions.pdf"
       presenter: "https://docs.google.com/presentation/d/1eAM6ruI2rAUczCWWifARVCMUUB0_owY3Ev0cjazor30/edit?usp=sharing"
+    - title: "Lexical Analysis practice"
+      url: "LEX-practice.html"
   links:
