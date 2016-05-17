@@ -14,10 +14,41 @@ active_tab: faq
 * We will be using the discussion board on courses.cs.sfu.ca for all discussions. For homeworks, exams, or other clarification emails do not email me (the instructor) or the TA directly.
 * If you email the instructor or TA directly then use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
 
-### Homework submission policies
+### Homework Submission and Grace Days
+    
+* Your group has to submit two deliverables for each homework:
+    * A zip or tar file of your Source code for your homework has to be submitted electronically on [courses.cs.sfu.ca](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/). Always include a `README` file in `answer/docs` that contains a documentation of your development process.
+    * The output on the provided testcases has to be uploaded to the leaderboard server on [Google App Engine](http://sfu-yacc.appspot.com/).
+* Only one member of the group should upload to the leaderboard and use the valid group name.
+* Check your scores on the leaderboard and check that your group appears only once in the leaderboard.
+* All homeworks are due by 11:59PM on the homework due date.
+* Each homework comes with 2 grace days. However the grace days only apply to those who have a valid submission on the due date (a submission that scores -1 or -inf is invalid). For example, if your homework deadline is Tuesday 11:59PM and you submit a valid solution then you have until Thursday night 11:59PM to modify your homework submission.
+* We will make every attempt to release grades for each homework the day after grace days are past. However, this means that after we review the source code we might have to lower your official grade. If you cheated in some way, such as copying your submission or you have violated the ground rules for each homework, your grades will be decreased from the initial value perhaps even lowered to zero.
 
-* For homework policies, see the Homework section
+### Groups
+    
+* The homework assignments will be solved in groups. Maximum group size is two. All groups must be formed before Homework 0 is due.
+* Each group will create a single submission and upload it before the due date.
+* If the TA or the instructor perceives there is a problem with collaboration in a group, certain group members can get zero marks. If you are pair programming, take turns in switching the user doing the commits to your git or svn or mercurial repository.
+* __Effective group collaboration__: We are looking to see effective collaboration to solve the homework assignment. People can play different roles and sometimes more than one role in the same homework:
+    * Designer: creates a plan for implementation and coordinates activities of the group. Should create design docs (text files or markdown or equivalent only). Put these documents in the directory `answer/docs` and mention the files in your `README` file.
+    * Code reviews: write a critical view of the implementation by the group. Points out what is missing, inelegant code, etc. and produces a code review document (text files or markdown or equivalent only). Put these documents in the directory `answer/docs` and mention the files in your `README` file.
+    * Development: write the code. This can be done in collaboration. 
+    * Testcases: write testcases to stress test the code. Provide the testcases in your submission.
 
+### Programming
+    
+* It is your responsibility to use a source code management system such as git or mercurial or svn for keeping track of changes to your code and for effective collaboration in your group.
+* It is expected that your program will compile and run using the standard runtime environment on the Linux CSIL lab machines. If you are developing on a Linux, Apple or Microsoft operating system at home, you have to ensure that the code will run on the CSIL machines before you submit the assignment. Please either visit the CSIL lab machines or you can use `ssh` to login to the CSIL Linux machines and also use `scp` to copy over and test your programs on the CSIL Linux machines before you submit them. Check the [CSIL Layout Maps](http://www.sfu.ca/computing/about/support/csil.html) for the machine names.
+* [Remote access to CSIL](http://www.sfu.ca/computing/about/support/csil/how-to-remote-access-to-csil.html) is allowed.
+* [Linux terminal server](http://www.sfu.ca/computing/about/support/csil/unix/how-to-use-csil-linux-terminal-server.html) is currently in beta.
+* CSIL computers accept SSH connections on port 24 (rather than the usual port 22). They can only be accessed from within the SFU network. If you are outside it, you need to go through a directly accessable computer, most likely fraser.sfu.ca. Here are some examples using the usual command line `ssh` and `scp` (from OpenSSH). Below $ is the command line shell on your home computer running Linux/MacosX/Cygwin. What follows is a recipe that will connect you remotely to a CSIL Linux machine: <script src="https://gist.github.com/4486532.js"></script> 
+* If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: username`sfu.ca), then prefix the SFU username to the ssh or scp command. `ssh (username)@fraser.sfu.ca`.
+* You can copy files to CSIL machines via `fraser.sfu.ca` using the following script:
+ <script src="https://gist.github.com/4486537.js"></script> 
+* You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://unlser1.unl.csi.cuny.edu/tutorials/QuickUnixTutorial.html).
+*  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
+    
 ### Exams
 
 * If you must miss an exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox. 
