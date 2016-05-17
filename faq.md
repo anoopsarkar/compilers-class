@@ -13,6 +13,7 @@ active_tab: faq
 
 * We will be using the discussion board on courses.cs.sfu.ca for all discussions. For homeworks, exams, or other clarification emails do not email me (the instructor) or the TA directly.
 * If you email the instructor or TA directly then use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
+* Before you email or post to the discussion board **read this FAQ**.
 
 ### Homework Submission and Grace Days
     
