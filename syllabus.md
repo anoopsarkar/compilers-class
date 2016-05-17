@@ -40,6 +40,9 @@ active_tab: syllabus
                                 {%if notes.video %}
                                     <a href="{{ notes.video }}"><span class="glyphicon glyphicon-film"></span></a>
                                 {% endif %}
+                                {%if notes.presenter %}
+                                    <a href="{{ notes.presenter }}"><span class="glyphicon glyphicon-play-circle"></span></a>
+                                {% endif %}
                             </li>
                           {% endfor %}
                           </ul>
