@@ -58,8 +58,9 @@ Submit your assignments [here](http://sfu-yacc.appspot.com). Results will be upd
 <p>A value of -1 indicates that the assignment file was found but
 contained invalid content.</p>
 
-<p>The highlighted lines are <span class="text-success">oracle (best possible)</span> and
-<span class="text-danger">default (performance of code provided to you; no marks)</span>.</p>
+<p>The highlighted lines are <span class="text-success">oracle (best possible)</span>,  
+<span class="text-danger">default (performance of code provided to you if any; no marks)</span>
+and <span class="text-success">baseline</span> which is the performance you should aim for.</p>
 
 </div>
 
