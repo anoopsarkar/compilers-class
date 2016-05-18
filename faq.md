@@ -11,14 +11,14 @@ active_tab: faq
 
 ### Email policy
 
-* We will be using the discussion board on courses.cs.sfu.ca for all discussions. For homeworks, exams, or other clarification emails do not email me (the instructor) or the TA directly.
+* We will be using the discussion board on [Coursys](http://courses.cs.sfu.ca) for all discussions. For homeworks, exams, or other clarification emails do not email me (the instructor) or the TA directly.
 * If you email the instructor or TA directly then use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
 * Before you email or post to the discussion board **read this FAQ**.
 
 ### Homework Submission and Grace Days
     
 * Your group has to submit two deliverables for each homework:
-    * A zip or tar file of your Source code for your homework has to be submitted electronically on [courses.cs.sfu.ca](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/). Always include a `README` file in `answer/docs` that contains a documentation of your development process.
+    * A zip or tar file of your Source code for your homework has to be submitted electronically on [Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/). Always include a `README` file in `answer/docs` that contains a documentation of your development process.
     * The output on the provided testcases has to be uploaded to the leaderboard server on [Google App Engine](http://sfu-yacc.appspot.com/).
 * Only one member of the group should upload to the leaderboard and use the valid group name.
 * Check your scores on the leaderboard and check that your group appears only once in the leaderboard.
