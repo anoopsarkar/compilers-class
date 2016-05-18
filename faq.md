@@ -29,6 +29,11 @@ active_tab: faq
 ### Groups
     
 * The homework assignments will be solved in groups. Maximum group size is two. All groups must be formed before Homework 0 is due.
+* Pick a creatively funny group name. Do not use an unacceptable group name:
+    * Do not use **offensive words** in your group name.
+    * Do not use your own name as the group name (name combinations or anagrams are ok).
+    * Do not use your email address as the group name.
+* Using an unacceptable group name will get you removed from the leaderboard and you might get a zero on the programming assignment.
 * Each group will create a single submission and upload it before the due date.
 * If the TA or the instructor perceives there is a problem with collaboration in a group, certain group members can get zero marks. If you are pair programming, take turns in switching the user doing the commits to your git or svn or mercurial repository.
 * __Effective group collaboration__: We are looking to see effective collaboration to solve the homework assignment. People can play different roles and sometimes more than one role in the same homework:
