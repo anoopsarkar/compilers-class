@@ -35,13 +35,10 @@ should use your group name as the handle when you submit your
 assignment. By default the leaderboard will use your Google nickname
 which cannot be used to assign your group a grade.
 
-3. Homework 0 (this one) has been activated. Use the file submission
-dialog to upload your submissions. Check your status on the [leaderboard](leaderboard.html)
+3. Homework 0 (this one) has been activated. Create a file called `hw0.txt` with a single number in it. 
+Use the file submission dialog to upload your submission. Check your status on the [leaderboard](leaderboard.html)
 
-4. Upload a tar.gz or zip file as the HW0 submission on
-[Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/+hw0/).  In
-future assignments you will be uploading your source code and
-documentation as your submission.
+4. Create a tar.gz or zip file called `hw0.tgz` or `hw0.zip` containing the text file you uploaded. Upload your archive file as the HW0 submission on [Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/+hw0/).  In future assignments you will be uploading your source code and documentation as your submission.
 
 ## Homework 0
 
