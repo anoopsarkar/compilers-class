@@ -29,8 +29,7 @@ active_tab: faq
 ### Groups
     
 * The homework assignments will be solved in groups. Maximum group size is two. All groups must be formed before Homework 0 is due.
-* Pick a creatively funny group name. Do not use an unacceptable group name:
-    * Do not use **[offensive](https://en.wiktionary.org/wiki/Category:English_offensive_terms) or [vulgar](https://en.wiktionary.org/wiki/Category:English_vulgarities) words** in your group name (in any language).
+* Pick a creatively funny group name. Do not use an unacceptable group name, for instance:
     * Do not use your own name as the group name (name combinations or anagrams are ok).
     * Do not use your email address as the group name.
 * Using an unacceptable group name will get you removed from the leaderboard and you might get a zero on the programming assignment.
