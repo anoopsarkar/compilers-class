@@ -49,10 +49,11 @@ The syntax is specified using [Extended Backus-Naur Form](http://en.wikipedia.or
     Production  = production_name "=" [ Expression ] "." .
     Expression  = Alternative { "|" Alternative } .
     Alternative = Term { Term } .
-    Term        = production_name | token [ "..." token ] | Group | Option | Repetition .
+    Term        = production_name | token [ "..." token ] | Group | Option | Repetition | Repetition+ | CommaList .
     Group       = "(" Expression ")" .
     Option      = "[" Expression "]" .
     Repetition  = "{" Expression "}" .
+    Repetition+ = "{" Expression "}+" .
     CommaList   = "{" Expression "}+," .
 
 Productions are expressions constructed from terms and the following operators, in increasing precedence:
