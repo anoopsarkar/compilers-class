@@ -18,14 +18,14 @@ Decaf is a strongly typed C-like language. The feature set is trimmed down consi
 
 Here is an example Decaf program:
 
-    extern void print_int(int);
+    extern func print_int(int) void;
 
-    class GreatestCommonDivisor {
-        int a = 10;
-        int b = 20;
+    package GreatestCommonDivisor {
+        var a int = 10;
+        var b int = 20;
 
-        int main() {
-            int x, y, z;
+        func main() int {
+            var x, y, z int;
             x = a;
             y = b;
             z = gcd(x, y);
@@ -35,7 +35,7 @@ Here is an example Decaf program:
         }
 
         // function that computes the greatest common divisor
-        int gcd(int a, int b) {
+        func gcd(a int, b int) int {
             if (b == 0) { return(a); }
             else { return( gcd(b, a % b) ); }
         }
@@ -166,9 +166,9 @@ Type and constant identifiers are predeclared.
 
 The following keywords are reserved and may not be used as identifiers.
 
-    bool    break   continue  class  else   extends 
-    extern  false   for       if     int    new 
-    null    return  string    true   void   while  
+    bool    break   continue  else   extern  false   
+    for     func    if        int    null    package 
+    return  string  true      var    void    while  
 
 ### Operators and Delimiters
 
@@ -281,7 +281,6 @@ The following is an alphabetically sorted list of tokens for Decaf with the toke
     T_BOOLTYPE       bool
     T_BREAK          break
     T_CHARCONSTANT   char_lit (see section on Character literals)
-    T_CLASS          class
     T_COMMA          ,
     T_COMMENT        comment
     T_CONTINUE       continue
@@ -289,10 +288,10 @@ The following is an alphabetically sorted list of tokens for Decaf with the toke
     T_DOT            .
     T_ELSE           else
     T_EQ             ==
-    T_EXTENDS        extends
     T_EXTERN         extern
     T_FALSE          false
     T_FOR            for
+    T_FUNC           func
     T_GEQ            >=
     T_GT             >
     T_ID             identifier (see section on Identifiers)
@@ -309,10 +308,10 @@ The following is an alphabetically sorted list of tokens for Decaf with the toke
     T_MOD            %
     T_MULT           *
     T_NEQ            !=
-    T_NEW            new
     T_NOT            !
     T_NULL           null
     T_OR             ||
+    T_PACKAGE        package
     T_PLUS           +
     T_RCB            }
     T_RETURN         return
@@ -323,6 +322,7 @@ The following is an alphabetically sorted list of tokens for Decaf with the toke
     T_STRINGCONSTANT string_lit (see section on String literals)
     T_STRINGTYPE     string
     T_TRUE           true
+    T_VAR            var
     T_VOID           void
     T_WHILE          while
     T_WHITESPACE     whitespace (see section on Whitespace)
@@ -354,7 +354,7 @@ A string type represents the set of string values. A string value is a (possibly
 
 ### Array types
 
-Decaf has integer and boolean arrays. However, arrays are declared only in the global (class declaration) scope as part of the field declarations (see FieldDecl). All arrays are one-dimensional and have a size that is fixed at compile-time. Arrays are indexed from 0 to n − 1, where n &gt; 0 is the size of the array. The usual bracket notation is used to index arrays. Since arrays have a compile-time fixed size and cannot be declared as method parameters (or local variables), there is no facility to query the length of an array variable in Decaf. Arrays must be initialized to all zeroes at declaration time.
+Decaf has integer and boolean arrays. However, arrays are declared only in the global (package declaration) scope as part of the field declarations (see FieldDecl). All arrays are one-dimensional and have a size that is fixed at compile-time. Arrays are indexed from 0 to n − 1, where n &gt; 0 is the size of the array. The usual bracket notation is used to index arrays. Since arrays have a compile-time fixed size and cannot be declared as method parameters (or local variables), there is no facility to query the length of an array variable in Decaf. Arrays must be initialized to all zeroes at declaration time.
 
     ArrayDecl = identifier "[" int_lit "]" .
 
@@ -372,37 +372,37 @@ Decaf program structure
 
 ### Program
 
-A Decaf program starts with optional external function declarations followed by the class definition (a Decaf class is more like a module or namespace). A class has optional global variables (called field variables) followed by method (function) definitions.
+A Decaf program starts with optional external function declarations followed by the package definition (a Decaf package is like a module or namespace). A package has optional global variables (called field variables) followed by method (function) definitions.
 
-    Program = Externs class identifier "{" FieldDecls MethodDecls "}" .
+    Program = Externs package identifier "{" FieldDecls MethodDecls "}" .
 
 ### External Functions
 
-A Decaf program can access external function that are linked, such as the Decaf standard library functions which are implemented in C, and accessed from within the Decaf program as external functions.
+A Decaf program can access external function that are linked, such as the Decaf standard library functions which are implemented in C, and accessed from within the Decaf program as external functions. For now, only external functions are allowed. External data cannot be declared.
 
     Externs    = { ExternDefn } .
-    ExternDefn = extern MethodType identifier "(" [ { ExternType }+ ] ")" ";" .
+    ExternDefn = extern func identifier "(" [ { ExternType }+ ] ")" MethodType ";" .
 
 ### Global variables
 
-Decaf has global variables with scope limited to their class that appear before any method declarations. Global variables in Decaf are called *field declarations*. They can be simple declarations without initialization (assumed to be zero initialized by the compiler) or non-array variables can be declared with an assignment to a constant (see Constants section).
+Decaf has global variables with scope limited to their package that appear before any method declarations. Global variables in Decaf are called *field declarations*. They can be simple declarations without initialization (assumed to be zero initialized by the compiler) or non-array variables can be declared with an assignment to a constant (see Constants section). Variables are always defined using the `var` reserved word.
 
     FieldDecls = { FieldDecl } .
-    FieldDecl  = Type { identifier | ArrayDecl }+ ";" 
-    FieldDecl  = Type identifier "=" Constant ";" .
+    FieldDecl  = var { identifier | ArrayDecl }+ Type ";" 
+    FieldDecl  = var identifier Type "=" Constant ";" .
 
 The assignment to an identifier has to be a constant:
 
-    class foo { int a; int b = a; } // Invalid!
+    package foo { var a int; var b int = a; } // Invalid!
 
 ### Method declarations
 
-Functions or methods in Decaf start with the return type of the method, the name of the method and in parentheses is the argument list.
+Functions or methods in Decaf start with the reserved word `func`, then the name of the method and in parentheses is the argument list followed by the return type of the method.
 
     MethodDecls = { MethodDecl } .
-    MethodDecl  = MethodType identifier "(" [ { Type identifier }+ ] ")" Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+ ] ")" MethodType Block
 
-The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` has to be type `int`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of the class declaration can have zero or more parameters and must have a return type of type `MethodType` explicitly defined.
+The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` has to be type `int`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined.
 
 ### Blocks
 
@@ -412,14 +412,14 @@ Decaf blocks have a section for local variable definitions first followed by sta
 
 ### Variable Declarations
 
-Local variables are declared using a comma separated list for each type. They cannot be assigned a value when they are defined.
+Local variables are declared using the reserved word `var` followed by a comma separated list of variables for each type and followed by the type of the variable(s). They cannot be assigned a value when they are defined.
 
     VarDecls = { VarDecl } .
-    VarDecl  = Type { identifier }+ ";" .
+    VarDecl  = var { identifier }+ Type ";" .
 
 There is no assignment allowed for local variables:
 
-    int foo() { int a = 10; } // Invalid!
+    func foo() int { var a int = 10; } // Invalid!
 
 ### Statements
 
@@ -443,7 +443,7 @@ External functions are declared using the extern keyword. These functions are pr
 
 The return value can be a type that can be assigned to an `Lvalue`:
 
-    z = read int(); 
+    z = read_int(); 
 
 In this case, the integer variable `z` receives the result of calling the `read_int` library function. The return value can also be declared to be `void` in which case assigning the output of a library function to an `Lvalue` will result in a semantic error.
 
@@ -549,18 +549,18 @@ In this expression, the `identifier` must be an Array Type (see section on Array
 
 ### Decaf grammar
 
-    Program = Externs class identifier "{" FieldDecls MethodDecls "}" .
+    Program = Externs package identifier "{" FieldDecls MethodDecls "}" .
     Externs    = { ExternDefn } .
-    ExternDefn = extern MethodType identifier "(" [ { ExternType }+ ] ")" ";" .
+    ExternDefn = extern func identifier "(" [ { ExternType }+ ] ")" MethodType ";" .
     FieldDecls = { FieldDecl } .
-    FieldDecl  = Type { identifier | ArrayDecl }+ ";" 
-    FieldDecl  = Type identifier "=" Constant ";" .
+    FieldDecl  = var { identifier | ArrayDecl }+ Type ";" 
+    FieldDecl  = var identifier Type "=" Constant ";" .
     ArrayDecl = identifier "[" int_lit "]" .
     MethodDecls = { MethodDecl } .
-    MethodDecl  = MethodType identifier "(" [ { Type identifier }+ ] ")" Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+ ] ")" MethodType Block
     Block = "{" VarDecls Statements "}" .
     VarDecls = { VarDecl } .
-    VarDecl  = Type { identifier }+ ";" .
+    VarDecl  = var { identifier }+ Type ";" .
     Statement = Block .
     Statement = Assign ";" .
     Assign    = Lvalue "=" Expr .
@@ -601,13 +601,13 @@ Make sure the following type checks are implemented in the compiler.
 -   Assignment to a function parameter is valid and should change the value as for a local variable
 -   The && and || operators are short-circuiting (this is already specified in the spec)
 -   If you have multiple return statements in one block then only the first is used, but the others should still be type checked.
--   Indexing a scalar is a semantic error. `{ int x; x[0] = 1; }` is a semantic error, and `{ int x; int y; y = x[0]; }` is a semantic error, and the same if `x` is a field variable.
--   Indexing with a bool is a semantic error. `{ int xs[10]; int main() { int x; x = xs[true]; }` is a semantic error.
--   Using a non-bool expression for a loop condition is a semantic error. `{ while (1) {} }` and `{ int x; for (x = 0; 1; x = x + 1) {} }` are semantic errors.
+-   Indexing a scalar is a semantic error. `{ var x int; x[0] = 1; }` is a semantic error, and `{ var x,y int; y = x[0]; }` is a semantic error, and the same if `x` is a field variable.
+-   Indexing with a bool is a semantic error. `{ var xs[10] int; func main() int { var x int; x = xs[true]; }` is a semantic error.
+-   Using a non-bool expression for a loop condition is a semantic error. `{ while (1) {} }` and `{ var x int; for (x = 0; 1; x = x + 1) {} }` are semantic errors.
 -   Using a non-bool expression in an if statement condition is a semantic error. `{ if (0) {} }` is a semantic error.
--   A return statement with an expression is not allowed in function with void return type. `{ void foo() { return (1); }` and `{ void bar() {} void foo() { return (bar()); }` are both semantic errors.
--   A return statement with no expression in a non-void function produces an undefined return value. `{ int foo() { return; } int main() { int x; x = foo(); } }` is a not a semantic error, but the value of `x` may be anything (typicall zero due to zero initialization).
--   Cannot use a void function in an expression. `void foo() {} int main() { if (foo()) {} }` is invalid.
+-   A return statement with an expression is not allowed in function with void return type. `{ func foo() void { return (1); }` and `{ func bar() void {} func foo() void { return (bar()); }` are both semantic errors.
+-   A return statement with no expression in a non-void function produces an undefined return value. `{ func foo() int { return; } func main() int { var x int; x = foo(); } }` is a not a semantic error, but the value of `x` may be anything (typically zero due to zero initialization).
+-   Cannot use a void function in an expression. `func foo() void {} func main() int { if (foo()) {} }` is invalid.
 -   Cannot call a method with the wrong number of arguments.
 
 ### Scoping Rules
@@ -618,10 +618,10 @@ This section clarifies the behaviour with scoping.
 -   Having two methods with the same name is a semantic error.
 -   Having a field and a method with the same name is a semantic error.
 -   externs count as methods for scoping.
--   Having two local variables with the same name declared at the same block is a semantic error. `{ int x; int x; }` is an error, but `{ int x; { int x; } }` is ok.
--   Having a local variable in the outer block of a method that has a parameter with the same name is a semantic error. `void foo(int x) { int x; }` is an error, but `void foo(int x) { { int x; } }` is ok.
--   A function can be referred to anywhere in the program, including before its definition. `class C { void foo() { bar() }; void bar() {}; /* ... */ }` is ok.
--   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `class C { void foo() {}; void bar() { int foo; foo(); } /* ... */ }` the "foo();" refers to the local int variable, not the function.
+-   Having two local variables with the same name declared at the same block is a semantic error. `{ var x int; var x int; }` is an error, but `{ var x int; { var x int; } }` is ok.
+-   Having a local variable in the outer block of a method that has a parameter with the same name is a semantic error. `func foo(x int) void { var x int; }` is an error, but `func foo(x int) void { { var x int; } }` is ok.
+-   A function can be referred to anywhere in the program, including before its definition. `package C { func foo() void { bar() }; func bar() void {}; /* ... */ }` is ok.
+-   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `package C { func foo() void {}; func bar() void { var foo int; foo(); } /* ... */ }` the `foo` in `foo();` refers to the local int variable, not the function resulting in an error.
 -   `break` and `continue` only apply to the innermost containing loop. Using `break` or `continue` outside of a loop results in a semantic error.
 
 ### Statements
