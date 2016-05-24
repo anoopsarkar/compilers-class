@@ -9,6 +9,8 @@ active_tab: homework
 
 # Homework & Leaderboard setup
 
+<p class="text-muted">Due on Tuesday, May 24, 2016</p>
+
 For this course, we use [an automated homework submission
 system](http://sfu-yacc.appspot.com)[^1] built on [Google App
 Engine](https://appengine.google.com). One component of this system
