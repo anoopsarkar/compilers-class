@@ -57,11 +57,12 @@ The syntax is specified using [Extended Backus-Naur Form](http://en.wikipedia.or
 
 Productions are expressions constructed from terms and the following operators, in increasing precedence:
 
-    |   alternation
-    ()  grouping
-    []  option (0 or 1 Expression)
-    {}  repetition (0 to n Expressions)
-    {}+ comma list (1 to n Expressions comma separated, e.g. x, y, z)
+    |    alternation
+    ()   grouping
+    []   option (0 or 1 Expression)
+    {}   repetition (0 to n Expressions)
+    {}+  repetition (1 to n Expressions)
+    {}+, comma list (1 to n Expressions comma separated, e.g. x, y, z)
 
 Lower-case production names are used to identify lexical tokens. Non-terminals are in CamelCase. Lexical tokens are enclosed in double quotes "" or back quotes \`\`.
 
@@ -97,6 +98,7 @@ The set of valid characters in Decaf is all the ASCII characters:
 
     all_char = /* all ASCII characters from 7 ... 13 and 32 ... 126 */ .
     char = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 92 "\" */ .
+    char_no_nl = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 10 "\n" */ .
 
 Implementation restriction: For compatibility with other tools, a compiler should always disallow the `nul` character (decimal: 0) in the source text.
 
@@ -118,7 +120,7 @@ Decaf only has line comments that start with the character sequence `//` and sto
 
     // this is a line comment and it includes the newline at the end of the line\n
 
-    comment = // { char } \n
+    comment = // { char_no_nl } \n
 
 ### Whitespace
 
@@ -130,7 +132,7 @@ Whitespace is used to separate tokens, and is defined as follows:
     vertical_tab    = /* ASCII character vt : '\v' */ .
     form_feed       = /* ASCII character np : '\f' */ .
     space           = /* ASCII character sp : ' ' */ .
-    whitespace      = { newline | carriage_return | horizontal_tab | vertical_tab | form_feed | space } .
+    whitespace      = { newline | carriage_return | horizontal_tab | vertical_tab | form_feed | space }+ .
 
 The following are special characters that are not part of white space:
 
@@ -184,7 +186,7 @@ An integer literal is a sequence of digits representing an integer constant. An 
 
     int_lit     = decimal_lit | hex_lit .
     decimal_lit = { decimal_digit } .
-    hex_lit     = "0" ( "x" | "X" ) hex_digit { hex_digit } .
+    hex_lit     = "0" ( "x" | "X" ) { hex_digit } .
 
 For example, the following are integer literals:
 
@@ -257,6 +259,10 @@ You can have an single quote or escaped single quote in a string. So both of the
 
     "'"
     "\'"
+
+Empty strings are allowed.
+
+    ""
 
 Unterminated string literals must be reported as errors.
 
@@ -381,14 +387,14 @@ A Decaf program starts with optional external function declarations followed by 
 A Decaf program can access external function that are linked, such as the Decaf standard library functions which are implemented in C, and accessed from within the Decaf program as external functions. For now, only external functions are allowed. External data cannot be declared.
 
     Externs    = { ExternDefn } .
-    ExternDefn = extern func identifier "(" [ { ExternType }+ ] ")" MethodType ";" .
+    ExternDefn = extern func identifier "(" [ { ExternType }+, ] ")" MethodType ";" .
 
 ### Global variables
 
 Decaf has global variables with scope limited to their package that appear before any method declarations. Global variables in Decaf are called *field declarations*. They can be simple declarations without initialization (assumed to be zero initialized by the compiler) or non-array variables can be declared with an assignment to a constant (see Constants section). Variables are always defined using the `var` reserved word.
 
     FieldDecls = { FieldDecl } .
-    FieldDecl  = var { identifier | ArrayDecl }+ Type ";" 
+    FieldDecl  = var { identifier | ArrayDecl }+, Type ";" 
     FieldDecl  = var identifier Type "=" Constant ";" .
 
 The assignment to an identifier has to be a constant:
@@ -400,7 +406,7 @@ The assignment to an identifier has to be a constant:
 Functions or methods in Decaf start with the reserved word `func`, then the name of the method and in parentheses is the argument list followed by the return type of the method.
 
     MethodDecls = { MethodDecl } .
-    MethodDecl  = func identifier "(" [ { identifier Type }+ ] ")" MethodType Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
 
 The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` has to be type `int`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined.
 
@@ -415,7 +421,7 @@ Decaf blocks have a section for local variable definitions first followed by sta
 Local variables are declared using the reserved word `var` followed by a comma separated list of variables for each type and followed by the type of the variable(s). They cannot be assigned a value when they are defined.
 
     VarDecls = { VarDecl } .
-    VarDecl  = var { identifier }+ Type ";" .
+    VarDecl  = var { identifier }+, Type ";" .
 
 There is no assignment allowed for local variables:
 
@@ -436,7 +442,7 @@ Statements in Decaf consist of variable assignment, method calls, syntax for var
 #### Method calls
 
     Statement  = MethodCall ";" .
-    MethodCall = identifier "(" [ { MethodArg }+ ] ")" .
+    MethodCall = identifier "(" [ { MethodArg }+, ] ")" .
     MethodArg  = Expr | string_lit .
 
 External functions are declared using the extern keyword. These functions are provided at using a separate library which is linked with your Decaf program at runtime. Some minimal type checking is done using the declaration. The most useful library functions that you will use are the `print_string`, `print_int` and `read_int` functions.
@@ -459,7 +465,7 @@ In this case, the integer variable `z` receives the result of calling the `read_
 
 The `for` loop in Decaf has the usual structure `for ( init ; check ; post )` followed by the `Block` of the for loop.
 
-    Statement = for "(" { Assign }+ ";" Expr ";" { Assign }+ ")" Block .
+    Statement = for "(" { Assign }+, ";" Expr ";" { Assign }+, ")" Block .
 
 The init, check and post parts of the `for` loop cannot be empty:
 
@@ -551,26 +557,26 @@ In this expression, the `identifier` must be an Array Type (see section on Array
 
     Program = Externs package identifier "{" FieldDecls MethodDecls "}" .
     Externs    = { ExternDefn } .
-    ExternDefn = extern func identifier "(" [ { ExternType }+ ] ")" MethodType ";" .
+    ExternDefn = extern func identifier "(" [ { ExternType }+, ] ")" MethodType ";" .
     FieldDecls = { FieldDecl } .
-    FieldDecl  = var { identifier | ArrayDecl }+ Type ";" 
+    FieldDecl  = var { identifier | ArrayDecl }+, Type ";" 
     FieldDecl  = var identifier Type "=" Constant ";" .
     ArrayDecl = identifier "[" int_lit "]" .
     MethodDecls = { MethodDecl } .
-    MethodDecl  = func identifier "(" [ { identifier Type }+ ] ")" MethodType Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
     Block = "{" VarDecls Statements "}" .
     VarDecls = { VarDecl } .
-    VarDecl  = var { identifier }+ Type ";" .
+    VarDecl  = var { identifier }+, Type ";" .
     Statement = Block .
     Statement = Assign ";" .
     Assign    = Lvalue "=" Expr .
     Lvalue    = identifier | identifier "[" Expr "]" .
     Statement  = MethodCall ";" .
-    MethodCall = identifier "(" [ { MethodArg }+ ] ")" .
+    MethodCall = identifier "(" [ { MethodArg }+, ] ")" .
     MethodArg  = Expr | string_lit .
     Statement = if "(" Expr ")" Block [ else Block ] .
     Statement =  while "(" Expr ")" Block .
-    Statement = for "(" { Assign }+ ";" Expr ";" { Assign }+ ")" Block .
+    Statement = for "(" { Assign }+, ";" Expr ";" { Assign }+, ")" Block .
     Statement = return [ "(" [ Expr ] ")" ] ";" .
     Statement = break ";" .
     Statement = continue ";" .
