@@ -61,7 +61,7 @@
   links:
     - title: "Regex 101"
       url: "http://www.regex101.com/"
-i   - title: "Historical Perspective, FORTRAN I"
+    - title: "Historical Perspective, FORTRAN I"
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/Fortran.html"
     - title: "Posix regular expression specification"
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
