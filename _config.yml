@@ -1,3 +1,5 @@
 exclude: ['README.md']
 timezone: US/Pacific
 markdown: kramdown
+coursys: "https://courses.cs.sfu.ca/2016su-cmpt-379-d1/"
+leaderboard: "https://sfu-yacc.appspot.com"
