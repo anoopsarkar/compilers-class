@@ -7,8 +7,7 @@ title: Homework | Setup
 active_tab: homework
 ---
 
-Homework & Leaderboard setup
-=============================================================
+# Homework & Leaderboard setup
 
 For this course, we use [an automated homework submission
 system](http://sfu-yacc.appspot.com)[^1] built on [Google App
