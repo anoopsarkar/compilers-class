@@ -125,8 +125,9 @@ The full list of tokens is provided in the section List of Tokens in the [Decaf 
 Using the [Decaf language specification](decafspec.html) as your guide, 
 provide a lex program that is a lexical analyzer for the Decaf language.
 
-Make sure you follow the following requirements:
+Make sure you obey the following requirements:
 
+1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds a lexical error you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
 1. Note that the token names and lexeme values should be identical to the sample output provided to you in the `testcases` directory. 
 1. You must use the token names provided in the List of Tokens section of the Decaf specification.
 1. You must include a special whitespace and comment token. The whitespace token should have a lexeme value that includes all the whitespace characters. The whitespace and comment lexemes should convert the newline character into the literal string `\n` so that the line number and character number of each token can be recovered from the lexical analyzer output.
