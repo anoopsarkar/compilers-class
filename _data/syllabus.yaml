@@ -59,6 +59,12 @@
     - title: "Read the course FAQ!"
       url: "faq.html"
   links:
+    - title: "Regex 101"
+      url: "http://www.regex101.com/"
+i   - title: "Historical Perspective, FORTRAN I"
+      url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/Fortran.html"
+    - title: "Posix regular expression specification"
+      url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
 - title: "Week 3 - Lexical Analysis (continued)"
   tag: week3
   current: true
@@ -70,3 +76,15 @@
       presenter: "https://docs.google.com/presentation/d/1eAM6ruI2rAUczCWWifARVCMUUB0_owY3Ev0cjazor30/present?usp=sharing"
     - title: "Lexical Analysis practice"
       url: "LEX-practice.html"
+  links:
+    - title: "Regular Expression Matching Can Be Simple And Fast"
+      author: Russ Cox
+      url: "http://swtch.com/~rsc/regexp/regexp1.html"
+    - title: "Implementing Regular Expressions"
+      author: "Russ Cox"
+      url: "http://swtch.com/~rsc/regexp/"
+    - title: "Storing a sparse table"
+      author: "R. E. Tarjan and A. C. Yao"
+      citation: "CACM 22(11), 1979"
+      url: "http://portal.acm.org/citation.cfm?id=359175&coll=portal&dl=ACM&CFID=15540343&CFTOKEN=40038079"
+
