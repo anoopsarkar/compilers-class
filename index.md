@@ -20,14 +20,14 @@ Teaching Assistant
 : Office Hours: ASB9838.1 Mondays 9:30-10:30
 
 Discussion Board
-: [on Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/discussion/)
+: [on Coursys]({{ site.coursys }}discussion/)
 
 Time and place
 : Tuesdays 11:30-1:20 BLU 9660, Thursdays 11:30-12:20 BLU 9660
 : May 10, 2016 to Aug 2, 2016
 
 Calendar
-: [View Calendar](https://courses.cs.sfu.ca/calendar/)
+: [View Calendar]({{ site.coursys }}calendar/)
 : [Subscribe](https://courses.cs.sfu.ca/calendar/0261d2fe6030dc6570c3073ca9dd1a93/anoop)
 : Subscribe to the URL in your calendaring app rather than saving the file and adding it manually.
 
@@ -36,7 +36,7 @@ Textbook
 : [List of reference books](textbook.html)
 
 Grading
-: Submit homework source code and check your grades on [Coursys](https://courses.cs.sfu.ca/2016su-cmpt-379-d1/)
+: Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
 
 * Setup homework: (2%)
 * Four programming homeworks. Due dates: TBA (60% total)
