@@ -53,7 +53,7 @@ The syntax is specified using [Extended Backus-Naur Form](http://en.wikipedia.or
     Group       = "(" Expression ")" .
     Option      = "[" Expression "]" .
     Repetition  = "{" Expression "}" .
-    CommaList   = "{" Expression "}+" .
+    CommaList   = "{" Expression "}+," .
 
 Productions are expressions constructed from terms and the following operators, in increasing precedence:
 
