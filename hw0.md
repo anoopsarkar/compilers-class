@@ -42,14 +42,14 @@ Use the file submission dialog to upload your submission. Check your status on t
 
 ## Homework 0
 
-Homework 0 expects a file containing a single number. The leaderboard
-displays a simple nonmonotonic function of this number, and sorts
-the entries according to the highest value. 
+The Homework 0 leaderboard upload expects a text file containing a
+single number. The leaderboard displays a simple nonmonotonic
+function of this number, and sorts the entries according to the
+highest value.
 
 To get full marks, you must do the following:
 
-* Upload and _Submit_ your file on [the upload
-page](http://sfu-yacc.appspot.com/). **Only one person per group should submit for the group.**
+* Upload your file on [the upload page](http://sfu-yacc.appspot.com/). **Only one person per group should submit for the group.**
 
 <!-- There will be a dialog
 that says this is the final submission (you can no longer upload
@@ -57,14 +57,14 @@ after you _Submit_ your final answer. Do __not__ press _Submit_ if
 you plan to keep uploading new submissions. 
 -->
 
-* You must use a valid group name that is verifiable on
-[Coursys](https://courses.cs.sfu.ca) 
+* You **must** use a valid group name that is verifiable on [Coursys](https://courses.cs.sfu.ca) 
 
-* Your group must upload your file as a tar.gz or zip file as the HW0
+* Your group must upload your text file inside a zip file as the HW0
 submission on [Coursys](https://courses.cs.sfu.ca). Only one person
-per group needs to submit here as well.
+per group needs to submit here as well. You can create a zip file like this:
 
-In future homeworks, you will submit your output files to the [upload
-page on Google](http://sfu-yacc.appspot.com) and submit your
+    zip hw0coursys.zip your-file.txt
+
+In future homeworks, you will submit your output files to the [upload page on Google](http://sfu-yacc.appspot.com) and submit your
 source code to the submission page on [Coursys](https://courses.cs.sfu.ca).
 
