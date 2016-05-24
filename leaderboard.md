@@ -8,7 +8,7 @@ active_tab: leaderboard
 jquery: true
 ---
 
-Submit your assignments [here](http://sfu-yacc.appspot.com). Results will be updated in a few minutes.
+Submit your assignments [here]({{ site.leaderboard }}). Results will be updated in a few minutes.
 
 
 <table class="table table-hover table-condensed">
