@@ -193,6 +193,6 @@ If you have any questions or you’re confused about anything, just ask.
 
 Practice your skills with lex before attempting to solve this homework.
 
-> [Lex practice](LEX-practice.md)
+> [Lex practice](LEX-practice.html)
 
 
