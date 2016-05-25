@@ -186,8 +186,8 @@ The following character sequences represent operators (see Operators section bel
 An integer literal is a sequence of digits representing an integer constant. An optional prefix sets a non-decimal base: 0x or 0X for hexadecimal. In hexadecimal literals, letters a-f and A-F represent values 10 through 15.
 
     int_lit     = decimal_lit | hex_lit .
-    decimal_lit = { decimal_digit } .
-    hex_lit     = "0" ( "x" | "X" ) { hex_digit } .
+    decimal_lit = { decimal_digit }+ .
+    hex_lit     = "0" ( "x" | "X" ) { hex_digit }+ .
 
 For example, the following are integer literals:
 
