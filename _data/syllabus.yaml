@@ -4,25 +4,25 @@
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/week1/IN1- Evangelize Compilers.pdf"
-      presenter: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/present?usp=sharing"
+      presenter: "https://docs.google.com/presentation/d/1hgWURsPcD8B7G54iahAZ-FE70_ojrlfdMTl_F28Mi_8/present"
     - title: "Duff device"
       url: "assets/demos/week1/duff-a.c"
     - title: "Language survey"
       url: "assets/demos/week1/pl-survey-summary_su2016.txt"
     - title: "IN2: Trusting Trust"
       url: "assets/lectures/week1/IN2- Trusting Trust.pdf"
-      presenter: "https://docs.google.com/presentation/d/1EzhhZDXzUS-HTcUuic1eA01HD0i7sdAvZDbqiXGt3Zs/present?usp=sharing"
+      presenter: "https://docs.google.com/presentation/d/1EzhhZDXzUS-HTcUuic1eA01HD0i7sdAvZDbqiXGt3Zs/present"
       video: "https://www.youtube.com/watch?v=6Fhy6cMaClk"
     - title: "Quines"
       url: "assets/demos/week1/myquine.c"
     - title: "IN3: What is a Compiler?"
       url: "assets/lectures/week1/IN3-\ What\ is\ a\ Compiler-.pdf"
-      presenter: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/present?usp=sharing"
+      presenter: "https://docs.google.com/presentation/d/1OBcI_TF16hS1RKD2NlgJ-Z2-JuwVLrCIvEiB_fL8zXc/present"
     - title: "Dynamic linking"
       url: "assets/demos/week1/dylib.zip"
     - title: "IN4: Stages of a Compiler"
       url: "assets/lectures/week1/IN4- Stages of a Compiler.pdf"
-      presenter: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/present?usp=sharing"
+      presenter: "https://docs.google.com/presentation/d/1ihm3VHPzLZM2-cd3ZbQVWs7kLcuCAQDqBLQpUIIhzf4/present"
     - title: "Lexing and parsing demo"
       url: "assets/demos/week1/expr.zip"
   links:
@@ -47,15 +47,18 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/Aho-SSST-Talk-Clipped.pdf"
       author: "Alfred Aho"
       citation: "Invited Keynote Talk, SSST-3, NAACL HLT, 2009."
-- title: "Week 2 - Lexical Analysis"
+- title: "Week 2 - Lexical Analysis 1"
   tag: week2
-  current: true
+  current: false
   notes:
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/week2/LEX1- Intro to Regexps.pdf"
-      presenter: "https://docs.google.com/presentation/d/1QJ62ipZbktaArGnoyc6WupBiL6QCjg_jrmZ-MfFQOgM/present?usp=sharing"
+      presenter: "https://docs.google.com/presentation/d/1QJ62ipZbktaArGnoyc6WupBiL6QCjg_jrmZ-MfFQOgM/present"
     - title: "Adhoc Scanner"
       url: "assets/demos/week2/adhocScanner.c"
+    - title: "LEX2: Regular Expressions"
+      url: "assets/lectures/week2/LEX2- Regular Expressions.pdf"
+      presenter: "https://docs.google.com/presentation/d/1eAM6ruI2rAUczCWWifARVCMUUB0_owY3Ev0cjazor30/present"
     - title: "Read the course FAQ!"
       url: "faq.html"
   links:
@@ -65,15 +68,18 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/Fortran.html"
     - title: "Posix regular expression specification"
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
-- title: "Week 3 - Lexical Analysis (continued)"
+- title: "Week 3 - Lexical Analysis 2"
   tag: week3
   current: true
   notes:
+    - title: "LEX3: Regexps are Trees"
+      url: "assets/lectures/week3/LEX3- Regexps are Trees.pdf"
+      presenter: "https://docs.google.com/presentation/d/1YTNVPtD7Xcflj6sOHxQtzMRJqrzbrRKozPuHzQH2qdo/present"
     - title: "Homework 1 released"
       url: hw1.html
-    - title: "LEX2: Regular Expressions"
-      url: "assets/lectures/week2/LEX2- Regular Expressions.pdf"
-      presenter: "https://docs.google.com/presentation/d/1eAM6ruI2rAUczCWWifARVCMUUB0_owY3Ev0cjazor30/present?usp=sharing"
+    - title: "LEX4: Regexps as Automata"
+      url: "assets/lectures/week3/LEX4- Regexps as Automata.pdf"
+      presenter: "https://docs.google.com/presentation/d/1ue7sebeMCav9c_AWx_4R9a_wNNqdshBznjcvLRzOJo0/present"
     - title: "Lexical Analysis practice"
       url: "LEX-practice.html"
   links:
@@ -87,3 +93,10 @@
       author: "R. E. Tarjan and A. C. Yao"
       citation: "CACM 22(11), 1979"
       url: "http://portal.acm.org/citation.cfm?id=359175&coll=portal&dl=ACM&CFID=15540343&CFTOKEN=40038079"
+    - title: "Regexp Simplifier"
+      url: "http://ivanzuzak.info/noam/webapps/regex_simplifier/" 
+    - title: "Automatic Synthesis of Regular Expressions from Examples"
+      author: "D. Bartoli and M. De Lorenzo and S. Medvet"
+      citation: "IEEE Computer, 2014"
+      url: "http://regex.inginf.units.it/"
+

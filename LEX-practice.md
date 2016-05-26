@@ -14,19 +14,24 @@ active_tab: syllabus
 Let $$\Sigma = \{ 0, 1 \}$$ 
 
 1. How many elements in the set $$\Sigma$$? 
-<!-- two -->
 1. Provide $$\Sigma^3$$. 
-<!-- $$\{ 000, 001, 010, 011, 100, 101, 110, 111 \}$$ -->
 1. Describe in English the set described by $$\Sigma^\ast$$. 
-<!-- All strings that represent binary numbers (leading zeroes are allowed). -->
 1. Give a regexp for all strings in $$\Sigma^\ast$$ equal to decimal number 6. 
-<!-- $$0^*110$$ -->
 1. Give regexp for all strings in $$\Sigma^\ast$$ that are powers of two. 
-<!-- $$0^*10^*$$ -->
 1. Give a regexp for all strings in $$\Sigma^\ast$$ that are even numbers. 
-<!-- $${(0|1)}^*100^*$$ -->
 1. Give a regexp for all strings in $$\Sigma^\ast$$ that are Binary Coded Decimal numbers (include the empty string). A BCD number is a decimal number where each decimal digit is encoded using a 4-bit representation of its binary value. For example, the BCD number of 2509 is `0010010100001001`. 
-<!-- $$((0(0|1)(0|1)(0|1))|((100)(0|1)))^*$$ -->
+
+<!--
+#### Answer
+
+1. two
+1. $$\{ 000, 001, 010, 011, 100, 101, 110, 111 \}$$
+1. All strings that represent binary numbers (leading zeroes are allowed).
+1. $$0^*110$$
+1. $$0^*10^*$$
+1. $${(0|1)}^*100^*$$
+1. $$((0(0|1)(0|1)(0|1))|((100)(0|1)))^*$$
+-->
 
 ### Simple Tokenizer
 
@@ -95,6 +100,8 @@ You should see the lexer output:
 Modify the pattern definition of the token IDENTIFIER so that it has to start with a letter (a-z or A-Z) and followed by a (possibly empty) sequence of letters or numbers.
 
 <!--
+#### Answer
+
     %{
     #include <stdio.h>
     #define NUMBER     256
@@ -140,11 +147,73 @@ the greedy longest match lexical analysis method. Provide the list
 of tokens and the lexeme values.
 
 1. `cdaaab`
-<!-- TOKEN_A (cdaaa), TOKEN_C (b) -->
 1. `cdccc`
-<!-- TOKEN_A (cd), TOKEN_B (ccc) -->
 1. `ccc`
-<!-- TOKEN_B (ccc) -->
 1. `cdccd`
-<!-- TOKEN_A (cd), TOKEN_B (cc), ERROR (illegal token) -->
 
+<!--
+#### Answer
+
+1. TOKEN_A (cdaaa), TOKEN_C (b)
+1. TOKEN_A (cd), TOKEN_B (ccc)
+1. TOKEN_B (ccc)
+1. TOKEN_A (cd), TOKEN_B (cc), ERROR (illegal token)
+-->
+
+### Lexical Analysis using `lex`
+
+The general architecture of a lexical analyzer for a programming
+language is to specify tokens in terms of patterns.  For instance,
+we can define a set of tokens `T_A, T_B, T_C`
+each associated with a pattern specified as regular expressions.
+
+| `T_A` | $$a$$ |
+| `T_B` | $$abb$$ |
+| `T_C` | $$a^\ast b^+$$ |
+{: .table}
+
+The lexical analysis engine should always pick the longest match
+possible, and in case of two patterns matching a prefix of the input
+of equal length, we break the tie by picking the pattern that was
+listed first in the specification (e.g. the token `T_B` is
+preferred over `T_C` for the input string $$abb$$, and for the same
+input string, token `T_A` followed by `T_C` would be incorrect).
+
+Provide a lexical analyzer using lex for the tokens shown above.
+Start with the Simple Tokenizer lex program you developed.
+
+<!--
+#### Answer
+
+    %{
+    #include <stdio.h>
+    #include <stdlib.h>
+    #define T_A 256
+    #define T_B 257
+    #define T_C 258
+    #define ERROR 666
+    %}
+
+    %%
+
+    a      { return T_A; }
+    abb    { return T_B; }
+    a*b+   { return T_C; }
+    \n     /* do nothing */
+    .      { return ERROR; }
+
+    %%
+
+    int main () {
+      int token;
+      while ((token = yylex())) {
+        switch (token) {
+          case T_A: printf("T_A %s\n", yytext); break;
+          case T_B: printf("T_B %s\n", yytext); break;
+          case T_C: printf("T_C %s\n", yytext); break;
+          default: fprintf(stderr, "illegal token\n"); printf("ERROR %s\n", yytext);
+        }
+      }
+      exit(0);
+}
+-->
