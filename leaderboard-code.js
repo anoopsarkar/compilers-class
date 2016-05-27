@@ -41,10 +41,11 @@ $.ajax({
                   // rows += ' (' + names[user] + ')';
               rows = rows + '</td>';
             }
-            for (j = 1; j < data[i].length; j++)
+            //for (j = 1; j < data[i].length; j++)
+            for (j = 1; j < max_assignment_number + 2; j++)
                 rows = rows + '<td class="score">' + data[i][j] + '</td>';
-            for (j = data[i].length; j < max_assignment_number + 2; j++)
-                rows += '<td></td>';
+            //for (j = data[i].length; j < max_assignment_number + 2; j++)
+             //   rows += '<td></td>';
             rows += "</tr>";
         }
 
