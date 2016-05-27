@@ -24,7 +24,7 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
         <a href="hw0.html">#0</a><br/><span class="small text-muted">Setup</span>
       </th>
       <th class="text-right">
-        <a href="hw1.html">#1</a><br/><span class="small text-muted">Segment</span>
+        <a href="hw1.html">#1</a><br/><span class="small text-muted">Decaflex</span>
       </th>
 <!--      
       <th class="text-right">
