@@ -23,10 +23,10 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
       <th class="text-right">
         <a href="hw0.html">#0</a><br/><span class="small text-muted">Setup</span>
       </th>
-<!--      
       <th class="text-right">
         <a href="hw1.html">#1</a><br/><span class="small text-muted">Segment</span>
       </th>
+<!--      
       <th class="text-right">
         <a href="hw2.html">#2</a><br/><span class="small text-muted">Chunk</span>
       </th>
@@ -48,7 +48,9 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
 
 <script type="text/javascript" src="leaderboard-code.js"></script>
 
+<!--
 <div id="loading">Loading...</div>
+-->
 
 <div class="panel panel-default"> 
 <div class="panel-heading">Legend</div> 
