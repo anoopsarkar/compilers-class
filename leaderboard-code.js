@@ -2,6 +2,12 @@ $.ajax({
     url: "//sfu-yacc.appspot.com/leaderboard.js",
     // url: "leaderboard-summer2016.js",
     dataType: "script",
+    beforeSend: function() {
+        $('#loader').show();
+    },
+    complete: function(){
+        $('#loader').hide();
+    },
     success: function () {
         // The current assignment number (0-indexed)
         var assignment_number = 1;
