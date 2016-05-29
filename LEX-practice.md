@@ -217,3 +217,32 @@ Start with the Simple Tokenizer lex program you developed.
       exit(0);
 }
 -->
+
+### Remove Multi-line Comments
+
+Provide a lex program to replace all single-line and multi-line comments from C or C++ programs with an equivalent amount of whitespace. 
+Single-line comments begin with `//` and continue to  the end of the line, and multi-line comments begin with `/*` and end with `*/`
+`*/`. Note that `/*/` is not a valid comment. The C specification does not allow nested comments.
+
+There are some testcases to help you develop your lex program. Clone the following repository (if you haven't done so already).
+
+    git clone https://github.com/anoopsarkar/compilers-class-hw.git
+
+If you have cloned it then do a `git pull` to get the latest files.
+
+In the `rmcomments` directory you will find various python programs
+which you can use to test your solution to this homework
+
+Run your solution program on the testcases using the Python program `zipout.py`. 
+Your solution must be compiled in the `answer` directory and must be called `rmcomments`.
+Run against all testcases as follows:
+
+    # go to the main rmcomments directory with the file zipout.py
+    python zipout.py
+
+This creates a directory called `output` and a file `output.zip`. If you run `zipout.py` multiple times it will overwrite your output directory and zip file which should be fine most of the time (but be careful).
+
+Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file first.
+
+    python check.py 
+
