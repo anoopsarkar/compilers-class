@@ -242,7 +242,7 @@ Run against all testcases as follows:
 
 This creates a directory called `output` and a file `output.zip`. If you run `zipout.py` multiple times it will overwrite your output directory and zip file which should be fine most of the time (but be careful).
 
-Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file first.
+Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file first using `python zipout.py`.
 
     python check.py 
 
