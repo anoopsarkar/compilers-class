@@ -3,22 +3,22 @@
   current: false
   notes:
     - title: "IN1: Evangelize Compilers"
-      url: "assets/lectures/week1/IN1- Evangelize Compilers.pdf"
+      url: "assets/lectures/week1/in1.pdf"
     - title: "Duff device"
       url: "assets/demos/week1/duff-a.c"
     - title: "Language survey"
       url: "assets/demos/week1/pl-survey-summary_su2016.txt"
     - title: "IN2: Trusting Trust"
-      url: "assets/lectures/week1/IN2- Trusting Trust.pdf"
+      url: "assets/lectures/week1/in2.pdf"
       video: "https://www.youtube.com/watch?v=6Fhy6cMaClk"
     - title: "Quines"
       url: "assets/demos/week1/myquine.c"
     - title: "IN3: What is a Compiler?"
-      url: "assets/lectures/week1/IN3-\ What\ is\ a\ Compiler-.pdf"
+      url: "assets/lectures/week1/in3.pdf"
     - title: "Dynamic linking"
       url: "assets/demos/week1/dylib.zip"
     - title: "IN4: Stages of a Compiler"
-      url: "assets/lectures/week1/IN4- Stages of a Compiler.pdf"
+      url: "assets/lectures/week1/in4.pdf"
     - title: "Lexing and parsing demo"
       url: "assets/demos/week1/expr.zip"
   links:
@@ -48,11 +48,11 @@
   current: false
   notes:
     - title: "LEX1: Intro to Regexps"
-      url: "assets/lectures/week2/LEX1- Intro to Regexps.pdf"
+      url: "assets/lectures/week2/lex1.pdf"
     - title: "Adhoc Scanner"
       url: "assets/demos/week2/adhocScanner.c"
     - title: "LEX2: Regular Expressions"
-      url: "assets/lectures/week2/LEX2- Regular Expressions.pdf"
+      url: "assets/lectures/week2/lex2.pdf"
     - title: "Read the course FAQ!"
       url: "faq.html"
   links:
@@ -64,16 +64,16 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
 - title: "Week 3 - Lexical Analysis 2"
   tag: week3
-  current: true
+  current: false
   notes:
     - title: "LEX3: Regexps are Trees"
-      url: "assets/lectures/week3/LEX3- Regexps are Trees.pdf"
+      url: "assets/lectures/week3/lex3.pdf"
     - title: "Homework 1 released"
       url: hw1.html
     - title: "LEX4: Regexps as Automata"
-      url: "assets/lectures/week3/LEX4- Regexps as Automata.pdf"
+      url: "assets/lectures/week3/lex4.pdf"
     - title: "LEX5: Regexps to NFA.pdf"
-      url: "assets/lectures/week3/LEX5- Regexps to NFA.pdf"
+      url: "assets/lectures/week3/lex5.pdf"
     - title: "Lexical Analysis practice"
       url: "LEX-practice.html"
   links:
@@ -89,8 +89,24 @@
       url: "http://portal.acm.org/citation.cfm?id=359175&coll=portal&dl=ACM&CFID=15540343&CFTOKEN=40038079"
     - title: "Regexp Simplifier"
       url: "http://ivanzuzak.info/noam/webapps/regex_simplifier/" 
+- title: "Week 4 - Lexical Analysis 3 and Context-Free Grammars"
+  tag: week4
+  current: true
+  notes:
+    - title: "LEX6: NFA to DFA"
+      url: "assets/lectures/week4/lex6.pdf"
+    - title: "LEX7: DFA Complexity"
+      url: "assets/lectures/week4/lex7.pdf"
+    - title: "CFG1: Introduction"
+      url: "assets/lectures/week4/cfg1.pdf"
+    - title: "CFG2: Ambiguity"
+      url: "assets/lectures/week4/cfg2.pdf"
+    - title: "CFG3: Push-down Automata"
+      url: "assets/lectures/week4/cfg3.pdf"
+  links:
     - title: "Automatic Synthesis of Regular Expressions from Examples"
       author: "D. Bartoli and M. De Lorenzo and S. Medvet"
       citation: "IEEE Computer, 2014"
       url: "http://regex.inginf.units.it/"
+
 
