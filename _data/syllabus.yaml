@@ -80,7 +80,7 @@
     - title: "LEX4: Regexps as Automata"
       url: "assets/lectures/week3/LEX4- Regexps as Automata.pdf"
       presenter: "https://docs.google.com/presentation/d/1ue7sebeMCav9c_AWx_4R9a_wNNqdshBznjcvLRzOJo0/present"
-    - title: "LEX5- Regexps to NFA.pdf"
+    - title: "LEX5: Regexps to NFA.pdf"
       url: "assets/lectures/week3/LEX5- Regexps to NFA.pdf"
       presenter: "https://docs.google.com/presentation/d/1w9g-Vo3MkOnVa96ylAnt4PLLfTBmN7piULzuBb46Lag/present"
     - title: "Lexical Analysis practice"
