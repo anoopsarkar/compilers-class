@@ -93,6 +93,8 @@
   tag: week4
   current: true
   notes:
+    - title: "Lex demos"
+      url: "https://gist.github.com/anoopsarkar/6545633"
     - title: "LEX6: NFA to DFA"
       url: "assets/lectures/week4/lex6.pdf"
     - title: "LEX7: DFA Complexity"
