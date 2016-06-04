@@ -246,3 +246,219 @@ Check your solution accuracy using the Python program `check.py`. You must creat
 
     python check.py 
 
+### Matching a Right Context
+
+Lex can match a _right context_ while matching a regexp by using
+the notation $$r_1/r_2$$ where the regexp $$r_1$$ will match only if
+the right context matches the regexp $$r_2$$. The longest match
+is computed using $$r_1$$ and $$r_2$$ concatenated together. The
+lexeme reported is the match for $$r_1$$.
+
+For example, consider the following lex program.
+
+    %%
+    a+/b  { printf("T_AB:%s\n", yytext); }
+    a+/c  { printf("T_AC:%s\n", yytext); }
+    b     { printf("T_B:%s\n", yytext); }
+    c     { printf("T_C:%s\n", yytext); }
+    .|\n  ECHO;
+
+Here is how it behaves for a few inputs:
+
+    On input: ab
+    T_AB:a
+    T_B:b
+
+    On input: ac
+    T_AC:a
+    T_C:c
+
+    On input: abc
+    T_AB:a
+    T_B:b
+    T_C:c
+
+Read the following lex program:
+
+    %%
+    a*b+/c+  { printf("T_AB:%s\n", yytext); }
+    a*b*c/a  { printf("T_ABC:%s\n", yytext); }
+    a        { printf("T_A:%s\n", yytext); }
+    c+       { printf("T_C:%s\n", yytext); }
+    .|\n  ECHO;
+
+Predict what it will print out for the input string `abcca`.
+
+### Matching a Left Context
+
+Lex can also match the _left context_ with the use of _states_. 
+The lex program below matches keyword called `inputfile` as the left context
+so that a string following this keyword is treated differently from one that does not.
+
+    %{
+    /* example illustrating the use of states in lex 
+       declare a state called INPUT using: %s INPUT
+       enter a state using: BEGIN INPUT
+       match a token only if in a certain state: <INPUT>\".*\"
+    */
+    %}
+
+    %s INPUT
+
+    %%
+
+    [ \t\n]+                ;
+    inputfile       BEGIN INPUT;
+    <INPUT>\".*\"   { BEGIN 0; ECHO; printf(" is the input file.\n"); }
+    \".*\"          { ECHO; printf("\n"); }
+    .                ;
+
+    %%
+
+Modify the lex program to include a new left context for the keyword 
+`outputfile` so that for the input:
+
+    inputfile "fileA"
+    outputfile "fileB"
+
+Your program produces the output:
+
+    "fileA" is the input file.
+    "fileB" is the output file.
+
+<!--
+#### Answer
+
+    %s INPUT
+    %s OUTPUT
+
+    %%
+
+    [ \t\n]+                ;
+    inputfile       BEGIN INPUT;
+    outputfile      BEGIN OUTPUT;
+    <INPUT>\".*\"   { BEGIN 0; ECHO; printf(" is the input file.\n"); }
+    <OUTPUT>\".*\"  { BEGIN 0; ECHO; printf(" is the output file.\n"); }
+
+    %%
+-->
+
+### Backtracking in Lex
+
+Lex can be forced to perform backtracking regexp matching using the REJECT command.
+For instance, this lex program does a match, does the action, and then resets back to
+the start of the match. 
+
+    %{
+    int numpat1, numpat2;
+    %}
+
+    %%
+    a+     { numpat1++; REJECT; }
+    a*b?   { numpat2++; REJECT; }
+    .|\n   /* do nothing */
+    %%
+
+    int main () {
+      yylex();
+      printf("pattern a+: %d -- pattern a*b?: %d\n", numpat1, numpat2);
+      exit(0);
+    }
+
+On input `aaa` the lex program above will produce the output:
+
+    pattern a+: 6 -- pattern a*b?: 6
+
+This is because there are $$\frac{n(n+1)}{2}$$ substrings for a string of length $$n$$.
+Predict the number of pattern matches for the following inputs, and check by running
+the lex program.
+
+    aaa
+    aa
+    ab
+
+### Counting with Lex
+
+Provide a lex program that reports the frequency of each pair of
+words in a text file. Each word is a sequence of non-whitespace
+characters separated by one or more whitespace characters (space
+and tab). The lex program below shows you how to use C++ in your
+lex program. However it does not compute the frequency of each
+pair of words correctly.
+
+    %{
+
+    #include <iostream>
+    #include <sstream>
+    #include <utility>
+    #include <string>
+    #include <map>
+    #include <iterator>
+    #include <vector>
+    #include <algorithm>
+    #include <cstdlib>
+
+    using namespace std;
+
+    typedef pair<string, string> bigram_type;
+    typedef map<bigram_type, int>::iterator dict_iter;
+
+    map<bigram_type, int> dict;
+
+    void
+    addtodict(char *yytext) {
+      string s(yytext);
+      istringstream sin(s);
+      vector<string> tokens;
+      copy(istream_iterator<string>(sin), istream_iterator<string>(), back_inserter(tokens));
+      bigram_type key(tokens[0], tokens[1]);
+      dict_iter find_bigram; 
+      if ((find_bigram = dict.find(key)) != dict.end()) {
+        dict[key] = dict[key] + 1;
+      } else {
+        dict[key] = 1;
+      }
+    }
+
+    %}
+
+    ws [ \t\n]*
+    notws [^ \t\n]+
+
+    %%
+
+    ^{notws}{ws}{notws}{ws}     { addtodict(yytext); }
+    {ws}{notws}{ws}{notws}{ws}  { addtodict(yytext); }
+    .|\n                        /* do nothing */
+
+    %%
+
+    int main () {
+      yylex();
+      for (dict_iter i = dict.begin(); i != dict.end(); i++) {
+        cout << (i->first).first << " " << (i->first).second << " " << i->second << endl;
+      }
+      exit(EXIT_SUCCESS);
+    }
+
+On the input string `the cat on the mat saw the cat on the cat box on the mat spit` the lex program above prints out:
+
+    cat box 1
+    mat saw 1
+    mat spit 1
+    on the 3
+    the cat 2
+
+The right output should be:
+
+    box on 1
+    cat box 1
+    cat on 2
+    mat saw 1
+    mat spit 1
+    on the 3
+    saw the 1
+    the cat 3
+    the mat 2
+
+
