@@ -29,23 +29,43 @@ active_tab: syllabus
                 {% else %}
                 <div id="{{ week.tag }}" class="panel-collapse collapse">
                 {% endif %}
-                    <div class="well">
-                        <div class="panel panel-default">
+                <div class="panel panel-default">
+                      <div class="panel-heading">
+                        <h3 class="panel-title">Lecture notes</h3>
+                      </div>
+                      <ul class="list-group">
+                      {% for notes in week.notes %}
+                        <li class="list-group-item"> <a href="{{ notes.url }}">{{ notes.title }}</a>
+                            {%if notes.video %}
+                                <a href="{{ notes.video }}"><span class="glyphicon glyphicon-film"></span></a>
+                            {% endif %}
+                            {%if notes.presenter %}
+                                <a href="{{ notes.presenter }}"><span class="glyphicon glyphicon-play-circle"></span></a>
+                            {% endif %}
+                        </li>
+                      {% endfor %}
+                      </ul>
+                      {%if week.extra %}
                           <div class="panel-heading">
-                            <h3 class="panel-title">Lecture notes</h3>
+                            <h3 class="panel-title">Extra Notes</h3>
                           </div>
                           <ul class="list-group">
-                          {% for notes in week.notes %}
-                            <li class="list-group-item"> <a href="{{ notes.url }}">{{ notes.title }}</a>
-                                {%if notes.video %}
-                                    <a href="{{ notes.video }}"><span class="glyphicon glyphicon-film"></span></a>
+                          {% for link in week.extra %}
+                            <li class="list-group-item"> <a href="{{ link.url }}">{{ link.title }}</a>.
+                                {%if link.author %}
+                                    {{ link.author }}.
                                 {% endif %}
-                                {%if notes.presenter %}
-                                    <a href="{{ notes.presenter }}"><span class="glyphicon glyphicon-play-circle"></span></a>
+                                {%if link.citation %}
+                                    {{ link.citation }}.
+                                {% endif %}
+                                {%if link.video %}
+                                    <a href="{{ link.video }}"><span class="glyphicon glyphicon-film"></span></a>
                                 {% endif %}
                             </li>
                           {% endfor %}
                           </ul>
+                      {% endif %}
+                      {%if week.links %}
                           <div class="panel-heading">
                             <h3 class="panel-title">Links</h3>
                           </div>
@@ -64,8 +84,8 @@ active_tab: syllabus
                             </li>
                           {% endfor %}
                           </ul>
-                        </div>
-                    </div>
+                      {% endif %}
+                </div>
                 </div>
             </div>
         {% endfor %}
