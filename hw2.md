@@ -35,12 +35,6 @@ where you cloned the repository earlier and then doing:
 
 To get started with your homework do the following steps.
 
-### Set up your repository
-
-Follow these [instructions to set up your repository on GitLab](https://courses.cs.sfu.ca/2016sp-cmpt-470-e1/pages/GitLab)
-
-In the above instructions, change the values of instructor and TA to `anoop` and `msiahban`.
-
 ### Copy over files to your repository
 
 Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
@@ -76,6 +70,10 @@ The details of the structure of Decaf programs is given in the Decaf specificati
 Read the specification carefully before you attempt to write any code to solve
 this homework.
 
+## Getting Started
+
+Do the [YACC practice problems](YACC-practice.html) to get ready for this assignment.
+
 ## Your Task
 
 Using the [Decaf language specification](decafspec.html) as your guide, 
@@ -87,7 +85,6 @@ Remember to push your solution source code to GitLab or other private repository
     git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
     git commit -m 'initial solution'
     git push
-
 
 An abstract syntax tree (AST) is a high-level representation of the
 program structure without the necessity of containing all the details
