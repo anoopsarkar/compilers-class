@@ -361,9 +361,11 @@ A string type represents the set of string values. A string value is a (possibly
 
 ### Array types
 
-Decaf has integer and boolean arrays. However, arrays are declared only in the global (package declaration) scope as part of the field declarations (see FieldDecl). All arrays are one-dimensional and have a size that is fixed at compile-time. Arrays are indexed from 0 to n − 1, where n &gt; 0 is the size of the array. The usual bracket notation is used to index arrays. Since arrays have a compile-time fixed size and cannot be declared as method parameters (or local variables), there is no facility to query the length of an array variable in Decaf. Arrays must be initialized to all zeroes at declaration time.
+Decaf has integer and boolean arrays. However, arrays are declared only in the global (package declaration) scope as part of the field declarations (see FieldDecl). 
 
-    ArrayDecl = identifier "[" int_lit "]" .
+    ArrayType = "[" int_lit "]" Type .
+
+All arrays are one-dimensional and have a size that is fixed at compile-time. Arrays are indexed from 0 to n − 1, where n &gt; 0 is the size of the array. The usual bracket notation is used to index arrays. Since arrays have a compile-time fixed size and cannot be declared as method parameters (or local variables), there is no facility to query the length of an array variable in Decaf. Arrays must be initialized to all zeroes at declaration time.  
 
 Constants
 ---------
@@ -395,12 +397,17 @@ A Decaf program can access external function that are linked, such as the Decaf 
 Decaf has global variables with scope limited to their package that appear before any method declarations. Global variables in Decaf are called *field declarations*. They can be simple declarations without initialization (assumed to be zero initialized by the compiler) or non-array variables can be declared with an assignment to a constant (see Constants section). Variables are always defined using the `var` reserved word.
 
     FieldDecls = { FieldDecl } .
-    FieldDecl  = var { identifier | ArrayDecl }+, Type ";" 
+    FieldDecl  = var { identifier }+, Type ";" 
+    FieldDecl  = var { identifier }+, ArrayType ";" 
     FieldDecl  = var identifier Type "=" Constant ";" .
 
 The assignment to an identifier has to be a constant:
 
     package foo { var a int; var b int = a; } // Invalid!
+
+The following is an example of an array field declaration. Notice the array type has the length before the type of the elements of the array.
+
+    package foo { var list [100]int; } // Array declaration
 
 ### Method declarations
 
@@ -435,6 +442,8 @@ Statements in Decaf consist of variable assignment, method calls, syntax for var
     Statement = Block .
 
 #### Assign statement
+
+Assignment to an `Lvalue` is a statement in `Decaf`. The location for the `Lvalue` can be either a scalar variable or an array location.
 
     Statement = Assign ";" .
     Assign    = Lvalue "=" Expr .
@@ -557,24 +566,25 @@ In this expression, the `identifier` must be an Array Type (see section on Array
 ### Decaf grammar
 
     Program = Externs package identifier "{" FieldDecls MethodDecls "}" .
-    Externs    = { ExternDefn } .
+    Externs = { ExternDefn } .
     ExternDefn = extern func identifier "(" [ { ExternType }+, ] ")" MethodType ";" .
     FieldDecls = { FieldDecl } .
-    FieldDecl  = var { identifier | ArrayDecl }+, Type ";" 
-    FieldDecl  = var identifier Type "=" Constant ";" .
-    ArrayDecl = identifier "[" int_lit "]" .
+    FieldDecl = var { identifier }+, Type ";" 
+    FieldDecl = var { identifier }+, ArrayType ";" 
+    FieldDecl = var identifier Type "=" Constant ";" .
+    ArrayType = "[" int_lit "]" Type .
     MethodDecls = { MethodDecl } .
-    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
+    MethodDecl = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
     Block = "{" VarDecls Statements "}" .
     VarDecls = { VarDecl } .
-    VarDecl  = var { identifier }+, Type ";" .
+    VarDecl = var { identifier }+, Type ";" .
     Statement = Block .
     Statement = Assign ";" .
-    Assign    = Lvalue "=" Expr .
-    Lvalue    = identifier | identifier "[" Expr "]" .
-    Statement  = MethodCall ";" .
+    Assign = Lvalue "=" Expr .
+    Lvalue = identifier | identifier "[" Expr "]" .
+    Statement = MethodCall ";" .
     MethodCall = identifier "(" [ { MethodArg }+, ] ")" .
-    MethodArg  = Expr | string_lit .
+    MethodArg = Expr | string_lit .
     Statement = if "(" Expr ")" Block [ else Block ] .
     Statement =  while "(" Expr ")" Block .
     Statement = for "(" { Assign }+, ";" Expr ";" { Assign }+, ")" Block .
