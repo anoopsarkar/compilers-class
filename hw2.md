@@ -66,12 +66,6 @@ binary as follows:
     cd your-repo-name/answer
     make default
 
-Remember to push your solution source code to GitLab:
-
-    git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
-    git commit -m 'initial solution'
-    git push
-
 ## The Challenge
 
 The goal of this homework is to write a parser for the Decaf programming language.
@@ -87,6 +81,13 @@ this homework.
 Using the [Decaf language specification](decafspec.html) as your guide, 
 provide a parser for the Decaf language that produces an abstract
 syntax tree for valid Decaf programs.
+
+Remember to push your solution source code to GitLab or other private repository:
+
+    git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
+    git commit -m 'initial solution'
+    git push
+
 
 An abstract syntax tree (AST) is a high-level representation of the
 program structure without the necessity of containing all the details
@@ -195,6 +196,7 @@ If you run `zipout.py` multiple times it will overwrite your output directory an
 
 Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file using the above step in _Run your solution on testcases_.
 
+You can use the default program provided to get an initial solution to this homework. Run `python zipout.py -r default` to get a `source.zip` file you can score.
 
     python check.py 
     Correct(dev): 39 / 124
