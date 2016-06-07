@@ -397,8 +397,8 @@ A Decaf program can access external function that are linked, such as the Decaf 
 Decaf has global variables with scope limited to their package that appear before any method declarations. Global variables in Decaf are called *field declarations*. They can be simple declarations without initialization (assumed to be zero initialized by the compiler) or non-array variables can be declared with an assignment to a constant (see Constants section). Variables are always defined using the `var` reserved word.
 
     FieldDecls = { FieldDecl } .
-    FieldDecl  = var { identifier }+, Type ";" 
-    FieldDecl  = var { identifier }+, ArrayType ";" 
+    FieldDecl  = var { identifier }+, Type ";" .
+    FieldDecl  = var { identifier }+, ArrayType ";" .
     FieldDecl  = var identifier Type "=" Constant ";" .
 
 The assignment to an identifier has to be a constant:
@@ -414,7 +414,7 @@ The following is an example of an array field declaration. Notice the array type
 Functions or methods in Decaf start with the reserved word `func`, then the name of the method and in parentheses is the argument list followed by the return type of the method.
 
     MethodDecls = { MethodDecl } .
-    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block .
 
 The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` has to be type `int`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined.
 
@@ -511,8 +511,8 @@ Expressions
 
 Operands are the elementary values in an expression.
 
-    Expr = identifier
-    Expr = MethodCall 
+    Expr = identifier .
+    Expr = MethodCall .
     Expr = Constant .
 
 ### Unary Operators
@@ -531,7 +531,7 @@ Binary operators are split into boolean binary operators and arithmetic binary o
     ArithmeticOperator = ( "+" | "-" | "*" | "/" | "<<" | ">>" | "%" ) .
     BooleanOperator = ( "==" | "!=" | "<" | "<=" | ">" | ">=" | "&&" | "||" ) .
 
-The boolean connectives `&&` and `||` are interpreted using <a href="http://en.wikipedia.org/wiki/Short-circuit_evaluation">short circuit evaluation</a>. This means: the second operand is not evaluated if the result of the first operand determines the value of the whole expression. For example, if the result is `false` for `&&` or `true` for `||`.
+The boolean connectives `&&` and `||` are interpreted using [short circuit evaluation](http://en.wikipedia.org/wiki/Short-circuit_evaluation). This means: the second operand is not evaluated if the result of the first operand determines the value of the whole expression. For example, if the result is `false` for `&&` or `true` for `||`.
 
 Binary `%` computes the modulus of two numbers. Given two operands of type `int`, `a` and `b`: If `b` is positive, then `a % b` is a minus the largest multiple of `b` that is not greater than `a`. If `b` is negative, then `a % b` is `a` minus the smallest multiple of `b` that is not less than `a` (in this case the result will be less than or equal to zero).
 
@@ -553,8 +553,8 @@ Unary operators have the highest precedence. For the other binary operators the 
 
 Primary expressions build larger expressions from operands, operators and parentheses. The parentheses are used to group expressions to obtain different orders of evaluation. Parentheses can be omitted if the desired evaluation is consistent with the precedence rules (see the Operators and Precedence section). The type of the `Expr` on the left hand side is determined by the `Expr` on the right hand side and the operator used.
 
-    Expr = Expr BinaryOperator Expr
-    Expr = UnaryOperator Expr
+    Expr = Expr BinaryOperator Expr .
+    Expr = UnaryOperator Expr .
     Expr = "(" Expr ")" .
 
 ### Index expression
@@ -565,34 +565,37 @@ In this expression, the `identifier` must be an Array Type (see section on Array
 
 ### Decaf grammar
 
+The entire set of rules that describe the `Decaf` grammar specification
+is collected in one place below. For explanation of each of the
+rules read the descriptions provided in the above sections.
+
     Program = Externs package identifier "{" FieldDecls MethodDecls "}" .
-    Externs = { ExternDefn } .
+    Externs    = { ExternDefn } .
     ExternDefn = extern func identifier "(" [ { ExternType }+, ] ")" MethodType ";" .
     FieldDecls = { FieldDecl } .
-    FieldDecl = var { identifier }+, Type ";" 
-    FieldDecl = var { identifier }+, ArrayType ";" 
-    FieldDecl = var identifier Type "=" Constant ";" .
-    ArrayType = "[" int_lit "]" Type .
+    FieldDecl  = var { identifier }+, Type ";" .
+    FieldDecl  = var { identifier }+, ArrayType ";" .
+    FieldDecl  = var identifier Type "=" Constant ";" .
     MethodDecls = { MethodDecl } .
-    MethodDecl = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block
+    MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block .
     Block = "{" VarDecls Statements "}" .
     VarDecls = { VarDecl } .
-    VarDecl = var { identifier }+, Type ";" .
+    VarDecl  = var { identifier }+, Type ";" .
     Statement = Block .
     Statement = Assign ";" .
-    Assign = Lvalue "=" Expr .
-    Lvalue = identifier | identifier "[" Expr "]" .
-    Statement = MethodCall ";" .
+    Assign    = Lvalue "=" Expr .
+    Lvalue    = identifier | identifier "[" Expr "]" .
+    Statement  = MethodCall ";" .
     MethodCall = identifier "(" [ { MethodArg }+, ] ")" .
-    MethodArg = Expr | string_lit .
+    MethodArg  = Expr | string_lit .
     Statement = if "(" Expr ")" Block [ else Block ] .
     Statement =  while "(" Expr ")" Block .
     Statement = for "(" { Assign }+, ";" Expr ";" { Assign }+, ")" Block .
     Statement = return [ "(" [ Expr ] ")" ] ";" .
     Statement = break ";" .
     Statement = continue ";" .
-    Expr = identifier
-    Expr = MethodCall 
+    Expr = identifier .
+    Expr = MethodCall .
     Expr = Constant .
     UnaryOperator = ( UnaryNot | UnaryMinus ) .
     UnaryNot = "!" .
@@ -600,10 +603,16 @@ In this expression, the `identifier` must be an Array Type (see section on Array
     BinaryOperator = ( ArithmeticOperator | BooleanOperator ) .
     ArithmeticOperator = ( "+" | "-" | "*" | "/" | "<<" | ">>" | "%" ) .
     BooleanOperator = ( "==" | "!=" | "<" | "<=" | ">" | ">=" | "&&" | "||" ) .
-    Expr = Expr BinaryOperator Expr
-    Expr = UnaryOperator Expr
+    Expr = Expr BinaryOperator Expr .
+    Expr = UnaryOperator Expr .
     Expr = "(" Expr ")" .
     Expr = identifier "[" Expr "]" .
+    ExternType = ( string | MethodType ) .
+    MethodType = ( void | Type ) .
+    Type = ( int | bool ) .
+    BoolConstant = ( true | false ) .
+    ArrayType = "[" int_lit "]" Type .
+    Constant = ( int_lit | char_lit | BoolConstant ) .
 
 Decaf Semantics
 ---------------
