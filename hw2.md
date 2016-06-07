@@ -1,9 +1,9 @@
 ---
 layout: default
-img: kenthompson
-img_link: "https://en.wikipedia.org/wiki/Ken_Thompson"
-caption: "Ken Thompson (sitting) with Dennis Ritchie. Ken Thompson wrote a 1968 journal paper on his regexp implementation for the QED editor which he wrote in assembly language on an IBM 7094 running the CTSS OS."
-title: Homework | Lexer
+img: sexpr
+img_link: "https://en.wikipedia.org/wiki/S-expression"
+caption: "In Lisp and programming languages related to it, s-expressions are used to represent both source code and data."
+title: Homework | Parser
 active_tab: homework
 ---
 
