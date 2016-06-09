@@ -1,2 +1,6 @@
 _site/
 .DS_Store
+*.tab.h 
+*.tab.c 
+*.lex.c
+*.pyc
