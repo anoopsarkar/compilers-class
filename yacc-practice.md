@@ -197,4 +197,54 @@ below:
 
     %%
 
+### Writing a Decaf Program
+
+Read the [Decaf specification](decafspec.html) and write a Decaf
+program that implements the quicksort algorithm to sort a list.
+Create an array variable `list` with 100 elements. Then initialize
+it using the following Decaf loop:
+
+    void initList() {
+        int i;
+        for (i = 0; i < 100; i = i + 1) {
+            list[i] = (i * 2382983) % 100;
+        }   
+    }   
+
+Sort this list using quicksort and then print the sorted list by
+iteratively calling the `print_int` library function in the format
+shown in the Homework 2 `testcases` directory.
+
+### Expression interpreter
+
+Write down a yacc parser for the following context-free grammar:
+
+    e -> e PLUS t
+    e -> t
+    t -> t TIMES f
+    t -> f
+    f -> LPAREN e RPAREN 
+    f -> ID
+
+The tokens `PLUS, TIMES, LPAREN, RPAREN` are defined to be `+`, `*`, `(`, `)` respectively.
+And the token ID is defined to be an identifier as in the [Decaf specification](decafspec.html).
+These tokens should be defined using a lexical analyzer produced using lex.
+
+For the input string `x + y * ( z )` the output produced by the
+yacc parser should be the parse tree for the input string in the
+format shown below. The tree below is indented but you should simply
+print your parse tree as a single line of output text.
+
+    (e (e (t (f (ID x))))
+       (PLUS +)
+       (t (t (f (ID y)))
+          (TIMES *)
+          (f (LPAREN \()
+             (e (t (f (ID z))))
+             (RPAREN \)))))
+
+Note the backslash preceding each instance of a literal parenthesis
+to avoid confusion with the parentheses used to denote the tree
+structure.  You may need to augment the grammar to produce the right
+output.
 
