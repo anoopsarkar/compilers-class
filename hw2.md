@@ -111,7 +111,7 @@ elements seperated by commas, or None for the zero element.
 
         method_type = VoidType | decaf_type
 
-        extern_type  = StringType | decaf_type
+        extern_type  = VarDef(StringType) | VarDef(decaf_type)
 
         package = Package(identifier name, field_decl* field_list, method_decl* method_list)
 
