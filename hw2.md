@@ -92,7 +92,7 @@ in the source code; it can be thought of as an abstract representation
 of the source code.
 
 The specification for the abstract syntax tree to be produced by your program is 
-given below using the [Zehpyr Abstract Syntax Definition Language][1] (ASDL).
+given below using the [Zehpyr Abstract Syntax Definition Language][^1] (ASDL).
 
 Modifiers on the argument type specify the number of values
 needed; `?` means it is optional, `*` means 0 or more, no modifier
