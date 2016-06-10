@@ -3,8 +3,8 @@ layout: default
 img: green_dragon_book
 img_link: "https://en.wikipedia.org/wiki/Principles_of_Compiler_Design"
 caption: "Principles of Compiler Design, by Alfred Aho and Jeffrey Ullman, published in 1977, is the classic textbook on compilers."
-title: Syllabus
-active_tab: syllabus
+title: Yacc Practice
+active_tab: practice
 ---
 
 ## Parsing using Context-free Grammars and Yacc/Bison: Practice Problems 
@@ -152,7 +152,7 @@ Extend this code in two ways:
 * First, add the ability to process multiple statements so that the following works:
     echo "a=10\nb=10" | ./simple-varexpr
 * Second, properly handle assignments of values to variables. The
-variable on the left hand side of an equation will be an _l-value_
+variable on the left hand side of an equation will be an $$\ell$$_-value_
 and the variable used on the right hand side of an equation will
 be a _r-value_.
 
