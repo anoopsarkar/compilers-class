@@ -7,7 +7,7 @@ title: Yacc Practice
 active_tab: practice
 ---
 
-## Parsing using Context-free Grammars and Yacc/Bison: Practice Problems 
+## Parsing with Yacc/Bison: Practice Problems 
 
 ### Single Expression Interpreter
 

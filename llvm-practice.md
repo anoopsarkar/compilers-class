@@ -7,5 +7,5 @@ title: LLVM Practice
 active_tab: practice
 ---
 
-## LLVM: Practice
+## Code Generation with LLVM: Practice Problems
 
