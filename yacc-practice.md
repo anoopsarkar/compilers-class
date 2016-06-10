@@ -9,7 +9,7 @@ active_tab: practice
 
 ## Parsing with Yacc/Bison: Practice Problems 
 
-### Single Expression Interpreter
+### Simple Expression Interpreter
 
 The yacc program below is a very simple (and incomplete) 
 expression interpreter. The `{ ... }` section contains arbitrary C/C++ code and the 
@@ -155,4 +155,46 @@ Extend this code in two ways:
 variable on the left hand side of an equation will be an $$\ell$$_-value_
 and the variable used on the right hand side of an equation will
 be a _r-value_.
+
+### Adding Functions to your Expression Interpreter
+
+Extend your expression interpreter to include constants of type `double`,
+and variables that can hold either integer or double types. Finally, add 
+the functions: `exp`, `sqrt`, `log` so that you can interpret
+the following types of input:
+
+    a = 2.0
+    b = exp(a)
+    b
+
+To avoid issues with precedence of operators use the yacc grammar provided
+below:
+
+    %token T_DOUBLE T_NUMBER T_NAME T_EXP T_SQRT T_LOG
+
+    %%
+    statement_list : statement '\n' statement_list
+       |
+       ;
+
+    statement: T_NAME '=' expression
+       | expression
+       ;
+
+    expression: expression '+' T_NUMBER
+       | expression '-' T_NUMBER
+       | expression '+' T_DOUBLE
+       | expression '-' T_DOUBLE
+       | expression '+' T_NAME 
+       | expression '-' T_NAME 
+       | T_NUMBER
+       | T_DOUBLE
+       | T_NAME 
+       | T_EXP '(' expression ')'
+       | T_SQRT '(' expression ')'
+       | T_LOG '(' expression ')'
+       ;
+
+    %%
+
 
