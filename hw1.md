@@ -15,6 +15,16 @@ Your task for this homework is to write a lexical analyzer (lexer
 for short) for the [Decaf programming language](decafspec.html)
 which is the programming language specifically for this course.
 
+## Lex
+
+We will be using a lexical analyzer generator called Lex to
+do this homework. Before you start programming for this
+homework it is very important you work through the 
+[Lex practice problems](lex-practice.html) first.
+
+The programming tool is called `lex` and the implementation
+we will be using is GNU `flex`.
+
 ## Getting Started
 
 You must have git and python (2.7) on your system to run the assignments.
@@ -188,11 +198,4 @@ This will create a zip file called `source.zip`. You should upload this file as 
 * For the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
 If you have any questions or you’re confused about anything, just ask.
-
-## Appendix
-
-Practice your skills with lex before attempting to solve this homework.
-
-> [Lex practice](LEX-practice.html)
-
 

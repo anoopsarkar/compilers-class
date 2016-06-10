@@ -13,6 +13,16 @@ active_tab: homework
 
 Your task for this homework is to write a parser for the [Decaf programming language](decafspec.html).
 
+## Yacc
+
+We will be using a parser generator called Yacc to
+do this homework. Before you start programming for this
+homework it is very important you work through the 
+[Yacc practice problems](yacc-practice.html) first.
+
+The programming tool is called `yacc` and the implementation
+we will be using is GNU `bison`.
+
 ## Getting Started
 
 You must have git and python (2.7) on your system to run the assignments.
@@ -70,7 +80,7 @@ The details of the structure of Decaf programs is given in the Decaf specificati
 Read the specification carefully before you attempt to write any code to solve
 this homework.
 
-## Getting Started
+## Get used to Yacc programming
 
 Do the [YACC practice problems](YACC-practice.html) to get ready for this assignment.
 
@@ -92,7 +102,10 @@ in the source code; it can be thought of as an abstract representation
 of the source code.
 
 The specification for the abstract syntax tree to be produced by your program is 
-given below using the [Zehpyr Abstract Syntax Definition Language][^1] (ASDL).
+given below using the Zehpyr Abstract Syntax Definition Language[^1] (ASDL).
+
+[^1]: 
+    > Daniel C. Wang, Andrew W. Appel, Jeff L. Korn, and Chris S. Serra. The Zephyr Abstract Syntax Description Language. In Proceedings of the Conference on Domain-Specific Languages, pp.  213--227, 1997.
 
 Modifiers on the argument type specify the number of values
 needed; `?` means it is optional, `*` means 0 or more, no modifier
@@ -162,8 +175,6 @@ elements seperated by commas, or None for the zero element.
         unary_operator = UnaryMinus | Not
 
     }
-
-[1] Daniel C. Wang, Andrew W. Appel, Jeff L. Korn, and Chris S. Serra. The Zephyr Abstract Syntax Description Language. In Proceedings of the Conference on Domain-Specific Languages, pp.  213--227, 1997.
 
 Make sure you obey the following requirements:
 
