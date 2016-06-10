@@ -80,10 +80,6 @@ The details of the structure of Decaf programs is given in the Decaf specificati
 Read the specification carefully before you attempt to write any code to solve
 this homework.
 
-## Get used to Yacc programming
-
-Do the [YACC practice problems](YACC-practice.html) to get ready for this assignment.
-
 ## Your Task
 
 Using the [Decaf language specification](decafspec.html) as your guide, 
