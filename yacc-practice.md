@@ -147,6 +147,8 @@ nonterminals, which is specified in the `%type` definition.  This
 allows yacc to check that the type of the non-terminal expression
 is `rvalue`, an integer type.
 
+#### Your Task
+
 Extend this code in two ways:
 
 * First, add the ability to process multiple statements so that the following works:

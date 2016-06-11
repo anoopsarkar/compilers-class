@@ -145,6 +145,7 @@ elements seperated by commas, or None for the zero element.
             | ReturnStmt(expr? return_value)
             | BreakStmt
             | ContinueStmt
+            | block
 
         assign = AssignVar(identifier name, expr value)
             | AssignArrayLoc(identifier name, expr index, expr value)
