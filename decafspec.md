@@ -437,9 +437,14 @@ There is no assignment allowed for local variables:
 
 ### Statements
 
-Statements in Decaf consist of variable assignment, method calls, syntax for various kinds of control flow, special statements for breaking out of or continuing to the top of the block. Statements can also be Blocks (see section on Blocks).
+Statements in Decaf consist of variable assignment, method calls, syntax for various kinds of control flow, special statements for breaking out of or continuing to the top of the block. 
 
     Statements = { Statement } .
+
+#### Blocks statement
+
+Statements can also be Blocks (see section on Blocks).
+
     Statement = Block .
 
 #### Assign statement
@@ -582,6 +587,7 @@ rules read the descriptions provided in the above sections.
     Block = "{" VarDecls Statements "}" .
     VarDecls = { VarDecl } .
     VarDecl  = var { identifier }+, Type ";" .
+    Statements = { Statement } .
     Statement = Block .
     Statement = Assign ";" .
     Assign    = Lvalue "=" Expr .
