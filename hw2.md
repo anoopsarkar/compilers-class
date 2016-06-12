@@ -161,7 +161,7 @@ This will create a zip file called `source.zip`. You should upload this file as 
 * Each group should submit using one person as the designated uploader.
 * You must turn in two things:
     * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW1 submission page on [Coursys]({{ site.coursys }}).
+    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW2 submission page on [Coursys]({{ site.coursys }}).
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `README.md` file.
 * For the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
