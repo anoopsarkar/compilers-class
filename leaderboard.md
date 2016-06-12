@@ -26,22 +26,11 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
         <a href="hw0.html">#0</a><br/><span class="small text-muted">Setup</span>
       </th>
       <th class="text-right">
-        <a href="hw1.html">#1</a><br/><span class="small text-muted">Decaflex</span>
-      </th>
-<!--      
-      <th class="text-right">
-        <a href="hw2.html">#2</a><br/><span class="small text-muted">Chunk</span>
+        <a href="hw1.html">#1</a><br/><span class="small text-muted">Lexer</span>
       </th>
       <th class="text-right">
-        <a href="hw3.html">#3</a><br/><span class="small text-muted">Align</span>
+        <a href="hw2.html">#2</a><br/><span class="small text-muted">Parser</span>
       </th>
-      <th class="text-right">
-        <a href="hw4.html">#4</a><br/><span class="small text-muted">Decode</span>
-      </th>
-      <th class="text-right">
-        <a href="hw5.html">#5</a><br/><span class="small text-muted">Rerank</span>
-      </th>
--->
     </tr>
   </thead>
   <tbody>
@@ -49,10 +38,6 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
 </table>
 
 <script type="text/javascript" src="leaderboard-code.js"></script>
-
-<!--
-<div id="loading">Loading...</div>
--->
 
 <div class="panel panel-default"> 
 <div class="panel-heading">Legend</div> 
