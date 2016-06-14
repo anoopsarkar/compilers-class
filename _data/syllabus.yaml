@@ -121,4 +121,11 @@
       url: "assets/lectures/cfg2.pdf"
     - title: "CFG3: Push-down Automata"
       url: "assets/lectures/cfg3.pdf"
+- title: "Week 6 - Parsing 1"
+  tag: week6
+  current: true
+  notes:
+    - title: "LL: Top-down parsing"
+      url: "assets/lectures/LL.pdf"
+
 
