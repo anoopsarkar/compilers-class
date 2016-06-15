@@ -1,4 +1,4 @@
-exclude: ['README.md','assets/demos','assets/latex']
+exclude: ['README.md','assets/demos','assets/latex','assets/ppt']
 timezone: US/Pacific
 markdown: kramdown
 coursys: "https://courses.cs.sfu.ca/2016su-cmpt-379-d1/"
