@@ -48,7 +48,7 @@ To get started with your homework do the following steps.
 ### Copy over files to your repository
 
 Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
-clone your repository and enter that directory and copy over the decaflex files:
+clone your repository and enter that directory and copy over the decafast files:
 
     git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
     cd your-repo-name/decafast
@@ -116,10 +116,10 @@ You have been given three helper programs to help you develop your solution to t
 ### Run your solution on testcases
 
 Run your solution program on the testcases using the Python program `zipout.py`. 
-Your solution must be compiled in the `answer` directory and must be called `decaflex`.
+Your solution must be compiled in the `answer` directory and must be called `decafast`.
 Run against all testcases as follows:
 
-    # go to the main decaflex directory with the file zipout.py
+    # go to the main decafast directory with the file zipout.py
     python zipout.py
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
@@ -149,7 +149,7 @@ You will see your performance on test and your accuracy will be displayed on the
 
 You must also upload your source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
 
-    # go to the main decaflex directory with the file zipsrc.py
+    # go to the main decafast directory with the file zipsrc.py
     python zipsrc.py
 
 This will create a zip file called `source.zip`. You should upload this file as your submission to hw1 on [Coursys]({{ site.coursys }}).
