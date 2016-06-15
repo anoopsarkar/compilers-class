@@ -9,6 +9,25 @@ active_tab: practice
 
 ## Parsing with Yacc/Bison: Practice Problems 
 
+### Clone the repository
+
+The files below and other example programs are available in a git repository
+
+You must have git and python (2.7) on your system. Once you've confirmed this, run this command:
+
+    git clone https://github.com/anoopsarkar/compilers-class-hw.git
+
+If you have already cloned the repository earlier you can
+get the new homework files by going to the directory
+where you cloned the repository earlier and then doing:
+
+    # go to the directory where you did a git clone earlier
+    git pull origin master
+
+Then go to the `yacc-practice` directory
+
+    cd /your-path-to/compilers-class-hw/yacc-practice
+
 ### Simple Expression Interpreter
 
 The yacc program below is a very simple (and incomplete) 
@@ -206,8 +225,8 @@ program that implements the quicksort algorithm to sort a list.
 Create an array variable `list` with 100 elements. Then initialize
 it using the following Decaf loop:
 
-    void initList() {
-        int i;
+    func initList() void {
+        var i int;
         for (i = 0; i < 100; i = i + 1) {
             list[i] = (i * 2382983) % 100;
         }   
