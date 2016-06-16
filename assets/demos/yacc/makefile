@@ -3,7 +3,8 @@ yacclib=y
 bindir=.
 rm=/bin/rm -f
 mv=/bin/mv -f
-targets=simple-expr multexpr simple-varexpr varexpr notLR
+yacctargets=expr
+targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr
 cpptargets=usingcpp expr-interpreter
 
 all: $(targets) $(cpptargets)
@@ -25,8 +26,14 @@ $(cpptargets): %: %.y
 	g++ -w -o $(bindir)/$@ $@.tab.cc $@.lex.cc -l$(yacclib) -l$(lexlib)
 	$(rm) $@.tab.h $@.tab.cc $@.lex.cc
 
+$(yacctargets): %: %.y
+	bison -o$@.tab.c $<
+	gcc -w -o $(bindir)/$@ $@.tab.c -l$(yacclib)
+	$(rm) $@.tab.c
+
 clean:
-	$(rm) $(targets) $(cpptargets)
+	$(rm) $(targets) $(cpptargets) $(yacctargets)
 	$(rm) *.tab.h *.tab.c *.lex.c
+	$(rm) a.out
 	$(rm) *.pyc
 
