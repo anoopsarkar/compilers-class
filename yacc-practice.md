@@ -269,3 +269,78 @@ to avoid confusion with the parentheses used to denote the tree
 structure.  You may need to augment the grammar to produce the right
 output.
 
+### Marking Precedence and Associativity in Yacc
+
+Use the following expression grammar in Yacc:
+
+    %{
+    #include <stdio.h>
+    #include <ctype.h>
+    %}
+
+    %token ID
+
+    %%
+
+    top: e ';' { printf("\n"); }
+
+    e: e '+' e { printf("+"); }
+     | e '-' e { printf("-"); }
+     | e '*' e { printf("*"); }
+     | e '/' e { printf("/"); }
+     | '(' e ')'
+     | ID  { printf("%c", $1); }
+     | '-' e { printf("-"); } 
+     ;
+
+    %%
+
+    yylex() {
+        int c=getchar();
+        while ((c == ' ') || (c == '\n') || (c == '\t')) {
+            /* skip whitespace */  
+            c = getchar();
+        }
+        if (islower(c)) {
+            yylval = c;
+            return(ID);
+        }
+        return(c);
+    }
+
+If you run it through `bison` you will get shift/reduce conflicts:
+
+    $ bison expr-conflicts.y 
+    expr-conflicts.y: conflicts: 20 shift/reduce
+
+Add precedence declarations just below the `%token` line in the
+yacc program. Precedence is added using the `%left` or `%right`
+associativity declaration for tokens. The precedence is marked
+by having a list of such declarations with the highest precedence
+token appearing at the bottom of the list. So if we wish `*` to
+have higher precedence than `-` we would write:
+
+    %left '-'
+    %left '*'
+
+Two tokens can be declared with the same precedence and left
+associativity by declaring them on the same line:
+
+    %left '+' '-'
+
+However, this does not solve the problem of the unary minus
+production. Unary minus should have a precedence higher than
+multiplication or division. To mark this we have to add a
+precedence annotation on the rule itself:
+
+    e: '-' e %prec UMINUS
+
+Then we can add this to our list of precedence  
+
+    %left '-'
+    %left '*'
+    %left UMINUS
+
+Modify the yacc program above to eliminate all shift/reduce conflicts
+using precedence and associativity declarations in yacc.
+
