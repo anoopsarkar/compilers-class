@@ -276,13 +276,14 @@ Use the following expression grammar in Yacc:
     %{
     #include <stdio.h>
     #include <ctype.h>
+    #include <stdlib.h>
     %}
 
     %token ID
 
     %%
 
-    top: e ';' { printf("\n"); }
+    top: e ';' { printf("\n"); exit(EXIT_SUCCESS); }
 
     e: e '+' e { printf("+"); }
      | e '-' e { printf("-"); }
