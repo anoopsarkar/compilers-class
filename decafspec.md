@@ -339,9 +339,9 @@ Types
 
 Decaf has four types: void, booleans, integers and strings. String types, however, can only be used with extern functions. Void types are for return types of functions only (called MethodType below) and not used in variable declarations.
 
-    ExternType = ( string | MethodType ) .
-    MethodType = ( void | Type ) .
+    ExternType = ( string | Type ) .
     Type = ( int | bool ) .
+    MethodType = ( void | Type ) .
 
 Decaf also has a limited *array type* for arrays of integers and booleans.
 
@@ -614,9 +614,9 @@ rules read the descriptions provided in the above sections.
     Expr = UnaryOperator Expr .
     Expr = "(" Expr ")" .
     Expr = identifier "[" Expr "]" .
-    ExternType = ( string | MethodType ) .
-    MethodType = ( void | Type ) .
+    ExternType = ( string | Type ) .
     Type = ( int | bool ) .
+    MethodType = ( void | Type ) .
     BoolConstant = ( true | false ) .
     ArrayType = "[" int_lit "]" Type .
     Constant = ( int_lit | char_lit | BoolConstant ) .

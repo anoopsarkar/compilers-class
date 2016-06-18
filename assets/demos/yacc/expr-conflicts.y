@@ -6,6 +6,10 @@
 
 %token ID
 
+%left '+' '-'
+%left '*' '/'
+%left UMINUS
+
 %%
 
 top: e ';' { printf("\n"); exit(EXIT_SUCCESS); }
@@ -16,7 +20,7 @@ e: e '+' e { printf("+"); }
  | e '/' e { printf("/"); }
  | '(' e ')'
  | ID  { printf("%c", $1); }
- | '-' e { printf("-"); } 
+ | '-' e %prec UMINUS { printf("-"); } 
  ;
 
 %%

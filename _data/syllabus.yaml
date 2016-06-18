@@ -89,7 +89,7 @@
       url: "http://portal.acm.org/citation.cfm?id=359175&coll=portal&dl=ACM&CFID=15540343&CFTOKEN=40038079"
     - title: "Regexp Simplifier"
       url: "http://ivanzuzak.info/noam/webapps/regex_simplifier/" 
-- title: "Week 4 - Lexical Analysis 3 and Context-Free Grammars 1"
+- title: "Week 4 - Lexical Analysis 3"
   tag: week4
   current: false
   notes:
@@ -101,8 +101,6 @@
       url: "assets/lectures/lex7.pdf"
     - title: "LEX8: Lexical Analyzer"
       url: "assets/lectures/lex8.pdf"
-    - title: "CFG1: Introduction"
-      url: "assets/lectures/cfg1.pdf"
   extra:
     - title: "LEX9: Implementing DFAs"
       url: "assets/lectures/lex9.pdf"
@@ -113,10 +111,12 @@
       author: "D. Bartoli and M. De Lorenzo and S. Medvet"
       citation: "IEEE Computer, 2014"
       url: "http://regex.inginf.units.it/"
-- title: "Week 5 - Context-Free Grammars 2"
+- title: "Week 5 - Context-Free Grammars"
   tag: week5
   current: true
   notes:
+    - title: "CFG1: Introduction"
+      url: "assets/lectures/cfg1.pdf"
     - title: "CFG2: Ambiguity"
       url: "assets/lectures/cfg2.pdf"
     - title: "CFG3: Push-down Automata"
