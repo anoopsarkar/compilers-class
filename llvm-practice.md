@@ -318,4 +318,6 @@ the location of the variables. Also, use the LLVM `alloca`
 instruction to create storage on the stack for the variables
 in our simple programming language.
 
+Once you have LLVM assembly output you can execute it
+on your machine using the commands in `run-llvm-code.sh`.
 
