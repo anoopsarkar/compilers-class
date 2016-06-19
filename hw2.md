@@ -48,7 +48,7 @@ To get started with your homework do the following steps.
 ### Copy over files to your repository
 
 Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
-clone your repository and enter that directory and copy over the decafast files:
+clone your repository and enter that directory and copy over the files:
 
     git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
     cd your-repo-name/decafast
@@ -63,7 +63,7 @@ in the `answer` directory.
 
 ### Default solution
 
-Your solution to this homework must be called `decafast.y` and `decafast.lex` in the `answer` directory.
+Your solution must be compiled in the `answer` directory and must be called `decafast`.
 There is an incomplete solution to this homework in `answer/default.lex`.  You can create the `default`
 binary as follows:
 
@@ -86,7 +86,7 @@ Using the [Decaf language specification](decafspec.html) as your guide,
 provide a parser for the Decaf language that produces an abstract
 syntax tree for valid Decaf programs.
 
-Remember to push your solution source code to GitLab or other private repository:
+Remember to push your solution source code to your repository:
 
     cd answer
     git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
@@ -119,7 +119,7 @@ Run your solution program on the testcases using the Python program `zipout.py`.
 Your solution must be compiled in the `answer` directory and must be called `decafast`.
 Run against all testcases as follows:
 
-    # go to the main decafast directory with the file zipout.py
+    # go to the directory with the file zipout.py
     python zipout.py
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
@@ -149,7 +149,7 @@ You will see your performance on test and your accuracy will be displayed on the
 
 You must also upload your source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
 
-    # go to the main decafast directory with the file zipsrc.py
+    # go to the directory with the file zipsrc.py
     python zipsrc.py
 
 This will create a zip file called `source.zip`. You should upload this file as your submission to hw1 on [Coursys]({{ site.coursys }}).

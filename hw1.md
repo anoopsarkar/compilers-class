@@ -54,7 +54,7 @@ In the above instructions, change the values of instructor and TA to `anoop` and
 
 ### Copy over files
 
-Clone your repository and enter that directory and copy over the decaflex files:
+Clone your repository and enter that directory and copy over the files:
 
     git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
     cd your-repo-name
@@ -69,7 +69,7 @@ in the `answer` directory.
 
 ### Default solution
 
-Your solution to this homework must be called `decaflex.lex` in the `answer` directory.
+Your solution must be compiled in the `answer` directory and must be called `decaflex`.
 There is an incomplete solution to this homework in `answer/default.lex`. Copy
 it over as your initial solution:
 
@@ -77,7 +77,7 @@ it over as your initial solution:
     cp default.lex decaflex.lex
     make decaflex
 
-Remember to push your solution source code to GitLab:
+Remember to push your solution source code to your git repository:
 
     git add decaflex.lex
     git commit -m 'initial solution'
@@ -125,7 +125,7 @@ The lexical analyzer produces the following token stream:
 
 The default lexer you were provided does work for this input. Run it and see:
 
-    # go to the answer directory and build the default decaflex (see instructions above)
+    # go to the answer directory and build your binary (see instructions above)
     ./decaflex < ../testcases/dev/default-passes.decaf
 
 The full list of tokens is provided in the section List of Tokens in the [Decaf specification](decafspec.html).
@@ -153,7 +153,7 @@ Run your solution program on the testcases using the Python program `zipout.py`.
 Your solution must be compiled in the `answer` directory and must be called `decaflex`.
 Run against all testcases as follows:
 
-    # go to the main decaflex directory with the file zipout.py
+    # go to the directory with the file zipout.py
     python zipout.py
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
@@ -181,7 +181,7 @@ You will see your performance on test and your accuracy will be displayed on the
 
 You must also upload your source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
 
-    # go to the main decaflex directory with the file zipsrc.py
+    # go to the directory with the file zipsrc.py
     python zipsrc.py
 
 This will create a zip file called `source.zip`. You should upload this file as your submission to hw1 on [Coursys]({{ site.coursys }}).
