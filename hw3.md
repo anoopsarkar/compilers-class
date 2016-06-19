@@ -87,8 +87,12 @@ binary as follows:
 
 ## The Challenge
 
-The goal of this homework is to write a parser for the Decaf programming language.
-The details of the structure of Decaf programs is given in the Decaf specification:
+The goal of this homework is to write a code generator for variables,
+expressions and methods for the Decaf programming language. The
+output will be in LLVM assembly which is compiled to x86 assembly
+and then to a binary file. The first step will be to write a symbol
+table implementation for your compiler.  The structure of Decaf and
+code generation hints are given in the Decaf specification:
 
 > [Decaf specification](decafspec.html)
 
@@ -98,11 +102,26 @@ this homework.
 ## Your Task
 
 Using the [Decaf language specification](decafspec.html) as your guide, 
-provide code generator for the following fragment of Decaf that includes:
+you have two steps:
+
+### Step 1: Symbol Table
+
+Implement a symbol table that can keep track of variables and methods
+in Decaf.
+
+TODO: add details about symbol table implementation.
+
+### Step 2: Simple Code Generation 
+
+Provide code generator for the following fragment of Decaf that includes:
 
 * variable declarations (both field and method variables) 
 * expressions, and 
 * methods (both method definitions and method calls)
+
+TODO: add details about expr codegen.
+
+More details about the task is provided by examining the testcases for this homework.
 
 The output should be in LLVM assembly which can be compiled to x86
 assembly using the LLVM tools and run as a binary.
@@ -110,7 +129,7 @@ assembly using the LLVM tools and run as a binary.
 Remember to push your solution source code to GitLab or other private repository:
 
     cd answer
-    git add decafexpr.y decafexpr.lex # and any other files such as decafexpr.cc and decafexpr-defs.h
+    git add decafexpr.y decafexpr.lex # and any other files such as symboltable.cc, decafexpr.cc and decafexpr-defs.h
     git commit -m 'initial solution'
     git push
 
