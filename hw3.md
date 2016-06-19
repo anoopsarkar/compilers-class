@@ -169,8 +169,8 @@ example, let's take a single CFG rule in a yacc program:
 
     block: '{' var_decl_list statement_list '}'
 
-If we wish to create a new scope region when we scan the `}` it is
-easy to do it if the grammar is changed to the equivalent form below:
+If we wish to create a new scope region when we scan the `{` it is easier if
+the grammar is changed to the equivalent form below:
 
     block: begin_block var_decl_list statement_list end_block
     begin_block: '{'
