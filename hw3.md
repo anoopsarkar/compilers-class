@@ -126,19 +126,25 @@ More details about the task is provided by examining the testcases for this home
 The output should be in LLVM assembly which can be compiled to x86
 assembly using the LLVM tools and run as a binary.
 
-Remember to push your solution source code to GitLab or other private repository:
-
-    cd answer
-    git add decafexpr.y decafexpr.lex # and any other files such as symboltable.cc, decafexpr.cc and decafexpr-defs.h
-    git commit -m 'initial solution'
-    git push
-
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
 1. TODO: More requirements to be added.
 
 ## Development and upload procedure
+
+Remember to push your solution source code to your repository:
+
+    cd answer
+    git add decafexpr.y decafexpr.lex # and any other files you need for the solution
+    git commit -m 'initial solution'
+    git push
+
+Then each time you finish a component of your solution you can push it to the remote repository:
+
+    git add [source-file]
+    git commit -m 'commit message' [source-file]
+    git push
 
 You have been given three helper programs to help you develop your solution to this homework.
 

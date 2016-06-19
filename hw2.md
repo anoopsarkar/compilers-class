@@ -86,13 +86,6 @@ Using the [Decaf language specification](decafspec.html) as your guide,
 provide a parser for the Decaf language that produces an abstract
 syntax tree for valid Decaf programs.
 
-Remember to push your solution source code to your repository:
-
-    cd answer
-    git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
-    git commit -m 'initial solution'
-    git push
-
 An abstract syntax tree (AST) is a high-level representation of the
 program structure without the necessity of containing all the details
 in the source code; it can be thought of as an abstract representation
@@ -110,6 +103,19 @@ Make sure you obey the following requirements:
 1. Do not add whitespace in your output. This might cause issues with matching your output to the reference output.
 
 ## Development and upload procedure
+
+Remember to push your solution source code to your repository:
+
+    cd answer
+    git add decafast.y decafast.lex # and any other files such as decafast.cc and decafast-defs.h
+    git commit -m 'initial solution'
+    git push
+
+Then each time you finish a component of your solution you can push it to the remote repository:
+
+    git add [source-file]
+    git commit -m 'commit message' [source-file]
+    git push
 
 You have been given three helper programs to help you develop your solution to this homework.
 

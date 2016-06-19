@@ -77,12 +77,6 @@ it over as your initial solution:
     cp default.lex decaflex.lex
     make decaflex
 
-Remember to push your solution source code to your git repository:
-
-    git add decaflex.lex
-    git commit -m 'initial solution'
-    git push
-
 ## The Challenge
 
 The goal of this homework is to write a lexical analyzer for the Decaf programming language.
@@ -144,6 +138,18 @@ Make sure you obey the following requirements:
 1. [Provide appropriate error reporting with the line number and location in the line where the error was detected](https://gist.github.com/anoopsarkar/33ea6b0374578ec8b168860f0fdd4190).
 
 ## Development and upload procedure
+
+Remember to push your solution source code to your git repository:
+
+    git add decaflex.lex
+    git commit -m 'initial solution'
+    git push
+
+Then each time you finish a component of your solution you can push it to the remote repository:
+
+    git add decaflex.lex # or other files you worked on
+    git commit -m 'commit message' decaflex.lex # or other files you worked on
+    git push
 
 You have been given three helper programs to help you develop your solution to this homework.
 
