@@ -177,6 +177,9 @@ Implement the factorial function in LLVM assembly and print out the value of
 
 ### LLVM API for Code Generation: First Steps
 
+Before you do this practice problem, make sure you have a working symbol
+table implementation as specified in [HW3](hw3.html).
+
 The following yacc program fragment does code generation using the LLVM API.
 The full source code is available in the file `sexpr-codegen.y`. 
 
