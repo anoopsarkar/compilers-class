@@ -109,7 +109,104 @@ you have two steps:
 Implement a symbol table that can keep track of variables and methods
 in Decaf.
 
-TODO: add details about symbol table implementation.
+A symbol table is a mapping from identifiers to any information that the
+compiler needs for code generation. A symbol table is easily implemented using
+hash tables or maps, e.g. here is a declaration of a symbol table using STL in
+C++:
+
+    typedef map<string, descriptor* > symbol_table;
+
+where a _descriptor_ is a structure or class which contains useful information
+about the variable including a _type_, a _register destination_, a _memory
+address_ location, and a variable _spilled_ indicating if the value is to be
+found in a register or in memory (note that we will not use memory locations
+for variables until later). 
+
+In Decaf we are allowed to [_shadow_ a variable
+declaration](https://en.wikipedia.org/wiki/Variable_shadowing).  This means
+that a new definition for an identifier in a block will cause a new descriptor
+to be associated with the identifier, but once the block terminates the
+previous descriptor for the identifier has to be restored. A simple way to
+implement this notion of local scoping is to specify that each block can create
+a new symbol table in a list:
+
+    typedef list<symbol_table > symbol_table_list;
+    symbol_table_list symtbl;
+
+If a variable has a local definition that shadows another definition
+of the same variable name, we pick up the most recently
+defined descriptor for that variable by simply scanning the list 
+of symbol tables starting from the most recent one:
+
+    descriptor* access_symtbl(string ident) {
+        for (symbol_table_list::iterator i = symtbl.begin(); i != symtbl.end(); ++i) {
+          symbol_table::iterator find_ident;
+          if ((find_ident = i->find(ident)) != i->end())
+            return find_ident->second;
+        }
+        return NULL;
+    }
+
+This is just one way to implement a symbol table. You can implement it any way
+you like, as long as it can handle shadowing of variables.
+
+For this first step, you can assume that the identifiers are only variables,
+but for solving this homework (including Part 2) the symbol table will also
+store information about function names, global variables, etc., and additional
+information will have to be added to the descriptor.
+
+To test your symbol table implementation, use it to remember the line number of
+each variable definition and then introduce a comment line into the input Decaf
+program that specifies the line number of the variable definition for that
+identifier. 
+
+When entering a new block you should make sure to insert a new symbol table so
+that local re-definitions of a variable will shadow higher level definitions.
+In order to do this in yacc the easiest way is to add a new non-terminal that
+can be used to trigger the action you want to do: either insertion of a new
+symbol table or removal of a symbol table for an out of scope block. For
+example, let's take a single CFG rule in a yacc program:
+
+    block: '{' var_decl_list statement_list '}'
+
+If we wish to create a new scope region when we scan the `}` it is
+easy to do it if the grammar is changed to the equivalent form below:
+
+    block: begin_block var_decl_list statement_list end_block
+    begin_block: '{'
+    end_block: '}'
+
+But now `begin_block` and `end_block` can support actions such
+as creation of a new scope or removal of an old scope.
+
+Here is an example of what Step 1 should do. For input Decaf program:
+
+    extern func print_int(int) void;
+    package C {
+        func main() int {
+            var x int; 
+            x = 1;
+            print_int(x);
+        }
+    }
+
+Your program should print out the following on standard error:
+
+    defined variable: x, with type: int, on line number: 4
+
+And on standard output:
+
+    extern func print_int(int) void;
+    package C {
+        func main() int {
+            var x int; 
+            x = 1; // using decl on line: 4
+            print_int(x) // using decl on line: 4;
+        }
+    }
+
+There are some additional testcases available in the `decafsym` directory in
+the `compilers-class-hw` git repository.
 
 ### Step 2: Simple Code Generation 
 
