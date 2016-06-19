@@ -553,7 +553,7 @@ Unary operators have the highest precedence. For the other binary operators the 
 | 4          | `+ -`             |
 | 3          | `== != < <= > >=` |
 | 2          | `&&`              |
-| 1          | "||"              |
+| 1          | `||`              |
 
 ### Primary expressions
 
