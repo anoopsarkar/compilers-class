@@ -78,7 +78,7 @@ in the `answer` directory.
 
 ### Default solution
 
-Your solution to this homework must be called `decafexpr.y` and `decafexpr.lex` in the `answer` directory.
+Your solution must be compiled in the `answer` directory and must be called `decafexpr`.
 There is an incomplete solution to this homework in `answer/default.lex`.  You can create the `default`
 binary as follows:
 
@@ -98,8 +98,14 @@ this homework.
 ## Your Task
 
 Using the [Decaf language specification](decafspec.html) as your guide, 
-provide a parser for the Decaf language that produces an abstract
-syntax tree for valid Decaf programs.
+provide code generator for the following fragment of Decaf that includes:
+
+* variable declarations (both field and method variables) 
+* expressions, and 
+* methods (both method definitions and method calls)
+
+The output should be in LLVM assembly which can be compiled to x86
+assembly using the LLVM tools and run as a binary.
 
 Remember to push your solution source code to GitLab or other private repository:
 
@@ -108,21 +114,10 @@ Remember to push your solution source code to GitLab or other private repository
     git commit -m 'initial solution'
     git push
 
-An abstract syntax tree (AST) is a high-level representation of the
-program structure without the necessity of containing all the details
-in the source code; it can be thought of as an abstract representation
-of the source code.
-
-The specification for the abstract syntax tree to be produced by your program is 
-given below using the Zehpyr Abstract Syntax Definition Language.
-
-<script src="https://gist.github.com/anoopsarkar/b1dec7f4ba7e7f70bc1ee99511be4bca.js"></script>
-
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
-1. The abstract syntax tree produced by your program must be in the format specified above. The output specification is also available as the file `Decaf.asdl` in the `decafexpr` directory.
-1. Do not add whitespace in your output. This might cause issues with matching your output to the reference output.
+1. TODO: More requirements to be added.
 
 ## Development and upload procedure
 
@@ -138,7 +133,7 @@ Run against all testcases as follows:
     python zipout.py
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
-(see section on _Check Your Solution_ below).
+(see section on _Check your solution_ below).
 The file `output.zip` can also be uploaded to the [leaderboard]({{ site.leaderboard }}) when you are ready.
 
 If you run `zipout.py` multiple times it will overwrite your output directory and zip file which should be fine most of the time (but be careful).
@@ -150,9 +145,7 @@ Check your solution accuracy using the Python program `check.py`. You must creat
 You can use the default program provided to get an initial solution to this homework. Run `python zipout.py -r default` to get a `source.zip` file you can score.
 
     python check.py 
-    Correct(dev): 39 / 124
-    Score(dev): 39.00
-    Total Score: 39.00
+    TODO: Add the score for default
 
 ### Check accuracy on hidden testcases
 
