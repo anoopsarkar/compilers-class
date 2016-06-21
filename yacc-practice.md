@@ -345,3 +345,23 @@ Then we can add this to our list of precedence
 Modify the yacc program above to eliminate all shift/reduce conflicts
 using precedence and associativity declarations in yacc.
 
+### Inherited Attributes
+
+For the following context-free grammar in yacc format:
+
+    block : '{' var-decl-list '}'
+    var-decl-list : var-decl var-decl-list 
+        |
+        ;
+    var-decl : type id-comma-list ';'
+    id-comma-list : id ',' id-comma-list 
+        | id 
+        ;
+    type : 'int' 
+        | 'bool'
+        ;
+
+Provide a yacc program that passes the type information for each variable
+by using _inherited attributes_. The program should enter each 
+variable name into a symbol table along with its type information.
+
