@@ -88,7 +88,7 @@ binary as follows:
 ## The Challenge
 
 The goal of this homework is to write a code generator for variables,
-expressions and methods for the Decaf programming language. The
+simple expressions and methods for the Decaf programming language. The
 output will be in LLVM assembly which is compiled to x86 assembly
 and then to a binary file. The first step will be to write a symbol
 table implementation for your compiler.  The structure of Decaf and
@@ -208,15 +208,34 @@ And on standard output:
 There are some additional testcases available in the `decafsym` directory in
 the `compilers-class-hw` git repository.
 
-### Step 2: Simple Code Generation 
+### Step 2: Code Generation for Expressions
 
 Provide code generator for the following fragment of Decaf that includes:
 
-* variable declarations (both field and method variables) 
-* expressions, and 
-* methods (both method definitions and method calls)
+* Arithmetic and Boolean expressions (**Warning**: do not attempt [short-circuit of boolean expressions](https://en.wikipedia.org/wiki/Short-circuit_evaluation) for this homework).
+* Function calls.
+* Function definitions (including recursive functions).
+* Declaration of extern functions (all extern functions are defined in `decaf-stdlib.c`).
 
-TODO: add details about expr codegen.
+The following AST nodes should have a fully working code generation implemented (except for short-circuiting).
+
+<script src="https://gist.github.com/anoopsarkar/c45e35600f9bef377dbe1a491a56584b.js"></script>
+
+Most of these are trivial to implement using the LLVM API. Only the first one,
+arithmetic and boolean expressions is non-trivial. The Decaf language
+specification has a section on Semantics which lays out the rules of type
+coercion and other gray areas in the implementation of Decaf.
+
+Boolean constants are of type `i1` in LLVM assembly. Char constants can be either `i8` or `i32`. 
+You will need to refer to the [LLVM Documentation](http://llvm.org/releases/3.8.0/docs/index.html)
+and the [LLVM Tutorial](http://llvm.org/releases/3.8.0/docs/tutorial/index.html).
+
+As shown in [LLVM practice](llvm-practice.html) you should extend your abstract
+syntax tree (AST) classes to add LLVM API calls for code generation. Keep all
+the AST classes from your parser in HW2. For the AST nodes not mentioned above
+just return `nullptr` or `NULL` as the value for the code generation function call. 
+For the rest you should make sure the code generation function returns the appropriate
+LLVM code block of type `LLVM::Value *`.
 
 More details about the task is provided by examining the testcases for this homework.
 
@@ -226,7 +245,7 @@ assembly using the LLVM tools and run as a binary.
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
-1. TODO: More requirements to be added.
+1. The output LLVM code should match the output LLVM code provided in the reference output for the testcases.
 
 ## Development and upload procedure
 
