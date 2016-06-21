@@ -34,7 +34,7 @@ def print_grammar(g):
     for r in g.productions():
         print 'rule:', r
 
-def print_rules(rules, nonterminal):
+def print_rules(nonterminal, rules):
     print "Current nonterminal:", nonterminal
     cur_g = nltk.CFG(nonterminal, rules, calculate_leftcorners=False)
     print cur_g
@@ -89,22 +89,20 @@ def expand_match(rules, expand_rules, lhs, match):
     return new_rules
 
 def noleft(g):
-    print "Before:"
-    print g
+    print "Before:\n", g
     lhs_list = ordered_lhs(g)
     rules = []
     for i in range(len(lhs_list)):
-        expand_rules = []
+        expand_rules = g.productions(lhs_list[i])
         for j in range(i):
-            expand_rules.extend( expand_match(rules, g.productions(lhs_list[i]), lhs_list[i], lhs_list[j]) )
-        if len(expand_rules) > 0:
-            rules.extend( noleft_immediate(expand_rules, lhs_list[i]) )
-        else:
-            rules.extend( noleft_immediate(g.productions(lhs_list[i]), lhs_list[i]) )
+            expand_rules = expand_match(rules, expand_rules, lhs_list[i], lhs_list[j])
+            #print_rules(lhs_list[i], expand_rules)
+        rules.extend( noleft_immediate(expand_rules, lhs_list[i]) )
+        #print_rules(lhs_list[i], rules)
     new_g = nltk.CFG(g.start(), rules, calculate_leftcorners=False)
-    print "After:"
-    print new_g
+    print "After:\n", new_g
     
 noleft(grammar1)
 print output1
+
 noleft(grammar2)
