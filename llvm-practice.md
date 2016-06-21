@@ -313,11 +313,20 @@ And produce LLVM assembly:
       ret i32 0
     }
 
-You will need to use your symbol table implementation to store
-the location of the variables. Also, use the LLVM `alloca`
-instruction to create storage on the stack for the variables
-in our simple programming language.
+You will need to use your symbol table implementation to store the
+location of the variables. Also, use the LLVM `alloca` instruction
+to create storage on the stack for the variables in our simple
+programming language. For example the following code uses the LLVM
+API to create an `alloca` instruction to store integers (LLVM type
+`i32`) on the stack. This storage space is used to store values and
+to load values from the memory locations on the stack.
 
+    llvm::AllocaInst *Alloca;
+    // unlike CreateEntryBlockAlloca the following will
+    // create the alloca instr at the current insertion point 
+    // rather than at the start of the block
+    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), 0, "variable_name");
+ 
 Once you have LLVM assembly output you can execute it
 on your machine using the commands in `run-llvm-code.sh`.
 
