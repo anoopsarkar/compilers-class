@@ -113,7 +113,7 @@
       url: "http://regex.inginf.units.it/"
 - title: "Week 5 - Context-Free Grammars"
   tag: week5
-  current: true
+  current: false
   notes:
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1.pdf"
@@ -123,9 +123,15 @@
       url: "assets/lectures/cfg3.pdf"
 - title: "Week 6 - Parsing 1"
   tag: week6
-  current: true
+  current: false
   notes:
     - title: "LL: Top-down parsing"
       url: "assets/lectures/LL.pdf"
-
-
+- title: "Week 7 - Parsing 2"
+  tag: week7
+  current: true
+  notes:
+    - title: "LR1: Shift Reduce parsing"
+      url: "assets/lectures/lr1-shift-reduce-parsing.pdf" 
+    - title: "LR2: LR parsing"
+      url: "assets/lectures/lr2-lr-parsing.pdf"
