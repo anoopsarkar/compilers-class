@@ -177,7 +177,9 @@ the grammar is changed to the equivalent form below:
     end_block: '}'
 
 But now `begin_block` and `end_block` can support actions such
-as creation of a new scope or removal of an old scope.
+as creation of a new scope or removal of an old scope.[^1]
+
+[^1]: A more advanced version of the solution to this task is to do the scoping over the entire AST that is created by the parser. Implement the scoping by adding and removing new scopes in your symbol table by doing a top-down pass over the AST. This way of solving it is closer to the top-down code generation in Step 2 of this homework.
 
 Here is an example of what Step 1 should do. For input Decaf program:
 
@@ -212,7 +214,8 @@ the `compilers-class-hw` git repository.
 
 Provide code generator for the following fragment of Decaf that includes:
 
-* Arithmetic and Boolean expressions (**Warning**: do not attempt [short-circuit of boolean expressions](https://en.wikipedia.org/wiki/Short-circuit_evaluation) for this homework).
+* Arithmetic and Boolean expressions.
+    * **Warning**: do not attempt [short-circuit of boolean expressions](https://en.wikipedia.org/wiki/Short-circuit_evaluation) for this homework.
 * Function calls.
 * Function definitions (including recursive functions).
 * Declaration of extern functions (all extern functions are defined in `decaf-stdlib.c`).
