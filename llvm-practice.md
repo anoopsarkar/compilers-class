@@ -240,8 +240,8 @@ structure:
 The code is then generated from the AST by calling functions defined in the
 LLVM API. Two main data structures contain the LLVM assembly code:
 
-static Module *TheModule;
-static IRBuilder<> Builder(getGlobalContext());
+    static Module *TheModule;
+    static IRBuilder<> Builder(getGlobalContext());
 
     int main() {
       // initialize LLVM
