@@ -1,6 +1,11 @@
 import nltk
 from collections import defaultdict
 
+inclass_grammar = nltk.CFG.fromstring("""
+   S -> S S
+   S -> a
+""")
+
 grammar1 = nltk.CFG.fromstring("""
     S -> A 'a' | 'b'
     A -> A 'c' | S 'd' | 
@@ -102,7 +107,9 @@ def noleft(g):
     new_g = nltk.CFG(g.start(), rules, calculate_leftcorners=False)
     print "After:\n", new_g
     
-noleft(grammar1)
-print output1
+#noleft(grammar1)
+#print output1
 
-noleft(grammar2)
+#noleft(grammar2)
+noleft(inclass_grammar)
+
