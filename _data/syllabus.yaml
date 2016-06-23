@@ -146,6 +146,11 @@
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
     - title: "LR4: LR(1) parsing"
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
+  links:
+    - title: "LLVM Practice"
+      url: "llvm-practice.html"
+    - title: "Midterm Practice"
+      url: "sample-midterm.pdf"
 - title: "Week 8 - Parsing 3"
   tag: week8
   current: false
