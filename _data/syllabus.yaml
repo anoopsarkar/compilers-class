@@ -115,12 +115,17 @@
   tag: week5
   current: false
   notes:
+    - title: "Homework 2 released"
+      url: hw2.html
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1-intro.pdf"
     - title: "CFG2: Ambiguity"
       url: "assets/lectures/cfg2-ambiguity.pdf"
     - title: "CFG3: Push-down Automata"
       url: "assets/lectures/cfg3-pda.pdf"
+  links:
+      title: "YACC Practice"
+      url: "yacc-practice.html"
 - title: "Week 6 - Parsing 1"
   tag: week6
   current: false
@@ -133,6 +138,8 @@
   tag: week7
   current: true
   notes:
+    - title: "Homework 3 released"
+      url: hw3.html
     - title: "LR2: LR(0) parsing"
       url: "assets/lectures/lr2-lr_0-parsing.pdf"
     - title: "LR3: SLR(1) parsing"
@@ -140,8 +147,10 @@
     - title: "LR4: LR(1) parsing"
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
 - title: "Week 8 - Parsing 3"
-  tag: week7
+  tag: week8
   current: false
   notes:
     - title: "LR5: Precedence and Associativity"
       url: "assets/lectures/lr5-prec-assoc.pdf"
+    - title: "Syntax Directed Translation"
+      url: "assets/lectures/sdt.pdf"
