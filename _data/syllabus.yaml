@@ -124,7 +124,7 @@
     - title: "CFG3: Push-down Automata"
       url: "assets/lectures/cfg3-pda.pdf"
   links:
-      title: "YACC Practice"
+    - title: "YACC Practice"
       url: "yacc-practice.html"
 - title: "Week 6 - Parsing 1"
   tag: week6
