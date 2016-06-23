@@ -4,7 +4,7 @@ bindir=.
 rm=/bin/rm -f
 mv=/bin/mv -f
 yacctargets=expr
-targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr
+targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr expr-conflicts
 cpptargets=usingcpp expr-interpreter
 
 all: $(targets) $(cpptargets)
