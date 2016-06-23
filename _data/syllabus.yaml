@@ -152,5 +152,7 @@
   notes:
     - title: "LR5: Precedence and Associativity"
       url: "assets/lectures/lr5-prec-assoc.pdf"
+    - title: "TD2: LL(1) parsing"
+      url: "assets/lectures/td2-ll_1-parsing.pdf"
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
