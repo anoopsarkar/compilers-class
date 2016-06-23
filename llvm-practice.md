@@ -175,7 +175,53 @@ addition.
 Implement the factorial function in LLVM assembly and print out the value of
 `11!` using `print_int`.
 
-### LLVM API for Code Generation: First Steps
+### LLVM Headers
+
+Typically include the following LLVM header files which contain the most
+useful functions in the LLVM API.
+
+    llvm/IR/DerivedTypes.h
+    llvm/IR/LLVMContext.h
+    llvm/IR/Module.h
+    llvm/IR/Type.h
+    llvm/IR/Verifier.h
+    llvm/IR/IRBuilder.h
+
+### LLVM Value
+
+Almost everything in LLVM, including types, constants, functions,
+etc. are derived from a base class of `llvm::Value`.
+
+So if you want to pass a single pointer in your yacc or codegen
+code then it is a good idea to use `llvm::Value*` to pass things
+around. You can always cast it back to the appropriate type when
+needed. For instance, if you pass a `llvm::Value*` but you want to
+treat it as an LLVM Function then you should cast it back to
+`llvm::Function *`.
+
+### LLVM Types
+
+For variables we can create a typed location using the IRBuilder functions
+below that return a `llvm::Type*` 
+
+| Type | `llvm::Type*` | Explanation |
+| void | Builder.getVoidTy() | just a void type | 
+| int | Builder.getInt32Ty() | assume 32 bit integers |
+| bool | Builder.getInt1Ty() | a one bit integer |
+| string | Builder.getInt8PtrTy() | pointer to array of bytes (int8) |
+{: .table}
+
+### LLVM Constants
+
+Sometimes the compiler needs to zero initialize a data structure (such as scalars or arrays).
+For this you can generate a zero constant using the following LLVM functions which
+return `llvm::Constant*`.
+
+| int32 | Builder.getInt32(0) |
+| bool | Builder.getInt1(0) |
+{: .table}
+
+### LLVM API for Arithmetic Expressions: First Steps
 
 Before you do this practice problem, make sure you have a working symbol
 table implementation as specified in [HW3](hw3.html).
