@@ -373,6 +373,4 @@ to load values from the memory locations on the stack.
     // rather than at the start of the block
     Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), 0, "variable_name");
  
-Once you have LLVM assembly output you can execute it
-on your machine using the commands in `run-llvm-code.sh`.
 
