@@ -286,10 +286,12 @@ If you run `zipout.py` multiple times it will overwrite your output directory an
 
 Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file using the above step in _Run your solution on testcases_.
 
-You can use the default program provided to get an initial solution to this homework. Run `python zipout.py -r default` to get a `source.zip` file you can score.
+You can use the default program provided to get an initial solution to this homework. Run `python zipout.py -r default` to get a `source.zip` file you can score using `check.py`.
 
     python check.py 
-    TODO: Add the score for default
+    Correct(dev): 2 / 100
+    Score(dev): 2.00
+    Total Score: 2.00
 
 ### Check accuracy on hidden testcases
 
