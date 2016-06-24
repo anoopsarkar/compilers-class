@@ -79,7 +79,7 @@ in the `answer` directory.
 ### Default solution
 
 Your solution must be compiled in the `answer` directory and must be called `decafexpr`.
-There is an incomplete solution to this homework in `answer/default.lex`.  You can create the `default`
+There is an incomplete solution to this homework in the `answer` directory. You can create the `default`
 binary as follows:
 
     cd your-repo-name/answer
