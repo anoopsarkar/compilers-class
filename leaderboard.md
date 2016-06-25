@@ -32,7 +32,7 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
         <a href="hw2.html">#2</a><br/><span class="small text-muted">Parser</span>
       </th>
       <th class="text-right">
-        <a href="hw3.html">#3</a><br/><span class="small text-muted">Expr Codegen</span>
+        <a href="hw3.html">#3</a><br/><span class="small text-muted">Codegen</span>
       </th>
     </tr>
   </thead>
