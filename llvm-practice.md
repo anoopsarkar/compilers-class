@@ -175,7 +175,9 @@ addition.
 Implement the factorial function in LLVM assembly and print out the value of
 `11!` using `print_int`.
 
-### LLVM Headers
+### Code Generation using LLVM
+
+#### LLVM Headers
 
 Typically include the following LLVM header files which contain the most
 useful functions in the LLVM API.
@@ -187,10 +189,28 @@ useful functions in the LLVM API.
     llvm/IR/Verifier.h
     llvm/IR/IRBuilder.h
 
-### LLVM Value
+It is a good idea to download the source for LLVM and have a look at the
+`IRBuilder.h` header file. It contains almost all the functions that you need
+for building the Decaf compiler (they all return a pointer to a sub-class of
+`llvm::Value`).
+
+#### The Module
+
+The easiest way to collect all the generated code in one place is
+to declare a global variable into which you can insert blocks and
+function definitions. In the same way, it is convenient to define
+a global variable which contains the `Builder` which is used to
+most of the LLVM instructions we need for code generation.
+
+    // this global variable contains all the generated code
+    static llvm::Module *TheModule;
+    // this is the method used to construct the LLVM intermediate code (IR)
+    static llvm::IRBuilder<> Builder(llvm::getGlobalContext());
+
+#### LLVM Value
 
 Almost everything in LLVM, including types, constants, functions,
-etc. are derived from a base class of `llvm::Value`.
+etc. is derived from a base class of `llvm::Value`.
 
 So if you want to pass a single pointer in your yacc or codegen
 code then it is a good idea to use `llvm::Value*` to pass things
@@ -199,7 +219,7 @@ needed. For instance, if you pass a `llvm::Value*` but you want to
 treat it as an LLVM Function then you should cast it back to
 `llvm::Function *`.
 
-### LLVM Types
+#### LLVM Types
 
 For variables we can create a typed location using the IRBuilder functions
 below that return a `llvm::Type*` 
@@ -211,7 +231,7 @@ below that return a `llvm::Type*`
 | string | Builder.getInt8PtrTy() | pointer to array of bytes (int8) |
 {: .table}
 
-### LLVM Constants
+#### LLVM Constants
 
 Sometimes the compiler needs to zero initialize a data structure (such as scalars or arrays).
 For this you can generate a zero constant using the following LLVM functions which
@@ -220,6 +240,119 @@ return `llvm::Constant*`.
 | int32 | Builder.getInt32(0) |
 | bool | Builder.getInt1(0) |
 {: .table}
+
+#### Lvalues: Storage on the Stack
+
+In Decaf, we need to store various objects such as variables, arguments to
+methods during a method call, and a few other objects.  In most of these cases,
+we can store the contents of these variables in stack memory (as opposed to
+heap memory which requires a malloc).  Storing in stack memory is convenient
+because once the function goes out of scope the memory for those variables is
+automatically reclaimed. 
+
+To create a new location (when the variable is defined) the following
+LLVM API call creates an allocated storage location `TYPE` which
+is of type `llvm::Type*` and returns a pointer to the location name
+in LLVM assembly.
+
+    llvm::AllocaInst *Alloca = Builder.CreateAlloca(TYPE, nullptr, NAME);
+
+You should then store this pointer into the symbol table for the identifier `NAME`.
+You can access the pointer to the type `TYPE` using `Alloca->getType()` when
+you want to assign a value to this location.
+
+To assign a value in a Decaf statement of the type _lvalue = rvalue_ you
+should get the location of _lvalue_ from the symbol table. You can check
+the type of _rvalue_ using the following API call:
+
+    const llvm::PointerType *ptrTy = rvalue->getType()->getPointerTo();
+
+And check that the type of the Alloca location for _lvalue_ has the same
+type:
+
+    ptrTy == Alloca->getType()
+
+If the types match then you can assign _rvalue_ to _lvalue_:
+
+    llvm::Value *val = Builder.CreateStore(rvalue, Alloca)
+
+#### Operators in LLVM
+
+All the binary operators you need for Decaf are defined in the LLVM IRBuilder 
+header file.
+
+| `+` | Builder.CreateAdd |
+| `-` | Builder.CreateSub |
+| `*` | Builder.CreateMul |
+| `/` | Builder.CreateSDiv |
+| `<<` | Builder.CreateShl |
+| `>>` | Builder.CreateLShr |
+| `%` | Builder.CreateSRem |
+| `<` | Builder.CreateICmpSLT |
+| `>` | Builder.CreateICmpSGT |
+| `<=` | Builder.CreateICmpSLE |
+| `>=` | Builder.CreateICmpSGE |
+| `&&` | Builder.CreateAnd |
+| `||` | Builder.CreateOr |
+| `==` | Builder.CreateICmpEQ |
+| `!=` | Builder.CreateICmpNE |
+{: .table}
+
+The unary operators are also defined in LLVM IRBuilder.
+
+| `-` | Builder.CreateNeg |
+| `!` | Builder.CreateNot |
+{: .table}
+
+#### Method Declaration and Method Calls using the LLVM API
+
+A method declaration needs some setup: the name of the function, the return
+type, and the argument list with the right types. Once you have those,
+creating a function definition is easy:
+
+    llvm::Type *returnTy;
+    // assign the correct Type to returnTy
+
+    std::vector<llvm::Type *> args;
+    // fill up the args vector with types
+
+    llvm::Function *func = llvm::Function::Create(
+        llvm::FunctionType::get(returnTy, args, false),
+        llvm::Function::ExternalLinkage,
+        Name,
+        TheModule
+    );
+
+Code generation for a method call also requires some setup.
+
+    llvm::Function *call;
+    // assign this to the pointer to the function to call, 
+    // usually loaded from the symbol table
+
+    std::vector<llvm::Value *> args;
+    // argvals are the values in the method call, 
+    // e.g. foo(1) would have a vector of size one with value of 1 with type i32.
+
+    bool isVoid = call->getReturnType()->isVoidTy();
+    llvm::Value *val = Builder.CreateCall(
+        call,
+        args,
+        isVoid ? "" : "calltmp"
+    );
+
+To create a return statement you first need to recover the function
+and then insert a return statement:
+
+    llvm::Function *func = Builder.GetInsertBlock()->getParent();
+    Builder.CreateRet(TYPE)
+
+### Promoting a boolean
+
+You can promote a boolean of type `i1` to an integer using `ZExt`:
+
+    llvm::Value *promo = Builder.CreateZExt(*i, Builder.getInt32Ty(), "zexttmp");
+
+Remember to do this in method calls (e.g. to `print_int`) if there is a type mismatch.
 
 ### LLVM API for Arithmetic Expressions: First Steps
 
