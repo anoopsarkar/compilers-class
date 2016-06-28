@@ -179,7 +179,7 @@
       url: "assets/lectures/ir.pdf"
     - title: "Static Single Assignment Form"
       url: "assets/lectures/ssaform.pdf"
-- title: "Week 11 - Code Optimization"
+- title: "Week 11 - Code Optimization 1"
   tag: week11
   current: false
   notes:
@@ -187,3 +187,11 @@
       url: "assets/lectures/regalloc.pdf"
     - title: "Optimization using SSA Form"
       url: "assets/lectures/ssaopt.pdf"
+- title: "Week 12 - Code Optimization 2"
+  tag: week12
+  current: false
+  notes:
+- title: "Week 13 - Type Checking and Conclusion"
+  tag: week13
+  current: false
+  notes:
