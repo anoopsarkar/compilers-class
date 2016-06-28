@@ -148,7 +148,7 @@
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
-      url: "assets/distrib/nltk-left-recursion.py"
+      url: "assets/distrib/nltk-left-recursion.py.txt"
     - title: "LLVM Practice"
       url: "llvm-practice.html"
     - title: "Midterm Practice"
