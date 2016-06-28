@@ -148,11 +148,11 @@
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
-      url: "assets/demos/grammars/nltk-left-recursion.py"
+      url: "assets/distrib/nltk-left-recursion.py"
     - title: "LLVM Practice"
       url: "llvm-practice.html"
     - title: "Midterm Practice"
-      url: "sample-midterm.pdf"
+      url: "assets/distrib/sample-midterm.pdf"
 - title: "Week 8 - Parsing 3"
   tag: week8
   current: true
@@ -171,3 +171,19 @@
       url: "assets/lectures/semantics.pdf"
     - title: "Runtime Support"
       url: "assets/lectures/runtime.pdf"
+- title: "Week 10 - Code Generation"
+  tag: week10
+  current: false
+  notes:
+    - title: "Intermediate Representation"
+      url: "assets/lectures/ir.pdf"
+    - title: "Static Single Assignment Form"
+      url: "assets/lectures/ssaform.pdf"
+- title: "Week 11 - Code Optimization"
+  tag: week11
+  current: false
+  notes:
+    - title: "Register Allocation"
+      url: "assets/lectures/regalloc.pdf"
+    - title: "Optimization using SSA Form"
+      url: "assets/lectures/ssaopt.pdf"
