@@ -1,3 +1,14 @@
+"""
+Eliminate General Left Recursion
+
+by Anoop Sarkar (anoop@sfu.ca)
+
+* Uses NLTK so install that first
+* Copyright (c) 2016 Anoop Sarkar 
+* Distributed under the MIT License 
+* https://opensource.org/licenses/MIT
+"""
+
 import nltk
 from collections import defaultdict
 
