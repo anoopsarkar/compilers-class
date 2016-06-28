@@ -28,7 +28,7 @@ Then go to the `llvm-practice` directory
 
     cd /your-path-to/compilers-class-hw/llvm-practice
 
-### Install LLVM
+### Installation 
 
 We will be using LLVM version 3.8.0 for the homeworks in this course offering.
 LLVM 3.8 has already been installed in the CSIL Linux machines. You can use
@@ -57,7 +57,7 @@ with `decaf-stdlib.c`:
 We will link the Decaf standard library with the x86 assembly that will
 be generated using LLVM.
 
-### Hello World in LLVM Assembly
+### Hello World
 
 LLVM is both a library for code generation and also a definition of an abstract
 assembly language which is used as an intermediate representation for code
@@ -107,7 +107,7 @@ since we do not use any of the function in it, but when we implement
 the Decaf compiler it will be easier to use the standard library functions instead of
 a function like `puts` which take pointers as arguments.
 
-### LLVM Assembly with Decaf Library Functions
+### Using Decaf Library Functions
 
 The following LLVM assembly code defines a function `@add1` that adds
 two integers and prints out the value followed by a newline.
@@ -170,14 +170,14 @@ type `i1` or integer of bit width 1).  The `br` call then branches either to
 `%tmp1`. Extend this template to write the LLVM assembly for recursive
 addition.
 
-### Factorial in LLVM 
+### Simple Recursion 
 
 Implement the factorial function in LLVM assembly and print out the value of
 `11!` using `print_int`.
 
-### Code Generation using LLVM
+### Introduction to the LLVM C++ API
 
-#### LLVM Headers
+#### Headers
 
 Typically include the following LLVM header files which contain the most
 useful functions in the LLVM API.
@@ -206,6 +206,10 @@ most of the LLVM instructions we need for code generation.
     static llvm::Module *TheModule;
     // this is the method used to construct the LLVM intermediate code (IR)
     static llvm::IRBuilder<> Builder(llvm::getGlobalContext());
+
+You can dump the LLVM assembly by calling the `dump` function:
+
+    TheModule->dump();
 
 #### LLVM Value
 
@@ -241,7 +245,7 @@ return `llvm::Constant*`.
 | bool | Builder.getInt1(0) |
 {: .table}
 
-#### Lvalues: Storage on the Stack
+#### Storage on the Stack
 
 In Decaf, we need to store various objects such as variables, arguments to
 methods during a method call, and a few other objects.  In most of these cases,
@@ -257,9 +261,20 @@ in LLVM assembly.
 
     llvm::AllocaInst *Alloca = Builder.CreateAlloca(TYPE, nullptr, NAME);
 
-You should then store this pointer into the symbol table for the identifier `NAME`.
-You can access the pointer to the type `TYPE` using `Alloca->getType()` when
-you want to assign a value to this location.
+For example the following code uses the LLVM API to create an `alloca`
+instruction to store integers (LLVM type `i32`) on the stack.  This storage
+space is used to store values and to load values from the memory locations on
+the stack.
+
+    llvm::AllocaInst *Alloca;
+    // unlike CreateEntryBlockAlloca the following will
+    // create the alloca instr at the current insertion point 
+    // rather than at the start of the block
+    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), nullptr, "variable_name");
+ 
+You should then store this pointer into the symbol table for the identifier
+`NAME`.  You can access the pointer to the type `TYPE` using
+`Alloca->getType()` when you want to assign a value to this location.
 
 To assign a value in a Decaf statement of the type _lvalue = rvalue_ you
 should get the location of _lvalue_ from the symbol table. You can check
@@ -276,7 +291,7 @@ If the types match then you can assign _rvalue_ to _lvalue_:
 
     llvm::Value *val = Builder.CreateStore(rvalue, Alloca)
 
-#### Operators in LLVM
+#### Arithmetic and Boolean Operators
 
 All the binary operators you need for Decaf are defined in the LLVM IRBuilder 
 header file.
@@ -304,11 +319,11 @@ The unary operators are also defined in LLVM IRBuilder.
 | `!` | Builder.CreateNot |
 {: .table}
 
-#### Method Declaration and Method Calls using the LLVM API
+#### Method Declaration
 
 A method declaration needs some setup: the name of the function, the return
 type, and the argument list with the right types. Once you have those,
-creating a function definition is easy:
+creating a function definition is easy.
 
     llvm::Type *returnTy;
     // assign the correct Type to returnTy
@@ -322,6 +337,42 @@ creating a function definition is easy:
         Name,
         TheModule
     );
+
+Then you have to create a basic block to hold the instructions
+for this method.
+
+    // Create a new basic block which contains a sequence of LLVM instructions
+    llvm::BasicBlock *BB = llvm::BasicBlock::Create(llvm::getGlobalContext(), "entry", func);
+    // insert "entry" into symbol table (not used in HW3 but useful in HW4)
+    // All subsequent calls to IRBuilder will place instructions in this location
+    Builder.SetInsertPoint(BB);
+
+You can get useful information about the method including a pointer to the
+function definition itself by using the following functions:
+
+    llvm::BasicBlock *CurBB = Builder.GetInsertBlock();
+    // gives you a link to the current basic block
+
+    llvm::Function *func = Builder.GetInsertBlock()->getParent();
+    // gives you a pointer to the function definition
+
+    func->getReturnType()
+    // gives you the return type of the function
+
+To create a return statement you first need to recover the function
+and then insert a return statement:
+
+    // sometimes the return statement is deep inside the method
+    // so it is useful to retrieve the function we are in without
+    // passing it down to all the AST nodes below the method declaration
+    Builder.CreateRet(TYPE)
+
+You should create a default return type when you create the function
+definition. You can replace it with the real return if there is one
+but by default you should return the default value for the method
+return type (zero for integers, and true for booleans).
+
+#### Method Calls
 
 Code generation for a method call also requires some setup.
 
@@ -340,13 +391,10 @@ Code generation for a method call also requires some setup.
         isVoid ? "" : "calltmp"
     );
 
-To create a return statement you first need to recover the function
-and then insert a return statement:
+In the above code fragment, the location `calltmp` is used to store
+the value returned by the method call.
 
-    llvm::Function *func = Builder.GetInsertBlock()->getParent();
-    Builder.CreateRet(TYPE)
-
-### Promoting a boolean
+#### Promoting a boolean
 
 You can promote a boolean of type `i1` to an integer using `ZExt`:
 
@@ -354,7 +402,20 @@ You can promote a boolean of type `i1` to an integer using `ZExt`:
 
 Remember to do this in method calls (e.g. to `print_int`) if there is a type mismatch.
 
-### LLVM API for Arithmetic Expressions: First Steps
+#### Global String Variables in LLVM
+
+You can declare a global variable in LLVM as follows:
+
+    llvm::GlobalVariable *GS = Builder.CreateGlobalString(s, "globalstring");
+    llvm::Value *stringConst = Builder.CreateConstGEP2_32(GS->getValueType(), GS, 0, 0, "cast");
+
+#### Verification
+
+You can ask LLVM to verify your function declaration (should be of type `llvm::Function`):
+
+    llvm::verifyFunction(F);
+
+### LLVM and Yacc: Simple Arithmetic Expressions
 
 Before you do this practice problem, make sure you have a working symbol
 table implementation as specified in [HW3](hw3.html).
@@ -493,17 +554,24 @@ And produce LLVM assembly:
     }
 
 You will need to use your symbol table implementation to store the
-location of the variables. Also, use the LLVM `alloca` instruction
-to create storage on the stack for the variables in our simple
-programming language. For example the following code uses the LLVM
-API to create an `alloca` instruction to store integers (LLVM type
-`i32`) on the stack. This storage space is used to store values and
-to load values from the memory locations on the stack.
+location of the variables. 
 
-    llvm::AllocaInst *Alloca;
-    // unlike CreateEntryBlockAlloca the following will
-    // create the alloca instr at the current insertion point 
-    // rather than at the start of the block
-    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), 0, "variable_name");
- 
+### Global Variables
+
+In the `llvm-practice` directory of the `compiler-class-hw` repository you
+can find two example C++ programs: `globalscalar.cc` and `globalarray.cc`
+for global scalar variables and global array variables respectively.
+
+`globalarray.cc` also shows you how to access a particular array location, e.g.
+`Foo[8]` and also shows you how to update an array location, e.g. `Foo[8] =
+Foo[8] + 1`.
+
+### Kaleidoscope language
+
+The LLVM download comes with a simple programming language which is
+illustrative of the LLVM API.  In the `llvm-practice` directory of the
+`compiler-class-hw` repository you can find the `kscope.cc` file which contains
+the entire source code for the Kaleidoscipe compiler which uses LLVM for code
+generation. Example Kaleidoscope programs are available in the directory
+`kscope-programs`.
 
