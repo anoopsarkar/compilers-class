@@ -161,12 +161,12 @@
       url: "assets/lectures/lr5-prec-assoc.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
+    - title: "Syntax Directed Translation"
+      url: "assets/lectures/sdt.pdf"
 - title: "Week 9 - Semantics and Runtime Support"
   tag: week9
   current: true
   notes:
-    - title: "Syntax Directed Translation"
-      url: "assets/lectures/sdt.pdf"
     - title: "Semantics"
       url: "assets/lectures/semantics.pdf"
     - title: "Runtime Support"
