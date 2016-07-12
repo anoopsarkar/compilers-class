@@ -171,7 +171,7 @@
       url: "assets/lectures/semantics.pdf"
     - title: "Runtime Support"
       url: "assets/lectures/runtime.pdf"
-- title: "Week 10 - Code Generation"
+- title: "Week 10 - Code Generation 2"
   tag: week10
   current: false
   notes:
@@ -179,16 +179,16 @@
       url: hw4.html
     - title: "Intermediate Representation"
       url: "assets/lectures/ir.pdf"
-    - title: "Static Single Assignment Form"
-      url: "assets/lectures/ssaform.pdf"
-- title: "Week 11 - Code Optimization 1"
+    - title: "Intro to SSA Form"
+      url: "assets/lectures/ssaopt1.pdf"
+- title: "Week 11 - Code Generation 2"
   tag: week11
   current: false
   notes:
+    - title: "Creating SSA Form"
+      url: "assets/lectures/ssaopt2.pdf"
     - title: "Register Allocation"
       url: "assets/lectures/regalloc.pdf"
-    - title: "Optimization using SSA Form"
-      url: "assets/lectures/ssaopt.pdf"
 - title: "Week 12 - Code Optimization 2"
   tag: week12
   current: false
