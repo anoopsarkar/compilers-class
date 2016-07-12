@@ -93,6 +93,9 @@ compiler for the [Decaf language specification](decafspec.html).
 Add support for global variables also known as field variables.  Decaf supports
 definition of integer and boolean arrays only as global variables.
 
+You will need to add code generation for assignment and modification
+of array locations in expressions.
+
 #### Step 2: Zero initialize all variables
 
 Make sure that all variables, including arrays, are zero initialized.
@@ -148,9 +151,13 @@ Optionally implement the following optimization passes:
 * Eliminate common sub-expressions (GVN).
 * Simplify the control flow graph (CFG simplification).
 
-You should modify the source code in your yacc program using the `FunctionPassManager` LLVM API call.
+You can implement this using the LLVM `opt` binary which can be used to run all
+of the above optimization passes on the LLVM bitcode output for a Decaf
+program.
 
-You can even [write your own LLVM pass](http://llvm.org/docs/WritingAnLLVMPass.html).
+Instead of using `opt` you could use the `FunctionPassManager` LLVM API call to
+add optimization passes. You can even [write your own LLVM
+pass](http://llvm.org/docs/WritingAnLLVMPass.html).
 
 #### Step 8: Add source-level debug info (Optional)
 
@@ -206,9 +213,13 @@ If you run `zipout.py` multiple times it will overwrite your output directory an
 
 ### Check your solution
 
-Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file using the above step in _Run your solution on testcases_.
+Check your solution accuracy using the Python program `check.py`. You must
+create an `output.zip` file using the above step in _Run your solution on
+testcases_.
 
-You can use the default program provided to get an initial solution to this homework. Run `python zipout.py -r default` to get a `source.zip` file you can score using `check.py`.
+You can use the default program provided to get an initial solution to this
+homework. Run `python zipout.py -r default` to get a `source.zip` file you can
+score using `check.py`.
 
     python check.py 
     Correct(dev): 19 / 212
@@ -217,27 +228,47 @@ You can use the default program provided to get an initial solution to this home
 
 ### Check accuracy on hidden testcases
 
-For some testcases (those in the `testcases/test` directory) the inputs are provided but the reference output is not provided to you.
-To see your performance on those testcases you must submit your `output.zip` to the [leaderboard]({{ site.leaderboard }}).
-You will see your performance on test and your accuracy will be displayed on the [class leaderboard page](leaderboard.html).
+For some testcases (those in the `testcases/test` directory) the inputs are
+provided but the reference output is not provided to you.  To see your
+performance on those testcases you must submit your `output.zip` to the
+[leaderboard]({{ site.leaderboard }}).
+You will see your performance on test and your accuracy will be displayed on
+the [class leaderboard page](leaderboard.html).
 
 ### Package your source for Coursys
 
-You must also upload your source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
+You must also upload your source code to Coursys. You should prepare your
+source for upload using the Python program `zipsrc.py`.
 
     # go to the directory with the file zipsrc.py
     python zipsrc.py
 
-This will create a zip file called `source.zip`. You should upload this file as your submission to hw1 on [Coursys]({{ site.coursys }}).
+This will create a zip file called `source.zip`. You should upload this file as
+your submission to hw1 on [Coursys]({{ site.coursys }}).
 
-**Be careful**: `zipsrc.py` will only package files in the `answer` directory. Make sure you have put all your supporting files in that directory. In particular, put relevant documentation into `answer/docs/README.md`. 
+**Be careful**: `zipsrc.py` will only package files in the `answer` directory.
+Make sure you have put all your supporting files in that directory. In
+particular, put relevant documentation into `answer/docs/README.md`. 
+
+### Use your own code
+
+For this homework we will reward those who have implemented all the stages of
+the compiler themselves.  If you have used the source code from the provided
+solution of a previous homework to implement your compiler for this homework,
+you will lose 20% of the marks for this homework for each solution used. For
+example, if you use the provided solution for HW1, HW2 and HW3 to solve this
+homework then you can get at most 40% of the total marks for HW4.
+
+You will **not** incur a penalty if you wrote your own source code for the
+solution to a previous homework after having examined the solution for a
+previous homework.
 
 ## Ground Rules
 
 * Each group should submit using one person as the designated uploader.
 * You must turn in two things:
     * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW3 submission page on [Coursys]({{ site.coursys }}).
+    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW4 submission page on [Coursys]({{ site.coursys }}).
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `README.md` file.
 * For the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 

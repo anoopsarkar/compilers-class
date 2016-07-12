@@ -175,6 +175,8 @@
   tag: week10
   current: false
   notes:
+    - title: "Homework 4 released"
+      url: hw4.html
     - title: "Intermediate Representation"
       url: "assets/lectures/ir.pdf"
     - title: "Static Single Assignment Form"
