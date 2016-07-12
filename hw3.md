@@ -104,7 +104,7 @@ this homework.
 Using the [Decaf language specification](decafspec.html) as your guide, 
 you have two steps:
 
-### Step 1: Symbol Table
+#### Step 1: Symbol Table
 
 Implement a symbol table that can keep track of variables and methods
 in Decaf.
@@ -210,7 +210,7 @@ And on standard output:
 There are some additional testcases available in the `decafsym` directory in
 the `compilers-class-hw` git repository.
 
-### Step 2: Code Generation for Expressions
+#### Step 2: Code Generation for Expressions
 
 Provide code generator for the following fragment of Decaf that includes:
 
@@ -242,13 +242,14 @@ LLVM code block of type `LLVM::Value *`.
 
 More details about the task is provided by examining the testcases for this homework.
 
-The output should be in LLVM assembly which can be compiled to x86
-assembly using the LLVM tools and run as a binary.
+The output should be in LLVM assembly which can be compiled to x86 assembly
+using the LLVM tools and run as a binary.  We will use the binary `llvm-run` in
+the answer directory to create and run the binary from the Decaf programs in
+the testcases directory.
 
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
-1. The output LLVM code should match the output LLVM code provided in the reference output for the testcases.
 1. You must dump the LLVM assembly by calling `TheModule->dump()` where `TheModule` is of type `llvm::Module*`.
 
 ## Development and upload procedure
