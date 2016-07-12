@@ -575,3 +575,110 @@ the entire source code for the Kaleidoscipe compiler which uses LLVM for code
 generation. Example Kaleidoscope programs are available in the directory
 `kscope-programs`.
 
+### Array Types
+
+The LLVM array type is `llvm::ArrayType` which is provided using the
+following function:
+
+    llvm::ArrayType::get(TYPE, SIZE)
+
+where `TYPE` is an LLVM Type and `SIZE` is the array size.
+
+### Control flow graphs 
+
+Consider the following function definition that involves control flow using an
+`if` statement.
+
+    // function that computes the greatest common divisor
+    func gcd(a int, b int) int {
+        if (b == 0) {
+            return(a);
+        } else {
+            return(gcd(b, a % b));
+        }
+    }
+
+Below is the desired LLVM assembly output for the above function.
+To implement control flow and loops we need to set up various basic
+blocks and link them together using branching statements.
+
+    define i32 @gcd(i32 %a, i32 %b) {
+    entry:
+      %a1 = alloca i32
+      store i32 %a, i32* %a1
+      %b2 = alloca i32
+      store i32 %b, i32* %b2
+      br label %ifstart
+
+    ifstart:                                          ; preds = %entry
+      %b3 = load i32, i32* %b2
+      %eqtmp = icmp eq i32 %b3, 0
+      br i1 %eqtmp, label %iftrue, label %iffalse
+
+    iftrue:                                           ; preds = %ifstart
+      %a4 = load i32, i32* %a1
+      ret i32 %a4
+      br label %end
+
+    end:                                              ; preds = %iffalse, %iftrue
+      ret i32 0
+
+    iffalse:                                          ; preds = %ifstart
+      %b5 = load i32, i32* %b2
+      %a6 = load i32, i32* %a1
+      %b7 = load i32, i32* %b2
+      %modtmp = srem i32 %a6, %b7
+      %calltmp = call i32 @gcd(i32 %b5, i32 %modtmp)
+      ret i32 %calltmp
+      br label %end
+    }
+
+In the LLVM assembly above we have five different basic blocks.
+We have already covered how to create a basic block and set an insert point
+for the instructions that should go into that basic block.
+
+The following diagram graphically shows how the different
+basic blocks are connected to each other.
+
+<img alt="LLVM Control Flow Graph" src="{{site.baseurl}}assets/img/llvmcfg.png" width="800px"/>
+
+Once you can create basic blocks and insert instructions for
+each basic block then all that remains is to link them together
+using unconditional branches and conditional branches using LLVM API calls.
+
+If I have created a basic block `llvm::BasicBlock *IfTrueBB` (the label
+used for this basic block is `iftrue` in the above LLVM assembly).
+Now I want to connect it to the return basic block `llvm::BasicBlock *EndBB`
+which has label `end`. In order to do this I need an unconditional branch
+from `IfTrueBB` to `EndBB` which I can do using the following LLVM API
+call assuming that my insert point is still in `IfTrueBB`:
+
+    Builder.CreateBr(EndBB)
+
+For the conditional branch from a basic block `llvm::BasicBlock *IfBB` with
+label `ifstart` to `llvm::BasicBlock *IfTrueBB` when the conditional statement
+evaluates to `True` or to `EndBB` when `False`.
+
+    Builder.CreateCondBr(val, IfTrueBB, EndBB)
+
+In this statement, `val` is an LLVM type `i1` (in other words a boolean).
+If `val` is `True` the branch will go to `IfTrueBB` and if it is `False`
+the branch goes to `EndBB`. In the above LLVM assembly the value of
+`val` is stored in `%eqtmp`.
+
+### Backpatching
+
+To implement backpatching for control flow and loops you need to remember
+different basic blocks. For example, to implement a `for` loop you will need to
+know the locations of the init, check and post parts of the for loop. The
+easiest way to remember this is to save a pointer to the basic blocks in the
+symbol table. The symbol to use is the symbol you use to name the LLVM basic
+blocks (`ifstart`, `iffalse`, and `end` in the above example). Because the
+symbol table already handles nested scopes you do not need to do anything
+special to handle any number of deeply nested control flow and loops (like, for
+example, nested for loops).
+
+Once you have these basic blocks accessible using the symbol table it becomes
+trivial to implement `break` and `continue`.
+
+

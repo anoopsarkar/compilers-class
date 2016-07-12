@@ -121,18 +121,13 @@ Short circuiting is implemented using control flow, very similar to an `if` stat
 
 #### Step 5: Semantics
 
-Perform at least the following semantic checks for any syntactically 
-valid input Decaf program:
+Implement all the semantic checks listed in the Decaf Semantics section of the
+[Decaf spec](decafspec.html).  Raise a semantic error if the input Decaf
+program does not pass any of the listed semantic checks.
 
-* A method called `main` has to exist in the Decaf program.
-* Find all cases where there is a type mismatch between the definition of the type of a variable and a value assigned to that variable. e.g. `bool x; x = 10;` is an example of a type mismatch. 
-* Find all cases where an expression is well-formed, where binary and unary operators are distinguished from relational and equality operators. e.g. `true + false` is an example of a mismatch but `true != true` is not a mismatch. 
-* Check that all variables are defined in the proper scope before they are used as an lvalue or rvalue in a Decaf program. 
-* Check that the return statement in a method matches the return type in the method definition. e.g. `func foo() bool { return(10); }` is an example of a mismatch. 
-
-Raise a semantic error if the input Decaf program does not pass any of the above semantic checks.
-
-Your program should take a syntactically valid Decaf program as input and perform all the semantic checks listed above. You can optionally include any other semantic checks that seem reasonable based on your analysis of the language. Provide a readme file with a description of any additional semantic checks.
+You can optionally include any other semantic checks that seem reasonable based
+on your analysis of the language. Provide a readme file with a description of
+any additional semantic checks.
 
 #### Step 6: Error reporting
 

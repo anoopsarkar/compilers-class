@@ -624,6 +624,10 @@ rules read the descriptions provided in the above sections.
 Decaf Semantics
 ---------------
 
+### Program Structure
+
+- A method called `main` has to exist in the Decaf program.
+
 ### Type Checking
 
 Make sure the following type checks are implemented in the compiler.
@@ -632,7 +636,7 @@ Make sure the following type checks are implemented in the compiler.
 -   Binary `&&` `||` and unary `!` only work on boolean expressions.
 -   Binary `==` `!=` work on any type, but both operands have to have the same type.
 -   Assignment to a function parameter is valid and should change the value as for a local variable
--   The && and || operators are short-circuiting (this is already specified in the spec)
+-   The `&&` and `||` operators are short-circuiting (this is already specified in the spec)
 -   If you have multiple return statements in one block then only the first is used, but the others should still be type checked.
 -   Indexing a scalar is a semantic error. `{ var x int; x[0] = 1; }` is a semantic error, and `{ var x,y int; y = x[0]; }` is a semantic error, and the same if `x` is a field variable.
 -   Indexing with a bool is a semantic error. `{ var xs[10] int; func main() int { var x int; x = xs[true]; }` is a semantic error.
@@ -642,6 +646,10 @@ Make sure the following type checks are implemented in the compiler.
 -   A return statement with no expression in a non-void function produces an undefined return value. `{ func foo() int { return; } func main() int { var x int; x = foo(); } }` is a not a semantic error, but the value of `x` may be anything (typically zero due to zero initialization).
 -   Cannot use a void function in an expression. `func foo() void {} func main() int { if (foo()) {} }` is invalid.
 -   Cannot call a method with the wrong number of arguments.
+- Find all cases where there is a type mismatch between the definition of the type of a variable and a value assigned to that variable. e.g. `bool x; x = 10;` is an example of a type mismatch. 
+- Find all cases where an expression is well-formed, where binary and unary operators are distinguished from relational and equality operators. e.g. `true + false` is an example of a mismatch but `true != true` is not a mismatch. 
+- Check that all variables are defined in the proper scope before they are used as an lvalue or rvalue in a Decaf program. 
+- Check that the return statement in a method matches the return type in the method definition. e.g. `func foo() bool { return(10); }` is an example of a mismatch. 
 
 ### Scoping Rules
 
@@ -661,7 +669,7 @@ This section clarifies the behaviour with scoping.
 
 These are semantic errors that can occur when using statements in Decaf.
 
--   There are no restrictions on the type of `main`.
+-   There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. Always emitting `int` as the return type for `main` is safe.
 -   Assigning a scalar to an array is considered a type mismatch.
 -   The following produce undefined behaviour, but must not produce compile time semantic errors:
     - Using the value of any uninitialized scalar variable or array element
