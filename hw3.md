@@ -240,6 +240,8 @@ just return `nullptr` or `NULL` as the value for the code generation function ca
 For the rest you should make sure the code generation function returns the appropriate
 LLVM code block of type `LLVM::Value *`.
 
+#### Requirements
+
 More details about the task is provided by examining the testcases for this homework.
 
 The output should be in LLVM assembly which can be compiled to x86 assembly
@@ -247,6 +249,8 @@ using the LLVM tools and run as a binary.  We will use the binary `llvm-run` in
 the answer directory to create and run the binary from the Decaf programs in
 the testcases directory.
 
+The LLVM assembly and toolchain output is dumped into the `llvm` directory.
+You should examine your output to debug your compiler.
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).

@@ -167,6 +167,8 @@ LLVM assembly has support for [debug instructions](http://llvm.org/docs/SourceLe
 Also see how to use the LLVM API to add debug annotations by reading through the
 [LLVM Kaleidoscope tutorial on DWARF emission](http://llvm.org/docs/tutorial/LangImpl8.html).
 
+#### Requirements
+
 More details about the task is provided by examining the testcases for this homework.
 
 The output should be in LLVM assembly which can be compiled to x86
@@ -174,10 +176,27 @@ assembly using the LLVM tools and run as a binary. We will use the binary
 `llvm-run` in the answer directory to create and run the binary from the 
 Decaf programs in the testcases directory.
 
+The LLVM assembly and toolchain output is dumped into the `llvm` directory.
+You should examine your output to debug your compiler.
+
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
 1. You must dump the LLVM assembly by calling `TheModule->dump()` where `TheModule` is of type `llvm::Module*`.
+1. Pass all the testcases.
+
+### Use your own code
+
+For this homework we will reward those who have implemented all the stages of
+the compiler themselves.  If you have used the source code from the provided
+solution of a previous homework to implement your compiler for this homework,
+you will lose 20% of the marks for this homework for each solution used. For
+example, if you use the provided solution for HW1, HW2 and HW3 to solve this
+homework then you can get at most 40% of the total marks for HW4.
+
+You will **not** incur a penalty if you wrote your own source code for the
+solution to a previous homework after having examined the solution for a
+previous homework. So just asking to view a solution is not penalized.
 
 ## Development and upload procedure
 
@@ -249,19 +268,6 @@ your submission to hw1 on [Coursys]({{ site.coursys }}).
 **Be careful**: `zipsrc.py` will only package files in the `answer` directory.
 Make sure you have put all your supporting files in that directory. In
 particular, put relevant documentation into `answer/docs/README.md`. 
-
-### Use your own code
-
-For this homework we will reward those who have implemented all the stages of
-the compiler themselves.  If you have used the source code from the provided
-solution of a previous homework to implement your compiler for this homework,
-you will lose 20% of the marks for this homework for each solution used. For
-example, if you use the provided solution for HW1, HW2 and HW3 to solve this
-homework then you can get at most 40% of the total marks for HW4.
-
-You will **not** incur a penalty if you wrote your own source code for the
-solution to a previous homework after having examined the solution for a
-previous homework.
 
 ## Ground Rules
 
