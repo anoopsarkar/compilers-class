@@ -715,4 +715,7 @@ where `L` is the LLVM output for the LHS of the boolean expression and `CurBB`
 and `OpValBB` are the two basic blocks that are incoming blocks for the
 $$\phi$$ function.
 
+### RTFM: LLVM Documentation
+
+There is a lot more to learn about LLVM. Read the documentation at [llvm.org](http://llvm.org/docs/). 
 
