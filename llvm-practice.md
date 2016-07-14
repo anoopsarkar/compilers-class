@@ -705,6 +705,8 @@ function yourself.
 
 where TYPE is an `LLVM::Type`
 
+A $$\phi$$ function is created using the LLVM function `CreatePHI`:
+
     llvm::PHINode *val = Builder.CreatePHI(L->getType(), 2, "phival");
     val->addIncoming(L, CurBB);
     val->addIncoming(opval, OpValBB);
