@@ -40,6 +40,6 @@ Grading
 
 * Setup homework: (2%)
 * Four programming homeworks. Due dates: TBA (60% total)
-* In class midterm: Date TBA (18%)
+* In class midterm: Date: Jun 30 (18%)
 * Final exam: Aug 15 8:30am-11:30am. Location: AQ 3181 (20%)
 
