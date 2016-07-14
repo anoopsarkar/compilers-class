@@ -681,4 +681,36 @@ example, nested for loops).
 Once you have these basic blocks accessible using the symbol table it becomes
 trivial to implement `break` and `continue`.
 
+### Short Circuit for Boolean Expressions
+
+To implement short circuit for boolean expressions you will need to set
+up basic blocks in a way similar to control flow statements like the
+`if` statement. Instead of generating the `&&` and `||` equivalent
+statements in LLVM assembly you have to generate control flow for
+short circuiting for `&&` and `||`. 
+
+The underlying representation for LLVM assembly is in static
+single assignment form or [SSA Form](https://en.wikipedia.org/wiki/Static_single_assignment_form).
+In SSA Form, each variable is only assigned a value once in the program. The value
+of the variable can be used multiple times. In complex control flow
+graphs a variable might get a value from two different paths in the program.
+To deal with this complexity, SSA Form uses the concept of a $$\phi$$ function
+which creates a new variable which depends on which path was taken through
+the control flow graph. 
+
+For short circuit of boolean expressions you have to create the $$\phi$
+function yourself.
+
+    llvm::PHINode *val = Builder.CreatePHI(TYPE, 2, "phival");
+
+where TYPE is an `LLVM::Type`
+
+    llvm::PHINode *val = Builder.CreatePHI(L->getType(), 2, "phival");
+    val->addIncoming(L, CurBB);
+    val->addIncoming(opval, OpValBB);
+
+where `L` is the LLVM output for the LHS of the boolean expression and `CurBB`
+and `OpValBB` are the two basic blocks that are incoming blocks for the
+$$\phi$$ function.
+
 
