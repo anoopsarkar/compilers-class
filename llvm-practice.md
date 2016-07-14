@@ -698,7 +698,7 @@ To deal with this complexity, SSA Form uses the concept of a $$\phi$$ function
 which creates a new variable which depends on which path was taken through
 the control flow graph. 
 
-For short circuit of boolean expressions you have to create the $$\phi$
+For short circuit of boolean expressions you have to create the $$\phi$$
 function yourself.
 
     llvm::PHINode *val = Builder.CreatePHI(TYPE, 2, "phival");
