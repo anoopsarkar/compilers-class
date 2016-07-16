@@ -5,10 +5,16 @@ $.ajax({
     beforeSend: function() {
         $('#loader').show();
     },
-    complete: function(){
-        $('#loader').hide();
+    timeout: 24000,
+    error: function(x, t, m) {
+        if (t == "timeout") {
+            alert("The URL at sfu-yacc.appspot.com is not responding at the moment. Try again later.");
+        } else {
+            alert(t);
+        }
     },
     success: function () {
+        $('#loader').hide();
         // The current assignment number (0-indexed)
         var assignment_number = 4;
 
