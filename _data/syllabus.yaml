@@ -181,7 +181,7 @@
       url: "assets/lectures/ir.pdf"
     - title: "Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
-- title: "Week 11 - Code Optimization 1"
+- title: "Week 11 - Code Generation and Optimization"
   tag: week11
   current: true
   notes:
@@ -191,7 +191,9 @@
       url: "assets/lectures/ssaform3.pdf"
     - title: "Register Allocation"
       url: "assets/lectures/regalloc.pdf"
-- title: "Week 12 - Code Optimization 2"
+    - title: "Code Optimization"
+      url: "assets/lectures/opt.pdf"
+- title: "Week 12 - Code Optimization"
   tag: week12
   current: false
   notes:
