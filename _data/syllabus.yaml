@@ -173,7 +173,7 @@
       url: "assets/lectures/runtime.pdf"
 - title: "Week 10 - Code Generation"
   tag: week10
-  current: true
+  current: false
   notes:
     - title: "Homework 4 released"
       url: hw4.html
@@ -183,10 +183,12 @@
       url: "assets/lectures/ssaform1.pdf"
 - title: "Week 11 - Code Optimization 1"
   tag: week11
-  current: false
+  current: true
   notes:
     - title: "Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
+    - title: "Creating SSA Form (continued)"
+      url: "assets/lectures/ssaform3.pdf"
     - title: "Register Allocation"
       url: "assets/lectures/regalloc.pdf"
 - title: "Week 12 - Code Optimization 2"
