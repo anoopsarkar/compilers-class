@@ -191,12 +191,12 @@
       url: "assets/lectures/ssaform3.pdf"
     - title: "Register Allocation"
       url: "assets/lectures/regalloc.pdf"
-    - title: "Code Optimization"
-      url: "assets/lectures/opt.pdf"
 - title: "Week 12 - Code Optimization"
   tag: week12
   current: false
   notes:
+    - title: "Code Optimization"
+      url: "assets/lectures/opt.pdf"
 - title: "Week 13 - Type Checking and Conclusion"
   tag: week13
   current: false
