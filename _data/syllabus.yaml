@@ -191,6 +191,9 @@
       url: "assets/lectures/ssaform3.pdf"
     - title: "Register Allocation"
       url: "assets/lectures/regalloc.pdf"
+  links:
+    - title: "Register Allocation in LLVM"
+      url: "http://llvm.org/devmtg/2011-11/Olesen_RegisterAllocation.pdf"
 - title: "Week 12 - Code Optimization"
   tag: week12
   current: false
