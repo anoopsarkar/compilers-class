@@ -183,7 +183,7 @@
       url: "assets/lectures/ssaform1.pdf"
 - title: "Week 11 - Code Generation and Optimization"
   tag: week11
-  current: true
+  current: false
   notes:
     - title: "Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
@@ -196,13 +196,15 @@
       url: "http://llvm.org/devmtg/2011-11/Olesen_RegisterAllocation.pdf"
     - title: "Future directions for register allocation in LLVM"
       url: "http://llvm.org/devmtg/2009-10/RegisterAllocationFutureWorks.pdf"
-- title: "Week 12 - Code Optimization"
+- title: "Week 12 - Code Optimization and Type Systems"
   tag: week12
-  current: false
+  current: true
   notes:
     - title: "Code Optimization"
       url: "assets/lectures/opt.pdf"
-- title: "Week 13 - Type Checking and Conclusion"
+    - title: "Type Systems"
+      url: "assets/lectures/types.pdf"
+- title: "Week 13 - Garbage Collection and Conclusion"
   tag: week13
   current: false
   notes:
