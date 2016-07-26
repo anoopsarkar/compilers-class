@@ -208,3 +208,7 @@
   tag: week13
   current: false
   notes:
+    - title: "Garbage Collection"
+      url: "assets/lectures/keithschwarzgc.pdf"
+    - title: "Conclusion"
+      url: "assets/lectures/conclusion.pdf"
