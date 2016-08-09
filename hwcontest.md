@@ -1,3 +1,11 @@
+---
+layout: default
+img: race
+img_link: "http://www.flickr.com/photos/nationaalarchief/3198249977/"
+caption: ""
+title: Compiler Contest
+active_tab: homework
+---
 
 # Compiler Contest 
 
