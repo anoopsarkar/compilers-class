@@ -1,6 +1,6 @@
 $.ajax({
     //url: "//sfu-yacc.appspot.com/leaderboard.js",
-    url: "leaderboard-summer2016.js",
+    url: "//leaderboard-summer2016.js",
     dataType: "script",
     beforeSend: function() {
         $('#loader').show();
