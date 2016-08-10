@@ -43,7 +43,7 @@ Submit your assignments [here]({{ site.leaderboard }}). Results will be updated 
   </tbody>
 </table>
 
-<script type="text/javascript" src="leaderboard-code.js"></script>
+<script type="text/javascript" src="leaderboard-summer2016.js"></script>
 
 <div class="panel panel-default"> 
 <div class="panel-heading">Legend</div> 
