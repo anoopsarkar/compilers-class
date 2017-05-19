@@ -10,7 +10,6 @@ jquery: true
 
 Submit your assignments [here]({{ site.leaderboard }}). Results will be updated in a few minutes.
 
-
 <img src="{{ site.baseurl }}assets/img/ajax-loader.gif" id="loader" style="display:none"/>
 
 <table class="table table-hover table-condensed">
