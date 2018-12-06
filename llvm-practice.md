@@ -640,7 +640,7 @@ for the instructions that should go into that basic block.
 The following diagram graphically shows how the different
 basic blocks are connected to each other.
 
-<img alt="LLVM Control Flow Graph" src="{{site.baseurl}}assets/img/llvmcfg.png" width="800px"/>
+<img alt="LLVM Control Flow Graph" src="{{site.baseurl}}/assets/img/llvmcfg.png" width="800px"/>
 
 Once you can create basic blocks and insert instructions for
 each basic block then all that remains is to link them together
