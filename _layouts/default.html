@@ -8,8 +8,8 @@
     <title>SFU Compilers class: {{ page.title }}</title>
 
     <!-- CSS -->
-    <link href="{{ site.baseurl }}dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="{{ site.baseurl }}dist/css/bootstrap-glyphicons.css" rel="stylesheet">
+    <link href="{{site.baseurl}}/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="{{site.baseurl}}/dist/css/bootstrap-glyphicons.css" rel="stylesheet">
     <link href="{{ site.baseurl }}assets/css/compilers-class.css" rel="stylesheet">   
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
@@ -21,10 +21,12 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <!-- MathJax -->
-    <script type="text/javascript"
-      src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+    <!-- MathJax
+    <script type="text/javascript" async
+      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
+    -->
+    {% include mathjax_support %}
   </head>
   <body>
     <a class="sr-only" href="#content">Skip to main content</a>
