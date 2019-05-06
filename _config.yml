@@ -1,40 +1,34 @@
 exclude: ['README.md','assets/demos','assets/latex','assets/ppt']
 timezone: US/Pacific
 markdown: kramdown
-coursys: "https://courses.cs.sfu.ca/2016su-cmpt-379-d1/"
+coursys: "https://coursys.sfu.ca/2019su-cmpt-379-d1/"
 leaderboard: "https://sfu-yacc.appspot.com"
 semcode: 1194
 calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
-lastday: "Dec 3, 2018"
-midterm: "Oct 30, 2018"
+lastday: "Aug 2, 2019"
+midterm: "Jun 25, 2019, 10:30-11:20am, Location: BLU 9660"
+finalexam: "Aug 9, 2019, 12-3pm, Location: TBA"
 instructor: anoop
 tas:
-  - name: "Ashkan Alinejad"
-    email: aalineja
-  - name: "Nadia Ghobadipasha"
-    email: nghobadi
-  - name: "Yilong (Jetic) Gu"
-    email: jeticg
-  - name: "Nishant Kambhatla" 
-    email: nkambhat
-  - name: "Sayyedhassan Shavarani"
-    email: sshavara
+  - name: "Vishal Batvia"
+    email: vbatvia
+    officehour: TBA
+  - name: "Pooya Moradi"
+    email: pmoradi
+    officehour: TBA
 hwdates:
   - hw: "0"
-    startdate: "Sep 11, 2018"
-    deadline: "Sep 18, 2018"
+    startdate: "May 14, 2019"
+    deadline: "May 21, 2019"
   - hw: "1"
-    startdate: "Sep 18, 2018"
-    deadline: "Oct 2, 2018"
+    startdate: "May 21, 2019"
+    deadline: "Jun 4, 2019"
   - hw: "2"
-    startdate: "Oct 2, 2018"
-    deadline: "Oct 16, 2018"
+    startdate: "Jun 4, 2019"
+    deadline: "Jun 18, 2019"
   - hw: "3"
-    startdate: "Oct 16, 2018"
-    deadline: "Nov 6, 2018"
+    startdate: "Jun 25, 2019"
+    deadline: "Jul 9, 2019"
   - hw: "4"
-    startdate: "Nov 6, 2018"
-    deadline: "Nov 20, 2018"
-  - hw: "project"
-    startdate: "Nov 6, 2018"
-    deadline: "Dec 10, 2018 2pm-5pm"
+    startdate: "Jul 9, 2019"
+    deadline: "Jul 30, 2019"

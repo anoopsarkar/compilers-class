@@ -1,8 +1,9 @@
 ---
 layout: default
-img: llvm
+img: temeraire
+img_link: "https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools"
+caption: "First published in 1986, [the Dragon book](https://en.wikipedia.org/wiki/Compilers:_Principles,_Techniques,_and_Tools) is widely regarded as the classic compiler textbook. Image from [Temeraire](https://en.wikipedia.org/wiki/Temeraire_(series))."
 img_link: "http://llvm.org/"
-caption: "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. "
 title: Textbook and References
 active_tab: textbook
 ---
