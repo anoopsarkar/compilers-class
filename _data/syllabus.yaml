@@ -1,6 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
   tag: week1
-  current: false
+  current: true
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
@@ -13,9 +13,9 @@
       url: "assets/lectures/in4-stages-of-a-compiler.pdf"
   links:
     - title: "Quines"
-      url: "assets/demos/myquine.c"
+      url: "assets/demos/intro/myquine.c"
     - title: "Language survey"
-      url: "assets/demos/pl-survey-summary_su2016.txt"
+      url: "assets/demos/intro/pl-survey-summary_su2016.txt"
     - title: "Duff device"
       url: "assets/demos/duff-a.c"
     - title: "Dynamic linking"
@@ -198,7 +198,7 @@
       url: "http://llvm.org/devmtg/2009-10/RegisterAllocationFutureWorks.pdf"
 - title: "Week 12 - Code Optimization and Type Systems"
   tag: week12
-  current: true
+  current: false
   notes:
     - title: "Code Optimization"
       url: "assets/lectures/opt.pdf"

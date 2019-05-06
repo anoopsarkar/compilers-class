@@ -4,13 +4,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl}}favicon.ico">
     <title>SFU Compilers class: {{ page.title }}</title>
 
     <!-- CSS -->
     <link href="{{site.baseurl}}/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="{{site.baseurl}}/dist/css/bootstrap-glyphicons.css" rel="stylesheet">
-    <link href="{{site.baseurl}}/assets/css/compilers-class.css" rel="stylesheet">   
+    <link href="{{site.baseurl}}/assets/css/nlp-class.css" rel="stylesheet">   
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,11 +21,6 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 
-    <!-- MathJax
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    -->
     {% include mathjax_support %}
   </head>
   <body>
@@ -83,7 +78,7 @@
         <div class="col-sm-2 hidden-sm hidden-xs">
         {% if page.img %}
           {% if page.img_link %}<a href="{{ page.img_link }}">{% endif %} 
-          <img src="assets/img/{{ page.img }}.jpg" class="img-responsive img-rounded" alt="{{ page.picture }}"/>
+          <img src="{{ site.baseurl }}/assets/img/{{ page.img }}.jpg" class="img-responsive img-rounded" alt="{{ page.picture }}"/>
           {% if page.img_link %}</a>{% endif %} 
           <span class="text-muted"><i>{{ page.caption | markdownify }}</i></span>
         {% endif %}
