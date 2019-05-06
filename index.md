@@ -21,7 +21,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 
 #### Teaching Assistants
 <ul>
-<li> Do **not** email TAs directly. Use the <a href="{{ site.coursys }}discussion/">discussion board</a> only.</li>
+<li> Do <b>not</b> email TAs directly. Use the <a href="{{ site.coursys }}discussion/">discussion board</a> only.</li>
 {% for ta in site.tas %}
 <li>{{ ta.name }}, <code>{{ ta.email }}</code>, Office hour: {{ ta.officehour }}</li>
 {% endfor %}
