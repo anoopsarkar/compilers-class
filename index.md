@@ -40,7 +40,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Instructor office hours: Thursdays 11:30am-12:30pm TASC1 9427
 * TA office hours listed above
 * <b>No emails</b> to the TAs and strictly emails about personal matters to the instructor
-* Use only SFU email address and use `cmpt413:` or `cmpt825:` (for ugrad and grad respectively) as subject prefix
+* Use only SFU email address and use `cmpt379:` as subject prefix
 
 #### Textbook
 * No required textbook. Online readings provided in Syllabus.
@@ -52,5 +52,4 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Four programming homeworks. Due dates: HW1 on {{ site.hwdates[1].deadline }}, HW2 on {{ site.hwdates[2].deadline }}, HW3 on {{ site.hwdates[3].deadline }}, HW4 on {{ site.hwdates[4].deadline }} (60% each)
 * In class midterm: {{ site.midterm }} (18%)
 * Final exam: {{ site.hwdates[5].deadline }} (20%)
-
 
