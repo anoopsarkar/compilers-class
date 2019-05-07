@@ -9,7 +9,7 @@ active_tab: homework
 
 # Homework & Leaderboard setup
 
-<p class="text-muted">Due on Tuesday, May 24, 2016</p>
+<p class="text-muted">Due on {{ site.hwdates[0].deadline }}</p>
 
 For this course, we use [an automated homework submission
 system](http://sfu-yacc.appspot.com)[^1] built on [Google App
@@ -23,18 +23,14 @@ according to their scores on assignment metrics.
 You should follow the steps in this document to make sure that
 everything is working for you.
 
-0. Join a group. The maximum group size is two. Decide on a group
-name. Make it memorable. Register yourself as a group on
-[Coursys](https://courses.cs.sfu.ca).
-
 1. Visit the course submission page at
-[sfu-yacc.appspot.com](http://sfu-yacc.appspot.com). At
-least one person in your group will need a valid Google account.
+[sfu-yacc.appspot.com](http://sfu-yacc.appspot.com). You 
+will need a valid Google account.
 
 2. This system is used to upload all homework assignments. You
-should use your group name as the handle when you submit your
+should use a handle when you submit your
 assignment. By default the leaderboard will use your Google nickname
-which cannot be used to assign your group a grade.
+which cannot be used to assign you a grade.
 
 3. Homework 0 (this one) has been activated. Create a file called `hw0.txt` with a single number in it. 
 Use the file submission dialog to upload your submission. Check your status on the [leaderboard](leaderboard.html)
@@ -50,7 +46,7 @@ highest value.
 
 To get full marks, you must do the following:
 
-* Upload your file on [the upload page](http://sfu-yacc.appspot.com/). **Only one person per group should submit for the group.**
+* Upload your file on [the upload page](http://sfu-yacc.appspot.com/). **Do not use multiple logins to submit your assignment.**
 
 <!-- There will be a dialog
 that says this is the final submission (you can no longer upload
@@ -58,7 +54,7 @@ after you _Submit_ your final answer. Do __not__ press _Submit_ if
 you plan to keep uploading new submissions. 
 -->
 
-* You **must** use a valid group name that is verifiable on [Coursys](https://courses.cs.sfu.ca) 
+* You **must** use a valid handle.
 
 * Your group must upload your text file inside a zip file as the HW0
 submission on [Coursys](https://courses.cs.sfu.ca). Only one person

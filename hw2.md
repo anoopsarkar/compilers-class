@@ -9,7 +9,7 @@ active_tab: homework
 
 # Parser for Decaf
 
-<p class="text-muted">Due on Tuesday, June 21, 2016</p>
+<p class="text-muted">Due on {{ site.hwdates[2].deadline }}</p>
 
 Your task for this homework is to write a parser for the [Decaf programming language](decafspec.html).
 
@@ -50,7 +50,7 @@ To get started with your homework do the following steps.
 Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
 clone your repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
+    git clone git@csil-git1.cs.surrey.sfu.ca:your-user-name/your-repo-name.git
     cd your-repo-name/decafast
     cp -r /your-path-to/compilers-class-hw/decafast/* .
     git add *
@@ -164,7 +164,6 @@ This will create a zip file called `source.zip`. You should upload this file as 
 
 ## Ground Rules
 
-* Each group should submit using one person as the designated uploader.
 * You must turn in two things:
     * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW2 submission page on [Coursys]({{ site.coursys }}).

@@ -10,7 +10,7 @@ active_tab: homework
 
 # The Decaf Compiler
 
-<p class="text-muted">Due on Tuesday, August 2, 2016</p>
+<p class="text-muted">Due on {{ site.hwdates[4].deadline }}</p>
 
 Your task for this homework is to use [LLVM](http://llvm.org) for code generation in order to
 write a fully working compiler, including semantic checks, for the [Decaf
@@ -52,7 +52,7 @@ To get started with your homework do the following steps.
 Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
 clone your repository and enter that directory and copy over the decafcomp files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
+    git clone git@csil-git1.cs.surrey.sfu.ca:your-user-name/your-repo-name.git
     cd your-repo-name/decafcomp
     cp -r /your-path-to/compilers-class-hw/decafcomp/* .
     git add *
@@ -266,7 +266,6 @@ particular, put relevant documentation into `answer/docs/README.md`.
 
 ## Ground Rules
 
-* Each group should submit using one person as the designated uploader.
 * You must turn in two things:
     * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW4 submission page on [Coursys]({{ site.coursys }}).

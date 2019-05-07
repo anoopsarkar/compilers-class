@@ -9,7 +9,7 @@ active_tab: homework
 
 # Lexical Analyzer for Decaf
 
-<p class="text-muted">Due on Tuesday, June 7, 2016</p>
+<p class="text-muted">Due on {{ site.hwdates[1].deadline }}</p>
 
 Your task for this homework is to write a lexical analyzer (lexer
 for short) for the [Decaf programming language](decafspec.html)
@@ -56,7 +56,7 @@ In the above instructions, change the values of instructor and TA to `anoop` and
 
 Clone your repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:your-group-name/your-repo-name.git
+    git clone git@csil-git1.cs.surrey.sfu.ca:your-username-name/your-repo-name.git
     cd your-repo-name
     cp -r /your-path-to/compilers-class-hw/decaflex/* .
     git add *
@@ -196,7 +196,6 @@ This will create a zip file called `source.zip`. You should upload this file as 
 
 ## Ground Rules
 
-* Each group should submit using one person as the designated uploader.
 * You must turn in two things:
     * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW1 submission page on [Coursys]({{ site.coursys }}).
