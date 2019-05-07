@@ -15,8 +15,8 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * [Anoop Sarkar](http://www.cs.sfu.ca/~anoop/) 
 
 #### Time and place
-* Tuesdays 10:30-11:20 BLU-9660
-* Thursdays 09:30-11:20 K-9500
+* Tuesdays 10:30-11:20 [BLU-9660](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
+* Thursdays 09:30-11:20 [K-9500](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants
