@@ -9,6 +9,7 @@ active_tab: homework
 
 # Homework & Leaderboard setup
 
+<p class="text-muted">Start on {{ site.hwdates[0].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[0].deadline }}</p>
 
 For this course, we use [an automated homework submission

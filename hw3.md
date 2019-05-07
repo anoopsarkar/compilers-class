@@ -10,6 +10,7 @@ active_tab: homework
 
 # Code Generation for Decaf Expressions
 
+<p class="text-muted">Start on {{ site.hwdates[3].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[3].deadline }}</p>
 
 Your task for this homework is to use LLVM in order to write the code

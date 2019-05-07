@@ -10,6 +10,7 @@ active_tab: homework
 
 # The Decaf Compiler
 
+<p class="text-muted">Start on {{ site.hwdates[4].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[4].deadline }}</p>
 
 Your task for this homework is to use [LLVM](http://llvm.org) for code generation in order to

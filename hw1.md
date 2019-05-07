@@ -9,6 +9,7 @@ active_tab: homework
 
 # Lexical Analyzer for Decaf
 
+<p class="text-muted">Start on {{ site.hwdates[1].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[1].deadline }}</p>
 
 Your task for this homework is to write a lexical analyzer (lexer
