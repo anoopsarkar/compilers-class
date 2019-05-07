@@ -48,8 +48,9 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 
 #### Grading
 * Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
-* Programming setup homework: HW0 due on {{ site.hwdates[0].deadline }} (2%)
-* Four programming homeworks. Due dates: HW1 on {{ site.hwdates[1].deadline }}, HW2 on {{ site.hwdates[2].deadline }}, HW3 on {{ site.hwdates[3].deadline }}, HW4 on {{ site.hwdates[4].deadline }} (60% each)
+* Programming setup homework: HW0 due on {{ site.hwdates[0].deadline }} (1%)
+* Four programming homeworks. Due dates: HW1 on {{ site.hwdates[1].deadline }}, HW2 on {{ site.hwdates[2].deadline }}, HW3 on {{ site.hwdates[3].deadline }}, HW4 on {{ site.hwdates[4].deadline }} (56% total)
+* Participation: Helping other students on the discussion board in a positive way (5%)
 * In class midterm: {{ site.midterm }} (18%)
 * Final exam: {{ site.hwdates[5].deadline }} (20%)
 
