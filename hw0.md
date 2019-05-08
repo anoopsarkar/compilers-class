@@ -15,9 +15,8 @@ active_tab: homework
 For this course, we use [an automated homework submission
 system](http://sfu-yacc.appspot.com)[^1] built on [Google App
 Engine](https://appengine.google.com). One component of this system
-is the [leaderboard](leaderboard.html), which introduces a competitive
-element into the assignments with realtime display of group submissions
-according to their scores on assignment metrics.
+is the [leaderboard](leaderboard.html) which allows you to
+check on your progress. It is not intended to be a competition.
 
 [^1]: In this case, `yacc` stands for Yet Another Compilers Course.
 
@@ -57,9 +56,8 @@ you plan to keep uploading new submissions.
 
 * You **must** use a valid handle.
 
-* Your group must upload your text file inside a zip file as the HW0
-submission on [Coursys](https://courses.cs.sfu.ca). Only one person
-per group needs to submit here as well. You can create a zip file like this:
+* You must upload your text file inside a zip file as the HW0
+submission on [Coursys](https://courses.cs.sfu.ca). You can create a zip file like this:
 
     zip hw0coursys.zip your-file.txt
 
