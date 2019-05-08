@@ -13,7 +13,7 @@ active_tab: practice
 
 The files below and other example programs are available in a git repository
 
-You must have git and python (2.7) on your system. Once you've confirmed this, run this command:
+You must have git and python (3.x) on your system. Once you've confirmed this, run this command:
 
     git clone https://github.com/anoopsarkar/compilers-class-hw.git
 

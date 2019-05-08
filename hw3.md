@@ -41,7 +41,7 @@ which LLVM libraries to link with your program and where they can be found.
 
 ## Getting Started
 
-You must have git and python (2.7) on your system to run the assignments.
+You must have git and python (3.x) on your system to run the assignments.
 Once you've confirmed this, run this command:
 
     git clone https://github.com/anoopsarkar/compilers-class-hw.git

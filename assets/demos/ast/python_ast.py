@@ -6,7 +6,8 @@ version of the AST.
 __author__ = 'Martin Blais <blais@furius.ca>'
 
 import sys
-from compiler.ast import Node
+import ast
+import pprint
 
 __all__ = ('printAst',)
 
@@ -52,12 +53,13 @@ def main():
     if not args:
         parser.error("You need to specify the name of Python files to print out.")
 
-    import compiler, traceback
+    import traceback
     for fn in args:
-        print '\n\n%s:\n' % fn
+        print('\n\n%s:\n' % fn)
         try:
-            printAst(compiler.parseFile(fn), initlevel=1)
-        except SyntaxError, e:
+            with open(fn, 'r') as source:
+                pprint.pprint(ast.dump(ast.parse(source.read())))
+        except SyntaxError as e:
             traceback.print_exc()
 
 if __name__ == '__main__':
