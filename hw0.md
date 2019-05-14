@@ -244,7 +244,6 @@ Run against all testcases as follows:
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
 (see section on _Check your solution_ below).
-The file `output.zip` can also be uploaded to the [leaderboard]({{ site.leaderboard }}) when you are ready.
 
 If you run `zipout.py` multiple times it will overwrite your output directory and zip file which should be fine most of the time (but be careful).
 
