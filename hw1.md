@@ -49,16 +49,14 @@ To get started with your homework do the following steps.
 
 ### Set up your repository
 
-Follow these [instructions to set up your repository on GitLab](https://courses.cs.sfu.ca/2016sp-cmpt-470-e1/pages/GitLab)
-
-In the above instructions, change the values of instructor and TA to `anoop` and `msiahban`.
+Make sure you have already followed the [instructions in HW0](hw0.html) to set up your gitlab repository.
 
 ### Copy over files
 
 Clone your repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:your-username-name/your-repo-name.git
-    cd your-repo-name
+    git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
+    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
     cp -r /your-path-to/compilers-class-hw/decaflex/* .
     git add *
     git commit -m 'initial commit'

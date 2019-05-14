@@ -13,8 +13,10 @@ active_tab: homework
 <p class="text-muted">Due on {{ site.hwdates[0].deadline }}</p>
 
 Your task for this homework is to setup your gitlab repository and
-get used to the routine we will be using in this course in order to:
+get used to the routine we will be using in this course. This
+homework will have the following steps:
 
+* set up your [gitlab repository](http://gitlab.cs.sfu.ca) for the course
 * get the homework files to get started on your homework, 
 * to write your solution for each homework, 
 * to test your solution, and 

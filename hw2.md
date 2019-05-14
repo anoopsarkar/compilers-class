@@ -48,11 +48,11 @@ To get started with your homework do the following steps.
 
 ### Copy over files to your repository
 
-Assuming you have set up your repository using the instruction in [HW1](hw1.html), 
+Assuming you have set up your repository using the instruction in [HW0](hw0.html), 
 clone your repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:your-user-name/your-repo-name.git
-    cd your-repo-name/decafast
+    git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
+    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
     cp -r /your-path-to/compilers-class-hw/decafast/* .
     git add *
     git commit -m 'initial commit'
