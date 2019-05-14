@@ -185,10 +185,15 @@ it over as your initial solution:
 
 ## The Challenge
 
+The objective of this homework is to lay out the development
+and testing methodology for the rest of the homeworks so it
+is designed to be a trivial task that can be tested.
+
 Your task for this homework is to write a very simple C++ program
 that trims the leading whitespace (if any) from each line read from
-the standard input stream `std:cin`. Any other whitespace should be
-left untouched.
+the standard input stream `std:cin`. Any other whitespace should
+be left untouched. For this homework we define whitespace to be
+only the ASCII space `' '` and tab `'\t'` characters. 
 
 For example, for the following input:
 
