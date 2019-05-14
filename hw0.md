@@ -103,6 +103,8 @@ If you have not set up your git configuration then in a terminal window, enter t
     git config --global push.default current
     cd $HOME
 
+If you prefer another editor instead of `nano` set up that one as the default editor.
+
 You should use the following command to clone your git repository for this course:
 
     git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
