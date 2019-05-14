@@ -267,7 +267,7 @@ Check your solution accuracy using the Python program `check.py`. You must creat
 You must upload your output zipfile and source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
 
     # go to the directory with the file zipsrc.py
-    python zipsrc.py
+    python3 zipsrc.py
 
 This will create a zip file called `source.zip`. You should upload this file as your submission to `hw0` on [Coursys]({{ site.coursys }}).
 
@@ -276,8 +276,8 @@ This will create a zip file called `source.zip`. You should upload this file as 
 ## Ground Rules
 
 * You must turn in two things:
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}).
-    * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the `default.cc` program to get any marks.
+    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}).
+    * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the `default.cc` program to get any marks.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 

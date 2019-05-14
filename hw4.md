@@ -218,7 +218,7 @@ Your solution must be compiled in the `answer` directory and must be called `dec
 Run against all testcases as follows:
 
     # go to the directory with the file zipout.py
-    python zipout.py
+    python3 zipout.py
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
 (see section on _Check your solution_ below).
@@ -233,10 +233,10 @@ create an `output.zip` file using the above step in _Run your solution on
 testcases_.
 
 You can use the default program provided to get an initial solution to this
-homework. Run `python zipout.py -r default` to get a `source.zip` file you can
+homework. Run `python3 zipout.py -r default` to get a `source.zip` file you can
 score using `check.py`.
 
-    python check.py 
+    python3 check.py 
     Correct(dev): 19 / 212
     Score(dev): 19.00
     Total Score: 19.00
@@ -256,7 +256,7 @@ You must also upload your source code to Coursys. You should prepare your
 source for upload using the Python program `zipsrc.py`.
 
     # go to the directory with the file zipsrc.py
-    python zipsrc.py
+    python3 zipsrc.py
 
 This will create a zip file called `source.zip`. You should upload this file as
 your submission to hw1 on [Coursys]({{ site.coursys }}).
@@ -268,8 +268,8 @@ particular, put relevant documentation into `answer/docs/README.md`.
 ## Ground Rules
 
 * You must turn in two things:
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}).
-    * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
+    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}).
+    * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
