@@ -320,10 +320,10 @@ This will create a zip file called `source.zip`. You should upload this file as 
 ## Ground Rules
 
 * You must turn in two things:
-    * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the [leaderboard web site]({{ site.leaderboard }}). It should have a value higher than the output from `default.lex` to get any marks.
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the HW3 submission page on [Coursys]({{ site.coursys }}).
-* You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `README.md` file.
-* For the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
+    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python zipsrc.py` must be uploaded to the `hw3` submission page on [Coursys]({{ site.coursys }}).
+    * Your output on the testcases which is the file `output.zip` produced by running `python zipout.py` must be uploaded to the `hw3` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
+* You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
+* For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
 If you have any questions or you’re confused about anything, just ask.
 
