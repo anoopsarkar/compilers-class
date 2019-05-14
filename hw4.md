@@ -55,6 +55,8 @@ clone your repository and enter that directory and copy over the decafcomp files
 
     git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
     cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
+    mkdir -p decafcomp
+    cd decafcomp
     cp -r /your-path-to/compilers-class-hw/decafcomp/* .
     git add *
     git commit -m 'initial commit'

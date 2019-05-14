@@ -68,6 +68,8 @@ clone your repository and enter that directory and copy over the decafexpr files
 
     git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
     cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
+    mkdir -p decafexpr
+    cd decafexpr
     cp -r /your-path-to/compilers-class-hw/decafexpr/* .
     git add *
     git commit -m 'initial commit'
