@@ -15,6 +15,85 @@ active_tab: faq
 * If you email the instructor or TA directly then use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
 * Before you email or post to the discussion board **read this FAQ**.
 
+### Grading
+
+* The grade for the course is computed using the final marks which are a weighted average of each activity as defined on the [main page](index.html).
+* The grade cutoff are as follows:
+
+  | **Final Grade** | **Final marks** |
+  | A+ | >95 |
+  | A  | >90 |
+  | A- | >85 |
+  | B+ | >80 |
+  | B  | >75 |
+  | B- | >70 |
+  | C+ | >65 |
+  | C  | >60 |
+  | C- | >55 |
+  | D  | >50 |
+  | F  | &le;50 |
+  {: .table}
+
+### Homework Submission and Grace Days
+    
+* You have to submit several deliverables for each homework as specified on the homework pages.
+* Your homework solution will be submitted electronically on [courses.cs.sfu.ca](https://courses.cs.sfu.ca/).
+* Please include an `answer/README.md` file for any documentation outside of the source code especially for code obtained from elsewhere.
+* All homeworks are due by 11:59PM on the homework due date.
+* Each homework comes with 2 grace days. However the grace days only apply to those who have a valid submission on the due date. The default is usually a valid submission. For example, if your homework deadline is Tuesday 11:59PM and you submit a valid solution then you have until Thursday night 11:59PM to modify your homework submission.
+* We will make every attempt to release grades for each homework as soon as possible. However, this means that after we review the source code we might have to lower your official grade. If you cheated in some way, such as copying your submission or you have violated the ground rules for each homework, your grades will be decreased from the initial value.
+
+### CSIL
+    
+* [Remote access to CSIL](http://www.sfu.ca/computing/about/support/csil/unix/how-to-use-csil-linux-cpu-server.html) is allowed.
+* CSIL computers accept SSH connections on port 24 (rather than the usual port 22). They can only be accessed from within the SFU network. If you are outside it, you need to go through a directly accessable computer, most likely fraser.sfu.ca. Here are some examples using the usual command line `ssh` and `scp` (from OpenSSH). Below $ is the command line shell on your home computer running Linux/MacosX/Cygwin. What follows is a recipe that will connect you remotely to a CSIL Linux machine: <script src="https://gist.github.com/4486532.js"></script> 
+* If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: username`sfu.ca), then prefix the SFU username to the ssh or scp command. `ssh (username)@fraser.sfu.ca`.
+* You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://unlser1.unl.csi.cuny.edu/tutorials/QuickUnixTutorial.html).
+*  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
+
+#### Using the computer from the command line shell
+
+In the instructions that follow, you will operate the computer using
+the text-based command-line interface, known as the "shell". Start
+off by reading [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/unix.html){:target="_blank"}
+
+Are you confident you know how to use the shell? Do [the shell challenge](shell_fu.txt)
+to prove to yourself that you really know how to use the command shell.
+
+Stop! We know that students skip over links! If you are
+new to Linux, you really need to read up on some basics.
+Read [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/unix.html){:target="_blank"} now!
+
+#### Logging in to CSIL
+
+It's time to get yourself set up in the CSIL Lab.
+
+CSIL is open starting the second week
+of the semester, 24 hours a day, 7 days a week. All your CMPT 127
+lab sessions are in CSIL. Log in to the **Linux** machines.  Use
+the same username and password as before.
+
+The machines in these rooms have Linux and Windows installed. If
+you a machine running Windows, simply restart the machine and select
+Linux when prompted.
+
+Once logged into Linux, you should see a familiar desktop interface.
+In order to manipulate most of your work, you will need a terminal
+window which runs the "shell".
+
+Click the launcher in the upper-left corner of the desktop interface
+and start the "Terminal Emulator" application, or Terminal for short.
+It should be under the Accessories submenu.  If you can't find it,
+then try searching for `Terminal` in the search box.
+
+The Terminal will allow you to type commands to manipulate, run and
+test programs in your labs.  But there will be no programming in this lab.
+In this lab you are going to use Git.
+
+Just a heads up about the directory `$HOME/sfuhome` on CSIL machines. 
+You should clone your repo inside your `$HOME` directory. You should not work inside your
+`$HOME/sfuhome` directory.
+
 ### Exams
 
 * If you must miss an exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox. 
