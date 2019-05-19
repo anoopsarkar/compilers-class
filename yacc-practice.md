@@ -37,6 +37,8 @@ the lexical analyzer.
 
     %{ 
     #include <stdio.h> 
+    extern int yylex(void);
+    extern int yyerror(char *);
     %}
     %token NAME NUMBER
     %%
@@ -83,8 +85,17 @@ The lex program can be compiled to a C program using `flex`:
 The final binary is created by compiling the output
 from flex and bison with a C/C++ compiler as follows. 
 
-    gcc -o ./simple-expr simple-expr.tab.c simple-expr.lex.c -ly -lfl
+    cc -o ./simple-expr simple-expr.tab.c simple-expr.lex.c -ly -lfl
     echo "a=2+3+5" | ./simple-expr
+
+If you see the following error:
+
+    ld: library not found for -lfl
+    error: linker command failed with exit code 1 (use -v to see invocation)
+
+Then use `-ll` instead of `-lfl`. And if that doesn't work then you
+probably need to install bison and flex on your local machine. The
+CSIL Linux machines should have these tools installed already.
 
 Convert the above yacc and lex programs so that it can handle
 multiple expressions, exactly one per line.
