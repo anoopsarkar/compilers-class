@@ -181,7 +181,7 @@ Your solution must be compiled in the `answer` directory and must be called `rmp
 There is an incomplete solution to this homework in `answer/default.cc`. Copy
 it over as your initial solution:
 
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
+    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME/rmprefix/answer
     cp default.cc rmprefix.cc
     make rmprefix
 
@@ -229,7 +229,7 @@ C).
 
 Remember to push your solution source code to your git repository:
 
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME/answer
+    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME/rmprefix/answer
     git add rmprefix.cc
     git commit -m 'initial solution'
     git push
