@@ -1,6 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
   tag: week1
-  current: true
+  current: false
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
@@ -64,7 +64,7 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
 - title: "Week 3 - Lexical Analysis 2"
   tag: week3
-  current: false
+  current: true
   notes:
     - title: "LEX3: Regexps are Trees"
       url: "assets/lectures/lex3-regexps-are-trees.pdf"
