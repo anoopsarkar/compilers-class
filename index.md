@@ -39,7 +39,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Ask for help on [the discussion board]({{ site.coursys }}/discussion)
 * Instructor office hours: Thursdays 11:30am-12:30pm TASC1 9427
 * TA office hours listed above
-* <b>No emails</b> to the TAs and strictly emails about personal matters to the instructor
+* Do not email the TAs directly (without cc:ing the instructor) under any circumstance.
 * Use only SFU email address and use `cmpt379:` as subject prefix
 
 #### Textbook
