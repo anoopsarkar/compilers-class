@@ -148,6 +148,8 @@ of symbol tables starting from the most recent one:
         return NULL;
     }
 
+The full example of how to use this data structure is available as
+a [github gist](https://gist.github.com/anoopsarkar/0a570c6bca560412048cb81401349d38).
 This is just one way to implement a symbol table. You can implement it any way
 you like, as long as it can handle shadowing of variables.
 
