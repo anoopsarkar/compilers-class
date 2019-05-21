@@ -72,9 +72,18 @@
       url: "assets/lectures/lex4-regexps-as-automata.pdf"
     - title: "LEX5: Regexps to NFA.pdf"
       url: "assets/lectures/lex5-regexps-to-nfa.pdf"
+    - title: "LEX8: Lexical Analyzer"
+      url: "assets/lectures/lex8-lexical-analyzer.pdf"
+  extra:
+    - title: "LEX6: NFA to DFA"
+      url: "assets/lectures/lex6-nfa-to-dfa.pdf"
+    - title: "LEX7: DFA Complexity"
+      url: "assets/lectures/lex7-nfa-to-dfa-complexity.pdf"
+    - title: "LEX9: Implementing DFAs"
+      url: "assets/lectures/lex9-implementing-dfas.pdf"
+    - title: "LEX10: Regexps directly to DFAs"
+      url: "assets/lectures/lex10-regexp-to-dfa.pdf"
   links:
-    - title: "Homework 1 released"
-      url: hw1.html
     - title: "Lexical Analysis practice"
       url: "lex-practice.html"
     - title: "Regular Expression Matching Can Be Simple And Fast"
@@ -89,34 +98,16 @@
       url: "http://portal.acm.org/citation.cfm?id=359175&coll=portal&dl=ACM&CFID=15540343&CFTOKEN=40038079"
     - title: "Regexp Simplifier"
       url: "http://ivanzuzak.info/noam/webapps/regex_simplifier/" 
-- title: "Week 4 - Lexical Analysis 3"
-  tag: week4
-  current: false
-  notes:
-    - title: "LEX6: NFA to DFA"
-      url: "assets/lectures/lex6-nfa-to-dfa.pdf"
-    - title: "LEX7: DFA Complexity"
-      url: "assets/lectures/lex7-nfa-to-dfa-complexity.pdf"
-    - title: "LEX8: Lexical Analyzer"
-      url: "assets/lectures/lex8-lexical-analyzer.pdf"
-  extra:
-    - title: "LEX9: Implementing DFAs"
-      url: "assets/lectures/lex9-implementing-dfas.pdf"
-    - title: "LEX10: Regexps directly to DFAs"
-      url: "assets/lectures/lex10-regexp-to-dfa.pdf"
-  links:
     - title: "Lex demos"
       url: "https://gist.github.com/anoopsarkar/6545633"
     - title: "Automatic Synthesis of Regular Expressions from Examples"
       author: "D. Bartoli and M. De Lorenzo and S. Medvet"
       citation: "IEEE Computer, 2014"
       url: "http://regex.inginf.units.it/"
-- title: "Week 5 - Context-Free Grammars"
-  tag: week5
+- title: "Week 4 - Context-Free Grammars"
+  tag: week4
   current: false
   notes:
-    - title: "Homework 2 released"
-      url: hw2.html
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1-intro.pdf"
     - title: "CFG2: Ambiguity"
@@ -126,20 +117,18 @@
   links:
     - title: "YACC Practice"
       url: "yacc-practice.html"
-- title: "Week 6 - Parsing 1"
-  tag: week6
+- title: "Week 5 - Parsing 1"
+  tag: week5
   current: false
   notes:
     - title: "TD1: Recursive descent parsing"
       url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "LR1: Shift Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
-- title: "Week 7 - Parsing 2"
-  tag: week7
+- title: "Week 6 - Parsing 2"
+  tag: week6
   current: false
   notes:
-    - title: "Homework 3 released"
-      url: hw3.html
     - title: "LR2: LR(0) parsing"
       url: "assets/lectures/lr2-lr_0-parsing.pdf"
     - title: "LR3: SLR(1) parsing"
@@ -153,8 +142,8 @@
       url: "llvm-practice.html"
     - title: "Midterm Practice"
       url: "assets/distrib/sample-midterm.pdf"
-- title: "Week 8 - Parsing 3"
-  tag: week8
+- title: "Week 7 - Parsing 3"
+  tag: week7
   current: false
   notes:
     - title: "LR5: Precedence and Associativity"
@@ -163,26 +152,24 @@
       url: "assets/lectures/td2-ll_1-parsing.pdf"
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
-- title: "Week 9 - Semantics and Runtime Support"
-  tag: week9
+- title: "Week 8 - Semantics and Runtime Support"
+  tag: week8
   current: false
   notes:
     - title: "Semantics"
       url: "assets/lectures/semantics.pdf"
     - title: "Runtime Support"
       url: "assets/lectures/runtime.pdf"
-- title: "Week 10 - Code Generation"
-  tag: week10
+- title: "Week 9 - Code Generation"
+  tag: week9
   current: false
   notes:
-    - title: "Homework 4 released"
-      url: hw4.html
     - title: "Intermediate Representation"
       url: "assets/lectures/ir.pdf"
     - title: "Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
-- title: "Week 11 - Code Generation and Optimization"
-  tag: week11
+- title: "Week 10 - Code Generation and Optimization"
+  tag: week10
   current: false
   notes:
     - title: "Creating SSA Form"
@@ -196,19 +183,23 @@
       url: "http://llvm.org/devmtg/2011-11/Olesen_RegisterAllocation.pdf"
     - title: "Future directions for register allocation in LLVM"
       url: "http://llvm.org/devmtg/2009-10/RegisterAllocationFutureWorks.pdf"
-- title: "Week 12 - Code Optimization and Type Systems"
-  tag: week12
+- title: "Week 11 - Code Optimization and Type Systems"
+  tag: week11
   current: false
   notes:
     - title: "Code Optimization"
       url: "assets/lectures/opt.pdf"
     - title: "Type Systems"
       url: "assets/lectures/types.pdf"
-- title: "Week 13 - Garbage Collection and Conclusion"
-  tag: week13
+- title: "Week 12 - Garbage Collection"
+  tag: week12
   current: false
   notes:
     - title: "Garbage Collection"
       url: "assets/lectures/keithschwarzgc.pdf"
+- title: "Week 13 - Conclusion"
+  tag: week13
+  current: false
+  notes:
     - title: "Conclusion"
       url: "assets/lectures/conclusion.pdf"
