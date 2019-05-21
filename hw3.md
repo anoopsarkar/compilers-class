@@ -139,10 +139,11 @@ defined descriptor for that variable by simply scanning the list
 of symbol tables starting from the most recent one:
 
     descriptor* access_symtbl(string ident) {
-        for (symbol_table_list::iterator i = symtbl.begin(); i != symtbl.end(); ++i) {
-          symbol_table::iterator find_ident;
-          if ((find_ident = i->find(ident)) != i->end())
-            return find_ident->second;
+        for (auto i : symtbl) {
+            auto find_ident = i.find(ident);
+            if (find_ident != i.end()) {
+                return find_ident->second;
+            }
         }
         return NULL;
     }
