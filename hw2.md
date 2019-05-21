@@ -32,10 +32,7 @@ Once you've confirmed this, run this command:
     git clone https://github.com/anoopsarkar/compilers-class-hw.git
 
 In the `decafast` directory you will find various python programs
-which you will use to test your solution to this homework and to
-prepare files you will upload to the 
-[leaderboard for this homework]({{ site.leaderboard }}) and to
-[Coursys]({{ site.coursys }}).
+which you will use to test your solution to this homework.
 
 If you have already cloned the repository earlier you can
 get the new homework files by going to the directory
@@ -133,7 +130,6 @@ Run against all testcases as follows:
 
 This creates a directory called `output` and a file `output.zip` which can be checked against the reference output files 
 (see section on _Check your solution_ below).
-The file `output.zip` can also be uploaded to the [leaderboard]({{ site.leaderboard }}) when you are ready.
 
 If you run `zipout.py` multiple times it will overwrite your output directory and zip file which should be fine most of the time (but be careful).
 
@@ -148,12 +144,6 @@ You can use the default program provided to get an initial solution to this home
     Score(dev): 39.00
     Total Score: 39.00
 
-### Check accuracy on hidden testcases
-
-For some testcases (those in the `testcases/test` directory) the inputs are provided but the reference output is not provided to you.
-To see your performance on those testcases you must submit your `output.zip` to the [leaderboard]({{ site.leaderboard }}).
-You will see your performance on test and your accuracy will be displayed on the [class leaderboard page](leaderboard.html).
-
 ### Package your source for Coursys
 
 You must also upload your source code to Coursys. You should prepare your source for upload using the Python program `zipsrc.py`.
@@ -163,7 +153,7 @@ You must also upload your source code to Coursys. You should prepare your source
 
 This will create a zip file called `source.zip`. You should upload this file as your submission to `hw2` on [Coursys]({{ site.coursys }}).
 
-**Be careful**: `zipsrc.py` will only package files in the `answer` directory. Make sure you have put all your supporting files in that directory. In particular, put relevant documentation into `answer/docs/README.md`. 
+**Be careful**: `zipsrc.py` will only package files in the `answer` directory. Make sure you have put all your supporting files in that directory. In particular, put relevant documentation into `answer/README.md`. 
 
 ## Ground Rules
 
