@@ -82,6 +82,9 @@ The details of the lexical elements in Decaf are in the Decaf specification:
 
 > [Decaf specification](decafspec.html)
 
+You will need to refer to the [List of Tokens](http://anoopsarkar.github.io/compilers-class/decafspec.html)
+to produce the output in the right format for for this homework.
+
 Read the specification carefully at least upto the section called Decaf Program Structure.
 
 The lexical analyzer produces a stream of tokens for a given Decaf program. The input
