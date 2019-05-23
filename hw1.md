@@ -197,5 +197,10 @@ This will create a zip file called `source.zip`. You should upload this file as 
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
+## Grading
+
+* Score for testcases both dev and test.
+* Code review by TAs. Please check for comments on your code on [gitlab](http://gitlab.cs.sfu.ca).
+
 If you have any questions or you’re confused about anything, just ask.
 

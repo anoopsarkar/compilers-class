@@ -259,8 +259,14 @@ particular, put relevant documentation into `answer/README.md`.
 * You must turn in two things:
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw4` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
+* Make sure that we can run `make decafcomp` in your answer directory to create the `decafcomp` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
+
+## Grading
+
+* Score for testcases both dev and test.
+* Code review by TAs. Please check for comments on your code on [gitlab](http://gitlab.cs.sfu.ca).
 
 If you have any questions or you’re confused about anything, just ask.
 
