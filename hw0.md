@@ -266,6 +266,8 @@ The option to log verbose debugging information to a log file will be very usefu
 ### Check your solution
 
 Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file using the above step in _Run your solution on testcases_.
+Note that the references are only available for the `dev` testcases. When you are graded you will be evaluated on both the `dev` and `test` testcases.
+`output.zip` contains your output for both sets of testcases.
 
     python3 check.py
     Correct(dev): 4 / 6

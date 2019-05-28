@@ -293,6 +293,8 @@ If you run `zipout.py` multiple times it will overwrite your output directory an
 ### Check your solution
 
 Check your solution accuracy using the Python program `check.py`. You must create an `output.zip` file using the above step in _Run your solution on testcases_.
+Note that the references are only available for the `dev` testcases. When you are graded you will be evaluated on both the `dev` and `test` testcases.
+`output.zip` contains your output for both sets of testcases.
 
 You can use the default program provided to get an initial solution to this homework. Run `python3 zipout.py -r default` to get a `source.zip` file you can score using `check.py`.
 
