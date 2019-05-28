@@ -240,8 +240,7 @@ Start with the Simple Tokenizer lex program you developed.
 ### Remove Multi-line Comments
 
 Provide a lex program to replace all single-line and multi-line comments from C or C++ programs with an equivalent amount of whitespace. 
-Single-line comments begin with `//` and continue to  the end of the line, and multi-line comments begin with `/*` and end with `*/`
-`*/`. Note that `/*/` is not a valid comment. The C specification does not allow nested comments.
+Single-line comments begin with `//` and continue to  the end of the line, and multi-line comments begin with `/*` and end with `*/` . Note that `/*/` is not a valid comment. The C specification does not allow nested comments.
 
 There are some testcases to help you develop your lex program. Clone the following repository (if you haven't done so already).
 
