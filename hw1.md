@@ -82,10 +82,8 @@ The details of the lexical elements in Decaf are in the Decaf specification:
 
 > [Decaf specification](decafspec.html)
 
-You will need to refer to the [List of Tokens](http://anoopsarkar.github.io/compilers-class/decafspec.html)
-to produce the output in the right format for for this homework.
-
-Read the specification carefully at least upto the section called Decaf Program Structure.
+Read the specification carefully at least upto the section called Decaf Program Structure and 
+in particular the section called [List of Tokens](decafspec.html#list-of-tokens).
 
 The lexical analyzer produces a stream of tokens for a given Decaf program. The input
 is taken from `stdin` (standard input) and the output token stream is sent to `stdout`
@@ -123,7 +121,7 @@ The default lexer you were provided does work for this input. Run it and see:
     # go to the answer directory and build your binary (see instructions above)
     ./decaflex < ../testcases/dev/default-passes.decaf
 
-The full list of tokens is provided in the section List of Tokens in the [Decaf specification](decafspec.html).
+The full list of tokens is provided in the section [List of Tokens in the Decaf specification](decafspec.html#list-of-tokens).
 
 ## Your Task
 
