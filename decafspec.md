@@ -98,7 +98,8 @@ The ASCII table and decimal equivalent for each character is shown below:
 The set of valid characters in Decaf is all the ASCII characters:
 
     all_char = /* all ASCII characters from 7 ... 13 and 32 ... 126 */ .
-    char = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 92 "\" */ .
+    char = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 10 "\n", char 92 "\" and char 34 """ */ 
+    char_lit_chars = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 39 "'" and char 92 "\" */ .
     char_no_nl = /* all ASCII characters from 7 ... 13 and 32 ... 126 except char 10 "\n" */ .
 
 Implementation restriction: For compatibility with other tools, a compiler should always disallow the `nul` character (decimal: 0) in the source text.
@@ -199,7 +200,7 @@ For integer literals, the semantics of range checking occurs later, so that a lo
 
 ### Character literals
 
-A character literal represents a character constant (see Constants section), which is an integer value that identifies an ASCII eqivalent. A character literal is expressed as one or more characters enclosed in single quotes. Within the quotes, any character may appear except single quote and newline. A single quoted character represents the ASCII value of the character itself, while multi-character sequences beginning with a backslash encode special ASCII values as escaped characters.
+A character literal represents a character constant (see Constants section), which is an integer value that identifies an ASCII eqivalent. A character literal is expressed as one or more characters enclosed in single quotes. Within the quotes, any character may appear except single quote. A single quoted character represents the ASCII value of the character itself, while multi-character sequences beginning with a backslash encode special ASCII values as escaped characters.
 
 The simplest form represents the single character within the quotes which is equal to the integer ASCII value. For example:
 
@@ -220,7 +221,7 @@ After a backslash, certain single-character escapes represent special values:
 
 The following is a list of escaped character codes that refer to the equivalent ASCII codes above.
 
-    char_lit     = "'" ( char | escaped_char ) "'" .
+    char_lit     = "'" ( char_lit_chars | escaped_char ) "'" .
     escaped_char = "\" ( "n" | "r" | "t" | "v" | "f" | "a" | "b" | `\` | "'" | `"` ) .
 
 The following are some legal and illegal examples of character literals:
