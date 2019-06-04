@@ -285,6 +285,8 @@ This will create a zip file called `source.zip`. You should upload this file as 
 
 **Be careful**: `zipsrc.py` will only package files in the `answer` directory. Make sure you have put all your supporting files in that directory. In particular, put relevant documentation into `answer/README.md`. 
 
+If you add any testcases of your own please put them in the directories `answer/testcases/[your-username]/` and `answer/references/[your-username]/` using the same convention used by `zipout.py` and `check.py`.
+
 ## Ground Rules
 
 * You must turn in two things:

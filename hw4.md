@@ -256,6 +256,8 @@ your submission to hw1 on [Coursys]({{ site.coursys }}).
 Make sure you have put all your supporting files in that directory. In
 particular, put relevant documentation into `answer/README.md`. 
 
+If you add any testcases of your own please put them in the directories `answer/testcases/[your-username]/` and `answer/references/[your-username]/` using the same convention used by `zipout.py` and `check.py`.
+
 ## Ground Rules
 
 * You must turn in two things:
