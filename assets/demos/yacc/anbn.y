@@ -1,4 +1,4 @@
 %%
-S: 'a' S 'b'
- | 
+S: 'a' S 'b' { printf(" => aSb"); }
+ | { printf("S"); }
  ;

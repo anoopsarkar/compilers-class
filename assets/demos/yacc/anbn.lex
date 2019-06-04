@@ -1,0 +1,3 @@
+%%
+.  return yytext[0];
+%%
