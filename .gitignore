@@ -1,4 +1,5 @@
 _site/
+venv/
 .DS_Store
 *.tab.h 
 *.tab.c 
