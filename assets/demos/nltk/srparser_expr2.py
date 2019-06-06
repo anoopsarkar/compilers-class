@@ -1,29 +1,25 @@
 
-from nltk import tokenize 
-from srparser_app import ShiftReduceApp
+
+from nltk.app.srparser_app import ShiftReduceApp
 
 def app():
     """
     Create a shift reduce parser app, using a simple grammar and
     text. 
     """
-    
-    from nltk.grammar import Nonterminal, Production, ContextFreeGrammar
-    nonterminals = 'T F'
-    (T, F) = [Nonterminal(s) for s in nonterminals.split()]
-    
-    productions = (
-    Production(T, [F]),
-    Production(T, [T, '*', F]),
-    Production(F, ['id']),
-    Production(F, ['(', T, ')']),
-    )
+    from nltk import CFG
+    expr_grammar = """
+        T -> F
+        T -> T '*' F
+        F -> ID
+        F -> '(' T ')'
 
-    grammar = ContextFreeGrammar(T, productions)
-
-    # tokenize the sentence
-    text = "( id ) * id".split()
-
+        ID -> 'a'
+        ID -> 'b'
+        ID -> 'c'
+    """
+    grammar = CFG.fromstring(expr_grammar)
+    text = "( a ) * b".split()
     ShiftReduceApp(grammar, text).mainloop()
 
 if __name__ == '__main__':

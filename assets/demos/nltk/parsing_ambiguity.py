@@ -1,18 +1,18 @@
 import nltk
 from nltk import CFG
+from nltk.draw.tree import draw_trees
 import sys
 
 grammar = CFG.fromstring("""
-N -> N N | 'natural' | 'language' | 'processing' | 'course'
+X -> X X | 'a' | 'b' | 'c' | 'd'
 """)
 
-if len(sys.argv) > 1:
-    inp = 'natural language processing course'
-else:
-    for line in sys.stdin:
-        inp = line.strip()
 print("Start:", grammar.start(), file=sys.stderr)
 print("Productions:", grammar.productions(), file=sys.stderr)
-parser = nltk.ChartParser(grammar)
-for tree in parser.parse(inp.split()):
-    print(tree)
+for line in sys.stdin:
+    text = line.strip().split()
+    parser = nltk.ChartParser(grammar)
+    for tree in parser.parse(text):
+        print(tree)
+    trees = parser.parse(text)
+    draw_trees(*trees)
