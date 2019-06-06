@@ -28,6 +28,102 @@ Then go to the `yacc-practice` directory
 
     cd /your-path-to/compilers-class-hw/yacc-practice
 
+### Getting started
+
+Let's start with a simple lexical analyzer that we will use for our first yacc program.
+Save the following Lex program to a file called `parens.lex`
+
+    %%
+    [ \t]+ { }
+    .  return yytext[0];
+    %%
+
+To specify a context-free grammar (CFG) in yacc we write the left-hand side
+of the rule just before the `:` followed by the right-hand side of each
+rule. Rules with the same left-hand side are grouped together using
+the alternation symbol `|`. Save the following Yacc program to a file
+called `parens.y`:
+
+    %%
+    S: '(' S ')'
+     |
+     ;
+
+The above grammar has two CFG rules, which we usually write as:
+
+    S -> "(" S ")"
+    S -> <epsilon>
+
+In Backus-Naur notation we write the two rules together using `|`:
+
+    S -> "(" S ")" | <epsilon>
+
+where `<epsilon>` is the empty string and in Yacc grammars
+this is represented as having an empty right-hand side. So
+the Yacc grammar equivalent of the above grammar is:
+
+    S: '(' S ')' | ;
+
+The ';' represents the end of all the `S` rules in the grammar.
+
+To create a C or C++ program we will use `bison` (the GNU version of
+`yacc`) and `flex` (the GNU version of `lex`). Let's using `bison`
+and `flex` to generate a C version of the parser for the CFG above and compile it:
+
+    bison -oparens.tab.c -d parens.y
+    flex -oparens.lex.c parens.lex
+    gcc -w -o ./parens parens.tab.c parens.lex.c -ly -ll
+
+It will accept strings with balanced parentheses where no close paren
+can precede an open paren:
+
+    $ ./parens
+    (())
+
+    (()
+    syntax error
+
+Similar to how we can attach actions to regular expressions in Lex
+we can also attach actions to CFG rules in Yacc:
+
+    %%
+    S: '(' S ')' { $$ = $2+1; printf("%d\n", $$); }
+     | { $$ = 0; }
+     ;
+
+In the above Yacc grammar, the symbol `$2` refers to the value
+of the second element in the right-hand side of the rule in the
+context of a parse tree for some input string. In the above rule
+`S: "(" S ")"` the `$2` refers to the value `S` in a parse tree.
+`$$` refers to the value created for the left-hand side and it
+is passed up the parse tree. After we re-compile the new Yacc
+file, we see the following behaviour:
+
+    $ ./parens
+    (())
+    1
+    2
+
+    ((()))
+    syntax error
+
+Let's look at a schematic for the parse tree for `(())`:
+
+    S: $1: "(" 
+       $2: S: $1: "("
+              $2: S:  { $$ = 0; } # no print, sets LHS to 0
+              $3: ")"
+            { $$ = $2+1; printf("%d\n", $$); } # prints 1, sets LHS to 1 
+       $3: ")"
+         { $$ = $2+1; printf("%d\n", $$); } # prints 2, sets LHS to 2
+
+Here are some exercises to test your understanding:
+
+1. Add a new CFG rule `TOP: S` to the top of the Yacc grammar (the order is important).
+2. Does anything change in the strings this new Yacc grammar accepts?
+3. What is the value of `$1`  in the rule `TOP: S`?
+4. Add an action to the rule to print out `$1` to see if you could predict the right value.
+
 ### Simple Expression Interpreter
 
 The yacc program below is a very simple (and incomplete) 
