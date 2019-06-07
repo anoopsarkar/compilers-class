@@ -16,6 +16,17 @@ active_tab: faq
 * Do not email the TAs directly (without cc:ing the instructor) under any circumstance.
 * Before you email or post to the discussion board **read this FAQ**.
 
+### How to ask a question
+
+How to ask a question on the [discussion board on Coursys]({{ site.coursys }}discussion/):
+
+* Do not ask two or more questions in the same topic. Ask each question as a separate topic.
+* First check your code on a CSIL Linux machine. If the problem goes away then the issue is with your development environment.
+* Describe your computing environment, e.g. Running Ubuntu Linux 16.04 and gcc version 5.4 on a VirtualBox VM. Depending on the complexity of your problem, more details might be required. If you are using a CSIL Linux machine just the hostname is sufficient.
+* If you are using a Windows machine then installing Ubuntu on a virtual machine as using that as your dev environment is a good idea. We cannot offer help debugging your home computing environment.
+* Do tell us what steps you take to invoke the problem, as well as what you've tried so far to fix it.
+* Do not open a new issue if there already exists an older one that asks the same question. First read through any issues that seem related to your own question before you post on the discussion board. This will save everybody time.
+
 ### Grading
 
 * The grade for the course is computed using the final marks which are a weighted average of each activity as defined on the [main page](index.html).
