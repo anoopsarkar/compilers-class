@@ -321,6 +321,7 @@ If you add any testcases of your own please put them in the directories `answer/
 * You must turn in two things:
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw3` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw3` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
+* Your source code from `source.zip` must be on your gitlab repository. Please commit and push often in order to get feedback on your code.
 * Make sure that we can run `make decafexpr` in your answer directory to create the `decafexpr` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
