@@ -3,9 +3,10 @@ yacclib=y
 bindir=.
 rm=/bin/rm -f
 mv=/bin/mv -f
-yacctargets=expr
-targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr expr-conflicts parens
-cpptargets=usingcpp expr-interpreter
+yacctargets=expr unambiguous-ifelse expr-conflicts
+targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr parens
+cpptargets=usingcpp expr-interpreter 
+cpp11targets=decaf_funcs
 
 all: $(targets) $(cpptargets)
 
@@ -24,6 +25,15 @@ $(cpptargets): %: %.y
 	$(mv) $@.tab.c $@.tab.cc
 	flex -o$@.lex.cc $@.lex
 	g++ -w -o $(bindir)/$@ $@.tab.cc $@.lex.cc -l$(yacclib) -l$(lexlib)
+	$(rm) $@.tab.h $@.tab.cc $@.lex.cc
+
+$(cpp11targets): %: %.y
+	@echo "compiling cpp yacc file:" $<
+	@echo "output file:" $@
+	bison -b $@ -d $<
+	$(mv) $@.tab.c $@.tab.cc
+	flex -o$@.lex.cc $@.lex
+	g++ -std=c++11 -w -o $(bindir)/$@ $@.tab.cc $@.lex.cc -l$(yacclib) -l$(lexlib)
 	$(rm) $@.tab.h $@.tab.cc $@.lex.cc
 
 $(yacctargets): %: %.y
