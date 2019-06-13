@@ -1,5 +1,3 @@
-import matplotlib
-matplotlib.use("TkAgg")
 import nltk
 
 grammar = nltk.CFG.fromstring("""
