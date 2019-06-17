@@ -70,6 +70,24 @@ binary as follows:
     cd your-repo-name/answer
     make default
 
+### Creating Decafast
+
+Make new copies of the following `default` files for `decafast`:
+
+    cp default.cc decafast.cc
+    cp default.lex decafast.lex
+    cp default.y decafast.y
+
+Modify `decafast.cc` to replace `#include "default.tab.h"` with `#include "decafast.tab.h"`.
+
+Modify `decafast.lex` to replace `#include "default.tab.h"` with `#include "decafast.tab.h"`.
+
+Modify `decafast.y` to replace `#include "default.cc"` with `#include "decafast.cc"`.
+
+Build the `decafast` executable by running:
+
+    make decafast
+
 ## The Challenge
 
 The goal of this homework is to write a parser for the Decaf programming language.
