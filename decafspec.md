@@ -495,7 +495,7 @@ The init, check and post parts of the `for` loop cannot be empty:
 The following are all valid return statements:
 
     return(3);
-    return(bool);
+    return(b); // where b was declared as "var b bool;"
     return();
     return;
 
