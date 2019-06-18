@@ -112,6 +112,8 @@ You need to use the lexer which you built in HW1. The parser will handle the tok
 
 **Copy only your token pattern definitions from `decaflex.lex` in HW1 to `decafast.lex`.** Do not copy anything from `int main()` as there is a new `int main()` function in `decafast.y`.
 
+As in the default action for `T_ID` from `default.lex`, make sure to assign values directly to `yyval` whenever appropriate.
+
 While whitespace was an explicit token in HW1, it is no longer necessary in HW2. Make sure that no token is returned upon recognizing whitespace, or a syntax error may occur.
 
 The lexer will be run first, after which the parser will receive the tokens.
