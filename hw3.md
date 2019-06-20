@@ -223,6 +223,8 @@ Provide code generator for the following fragment of Decaf that includes:
 * Function definitions (including recursive functions).
 * Declaration of extern functions (all extern functions are defined in `decaf-stdlib.c`).
 
+Do not perform code generation for field declarations aka Global variables.
+
 The following AST nodes should have a fully working code generation implemented (except for short-circuiting).
 
 <script src="https://gist.github.com/anoopsarkar/c45e35600f9bef377dbe1a491a56584b.js"></script>
