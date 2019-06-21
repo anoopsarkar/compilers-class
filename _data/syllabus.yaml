@@ -106,7 +106,7 @@
       url: "http://regex.inginf.units.it/"
 - title: "Week 4 - Context-Free Grammars"
   tag: week4
-  current: true
+  current: false
   notes:
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1-intro.pdf"
@@ -119,10 +119,8 @@
       url: "yacc-practice.html"
 - title: "Week 5 - Parsing 1"
   tag: week5
-  current: false
+  current: true
   notes:
-    - title: "TD1: Recursive descent parsing"
-      url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "LR1: Shift Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
 - title: "Week 6 - Parsing 2"
@@ -138,8 +136,6 @@
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
       url: "assets/distrib/nltk-left-recursion.py.txt"
-    - title: "LLVM Practice"
-      url: "llvm-practice.html"
     - title: "Midterm Practice"
       url: "assets/distrib/sample-midterm.pdf"
 - title: "Week 7 - Parsing 3"
@@ -148,10 +144,15 @@
   notes:
     - title: "LR5: Precedence and Associativity"
       url: "assets/lectures/lr5-prec-assoc.pdf"
+    - title: "TD1: Recursive descent parsing"
+      url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
+  links:
+    - title: "LLVM Practice"
+      url: "llvm-practice.html"
 - title: "Week 8 - Semantics and Runtime Support"
   tag: week8
   current: false
