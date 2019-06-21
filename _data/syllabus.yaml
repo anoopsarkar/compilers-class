@@ -123,12 +123,12 @@
   notes:
     - title: "LR1: Shift Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
+    - title: "LR2: LR(0) parsing"
+      url: "assets/lectures/lr2-lr_0-parsing.pdf"
 - title: "Week 6 - Parsing 2"
   tag: week6
   current: false
   notes:
-    - title: "LR2: LR(0) parsing"
-      url: "assets/lectures/lr2-lr_0-parsing.pdf"
     - title: "LR3: SLR(1) parsing"
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
     - title: "LR4: LR(1) parsing"
