@@ -110,7 +110,6 @@ You should clone your repo inside your `$HOME` directory. You should not work in
 ### Exams
 
 * If you must miss an exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox and you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf).
-).
 * If you miss an exam due to valid medical reasons you will be graded on your performance on the rest of the course. 
 * **Make up exams will not be given under any circumstances**. 
 
