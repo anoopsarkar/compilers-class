@@ -30,9 +30,9 @@ Then go to the `llvm-practice` directory
 
 ### Installation 
 
-We will be using LLVM version 3.8.0 for the homeworks in this course offering.
-LLVM 3.8 has already been installed in the CSIL Linux machines. You can use
-this version by using `llvm-config-3.8` in your makefile.
+We will be using LLVM version 8.0 for the homeworks in this course offering.
+LLVM 8.0 has already been installed in the CSIL Linux machines. You can use
+this version by using `llvm-config-8` in your makefile.
 
 You can also install LLVM on your own machine by following the links on
 this page:
@@ -94,16 +94,12 @@ question explains the use of the `getelementptr` to access global constants.
 The LLVM assembly file can be converted into executable machine code using the
 following steps (also in the shell script `run-llvm-code.sh`). 
 
-    llvmconfig=llvm-config-3.8
-    b=`basename -s .ll helloworld.ll`
-    `$llvmconfig --bindir`/llvm-as helloworld.ll  # convert LLVM assembly to bitcode
-    `$llvmconfig --bindir`/llc helloword.bc   # convert LLVM bitcode to x86 assembly
-    gcc helloworld.s -o helloworld
-
-You can now run the binary `helloworld`.
+    llvmconfig=llvm-config-8
+    lli-bin=`$llvmconfig --bindir`/lli
+    $lli-bin helloworld.ll
 
 In this case we did not need to link with the Decaf standard library
-since we do not use any of the function in it, but when we implement
+since we do not use any of the functions in it, but when we implement
 the Decaf compiler it will be easier to use the standard library functions instead of
 a function like `puts` which take pointers as arguments.
 
