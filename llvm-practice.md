@@ -217,7 +217,9 @@ most of the LLVM instructions we need for code generation.
     // this is the method used to construct the LLVM intermediate code (IR)
     static llvm::IRBuilder<> Builder(TheContext);
 
-You can dump the LLVM assembly by calling the `print` function:
+You can dump the LLVM assembly by calling the `print` function and
+specifying output to standard output `outs()` or standard error
+`errs()`:
 
     TheModule->print(llvm::outs(), nullptr);
 
@@ -500,7 +502,7 @@ LLVM API. Two main data structures contain the LLVM assembly code:
       // parse the input and create the abstract syntax tree
       yyparse();
       // Print out all of the generated code to stderr
-      TheModule->print(outs(), nullptr);
+      TheModule->print(errs(), nullptr);
       exit(0);
     }
 
