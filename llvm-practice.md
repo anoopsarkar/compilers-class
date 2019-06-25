@@ -91,8 +91,7 @@ contains a simple Hello, World program in LLVM assembly.
 takes an ASCII string and returns an integer return value of type `i32`.
 Except for the `getelementptr` instruction the rest is easy to follow. The next
 question explains the use of the `getelementptr` to access global constants.
-The LLVM assembly file can be converted into executable machine code using the
-following steps (also in the shell script `run-llvm-code.sh`). 
+The LLVM assembly file can be run directly using the `lli` command:
 
     llvmconfig=llvm-config-8
     lli-bin=`$llvmconfig --bindir`/lli
@@ -100,8 +99,10 @@ following steps (also in the shell script `run-llvm-code.sh`).
 
 In this case we did not need to link with the Decaf standard library
 since we do not use any of the functions in it, but when we implement
-the Decaf compiler it will be easier to use the standard library functions instead of
-a function like `puts` which take pointers as arguments.
+the Decaf compiler it will be easier to use the Decaf standard library
+functions instead of a function like `puts` which take pointers as
+arguments.
+
 
 ### Using Decaf Library Functions
 
@@ -136,6 +137,18 @@ two integers and prints out the value followed by a newline.
       call void @print_string(i8* %cast.nl)
       ret i32 0
     }
+
+Save the above LLVM assembly to a file `add.ll`. Notice that it uses
+the Decaf standard library functions: `print_int` and `print_string`.
+The LLVM assembly in `add.ll` can be converted into executable machine code using the
+following steps (also in the shell script `run-llvm-code.sh`). 
+
+    llvmconfig=llvm-config-8
+    `$llvmconfig --bindir`/llvm-as add.ll  # convert LLVM assembly to bitcode
+    `$llvmconfig --bindir`/llc add.bc   # convert LLVM bitcode to x86 assembly
+    clang add.s decaf-stdlib.c -o add 
+
+The binary file `add` is created and can be run as `./add`.
 
 Write down a recursive version of the addition function in LLVM assembly. The
 following Python program illustrates the algorithm.
@@ -200,12 +213,13 @@ most of the LLVM instructions we need for code generation.
 
     // this global variable contains all the generated code
     static llvm::Module *TheModule;
+    static llvm::LLVMContext TheContext;
     // this is the method used to construct the LLVM intermediate code (IR)
-    static llvm::IRBuilder<> Builder(llvm::getGlobalContext());
+    static llvm::IRBuilder<> Builder(TheContext);
 
-You can dump the LLVM assembly by calling the `dump` function:
+You can dump the LLVM assembly by calling the `print` function:
 
-    TheModule->dump();
+    TheModule->print(llvm::outs(), nullptr);
 
 #### LLVM Value
 
@@ -477,17 +491,16 @@ The code is then generated from the AST by calling functions defined in the
 LLVM API. Two main data structures contain the LLVM assembly code:
 
     static Module *TheModule;
-    static IRBuilder<> Builder(getGlobalContext());
+    static LLVMContext TheContext;
+    static IRBuilder<> Builder(TheContext);
 
     int main() {
-      // initialize LLVM
-      LLVMContext &Context = getGlobalContext();
       // Make the module, which holds all the code.
-      TheModule = new Module("module for very simple expressions", Context);
+      TheModule = new Module("module for very simple expressions", TheContext);
       // parse the input and create the abstract syntax tree
       yyparse();
       // Print out all of the generated code to stderr
-      TheModule->dump();
+      TheModule->print(outs(), nullptr);
       exit(0);
     }
 
@@ -564,12 +577,13 @@ Foo[8] + 1`.
 
 ### Kaleidoscope language
 
-The LLVM download comes with a simple programming language which is
-illustrative of the LLVM API.  In the `llvm-practice` directory of the
-`compiler-class-hw` repository you can find the `kscope.cc` file which contains
-the entire source code for the Kaleidoscipe compiler which uses LLVM for code
-generation. Example Kaleidoscope programs are available in the directory
-`kscope-programs`.
+The LLVM download comes with a simple programming language which
+is illustrative of the LLVM API.  In the `llvm-practice` directory
+of the `compiler-class-hw` repository you can find the `toy.cc` and
+`kscope.cc` files which contains the entire source code for the
+Kaleidoscope compiler and a toy version as well. The compiler uses
+LLVM for code generation. Example Kaleidoscope programs are available
+in the directory `kscope-programs`.
 
 ### Array Types
 
