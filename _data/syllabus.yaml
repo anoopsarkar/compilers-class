@@ -119,7 +119,7 @@
       url: "yacc-practice.html"
 - title: "Week 5 - Parsing 1"
   tag: week5
-  current: true
+  current: false
   notes:
     - title: "LR1: Shift Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
@@ -140,7 +140,7 @@
       url: "assets/distrib/sample-midterm.pdf"
 - title: "Week 7 - Parsing 3"
   tag: week7
-  current: false
+  current: true
   notes:
     - title: "LR5: Precedence and Associativity"
       url: "assets/lectures/lr5-prec-assoc.pdf"
@@ -151,6 +151,8 @@
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
   links:
+    - title: "Intro to LLVM by Nick Sumner"
+      url: "assets/lectures/llvm.pdf"
     - title: "LLVM Practice"
       url: "llvm-practice.html"
 - title: "Week 8 - Semantics and Runtime Support"
@@ -196,7 +198,7 @@
   tag: week12
   current: false
   notes:
-    - title: "Garbage Collection"
+    - title: "Garbage Collection by Keith Schwarz"
       url: "assets/lectures/keithschwarzgc.pdf"
 - title: "Week 13 - Conclusion"
   tag: week13
