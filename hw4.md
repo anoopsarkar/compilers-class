@@ -160,7 +160,7 @@ Add source level debug information using DWARF annotations to your LLVM assembly
 
 LLVM assembly has support for [debug instructions](http://llvm.org/docs/SourceLevelDebugging.html).
 Also see how to use the LLVM API to add debug annotations by reading through the
-[LLVM Kaleidoscope tutorial on DWARF emission](http://llvm.org/docs/tutorial/LangImpl8.html).
+[LLVM Kaleidoscope tutorial on DWARF emission](https://llvm.org/docs/tutorial/LangImpl09.html#dwarf-emission-setup).
 
 #### Requirements
 
