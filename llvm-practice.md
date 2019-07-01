@@ -94,8 +94,8 @@ question explains the use of the `getelementptr` to access global constants.
 The LLVM assembly file can be run directly using the `lli` command:
 
     llvmconfig=llvm-config-8
-    lli-bin=`$llvmconfig --bindir`/lli
-    $lli-bin helloworld.ll
+    lli_bin=`$llvmconfig --bindir`/lli
+    $lli_bin helloworld.ll
 
 In this case we did not need to link with the Decaf standard library
 since we do not use any of the functions in it, but when we implement
