@@ -150,6 +150,8 @@
       url: "assets/lectures/td2-ll_1-parsing.pdf"
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
+    - title: "decaf and LLVM"
+      url: "assets/lectures/decafLLVM.pdf"
   links:
     - title: "Intro to LLVM by Nick Sumner"
       url: "assets/lectures/llvm.pdf"
