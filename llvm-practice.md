@@ -547,22 +547,27 @@ It should accept input like the following:
 
 And produce LLVM assembly:
 
+    ; ModuleID = 'module for simple expressions'
+    source_filename = "module for simple expressions"
+
     define i32 @main() {
     entry:
       %a = alloca i32
       store i32 5, i32* %a
       %b = alloca i32
       store i32 3, i32* %b
-      %a1 = load i32* %a
-      %b2 = load i32* %b
+      %a1 = load i32, i32* %a
+      %b2 = load i32, i32* %b
       %addtmp = add i32 %a1, %b2
       %c = alloca i32
       store i32 %addtmp, i32* %c
-      %c3 = load i32* %c
+      %c3 = load i32, i32* %c
       %addtmp4 = add i32 %c3, 2
       %calltmp = call i32 @print_int(i32 %addtmp4)
       ret i32 0
     }
+
+    declare i32 @print_int(i32)
 
 You will need to use your symbol table implementation to store the
 location of the variables. 
