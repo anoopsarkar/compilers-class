@@ -271,7 +271,7 @@ LLVM API call creates an allocated storage location `TYPE` which
 is of type `llvm::Type*` and returns a pointer to the location name
 in LLVM assembly.
 
-    llvm::AllocaInst *Alloca = Builder.CreateAlloca(TYPE, nullptr, NAME);
+    llvm::AllocaInst *Alloca = Builder.CreateAlloca(TYPE, 0, NAME);
 
 For example the following code uses the LLVM API to create an `alloca`
 instruction to store integers (LLVM type `i32`) on the stack.  This storage
@@ -282,7 +282,7 @@ the stack.
     // unlike CreateEntryBlockAlloca the following will
     // create the alloca instr at the current insertion point 
     // rather than at the start of the block
-    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), nullptr, "variable_name");
+    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), 0, "variable_name");
  
 You should then store this pointer into the symbol table for the identifier
 `NAME`.  You can access the pointer to the type `TYPE` using
