@@ -662,8 +662,8 @@ This section clarifies the behaviour with scoping.
 -   externs count as methods for scoping.
 -   Having two local variables with the same name declared at the same block is a semantic error. `{ var x int; var x int; }` is an error, but `{ var x int; { var x int; } }` is ok.
 -   Having a local variable in the outer block of a method that has a parameter with the same name is a semantic error. `func foo(x int) void { var x int; }` is an error, but `func foo(x int) void { { var x int; } }` is ok.
--   A function can be referred to anywhere in the program, including before its definition. `package C { func foo() void { bar() }; func bar() void {}; /* ... */ }` is ok.
--   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `package C { func foo() void {}; func bar() void { var foo int; foo(); } /* ... */ }` the `foo` in `foo();` refers to the local int variable, not the function resulting in an error.
+-   A function can be referred to anywhere in the program, including before its definition. `package C { func foo() void { bar() }; func bar() void {}; }` is ok.
+-   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `package C { func foo() void {}; func bar() void { var foo int; foo(); } }` the `foo` in `foo();` refers to the local int variable, not the function resulting in an error.
 -   `break` and `continue` only apply to the innermost containing loop. Using `break` or `continue` outside of a loop results in a semantic error.
 
 ### Statements
