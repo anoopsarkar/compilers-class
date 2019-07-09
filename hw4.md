@@ -183,15 +183,8 @@ Make sure you obey the following requirements:
 ### Use your own code
 
 For this homework we will reward those who have implemented all the stages of
-the compiler themselves.  If you have used the source code from the provided
-solution of a previous homework to implement your compiler for this homework,
-you will lose 20% of the marks for this homework for each solution used. For
-example, if you use the provided solution for HW1, HW2 and HW3 to solve this
-homework then you can get at most 40% of the total marks for HW4.
-
-You will **not** incur a penalty if you wrote your own source code for the
-solution to a previous homework after having examined the solution for a
-previous homework. So just asking to view a solution is not penalized.
+the compiler themselves.  There is a portion of the grade set aside in 
+Coursys for not using the solution to HW2 in your solution for HW4.
 
 ## Development and upload procedure
 
