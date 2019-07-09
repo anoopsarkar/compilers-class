@@ -282,7 +282,7 @@ the stack.
     // unlike CreateEntryBlockAlloca the following will
     // create the alloca instr at the current insertion point 
     // rather than at the start of the block
-    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(getGlobalContext(), 32), 0, "variable_name");
+    Alloca = llvm::Builder.CreateAlloca(llvm::IntegerType::get(TheContext, 32), 0, "variable_name");
  
 You should then store this pointer into the symbol table for the identifier
 `NAME`.  You can access the pointer to the type `TYPE` using
@@ -354,7 +354,7 @@ Then you have to create a basic block to hold the instructions
 for this method.
 
     // Create a new basic block which contains a sequence of LLVM instructions
-    llvm::BasicBlock *BB = llvm::BasicBlock::Create(llvm::getGlobalContext(), "entry", func);
+    llvm::BasicBlock *BB = llvm::BasicBlock::Create(TheContext, "entry", func);
     // insert "entry" into symbol table (not used in HW3 but useful in HW4)
     // All subsequent calls to IRBuilder will place instructions in this location
     Builder.SetInsertPoint(BB);
