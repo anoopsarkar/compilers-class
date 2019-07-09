@@ -230,9 +230,9 @@ homework. Run `python3 zipout.py -r default` to get a `source.zip` file you can
 score using `check.py`.
 
     python3 check.py 
-    Correct(dev): 19 / 212
-    Score(dev): 19.00
-    Total Score: 19.00
+    Correct(dev): 15 / 208
+    Score(dev): 15.00
+    Total Score: 15.00
 
 ### Package your source for Coursys
 
