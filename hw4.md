@@ -177,7 +177,7 @@ You should examine your output to debug your compiler.
 Make sure you obey the following requirements:
 
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds an error in the input Decaf program you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
-1. You must dump the LLVM assembly by calling `TheModule->dump()` where `TheModule` is of type `llvm::Module*`.
+1. You must dump the LLVM assembly by calling `TheModule->print(errs(), nullptr);` where `TheModule` is defined as specified in [llvm-practice](llvm-practice.html).
 1. Pass all the testcases.
 
 ### Use your own code
