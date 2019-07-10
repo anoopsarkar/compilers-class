@@ -590,7 +590,7 @@ And produce LLVM assembly:
     declare i32 @print_int(i32)
 
 You will need to use your symbol table implementation to store the
-location of the variables. 
+location of the variables. [^1]
 
 ### Global Variables
 
