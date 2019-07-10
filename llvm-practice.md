@@ -756,7 +756,7 @@ $$\phi$$ function.
 
 There is a lot more to learn about LLVM. Read the documentation at [llvm.org](http://llvm.org/docs/). 
 
-[^1]: The [s-expr practice solution](https://gist.github.com/anoopsarkar/91beb447f8b97d967f040f9a301dadc0).  Please do the exercise yourself before viewing the solution.
+[^1]: The [s-expr practice solution](https://gist.github.com/anoopsarkar/91beb447f8b97d967f040f9a301dadc0). You need a working symbol table in `symboltable.cc` with the functions `new_symtbl` and `remove_symtbl` to add/remove symbol tables as well as `access_symtbl` and `enter_symtbl` to read/write to the symbol table.  Please do the exercise yourself before viewing the solution.
 
 
 
