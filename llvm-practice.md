@@ -384,6 +384,26 @@ definition. You can replace it with the real return if there is one
 but by default you should return the default value for the method
 return type (zero for integers, and true for booleans).
 
+When you generate code for a method declaration do the following:
+
+1. Create a new symbol table for local variables
+1. Create a BasicBlock, let's say `BB`
+1. Do `Builder.SetInsertPoint(BB)`
+1. If you have done the function declaration for `Function* func` then iterate through the function arguments using `arg_iterator` and allocate them into the stack for each argument.
+
+Let us consider an illustrative example for one function parameter called `a` of type `int` for a `Function* func`:
+
+    string name = string("a");
+    llvm::Function::arg_iterator AI = func->arg_begin();
+    AI->setName(name);
+    llvm::AllocaInst *Alloca = Builder.CreateAlloca(Builder.getInt32Ty(), nullptr, name.c_str());
+    // Store the initial value into the alloca.
+    Builder.CreateStore(static_cast<llvm::Value *>(&*AI), Alloca);
+    // Add to symbol table
+    syms.enter_symtbl(name, Alloca);
+
+You will have to iterate through each of the arguments in the method declaration AST and use the name and type and add it to the function definition using the `arg_iterator` as shown above by going through each function argument.
+
 #### Method Calls
 
 Code generation for a method call also requires some setup.
@@ -735,4 +755,8 @@ $$\phi$$ function.
 ### RTFM: LLVM Documentation
 
 There is a lot more to learn about LLVM. Read the documentation at [llvm.org](http://llvm.org/docs/). 
+
+[^1]: The [s-expr practice solution](https://gist.github.com/anoopsarkar/91beb447f8b97d967f040f9a301dadc0).  Please do the exercise yourself before viewing the solution.
+
+
 
