@@ -359,6 +359,20 @@ for this method.
     // All subsequent calls to IRBuilder will place instructions in this location
     Builder.SetInsertPoint(BB);
 
+You will also need to name and load in the arguments from the function before running code generation on the body, so they can be used in the body statements. Iterate through each argument using an iterator, set the names, allocate them, and store them. This process is unique to generating function parameters.
+
+    llvm::Function *func =  // Implement from code above
+    for (llvm::Function::arg_iterator argIterator = func->arg_begin(); argIterator != func->arg_end(); ++argIterator) {
+
+        string argName =  // Retrieve name from the parameter which corresponds to this argument
+        argIterator->setName(argName);
+
+        llvm::AllocaInst *alloca = Builder.CreateAlloca(argIterator->getType(), 0, argName.c_str());  // Same as when defining a variable
+        Builder.CreateStore(static_cast<llvm::Value *>(&*argIterator), alloca);
+
+        // Add (argName, alloca) to symbol table
+    }
+
 You can get useful information about the method including a pointer to the
 function definition itself by using the following functions:
 
