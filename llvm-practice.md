@@ -359,7 +359,26 @@ for this method.
     // All subsequent calls to IRBuilder will place instructions in this location
     Builder.SetInsertPoint(BB);
 
-You will also need to name and load in the arguments from the function before running code generation on the body, so they can be used in the body statements. Iterate through each argument using an iterator, set the names, allocate them, and store them. This process is unique to generating function parameters.
+When you generate code for a method declaration do the following:
+
+1. Create a new symbol table for local variables
+1. Create a BasicBlock, let's say `BB`
+1. Do `Builder.SetInsertPoint(BB)`
+1. If you have done the function declaration for `Function* func` then iterate through the function arguments using `arg_iterator` and allocate them into the stack for each argument.
+
+Let us consider an illustrative example for one function parameter called `a` of type `int` for a `Function* func`:
+
+    string name = string("a");
+    llvm::Function::arg_iterator AI = func->arg_begin();
+    AI->setName(name);
+    llvm::AllocaInst *Alloca = Builder.CreateAlloca(Builder.getInt32Ty(), nullptr, name.c_str());
+    // Store the initial value into the alloca.
+    Builder.CreateStore(static_cast<llvm::Value *>(&*AI), Alloca);
+    // Add to symbol table
+    syms.enter_symtbl(name, Alloca);
+
+You will have to iterate through each of the arguments in the method declaration AST and use the name and type and add it to the function definition using the `arg_iterator` as shown below.
+You need to name and load each argument from the function before running code generation on the body, so they can be used in the body statements. Iterate through each argument using an iterator, set the names, allocate them, and store them. This process is unique to generating function parameters.
 
     llvm::Function *func =  // Implement from code above
     for (llvm::Function::arg_iterator argIterator = func->arg_begin(); argIterator != func->arg_end(); ++argIterator) {
@@ -398,27 +417,7 @@ definition. You can replace it with the real return if there is one
 but by default you should return the default value for the method
 return type (zero for integers, and true for booleans).
 
-When you generate code for a method declaration do the following:
-
-1. Create a new symbol table for local variables
-1. Create a BasicBlock, let's say `BB`
-1. Do `Builder.SetInsertPoint(BB)`
-1. If you have done the function declaration for `Function* func` then iterate through the function arguments using `arg_iterator` and allocate them into the stack for each argument.
-
-Let us consider an illustrative example for one function parameter called `a` of type `int` for a `Function* func`:
-
-    string name = string("a");
-    llvm::Function::arg_iterator AI = func->arg_begin();
-    AI->setName(name);
-    llvm::AllocaInst *Alloca = Builder.CreateAlloca(Builder.getInt32Ty(), nullptr, name.c_str());
-    // Store the initial value into the alloca.
-    Builder.CreateStore(static_cast<llvm::Value *>(&*AI), Alloca);
-    // Add to symbol table
-    syms.enter_symtbl(name, Alloca);
-
-You will have to iterate through each of the arguments in the method declaration AST and use the name and type and add it to the function definition using the `arg_iterator` as shown above by going through each function argument.
-
-#### Method Calls
+### Method Calls
 
 Code generation for a method call also requires some setup.
 
