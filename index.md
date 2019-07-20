@@ -16,7 +16,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 
 #### Time and place
 * Tuesdays 10:30-11:20 [BLU-9660](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
-* Thursdays 09:30-11:20. **Note**: From July 2nd onwards we will meet in [AQ 3153](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html). Until then we continue to meet in [SCK-9500](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
+* Thursdays 09:30-11:20. **Note**: We continue to meet in [SCK-9500](http://www.sfu.ca/campuses/maps-and-directions/burnaby-map.html)
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants
