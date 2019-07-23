@@ -12,10 +12,10 @@ instructor: anoop
 tas:
   - name: "Vishal Batvia"
     email: vbatvia
-    officehour: "Mondays 5:30pm-6:30pm CSIL Labs ASB 9810"
+    officehour: "Wednesdays 5:30pm-6:30pm CSIL Labs ASB 9810"
   - name: "Pooya Moradi"
     email: pmoradi
-    officehour: "Mondays 5:30pm-6:30pm CSIL Labs ASB 9808"
+    officehour: "Tuesdays 5:30pm-6:30pm CSIL Labs ASB 9808"
 hwdates:
   - hw: "0"
     startdate: "May 14, 2019"
