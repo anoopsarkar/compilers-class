@@ -417,7 +417,7 @@ Functions or methods in Decaf start with the reserved word `func`, then the name
     MethodDecls = { MethodDecl } .
     MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block .
 
-The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be either type `int` or `void`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined. Even if the return type of `main` is `void` the compiler can insert a `return(0)` to get a valid exit value.
+The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be either type `int` or `void`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined. So your `main` function which does not have an explicit return statement can either have a `ret i32 0` or `ret void` in LLVM assembly depending on the return type of the `main` function, either `int` or `void` respectively. 
 
 ### Blocks
 
@@ -670,7 +670,7 @@ This section clarifies the behaviour with scoping.
 
 These are semantic errors that can occur when using statements in Decaf.
 
-- There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. Always emitting a `return(0)` at the return from `main` is safe.
+- There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. For `main` function missing an explicit return statement, `void` return types return void, and for `int` return zero.
 - Assigning a scalar to an array is considered a type mismatch.
 - The following produce undefined behaviour, but must not produce compile time semantic errors:
     - Using the value of any uninitialized scalar variable or array element
