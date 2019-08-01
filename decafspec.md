@@ -670,7 +670,7 @@ This section clarifies the behaviour with scoping.
 
 These are semantic errors that can occur when using statements in Decaf.
 
-- There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. For `main` function missing an explicit return statement, `void` return types return void, and for `int` return zero.
+- There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. For `main` function missing an explicit return statement, `void` return types return void, and for `int` return zero, and for `bool` return `true`.
 - Assigning a scalar to an array is considered a type mismatch.
 - The following produce undefined behaviour, but must not produce compile time semantic errors:
     - Using the value of any uninitialized scalar variable or array element
