@@ -5,3 +5,4 @@ venv/
 *.tab.c 
 *.lex.c
 *.pyc
+~$*.pptx
