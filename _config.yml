@@ -1,34 +1,33 @@
 exclude: ['README.md','assets/latex','assets/ppt']
 timezone: US/Pacific
 markdown: kramdown
-coursys: "https://coursys.sfu.ca/2019su-cmpt-379-d1/"
-leaderboard: "https://sfu-yacc.appspot.com"
-semcode: 1194
+coursys: "https://coursys.sfu.ca/2020fa-cmpt-379-d1/"
+semcode: 1207
 calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
-lastday: "Aug 2, 2019"
-midterm: "Jun 25, 2019, 10:30-11:20am, Location: BLU 9660"
-finalexam: "Aug 9, 2019, 12-3pm, Location: EDB 7618"
+lastday: "Dec 7, 2020"
+midterm: "TBD"
+finalexam: "TBD"
 instructor: anoop
 tas:
-  - name: "Vishal Batvia"
-    email: vbatvia
-    officehour: "Wednesdays 5:30pm-6:30pm CSIL Labs ASB 9810"
-  - name: "Pooya Moradi"
-    email: pmoradi
-    officehour: "Tuesdays 5:30pm-6:30pm CSIL Labs ASB 9808"
+  - name: "Navid Rahimi"
+    email: navidr
+    officehour: "TBD on Zoom"
 hwdates:
   - hw: "0"
-    startdate: "May 14, 2019"
-    deadline: "May 21, 2019"
+    startdate: "Sep 9, 2020"
+    deadline: "Sep 21, 2020"
   - hw: "1"
-    startdate: "May 21, 2019"
-    deadline: "Jun 4, 2019"
+    startdate: "Sep 21, 2020"
+    deadline: "Oct 5, 2020"
   - hw: "2"
-    startdate: "Jun 4, 2019"
-    deadline: "Jun 18, 2019"
+    startdate: "Oct 5, 2020"
+    deadline: "Oct 19, 2020"
   - hw: "3"
-    startdate: "Jun 25, 2019"
-    deadline: "Jul 9, 2019"
+    startdate: "Oct 19, 2020"
+    deadline: "Nov 2, 2020"
   - hw: "4"
-    startdate: "Jul 9, 2019"
-    deadline: "Jul 30, 2019"
+    startdate: "Nov 2, 2020"
+    deadline: "Nov 23, 2020"
+  - hw: "5"
+    startdate: "Nov 23, 2020"
+    deadline: "Dec 7, 2020"
