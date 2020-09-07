@@ -11,7 +11,8 @@ active_tab: faq
 
 ### Email policy
 
-* We will be using the [discussion board on Coursys]({{ site.coursys }}discussion/) for **all** discussions including asking for help. For syllabus, practice, homeworks, exams, or other clarification emails **do not** email me (the instructor) or the TA(s) directly.
+* We will be using the [discussion board on Coursys]({{ site.coursys }}discussion/) exclusively for **all** discussions including asking for help. 
+* For syllabus, practice, homeworks, exams, or other clarification emails **do not** email me (the instructor) or the TA(s) directly.
 * If you email the instructor directly for personal matters that are inappropriate for the discussion board, use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
 * Do not email the TAs directly (without cc:ing the instructor) under any circumstance.
 * Before you email or post to the discussion board **read this FAQ**.
@@ -83,22 +84,20 @@ Read [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/un
 It's time to get yourself set up in the CSIL Lab.
 
 CSIL is open starting the second week
-of the semester, 24 hours a day, 7 days a week. All your CMPT 127
-lab sessions are in CSIL. Log in to the **Linux** machines.  Use
-the same username and password as before.
+of the semester, 24 hours a day, 7 days a week. 
+Log in to the **Linux** machines.  
 
-The machines in these rooms have Linux and Windows installed. If
-you a machine running Windows, simply restart the machine and select
-Linux when prompted.
-
-Once logged into Linux, you should see a familiar desktop interface.
+If you use the terminal server to login to Linux, you should see a familiar desktop interface.
 In order to manipulate most of your work, you will need a terminal
-window which runs the "shell".
+window which runs the "shell". Your default shell will be "bash".
 
-Click the launcher in the upper-left corner of the desktop interface
+If you are using the terminal server, click the launcher in the upper-left corner of the desktop interface
 and start the "Terminal Emulator" application, or Terminal for short.
 It should be under the Accessories submenu.  If you can't find it,
 then try searching for `Terminal` in the search box.
+
+If you are using `ssh` to log into Linux at CSIL you will automatically
+be on a Terminal, typically running `bash` as your shell.
 
 The Terminal will allow you to type commands to manipulate, run and
 test programs in your labs.  But there will be no programming in this lab.
@@ -110,21 +109,19 @@ You should clone your repo inside your `$HOME` directory. You should not work in
 
 ### Exams
 
-* If you must miss an exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox and you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf).
+* If you must miss a quiz or exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox and you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf).
 * If you miss an exam due to valid medical reasons you will be graded on your performance on the rest of the course. 
 * **Make up exams will not be given under any circumstances**. 
-
-### Disclaimers about this web page
-
-* All course information on this web page is tentative and could be in error. It can also change at any time. Confirm crucial dates or information with me in person during class. Double check with SFU calendar or schedule information for official class times and final exams time and location. 
-* Students are expected to attend all classes: announcements about assigned readings, homeworks and exams will be made available at the start of each class. Such announcements may not be made on this web page, so don't rely on information here instead of attending class. 
 
 ### Academic Honesty
 
 * Some examples of unacceptable behaviour:
+    * Copying code from another student in your class.
+    * Copying code from GitHub.
+    * Copying code from Stack Overflow or other coding help websites.
     * Handing in assignments that are not 100% your own work (in design, implementation, wording, etc.), without proper citation. There must be a README file in your submission with citations to any external code used.
     * Using any unpermitted resources during an exam.
-    * Looking at, or attempting to look at, another student's paper during an exam.
+    * Looking at, or attempting to look at, another student's code or work during an exam or quiz.
     * Submitting work that has been submitted before, for any course at any institution.
 * If you are unclear on what academic honesty is, see Simon Fraser University's [Policy S10-01](https://www.sfu.ca/policies/gazette/student/s10-01.html).
 * All instances of academic dishonesty will be dealt with very severely.
@@ -133,16 +130,18 @@ You should clone your repo inside your `$HOME` directory. You should not work in
     * For exams: an F in the course.
     * Please note that these are minimum penalties. At the instructor's option, more severe penalties may be given/requested.  All instances of academic dishonesty will be noted on your University record.
 * The instructor may use, or require students to submit assignments to, an automated service that will check for plagiarism.
-     
+
 ### Exams and Tests
 
-* Midterms may be in different rooms than the lectures.  You will be notified by email.
-* Exams may be written in either pen or pencil.  Calculators or other aids are not allowed unless explicitly stated.
-* Midterm exams and other tests may or may not be returned, depending on the course.  If they are returned, you can get them from the instructor's office hours. You can not dispute the marking of your exam after you have taken it out of the instructor's office. 
-* Final exams are not returned to students by University policy; they are kept by the instructor.
 * If you miss a test or exam, you must present a note from a doctor to get a mark other than zero.  Arrangements to make up the lost marks will be made on a case-by-case basis by the instructor.  Make-up exams may be given as an oral examination.
 * You must get a pass on the weighted average of the exams to pass the course.
-     
+* Disregard the following for this semester which has all activities online.
+* For in-person exams:
+    * Midterms may be in different rooms than the lectures.  You will be notified by email.
+    * In person exams may be written in either pen or pencil.  Calculators or other aids are not allowed unless explicitly stated.
+    * Midterm exams and other tests may or may not be returned, depending on the course.  If they are returned, you can get them from the instructor's office hours. You can not dispute the marking of your exam after you have taken it out of the instructor's office. 
+    * Final exams are not returned to students by University policy; they are kept by the instructor.
+
 ### Mark Appeals
 
 Except for final grades, this is how you can go about getting your mark changed:
@@ -156,13 +155,12 @@ Except for final grades, this is how you can go about getting your mark changed:
     * I knew what I was saying here, but didn't write it.
     * This is the correct answer for some question other than the one asked, but I didn't get any marks for it.
     * I didn't understand the question.
-     
-### Final Exam and Final Marks Appeals
+
+### Final and Final Marks Appeals
 
 If you're concerned about your mark at the end of the course, you can see the instructor.  Here are some guidelines:
 
-* You can come to the instructor's office at designated times to review your final exam.
-* Like assignments, you can ask the instructor to reevaluate your final exam marking.
+* Like assignments, you can ask the instructor to reevaluate your final marking.
 * The following are not good reasons to get a higher final mark:
     * I want it.
     * I think I deserve it.
@@ -172,3 +170,11 @@ If you're concerned about your mark at the end of the course, you can see the in
     * There's a marking irregularity on my final or some other piece of work.
 * The marking scheme is fixed.  If you did badly on a midterm, you can't weight the final more heavily.
    
+### Disclaimers about this web page
+
+* All course information on this web page is tentative and could be in error. It can also change at any time. Confirm crucial dates or information with me in person during class. Double check with SFU calendar or schedule information for official class times and final exams time and location. 
+* Students are expected to attend all classes: announcements about assigned readings, homeworks and exams will be made available at the start of each class. Such announcements may not be made on this web page, so don't rely on information here instead of attending class. 
+
+### Easter egg
+
+<img src="{{ site.baseurl }}/assets/img/puzzle.png" alt="Easter egg image" width="400"/>
