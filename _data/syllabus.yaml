@@ -1,6 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
   tag: week1
-  current: false
+  current: true
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
@@ -167,7 +167,7 @@
       url: "assets/lectures/runtime.pdf"
 - title: "Week 9 - Code Generation"
   tag: week9
-  current: true
+  current: false
   notes:
     - title: "Intermediate Representation"
       url: "assets/lectures/ir.pdf"
