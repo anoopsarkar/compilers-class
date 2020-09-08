@@ -15,7 +15,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * [Anoop Sarkar](https://anoopsarkar.github.io) 
 
 #### Time and place
-* Mondays-Wednesdays-Fridays 09:30-10:30am on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
+* Mon-Wed-Fri 09:30-10:20am on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants

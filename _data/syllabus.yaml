@@ -4,9 +4,10 @@
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
+      video: "https://youtu.be/CQ4a5RRHiCg"
     - title: "IN2: Trusting Trust"
       url: "assets/lectures/in2-trusting-trust.pdf"
-      video: "https://www.youtube.com/watch?v=6Fhy6cMaClk"
+      video: "https://youtu.be/aTi09veWajE"
     - title: "IN3: What is a Compiler?"
       url: "assets/lectures/in3-what-is-a-compiler.pdf"
     - title: "IN4: Stages of a Compiler"
