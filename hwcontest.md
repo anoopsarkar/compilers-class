@@ -2,14 +2,14 @@
 layout: default
 img: race
 img_link: "http://www.flickr.com/photos/nationaalarchief/3198249977/"
-caption: ""
+caption: "Compiler Contest"
 title: Compiler Contest
 active_tab: homework
 ---
 
 # Compiler Contest 
 
-The compiler contest is optional and is not worth any marks for your grade.
+More details will be posted here. This is a placeholder for the final compiler project.
 
 ## Submission Rules 
 
@@ -33,9 +33,4 @@ The compiler contest is optional and is not worth any marks for your grade.
 1. Whoever passes the most testcases will be the winner of the contest.
 1. If there is a tie, the fastest compiler wins.
 1. My compiler cannot be the winner.
-
-## The Prize
-
-* The prize for the winner of the contest is a $25 gift certificate from amazon.ca
-* The prize will be handed out to the winner of the contest at the final exam.
 
