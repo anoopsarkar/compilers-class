@@ -48,5 +48,5 @@ clean:
 	/bin/rm -f english_hello korean_hello dlhello *.o *.so *~ *.dylib
 
 archive:
-	ar -r dylib.ar *.c makefile
+	zip dylib.zip *.c makefile
 

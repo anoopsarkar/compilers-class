@@ -1,4 +1,4 @@
-int
-main () {
+void greet();
+int main () {
   greet();
 }

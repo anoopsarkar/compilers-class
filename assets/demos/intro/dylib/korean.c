@@ -1,5 +1,4 @@
 #include <stdio.h>
-void
-greet () {
+void greet () {
   printf("세상, 안녕!\n");
 }
