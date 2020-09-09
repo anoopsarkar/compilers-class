@@ -37,7 +37,6 @@
     - title: "wat"
       url: "https://www.destroyallsoftware.com/talks/wat"
       author: "Gary Bernhardt"
-      video: "https://destroyallsoftware-talks.s3.amazonaws.com/wat.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIKRVCECXBC4ZGHIQ%2F20160510%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20160510T233152Z&X-Amz-Expires=14400&X-Amz-SignedHeaders=host&X-Amz-Signature=62edec45df6af516ae2c9f3da4441cfb4db3def79cc8527190a91fe54df036f4"
     - title:  "How Browsers Work: Behind the Scenes of Modern Web Browsers"
       url: "http://www.html5rocks.com/en/tutorials/internals/howbrowserswork/"
       author: "Tali Garsiel and Paul Irish"
