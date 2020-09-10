@@ -3,8 +3,6 @@
 extern int yylval;
 %}
 
-num [0-9]+\.?|[0-9]*\.[0-9]+
-
 %%
 
 [ \t]     ; /* skip blanks and tabs */

@@ -1,0 +1,7 @@
+NUMBER is a token that comes from the lexical analyzer
+'c' is the literal for the character c.
+
+e => e '+' e
+e => e '*' e
+e => '(' e ')'
+e => NUMBER
