@@ -1,8 +1,8 @@
 
 Title: Video lecture: IN1 Why should you take a Compilers course?
 
-* [Video lecture](https://youtu.be/aTi09veWajE)
-* [Slides](http://anoopsarkar.github.io/compilers-class/assets/lectures/in2-trusting-trust.pdf)
+* [Video lecture](https://youtu.be/CQ4a5RRHiCg)
+* [Slides](http://anoopsarkar.github.io/compilers-class/assets/lectures/in1-evangelize-compilers.pdf)
 
 Use this discussion thread for the contents of this lecture.
 
