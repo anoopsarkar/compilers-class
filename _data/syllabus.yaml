@@ -20,9 +20,9 @@
       url: "assets/demos/intro/pl-survey-summary_su2016.txt"
     - title: "Duff device"
       url: "assets/demos/intro/duff-a.c"
-    - title: "Dynamic linking"
+    - title: "Dynamic linking (dylib.zip)"
       url: "assets/demos/intro/dylib.zip"
-    - title: "Lexing and parsing demo"
+    - title: "Lexing and parsing demo (expr.zip)"
       url: "assets/demos/intro/expr.zip"
     - title: "Chapter 1 of the Dragon Book"
       url: textbook.html
