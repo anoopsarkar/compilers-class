@@ -51,7 +51,7 @@ How to ask a question on the [discussion board on Coursys]({{ site.coursys }}dis
 ### Homework Submission and Grace Days
     
 * You have to submit several deliverables for each homework as specified on the homework pages.
-* Your homework solution will be submitted electronically on [courses.cs.sfu.ca](https://courses.cs.sfu.ca/).
+* Your homework solution will be submitted electronically on <a href="{{ site.coursys }}">Coursys</a>.
 * Please include an `answer/README.md` file for any documentation outside of the source code especially for code obtained from elsewhere.
 * All homeworks are due by 11:59PM on the homework due date.
 * Each homework comes with 2 grace days. However the grace days only apply to those who have a valid submission on the due date. The default is usually a valid submission. For example, if your homework deadline is Tuesday 11:59PM and you submit a valid solution then you have until Thursday night 11:59PM to modify your homework submission.
