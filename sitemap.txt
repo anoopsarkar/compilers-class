@@ -2,5 +2,4 @@ http://anoopsarkar.github.io/compilers-class/syllabus.html
 http://anoopsarkar.github.io/compilers-class/practice.html
 http://anoopsarkar.github.io/compilers-class/homeworks.html
 http://anoopsarkar.github.io/compilers-class/decafspec.html
-http://anoopsarkar.github.io/compilers-class/leaderboard.html
 http://anoopsarkar.github.io/compilers-class/faq.html
