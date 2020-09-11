@@ -13,6 +13,7 @@
       video: "https://youtu.be/81uQikW9vpw"
     - title: "IN4: Stages of a Compiler"
       url: "assets/lectures/in4-stages-of-a-compiler.pdf"
+      video: "https://youtu.be/0w0nRdUr_kA"
   links:
     - title: "Quines"
       url: "assets/demos/intro/myquine.c"
@@ -134,21 +135,17 @@
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
     - title: "LR4: LR(1) parsing"
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
+    - title: "LR5: Precedence and Associativity"
+      url: "assets/lectures/lr5-prec-assoc.pdf"
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
       url: "assets/distrib/nltk-left-recursion.py.txt"
     - title: "Midterm Practice"
       url: "assets/distrib/sample-midterm.pdf"
-- title: "Week 7 - Parsing 3"
+- title: "Week 7 - Syntax Directed Translation"
   tag: week7
   current: false
   notes:
-    - title: "LR5: Precedence and Associativity"
-      url: "assets/lectures/lr5-prec-assoc.pdf"
-    - title: "TD1: Recursive descent parsing"
-      url: "assets/lectures/td1-recursive-descent.pdf"
-    - title: "TD2: LL(1) parsing"
-      url: "assets/lectures/td2-ll_1-parsing.pdf"
     - title: "Syntax Directed Translation"
       url: "assets/lectures/sdt.pdf"
     - title: "decaf and LLVM"
@@ -158,24 +155,32 @@
       url: "assets/lectures/llvm.pdf"
     - title: "LLVM Practice"
       url: "llvm-practice.html"
-- title: "Week 8 - Semantics and Runtime Support"
+- title: "Week 8 - Top Down Parsing"
   tag: week8
+  current: false
+  notes:
+    - title: "TD1: Recursive descent parsing"
+      url: "assets/lectures/td1-recursive-descent.pdf"
+    - title: "TD2: LL(1) parsing"
+      url: "assets/lectures/td2-ll_1-parsing.pdf"
+- title: "Week 9 - Semantics and Runtime Support"
+  tag: week9
   current: false
   notes:
     - title: "Semantics"
       url: "assets/lectures/semantics.pdf"
     - title: "Runtime Support"
       url: "assets/lectures/runtime.pdf"
-- title: "Week 9 - Code Generation"
-  tag: week9
+- title: "Week 10 - Code Generation"
+  tag: week10
   current: false
   notes:
     - title: "Intermediate Representation"
       url: "assets/lectures/ir.pdf"
     - title: "Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
-- title: "Week 10 - Code Generation and Optimization"
-  tag: week10
+- title: "Week 11 - Code Generation and Optimization"
+  tag: week11
   current: false
   notes:
     - title: "Creating SSA Form"
@@ -189,23 +194,19 @@
       url: "http://llvm.org/devmtg/2011-11/Olesen_RegisterAllocation.pdf"
     - title: "Future directions for register allocation in LLVM"
       url: "http://llvm.org/devmtg/2009-10/RegisterAllocationFutureWorks.pdf"
-- title: "Week 11 - Code Optimization and Type Systems"
-  tag: week11
+- title: "Week 12 - Code Optimization and Type Systems"
+  tag: week12
   current: false
   notes:
     - title: "Code Optimization"
       url: "assets/lectures/opt.pdf"
     - title: "Type Systems"
       url: "assets/lectures/types.pdf"
-- title: "Week 12 - Garbage Collection"
-  tag: week12
-  current: false
-  notes:
-    - title: "Garbage Collection by Keith Schwarz"
-      url: "assets/lectures/keithschwarzgc.pdf"
 - title: "Week 13 - Conclusion"
   tag: week13
   current: false
   notes:
     - title: "Conclusion"
       url: "assets/lectures/conclusion.pdf"
+    - title: "Garbage Collection by Keith Schwarz"
+      url: "assets/lectures/keithschwarzgc.pdf"

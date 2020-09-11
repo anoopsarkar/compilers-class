@@ -1,7 +1,7 @@
 
 Title: Video lecture: IN4 Stages of a Compiler
 
-* [Video lecture](
+* [Video lecture](https://youtu.be/0w0nRdUr_kA)
 * [Slides](http://anoopsarkar.github.io/compilers-class/assets/lectures/in4-stages-of-a-compiler.pdf)
 
 Use this discussion thread for the contents of this lecture.
