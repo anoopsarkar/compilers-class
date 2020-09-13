@@ -51,10 +51,13 @@
   notes:
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/lex1-regexp-intro.pdf"
+      video: "https://youtu.be/CklIVTkg2Rw"
     - title: "LEX2: Regular Expressions"
       url: "assets/lectures/lex2-regular-expressions.pdf"
     - title: "Read the course FAQ!"
       url: "faq.html"
+    - title: "Homework 0"
+      url: "hw0.html"
   links:
     - title: "Adhoc Scanner"
       url: "assets/demos/lex//adhocScanner.c"
