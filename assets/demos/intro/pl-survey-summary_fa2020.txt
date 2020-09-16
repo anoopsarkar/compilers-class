@@ -1,0 +1,29 @@
+C/C++: (34/44) 77% 
+Java: (30/44) 68%
+Python: (27/44) 61%
+Haskell: (1/44) 2%
+Ruby: 0%
+Perl: 0%
+C#: (5/44) 11%
+F#: 0%
+Swift: (2/44) 5%
+Matlab: 0%
+--------------------
+Golang: (10/44) 23%
+Lisp/Scheme: (2/44) 5%
+Clojure: 0%
+Objective C: (5/44) 11%
+Javascript: (31/44) 70%
+Dart: 0%
+Kotlin: (3/44) 7%
+Fortran: (2/44) 5%
+R: (1/44) 2%
+Julia: 0%
+--------------------
+Rust: (19/44) 43%
+Prolog: 0%
+Smalltalk: (1/44) 2%
+Scala: (8/44) 18%
+Zig: (1/44) 2% (confirmed to be an artifact)
+Brainf**k: (13/44) 30%
+Whitespace: (7/44) 16%
