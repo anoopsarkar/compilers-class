@@ -1,6 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
   tag: week1
-  current: true
+  current: false
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
@@ -51,7 +51,7 @@
       citation: "Invited Keynote Talk, SSST-3, NAACL HLT, 2009."
 - title: "Week 2 - Lexical Analysis 1"
   tag: week2
-  current: false
+  current: true
   notes:
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/lex1-regexp-intro.pdf"
