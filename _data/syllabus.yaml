@@ -51,7 +51,7 @@
       citation: "Invited Keynote Talk, SSST-3, NAACL HLT, 2009."
 - title: "Week 2 - Lexical Analysis 1"
   tag: week2
-  current: true
+  current: false
   notes:
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/lex1-regexp-intro.pdf"
@@ -74,16 +74,20 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
 - title: "Week 3 - Lexical Analysis 2"
   tag: week3
-  current: false
+  current: true
   notes:
     - title: "LEX3: Regexps are Trees"
       url: "assets/lectures/lex3-regexps-are-trees.pdf"
+      video: "https://youtu.be/r6ntztPVjcY"
     - title: "LEX4: Regexps as Automata"
       url: "assets/lectures/lex4-regexps-as-automata.pdf"
+      video: "https://youtu.be/KXyC3gx24lQ"
     - title: "LEX5: Regexps to NFA.pdf"
       url: "assets/lectures/lex5-regexps-to-nfa.pdf"
+      video: "https://youtu.be/HWvrf7eUMso"
     - title: "LEX8: Lexical Analyzer"
       url: "assets/lectures/lex8-lexical-analyzer.pdf"
+      video: "https://youtu.be/hD2RZFlsJ5c"
   extra:
     - title: "LEX6: NFA to DFA"
       url: "assets/lectures/lex6-nfa-to-dfa.pdf"
