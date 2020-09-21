@@ -5,15 +5,15 @@
     Useful to check robustness of the lexical analyzer in various compilers.
 
     e.g. Run:
-    
-        python3 smash-gcc-lex.py | gcc -xc -
+
+        python3 smash-gcc-lex.py | cc -xc -
 
     This may not actually produce an a.out file. Works (or not) with gcc or clang.
 
     Compare to flex by running:
 
         make smash-gcc-lex
-        python3 smash-gcc-lex.py | ./smash-gcc-lex
+        python3 smash-gcc-lex.py | ./smash-gcc-lex | cc -xc -
 
 """
 
