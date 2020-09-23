@@ -1,4 +1,4 @@
-import nltk
+import nltk, string
 from nltk import CFG
 import sys
 
@@ -11,8 +11,10 @@ if len(sys.argv) == 1:
 else:
     for line in sys.stdin:
         inp = line.strip()
+inp = inp.translate(str.maketrans('', '', string.whitespace))
+print(inp)
 print("Start:", grammar.start(), file=sys.stderr)
 print("Productions:", grammar.productions(), file=sys.stderr)
 parser = nltk.ChartParser(grammar)
-for i, tree in enumerate(parser.parse(inp.split()), 1):
+for i, tree in enumerate(parser.parse([c for c in inp]), 1):
     print(i, tree)
