@@ -15,17 +15,7 @@ def match_regexps(regexp_dict, s):
     print("match_regexps", matched_regexps)
     return matched_regexps
 
-if __name__ == '__main__':
-    import sys
-    # define the regexps as strings
-    regexps = [
-        "^(((ac)|b)c)$",
-        "^(a((c|b)c))$",
-        "^(a(c|(bc)))$",
-        "^((a(c|b))c)$",
-        "^((ac)|(bc))$",
-        "^ac|bc$"
-    ]
+def interactive_disambiguate_regexp(regexps):
     for (i,r) in enumerate(regexps):
         print(i, r)
     # compile each one and store in a dict
@@ -38,6 +28,21 @@ if __name__ == '__main__':
         s = s.strip()
         inputs.add(s)
         valid_regexps = valid_regexps.intersection(match_regexps(regexp_dict, s))
-        for i in valid_regexps:
-            print(i, regexps[i])
+        if bool(valid_regexps):
+            for i in valid_regexps:
+                print("valid_regexp:", i, regexps[i])
+        else:
+            print("no valid regexps left. perhaps restart?")
     print(f"inputs: {inputs}")
+
+if __name__ == '__main__':
+    import sys
+    # define the regexps as strings
+    interactive_disambiguate_regexp([
+        "^(((ac)|b)c)$",
+        "^(a((c|b)c))$",
+        "^(a(c|(bc)))$",
+        "^((a(c|b))c)$",
+        "^((ac)|(bc))$",
+        "^ac|bc$"
+    ])
