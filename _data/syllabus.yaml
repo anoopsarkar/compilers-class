@@ -74,7 +74,7 @@
       url: "http://anoopsarkar.github.io/courses/CMPT-379-Fall-2013/posix-regexp.html"
 - title: "Week 3 - Lexical Analysis 2"
   tag: week3
-  current: true
+  current: false
   notes:
     - title: "LEX3: Regexps are Trees"
       url: "assets/lectures/lex3-regexps-are-trees.pdf"
@@ -120,14 +120,17 @@
       url: "http://regex.inginf.units.it/"
 - title: "Week 4 - Context-Free Grammars"
   tag: week4
-  current: false
+  current: true
   notes:
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1-intro.pdf"
+      video: "https://youtu.be/gPA9ssdnFso"
     - title: "CFG2: Ambiguity"
       url: "assets/lectures/cfg2-ambiguity.pdf"
+      video: "https://youtu.be/2ZjYQ8izfTI"
     - title: "CFG3: Push-down Automata"
       url: "assets/lectures/cfg3-pda.pdf"
+      video: "https://youtu.be/Jc_pPoTUEgA"
   links:
     - title: "YACC Practice"
       url: "yacc-practice.html"

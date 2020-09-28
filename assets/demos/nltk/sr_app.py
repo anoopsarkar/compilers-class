@@ -17,6 +17,6 @@ grammar = nltk.CFG.fromstring("""
 for prod in grammar.productions():
     print(prod)
 
-sent = 'I saw a man in the park'.split()
+sent = 'I saw a man with a telescope'.split()
 nltk.app.srparser_app.ShiftReduceApp(grammar, sent).mainloop()
 

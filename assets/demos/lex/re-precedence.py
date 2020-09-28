@@ -39,10 +39,12 @@ if __name__ == '__main__':
     import sys
     # define the regexps as strings
     interactive_disambiguate_regexp([
-        "^(((ac)|b)c)$",
-        "^(a((c|b)c))$",
-        "^(a(c|(bc)))$",
-        "^((a(c|b))c)$",
-        "^((ac)|(bc))$",
-        "^ac|bc$"
+        "^((a((b*)|c))*)$",
+        "^((((ab)*)|c)*)$",
+        "^(((a(b*))|c)*)$",
+        "^(a(((b*)|c)*))$",
+        "^(a((b*)|(c*)))$",
+        "^(((ab)*)|(c*))$",
+        "^((a(b*))|(c*))$",
+        "^ab*|c*$"
     ])
