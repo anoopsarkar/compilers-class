@@ -155,8 +155,6 @@
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
       url: "assets/distrib/nltk-left-recursion.py.txt"
-    - title: "Midterm Practice"
-      url: "assets/distrib/sample-midterm.pdf"
 - title: "Week 7 - Syntax Directed Translation"
   tag: week7
   current: false
