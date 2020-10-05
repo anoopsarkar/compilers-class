@@ -19,6 +19,6 @@ grammar = nltk.CFG.fromstring("""
 for prod in grammar.productions():
     print(prod)
 
-sent = 'a + b * c'.split()
+sent = '- ( a + b )'.split()
 nltk.app.srparser_app.ShiftReduceApp(grammar, sent).mainloop()
 
