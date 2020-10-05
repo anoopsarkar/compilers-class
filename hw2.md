@@ -159,10 +159,10 @@ Note that the references are only available for the `dev` testcases. When you ar
 
 You can use the default program provided to get an initial solution to this homework. Run `python3 zipout.py -r default` to get a `source.zip` file you can score.
 
-    python3 check.py 
-    Correct(dev): 39 / 124
-    Score(dev): 39.00
-    Total Score: 39.00
+    python3 check.py
+    Correct(dev): 34 / 134
+    Score(dev): 34.00
+    Total Score: 34.00
 
 ### Package your source for Coursys
 

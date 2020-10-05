@@ -96,23 +96,23 @@ For example, for the input Decaf program:
 The lexical analyzer produces the following token stream:
 
     T_PACKAGE package
-    T_WHITESPACE  
+    T_WHITESPACE
     T_ID Test
-    T_WHITESPACE  
+    T_WHITESPACE
     T_LCB {
-    T_WHITESPACE  
+    T_WHITESPACE
     T_FUNC func
-    T_WHITESPACE  
+    T_WHITESPACE
     T_ID main
     T_LPAREN (
     T_RPAREN )
-    T_WHITESPACE  
-    T_INT int
-    T_WHITESPACE  
+    T_WHITESPACE
+    T_INTTYPE int
+    T_WHITESPACE
     T_LCB {
-    T_WHITESPACE  
+    T_WHITESPACE
     T_RCB }
-    T_WHITESPACE  
+    T_WHITESPACE
     T_RCB }
     T_WHITESPACE \n
 
