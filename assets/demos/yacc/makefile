@@ -5,7 +5,7 @@ rm=/bin/rm -f
 mv=/bin/mv -f
 yacctargets=expr unambiguous-ifelse expr-conflicts
 targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr parens
-cpptargets=usingcpp expr-interpreter 
+cpptargets=usingcpp expr-interpreter json
 cpp11targets=decaf_funcs
 
 all: $(targets) $(cpptargets)

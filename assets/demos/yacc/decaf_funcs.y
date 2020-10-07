@@ -18,8 +18,8 @@ int, double or a pointer type, e.g. you cannot have 'string tval'
 as a valid type for tokens or non-terminals */
 
 %union {
-	char *sval;
-	string *tval; 
+    char *sval;
+    string *tval; 
 }
 
 %token FUNC_KW INT_TY BOOL_TY RET_KW
@@ -29,48 +29,48 @@ as a valid type for tokens or non-terminals */
 %%
 
 start: func
-	{ 
-		// cout << $1; 
-	}
+    { 
+        // cout << $1; 
+    }
 func: FUNC_KW ID '(' params ')' type '{' body '}'
-	{ 
-		//$$ = "Method(($2, $6, $4, $8)"; 
+    { 
+        //$$ = "Method(($2, $6, $4, $8)"; 
     }
 params: has_params 
-	{ 
-		// $$ = $1; 
-	}
+    { 
+        // $$ = $1; 
+    }
   |
-	{ 
-		// $$ = "None"; 
-	}
+    { 
+        // $$ = "None"; 
+    }
 has_params: ID type ',' has_params 
-	{ 
-		// $$ = "VarDef($1,$2),"; 
-	}
+    { 
+        // $$ = "VarDef($1,$2),"; 
+    }
   | ID type
-	{ 
-		// $$ = "VarDef($1,$2)"; 
-	}
+    { 
+        // $$ = "VarDef($1,$2)"; 
+    }
 type: INT_TY 
-	{ 
-		// $$ = "IntType"; 
-	}
+    { 
+        // $$ = "IntType"; 
+    }
   | BOOL_TY
-	{ 
-		// $$ = "BoolType"; 
-	}
+    { 
+        // $$ = "BoolType"; 
+    }
 body: RET_KW '(' ID ')' ';' 
-	{ 
-		// $$ = "MethodBlock(None,ReturnStmt(VariableExpr($2)))";  
-	}
-  | RET_KW 
-	{
-		// $$ = "MethodBlock(None,ReturnStmt())"; 
-	}
+    { 
+        // $$ = "MethodBlock(None,ReturnStmt(VariableExpr($2)))";  
+    }
+  | RET_KW  ';'
+    {
+        // $$ = "MethodBlock(None,ReturnStmt())"; 
+    }
   |
-	{ 
-		// $$ = "MethodBlock(None,ReturnStmt())"; 
-	}
+    { 
+        // $$ = "MethodBlock(None,ReturnStmt())"; 
+    }
 
 %%

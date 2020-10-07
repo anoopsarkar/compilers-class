@@ -109,8 +109,10 @@ program structure without the necessity of containing all the details
 in the source code; it can be thought of as an abstract representation
 of the source code.
 
-The specification for the abstract syntax tree to be produced by your program is 
-given below using the Zehpyr Abstract Syntax Definition Language.
+The specification for the abstract syntax tree to be produced by
+your program is given below using the [Zehpyr Abstract Syntax
+Definition Language](http://www.oilshell.org/blog/2016/12/11.html)
+which is a method for serialization of the abstract syntax tree.
 
 <script src="https://gist.github.com/anoopsarkar/b1dec7f4ba7e7f70bc1ee99511be4bca.js"></script>
 

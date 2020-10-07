@@ -2,14 +2,14 @@
 #define _JSON_DEFS
 
 #include <iostream>
-#include <tr1/unordered_map>
+#include <unordered_map>
 #include <vector>
 #include <string>
 
 using namespace std;
 
 typedef vector<class descriptor* > json_array;
-typedef tr1::unordered_map<string, class descriptor* > json_map;
+typedef unordered_map<string, class descriptor* > json_map;
 typedef json_map::iterator json_map_iterator;
 typedef json_array::iterator json_array_iterator;
 
