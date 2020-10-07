@@ -139,6 +139,12 @@ Then each time you finish a component of your solution you can push it to the re
 
 You have been given three helper programs to help you develop your solution to this homework.
 
+Make sure you understand the `decafAST` class that is defined in `default.cc` and extend it
+to create your own solution. This will save you a lot of development effort and time. 
+Compare the definition of the data structures and methods defined in`default.cc` and the
+code that calls the constructor methods and other methods from `default.cc` in the yacc
+file `default.y`.
+
 ### Run your solution on testcases
 
 Run your solution program on the testcases using the Python program `zipout.py`. 
