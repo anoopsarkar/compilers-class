@@ -3,12 +3,12 @@ yacclib=y
 bindir=.
 rm=/bin/rm -f
 mv=/bin/mv -f
-yacctargets=expr unambiguous-ifelse expr-conflicts
-targets=simple-expr multexpr simple-varexpr varexpr anbn coordination unambexpr parens
-cpptargets=usingcpp expr-interpreter json
-cpp11targets=decaf_funcs
+yacctargets=
+targets=
+cpptargets=
+cpp11targets=json
 
-all: $(targets) $(cpptargets)
+all: $(cpp11targets)
 
 $(targets): %: %.y
 	@echo "compiling yacc file:" $<
