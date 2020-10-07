@@ -144,6 +144,11 @@
     - title: "LR2: LR(0) parsing"
       url: "assets/lectures/lr2-lr_0-parsing.pdf"
       video: "https://youtu.be/_MLZAQeIxqU"
+  links:
+    - title: "Demo: example yacc grammar for (simplified) Decaf function definitions"
+      url: "assets/distrib/decaf_funcs.zip"
+    - title: "Demo: JSON parser"
+      url: "assets/distrib/json.zip"
 - title: "Week 6 - Parsing 2"
   tag: week6
   current: false
