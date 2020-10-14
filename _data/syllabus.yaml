@@ -136,7 +136,7 @@
       url: "yacc-practice.html"
 - title: "Week 5 - Parsing 1"
   tag: week5
-  current: true
+  current: false
   notes:
     - title: "LR1: Shift-Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
@@ -151,17 +151,24 @@
       url: "assets/distrib/json.zip"
 - title: "Week 6 - Parsing 2"
   tag: week6
-  current: false
+  current: true
   notes:
     - title: "LR3: SLR(1) parsing"
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
+      video: "https://youtu.be/jrG-e2wPuHk"
     - title: "LR4: LR(1) parsing"
       url: "assets/lectures/lr4-lr_1-parsing.pdf"
+      video: "https://youtu.be/lRISr60SjKc"
     - title: "LR5: Precedence and Associativity"
       url: "assets/lectures/lr5-prec-assoc.pdf"
+      video: "https://youtu.be/_FQAi0iL_zk"
   links:
-    - title: "Eliminate general left recursion in Python using NLTK"
-      url: "assets/distrib/nltk-left-recursion.py.txt"
+    - title: "Which parsing approach?"
+      author: "Laurence Tratt"
+      url: "https://tratt.net/laurie/blog/entries/which_parsing_approach.html"
+    - title: "Response: Challenging LR Parsing"
+      author: "@matklad""
+      url: "https://rust-analyzer.github.io/blog/2020/09/16/challeging-LR-parsing.html"
 - title: "Week 7 - Syntax Directed Translation"
   tag: week7
   current: false
@@ -183,6 +190,9 @@
       url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
+  links:
+    - title: "Eliminate general left recursion in Python using NLTK"
+      url: "assets/distrib/nltk-left-recursion.py.txt"
 - title: "Week 9 - Semantics and Runtime Support"
   tag: week9
   current: false
