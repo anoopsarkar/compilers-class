@@ -170,7 +170,7 @@
       author: "Laurence Tratt"
       url: "https://tratt.net/laurie/blog/entries/which_parsing_approach.html"
     - title: "Response: Challenging LR Parsing"
-      author: "@matklad""
+      author: "@matklad"
       url: "https://rust-analyzer.github.io/blog/2020/09/16/challeging-LR-parsing.html"
 - title: "Week 7 - Syntax Directed Translation"
   tag: week7
