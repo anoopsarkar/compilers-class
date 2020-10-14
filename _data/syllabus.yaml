@@ -163,6 +163,9 @@
       url: "assets/lectures/lr5-prec-assoc.pdf"
       video: "https://youtu.be/_FQAi0iL_zk"
   links:
+    - title: "Don't Panic! Better, Fewer, Syntax Errors for LR Parsers"
+      author: "Lukas Diekmann and Laurence Tratt"
+      url: "https://soft-dev.org/pubs/html/diekmann_tratt__dont_panic/"
     - title: "Which parsing approach?"
       author: "Laurence Tratt"
       url: "https://tratt.net/laurie/blog/entries/which_parsing_approach.html"
