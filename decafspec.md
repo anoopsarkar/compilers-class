@@ -660,11 +660,24 @@ This section clarifies the behaviour with scoping.
 -   Having two methods with the same name is a semantic error.
 -   Having a field and a method with the same name is a semantic error.
 -   externs count as methods for scoping.
+-   However, having an extern function with the same name as a function inside a package is allowed (the package should defined a new scope in which the local function is defined). See the example below.
 -   Having two local variables with the same name declared at the same block is a semantic error. `{ var x int; var x int; }` is an error, but `{ var x int; { var x int; } }` is ok.
 -   Having a local variable in the outer block of a method that has a parameter with the same name is a semantic error. `func foo(x int) void { var x int; }` is an error, but `func foo(x int) void { { var x int; } }` is ok.
 -   A function can be referred to anywhere in the program, including before its definition. `package C { func foo() void { bar() }; func bar() void {}; }` is ok.
 -   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `package C { func foo() void {}; func bar() void { var foo int; foo(); } }` the `foo` in `foo();` refers to the local int variable, not the function resulting in an error.
 -   `break` and `continue` only apply to the innermost containing loop. Using `break` or `continue` outside of a loop results in a semantic error.
+
+The following code is acceptable because of the scope defined by the `package` for the functions in the package.
+
+```
+extern func foo() int;
+
+
+package Scoping {
+	func foo(x int) void { { var x int; } }
+	func main() int { foo(1);  }
+}
+```
 
 ### Statements
 
