@@ -176,10 +176,12 @@
   tag: week7
   current: false
   notes:
-    - title: "Syntax Directed Translation for LR Parsers"
+    - title: "LR6: Syntax Directed Translation for LR Parsers"
       url: "assets/lectures/lr6-sdt.pdf"
+      video: "https://youtu.be/WFQ4oXVP4DA"
     - title: "decaf and LLVM"
       url: "assets/lectures/decafLLVM.pdf"
+      video: "https://youtu.be/O8cP05b3g2s"
   links:
     - title: "Intro to LLVM by Nick Sumner"
       url: "assets/lectures/llvm.pdf"
