@@ -380,20 +380,16 @@ Let us consider an illustrative example for one function parameter called `a` of
 You will have to iterate through each of the arguments in the method declaration AST and use the name and type and add it to the function definition using the `arg_iterator` as shown below.
 You need to name and load each argument from the function before running code generation on the body, so they can be used in the body statements. Iterate through each argument using an iterator, set the names, allocate them, and store them. This process is unique to generating function parameters.
 
-    llvm::Function *func =  // Implement from code above
-    for (llvm::Function::arg_iterator argIterator = func->arg_begin(); argIterator != func->arg_end(); ++argIterator) {
-
-        string argName =  // Retrieve name from the parameter which corresponds to this argument
-        argIterator->setName(argName);
-
-        llvm::AllocaInst *alloca = Builder.CreateAlloca(argIterator->getType(), 0, argName.c_str());  // Same as when defining a variable
-        Builder.CreateStore(static_cast<llvm::Value *>(&*argIterator), alloca);
-
-        // Add (argName, alloca) to symbol table
+    for (auto &Arg : func->args()) {
+      llvm::AllocaInst *Alloca = CreateEntryBlockAlloca(func, Arg.getName());
+      // Store the initial value into the alloca.
+      Builder.CreateStore(&Arg, Alloca);
+      // Add to symbol table
+      syms.enter_symtbl(Arg.getName(), Alloca);
     }
 
-You can get useful information about the method including a pointer to the
-function definition itself by using the following functions:
+
+You can get useful information about the method including a pointer to the function definition itself by using the following functions:
 
     llvm::BasicBlock *CurBB = Builder.GetInsertBlock();
     // gives you a link to the current basic block
