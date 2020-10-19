@@ -652,6 +652,24 @@ Make sure the following type checks are implemented in the compiler.
 - Check that all variables are defined in the proper scope before they are used as an lvalue or rvalue in a Decaf program. 
 - Check that the return statement in a method matches the return type in the method definition. e.g. `func foo() bool { return(10); }` is an example of a mismatch. 
 
+### Default values
+
+- Integer variables default to zero when initialized.
+- Boolean variables default to False when initialized.
+- For function return type: integer return type defaults to zero.
+- For function return type: boolean return type defaults to True.
+
+For function return values, here is an example:
+
+```
+func panama() bool {
+  print_string("Panama");
+}
+if (flag && panama()) { // panama() will return True
+ ...
+}
+```
+
 ### Scoping Rules
 
 This section clarifies the behaviour with scoping.

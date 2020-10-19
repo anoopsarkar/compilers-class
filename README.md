@@ -8,7 +8,7 @@ Cloned from https://github.com/mt-class/jhu and then modified.
 
 ## Installation
 
-    sudo gem install jekyll bundler
+    sudo gem install jekyll bundler github-pages kramdown
     bundle install
 
 ## Deploy
