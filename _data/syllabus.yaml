@@ -151,7 +151,7 @@
       url: "assets/distrib/json.zip"
 - title: "Week 6 - Parsing 2"
   tag: week6
-  current: true
+  current: false
   notes:
     - title: "LR3: SLR(1) parsing"
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
@@ -174,7 +174,7 @@
       url: "https://rust-analyzer.github.io/blog/2020/09/16/challeging-LR-parsing.html"
 - title: "Week 7 - Syntax Directed Translation"
   tag: week7
-  current: false
+  current: true
   notes:
     - title: "LR6: Syntax Directed Translation for LR Parsers"
       url: "assets/lectures/lr6-sdt.pdf"
