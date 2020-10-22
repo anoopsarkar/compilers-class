@@ -85,6 +85,10 @@ There is an incomplete solution to this homework in the `answer` directory. You 
 binary as follows:
 
     cd your-repo-name/answer
+    make llvmconfig=llvm-config-10 default
+
+If you have your own installation of LLVM on your home machine then just use:
+
     make default
 
 ## The Challenge
