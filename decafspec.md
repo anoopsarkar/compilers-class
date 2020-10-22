@@ -685,15 +685,14 @@ This section clarifies the behaviour with scoping.
 -   Functions, fields, arguments, and local variables all share the same namespace (symbol table) and can shadow each other except for the above rules. e.g. in `package C { func foo() void {}; func bar() void { var foo int; foo(); } }` the `foo` in `foo();` refers to the local int variable, not the function resulting in an error.
 -   `break` and `continue` only apply to the innermost containing loop. Using `break` or `continue` outside of a loop results in a semantic error.
 
-The following code is acceptable because of the scope defined by the `package` for the functions in the package.
+The following code is acceptable because of the scope defined by the `package` for the functions in the package. The `foo` call in `main` uses the locally scoped `foo` (defined inside the package).
 
 ```
 extern func foo() int;
 
-
 package Scoping {
-	func foo(x int) void { { var x int; } }
-	func main() int { foo(1);  }
+    func foo(x int) void { { var x int; } }
+    func main() int { foo(1);  }
 }
 ```
 
