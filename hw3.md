@@ -82,7 +82,7 @@ in the `answer` directory.
 
 Your solution must be compiled in the `answer` directory and must be called `decafexpr`.
 There is an incomplete solution to this homework in the `answer` directory. You can create the `default`
-binary as follows:
+binary on CSIL machines as follows:
 
     cd your-repo-name/answer
     make llvmconfig=llvm-config-10 default

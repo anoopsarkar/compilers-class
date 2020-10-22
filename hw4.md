@@ -1,6 +1,6 @@
 ---
 layout: default
-llvmver: 8.0.0
+llvmver: 10.0.1
 img: caffeine
 img_link: "https://en.wikipedia.org/wiki/Decaffeination"
 caption: "The Swiss Water Method uses water and osmosis to decaffeinate coffee beans. Developed in Switzerland in 1933 and turned into a commercially viable method by Coffex S.A. in 1980, in 1988 it became a product sold by The Swiss Water Decaffeinated Coffee Company of Burnaby, British Columbia, Canada."
@@ -67,9 +67,13 @@ in the `answer` directory.
 
 Your solution must be compiled in the `answer` directory and must be called `decafcomp`.
 There is an incomplete solution to this homework in the `answer` directory. You can create the `default`
-binary as follows:
+binary on CSIL machines as follows:
 
     cd your-repo-name/answer
+    make llvmconfig=llvm-config-10 default
+
+If you have your own installation of LLVM on your home machine then just use:
+
     make default
 
 ## The Challenge
