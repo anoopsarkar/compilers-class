@@ -296,6 +296,8 @@ Run your solution program on the testcases using the Python program `zipout.py`.
 Your solution must be compiled in the `answer` directory and must be called `decafexpr`.
 Run against all testcases as follows:
 
+    # on CSIL machines you should set the following environment variable
+    export LLVMCONFIG=llvm-config-10
     # go to the directory with the file zipout.py
     python3 zipout.py
 
