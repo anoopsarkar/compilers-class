@@ -1,6 +1,5 @@
 ---
 layout: default
-llvmver: 10.0.1
 img: caffeine
 img_link: "https://en.wikipedia.org/wiki/Decaffeination"
 caption: "The Swiss Water Method uses water and osmosis to decaffeinate coffee beans. Developed in Switzerland in 1933 and turned into a commercially viable method by Coffex S.A. in 1980, in 1988 it became a product sold by The Swiss Water Decaffeinated Coffee Company of Burnaby, British Columbia, Canada."
@@ -21,7 +20,7 @@ programming language](decafspec.html).
 
 We will be using a code generation and compiler toolkit called
 [LLVM](http://llvm.org/)  for this homework. We will be using LLVM version 
-{{ page.llvmver }}. 
+{{ site.llvmver }}. 
 
 Revisit the [LLVM practice problems](llvm-practice.html) before starting
 on this homework.

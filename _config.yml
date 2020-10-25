@@ -8,6 +8,7 @@ lastday: "Dec 7, 2020"
 midterm: "TBD"
 finalexam: "TBD"
 instructor: anoop
+llvmver: "10.0.1"
 tas:
   - name: "Navid Rahimi"
     email: navidr

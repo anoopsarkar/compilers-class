@@ -1,6 +1,5 @@
 ---
 layout: default
-llvmver: 10.0.1
 img: llvm
 img_link: "http://llvm.org/"
 caption: "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies."
@@ -21,7 +20,7 @@ language](decafspec.html).
 
 We will be using a code generation and compiler toolkit called
 [LLVM](http://llvm.org/)  for this homework. We will be using LLVM version 
-{{ page.llvmver }}. 
+{{ site.llvmver }}. 
 
 Before you start programming for this homework it is very important you work
 through the [LLVM practice problems](llvm-practice.html) first.
@@ -241,8 +240,8 @@ specification has a section on Semantics which lays out the rules of type
 coercion and other gray areas in the implementation of Decaf.
 
 Boolean constants are of type `i1` in LLVM assembly. Char constants can be either `i8` or `i32`. 
-You will need to refer to the [LLVM Documentation](http://releases.llvm.org/{{ page.llvmver }}/docs/index.html)
-and the [LLVM Tutorial](http://llvm.org/releases/{{ page.llvmver }}/docs/tutorial/index.html).
+You will need to refer to the [LLVM Documentation](http://releases.llvm.org/{{ site.llvmver }}/docs/index.html)
+and the [LLVM Tutorial](http://llvm.org/releases/{{ site.llvmver }}/docs/tutorial/index.html).
 
 ##### Getting Started on Step 2
 

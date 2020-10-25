@@ -28,11 +28,17 @@ Then go to the `llvm-practice` directory
 
     cd /your-path-to/compilers-class-hw/llvm-practice
 
+Here is how to use the `makefile` in different environments:
+
+1. On CSIL Linux machines: use `make llvmconfig=llvm-config-10 all`
+2. On your local macos or other installation: use `make all`
+
 ### Installation 
 
-We will be using LLVM version 8.0 for the homeworks in this course offering.
-LLVM 8.0 has already been installed in the CSIL Linux machines. You can use
-this version by using `llvm-config-8` in your makefile.
+We will be using LLVM version {{ site.llvmver }}  for the homeworks in this course offering.
+LLVM {{ site.llvmver }} has already been installed in the CSIL Linux machines. You can use
+this version on CSIL by using `llvm-config-10` in your makefile or using `llvm-config` on your
+local machine LLVM installation.
 
 You can also install LLVM on your own machine by following the links on
 this page:
