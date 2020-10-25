@@ -253,6 +253,19 @@ below that return a `llvm::Type*`
 | string | Builder.getInt8PtrTy() | pointer to array of bytes (int8) |
 {: .table}
 
+Here is a helper function that returns the correct LLVM type for
+each Decaf type:
+
+    typedef enum { voidTy, intTy, boolTy, stringTy, } decafType;
+    llvm::Type *getLLVMType(decafType ty) { 
+        switch (ty) {
+            case voidTy: return Builder.getVoidTy();
+            case intTy: return Builder.getInt32Ty();
+            case boolTy: return Builder.getInt1Ty();
+            case stringTy: return Builder.getInt8PtrTy(); default: throw runtime_error("unknown type");
+        } 
+    }
+
 #### LLVM Constants
 
 Sometimes the compiler needs to zero initialize a data structure (such as scalars or arrays).
@@ -412,12 +425,25 @@ and then insert a return statement:
     // sometimes the return statement is deep inside the method
     // so it is useful to retrieve the function we are in without
     // passing it down to all the AST nodes below the method declaration
-    Builder.CreateRet(TYPE)
+    Builder.CreateRet(llvm::Value*)
 
 You should create a default return type when you create the function
 definition. You can replace it with the real return if there is one
 but by default you should return the default value for the method
 return type (zero for integers, and true for booleans).
+
+The following function with an appropriate enum definition of
+`decafType` will provide you the default value for the method return
+type:
+
+    typedef enum { voidTy, intTy, boolTy, stringTy, } decafType;
+    llvm::Constant *getZeroInit(decafType ty) { 
+        switch (ty) {
+            case intTy: return Builder.getInt32(0);
+            case boolTy: return Builder.getInt1(0);
+            default: throw runtime_error("unknown type");
+        } 
+    }
 
 ### Method Calls
 
