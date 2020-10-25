@@ -227,7 +227,7 @@ You can dump the LLVM assembly by calling the `print` function and
 specifying output to standard output `outs()` or standard error
 `errs()`:
 
-    TheModule->print(llvm::outs(), nullptr);
+    TheModule->print(llvm::errs(), nullptr);
 
 #### LLVM Value
 
