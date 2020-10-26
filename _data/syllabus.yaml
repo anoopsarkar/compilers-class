@@ -193,8 +193,10 @@
   notes:
     - title: "SEM1: Scoping and Symbol Tables"
       url: "assets/lectures/sem1-scoping.pdf"
+      video: "https://youtu.be/mlx6OY7Cmmw"
     - title: "Runtime Support"
       url: "assets/lectures/runtime.pdf"
+      video: "https://youtu.be/Gt26AQ7XO-I"
   extra:
     - title: "SEM2: Type Systems"
       url: "assets/lectures/sem2-type-systems.pdf"
