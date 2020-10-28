@@ -237,6 +237,7 @@
       url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
+  extra:
     - title: "TD3: Syntax Directed Translation for LL Parsers"
       url: "assets/lectures/sdt.pdf"
   links:
@@ -248,5 +249,6 @@
   notes:
     - title: "Conclusion"
       url: "assets/lectures/conclusion.pdf"
+  extra:
     - title: "Garbage Collection by Keith Schwarz"
       url: "assets/lectures/keithschwarzgc.pdf"
