@@ -204,27 +204,24 @@
   tag: week9
   current: false
   notes:
+    - title: "IR: Three-Address Code"
+      url: "assets/lectures/ir.pdf"
     - title: "SSA1: Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
+- title: "Week 10 - Creating SSA Form"
+  tag: week10
+  current: false
+  notes:
     - title: "SSA2: Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
     - title: "SSA3: Creating SSA Form (continued)"
       url: "assets/lectures/ssaform3.pdf"
-  extra:
-    - title: "Three-Address Code"
-      url: "assets/lectures/ir.pdf"
-- title: "Week 10 - Register Allocation"
-  tag: week10
+- title: "Week 11 - Register Allocation and Code Optimization"
+  tag: week11
   current: false
   notes:
     - title: "OPT1: Register Allocation"
       url: "assets/lectures/regalloc.pdf"
-    - title: "OPT2: Register Allocation (continued)"
-      url: "assets/lectures/regalloc.pdf"
-- title: "Week 11 - Code Optimization"
-  tag: week11
-  current: false
-  notes:
     - title: "OPT3: Code Optimization"
       url: "assets/lectures/opt.pdf"
   links:
