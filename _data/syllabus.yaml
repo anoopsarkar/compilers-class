@@ -206,6 +206,7 @@
   notes:
     - title: "IR: Three-Address Code"
       url: "assets/lectures/ir.pdf"
+      video: "https://youtu.be/vZqWUKG7-cw"
     - title: "SSA1: Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
 - title: "Week 10 - Creating SSA Form"
