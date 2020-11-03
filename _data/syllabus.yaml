@@ -209,6 +209,7 @@
       video: "https://youtu.be/vZqWUKG7-cw"
     - title: "SSA1: Intro to SSA Form"
       url: "assets/lectures/ssaform1.pdf"
+      video: "https://youtu.be/3d9zfdWXGh0"
 - title: "Week 10 - Creating SSA Form"
   tag: week10
   current: false
