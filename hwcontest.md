@@ -34,3 +34,7 @@ More details will be posted here. This is a placeholder for the final compiler p
 1. Your compiler will be graded based on how many testcases were successfully passed and how many of your testcases were failed by other compilers in the contest.
 1. The grading details will be posted here soon.
 
+## Grading details
+
+1. What happens if none of your testcases pass the reference compiler sniff test.
+

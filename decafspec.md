@@ -417,7 +417,7 @@ Functions or methods in Decaf start with the reserved word `func`, then the name
     MethodDecls = { MethodDecl } .
     MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block .
 
-The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be either type `int` or `void`, however the compiler does not enforce a return statement within the `main` definition (just like ANSI C). Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return type of type `MethodType` explicitly defined. So your `main` function which does not have an explicit return statement can either have a `ret i32 0` or `ret void` in LLVM assembly depending on the return type of the `main` function, either `int` or `void` respectively. 
+The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be either type `int` or `void`. Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return statement of type `MethodType` explicitly or implicitly defined, e.g. if your `main` function which does not have an explicit return statement can either have a `ret i32 0` or `ret void` in LLVM assembly depending on the return type of the `main` function, either `int` or `void` respectively. 
 
 ### Blocks
 
@@ -464,7 +464,7 @@ Assignment to an `Lvalue` is a statement in `Decaf`. The location for the `Lvalu
 
 External functions are declared using the extern keyword. These functions are provided at using a separate library which is linked with your Decaf program at runtime. Some minimal type checking is done using the declaration. The most useful library functions that you will use are the `print_string`, `print_int` and `read_int` functions.
 
-The return value can be a type that can be assigned to an `Lvalue`:
+Unless it is `void`, the return value is a type that can be assigned to an `Lvalue`:
 
     z = read_int(); 
 
@@ -644,7 +644,7 @@ Make sure the following type checks are implemented in the compiler.
 -   Using a non-bool expression for a loop condition is a semantic error. `{ while (1) {} }` and `{ var x int; for (x = 0; 1; x = x + 1) {} }` are semantic errors.
 -   Using a non-bool expression in an if statement condition is a semantic error. `{ if (0) {} }` is a semantic error.
 -   A return statement with an expression is not allowed in function with void return type. `{ func foo() void { return (1); }` and `{ func bar() void {} func foo() void { return (bar()); }` are both semantic errors.
--   A return statement with no expression in a non-void function produces an undefined return value. `{ func foo() int { return; } func main() int { var x int; x = foo(); } }` is a not a semantic error, but the value of `x` may be anything (typically zero due to zero initialization).
+-   A return statement with no expression in a non-void function produces an default return value (see "Default values" section below).
 -   Cannot use a void function in an expression. `func foo() void {} func main() int { if (foo()) {} }` is invalid.
 -   Cannot call a method with the wrong number of arguments.
 - Find all cases where there is a type mismatch between the definition of the type of a variable and a value assigned to that variable. e.g. `bool x; x = 10;` is an example of a type mismatch. 
@@ -703,8 +703,8 @@ These are semantic errors that can occur when using statements in Decaf.
 - There are no restrictions on the type of `main` but a return statement inside main must match the return type of `main`. For `main` function missing an explicit return statement, `void` return types return void, and for `int` return zero, and for `bool` return `true`.
 - Assigning a scalar to an array is considered a type mismatch.
 - The following produce undefined behaviour, but must not produce compile time semantic errors:
-    - Using the value of any uninitialized scalar variable or array element
-    - A function with no return statement is equivalent to ending the function with a return statement that has no expression: `return;`
+    - Using the value of any uninitialized scalar variable or array element (this is allowed in the reference implementation)
+    - A function with no return statement is equivalent to ending the function with a return statement that has no expression: `return;` (this is allowed in the reference implementation)
 - Assigning to an array cell at an invalid index can either produce a compile-time or runtime error.
 - Any bool argument to a integer parameter must be converted while keeping its value, not just for `print_int`.
 - Passing a argument to a function parameter with a different type is a semantic error except for the special case of passing a `bool` as an `int`.
