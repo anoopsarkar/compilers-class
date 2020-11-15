@@ -38,12 +38,12 @@ This section specifies the testcase directory structure.
 1. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
 1. If there are more than 50 remaining testcases, I will take the first 50 based on lexicographic sort.
 
+### Grading
 
 1. The compiler from each participating submission will be run on all the collected testcases. 
 1. Your compiler will be graded based on how many testcases were successfully passed and how many of your testcases were failed by other compilers in the contest.
-1. The grading details will be posted here soon.
 
-## Grading details
+## FAQ
 
 1. What happens if none of your testcases pass the reference compiler sniff test.
 
