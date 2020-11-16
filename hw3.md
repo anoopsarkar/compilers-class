@@ -11,6 +11,7 @@ active_tab: homework
 
 <p class="text-muted">Start on {{ site.hwdates[3].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[3].deadline }}</p>
+<p class="text-muted">With grace days due on {{ site.hwdates[3].gracedays }}</p>
 
 Your task for this homework is to use LLVM in order to write the code
 generation step for expressions and methods in the [Decaf programming

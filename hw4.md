@@ -11,6 +11,7 @@ active_tab: homework
 
 <p class="text-muted">Start on {{ site.hwdates[4].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[4].deadline }}</p>
+<p class="text-muted">With grace days due on {{ site.hwdates[4].gracedays }}</p>
 
 Your task for this homework is to use [LLVM](http://llvm.org) for code generation in order to
 write a fully working compiler, including semantic checks, for the [Decaf

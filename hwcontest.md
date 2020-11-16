@@ -9,6 +9,10 @@ active_tab: homework
 
 # Compiler Contest 
 
+<p class="text-muted">Start on {{ site.hwdates[5].startdate }}</p>
+<p class="text-muted">Due on {{ site.hwdates[5].deadline }}</p>
+<p class="text-muted">With grace days due on {{ site.hwdates[5].gracedays }}</p>
+
 ## Your Task
 
 1. Create at least 10 new testcases and at most 50 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).

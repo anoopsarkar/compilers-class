@@ -11,6 +11,7 @@ active_tab: homework
 
 <p class="text-muted">Start on {{ site.hwdates[2].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[2].deadline }}</p>
+<p class="text-muted">With grace days due on {{ site.hwdates[2].gracedays }}</p>
 
 Your task for this homework is to write a parser for the [Decaf programming language](decafspec.html).
 

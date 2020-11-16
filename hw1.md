@@ -11,6 +11,7 @@ active_tab: homework
 
 <p class="text-muted">Start on {{ site.hwdates[1].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[1].deadline }}</p>
+<p class="text-muted">With grace days due on {{ site.hwdates[1].gracedays }}</p>
 
 Your task for this homework is to write a lexical analyzer (lexer
 for short) for the [Decaf programming language](decafspec.html)
