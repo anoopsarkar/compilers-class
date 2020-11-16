@@ -61,5 +61,5 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
     * Quiz 3 on {{ site.quiz[3].date }}
     * Quiz 4 on {{ site.quiz[4].date }}
     * Quiz 5 on {{ site.quiz[5].date }}
-* Final: [Compiler Contest](hwcontest.html) {{ site.hwdates[5].deadline }} (20%) **No grace days for final submission**
+* Final: [Compiler Contest](hwcontest.html) {{ site.hwdates[5].deadline }} [with grace days: {{ site.hwdates[5].gracedays }}] (20%)
 
