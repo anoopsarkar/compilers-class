@@ -38,6 +38,12 @@ This section specifies the testcase directory structure.
 1. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
 1. If there are more than 50 remaining testcases, I will take the first 50 based on lexicographic sort.
 
+### Grace Days
+
+1. There are two grace days for the compiler contest. 
+1. These will be used to provide some feedback on the quality of the testcases.
+1. However, the submitted testcases and compiler will not be run against the entire set of testcases to provide a full auto-grade of the contest. Only the number of testcases that passed the "Validation Phase" (see above) will be reported for each submission.
+
 ### Grading
 
 1. The compiler from each participating submission will be run on all the collected testcases. 

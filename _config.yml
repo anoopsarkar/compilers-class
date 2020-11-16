@@ -37,7 +37,7 @@ hwdates:
   - hw: "5"
     startdate: "Nov 23, 2020"
     deadline: "Dec 7, 2020"
-    gracedays: "None"
+    gracedays: "Dec 9, 2020"
 quiz:
   - quiz: "0"
     date: "Sep 16, 2020"
