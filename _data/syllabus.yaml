@@ -216,18 +216,23 @@
   notes:
     - title: "SSA2: Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
+      video: "https://youtu.be/b3ENhXvj3ww"
     - title: "SSA3: Creating SSA Form (continued)"
       url: "assets/lectures/ssaform3.pdf"
+      video: "https://youtu.be/hm2BQyrZ0l4"
 - title: "Week 11 - Register Allocation and Code Optimization"
   tag: week11
   current: false
   notes:
     - title: "OPT1: Register Allocation as Graph Coloring"
       url: "assets/lectures/opt1-regalloc-graph.pdf"
+      video: "https://youtu.be/PA7M8EbYRUU"
     - title: "OPT2: Register Allocation and Spilling to Memory"
       url: "assets/lectures/opt2-regalloc-spilling.pdf"
+      video: "https://youtu.be/xYVtyNXOwmw"
     - title: "OPT3: Linear Scan Register Allocation"
       url: "assets/lectures/opt3-regalloc-linearscan.pdf"
+      video: "https://youtu.be/ID9t-bp8X50"
     - title: "OPT4: Code Optimization"
       url: "assets/lectures/opt4-code-opt.pdf"
   links:
