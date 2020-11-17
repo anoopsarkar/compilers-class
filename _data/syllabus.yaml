@@ -233,13 +233,22 @@
     - title: "OPT3: Linear Scan Register Allocation"
       url: "assets/lectures/opt3-regalloc-linearscan.pdf"
       video: "https://youtu.be/ID9t-bp8X50"
-    - title: "OPT4: Code Optimization"
+    - title: "OPT4: Intro to Code Optimization"
       url: "assets/lectures/opt4-code-opt.pdf"
+      video: "https://youtu.be/O0zB5vx4DK8"
   links:
     - title: "Register allocation in LLVM"
       url: "http://llvm.org/devmtg/2011-11/Olesen_RegisterAllocation.pdf"
     - title: "Future directions for register allocation in LLVM"
       url: "http://llvm.org/devmtg/2009-10/RegisterAllocationFutureWorks.pdf"
+    - title: "LLVM Greedy Register Allocator"
+      url: "https://llvm.org/devmtg/2018-04/slides/Yatsina-LLVM%20Greedy%20Register%20Allocator.pdf"
+    - title: "Register Allocation Tutorial: More Than Coloring"
+      url: "https://www.youtube.com/watch?v=IK8TMJf3G6U"
+    - title: "How to write an LLVM Register Allocator"
+      url: "https://github.com/nael8r/How-To-Write-An-LLVM-Register-Allocator/blob/master/HowToWriteAnLLVMRegisterAllocator.rst"
+    - title: "Loop optimization in LLVM"
+      url: "https://www.youtube.com/watch?v=CEVznqrzVVI"
 - title: "Week 12 - Top Down Parsing"
   tag: week12
   current: false
