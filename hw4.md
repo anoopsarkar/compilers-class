@@ -265,7 +265,7 @@ If you add any testcases of your own please put them in the directories `answer/
 * Your source code from `source.zip` must be on your gitlab repository. Please commit and push often in order to get feedback on your code.
 * Make sure that we can run `make decafcomp` in your answer directory to create the `decafcomp` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
-* For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
+* For the written description of your submission and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
 ## Grading
 
