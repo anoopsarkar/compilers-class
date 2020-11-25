@@ -50,6 +50,7 @@ This section specifies the testcase directory structure.
 
 ## Ground Rules
 
+* The scripts `zipsrc.py`, `zipout.py` and `zipcontest.py` are available in the `decafcomp` directory from my `compilers-class-hw` repository. See the "Getting Started" section in [hw4](hw4.html) for details on the repository.
 * You must turn in three things:
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
