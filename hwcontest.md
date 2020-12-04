@@ -37,7 +37,7 @@ This section specifies the testcase directory structure.
 
 1. Each testcase must be in the right format (see "Testcase format" section above).
 1. The first phase of the contest will be a validation phase where I examine your output and make a decision about your program and the output being consistent with the Decaf spec.
-1. I can remove any testcases from your submission if I consider them to be too similar to existing testcases from previous homeworks or if they are invalid or they produce the wrong output. 
+1. I can remove any testcases from your submission if they are invalid or they produce the wrong output when compared to an existing Decaf compiler written by me. 
 1. My decision on accepting testcases is final and cannot be contested.
 1. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
 1. If there are more than 50 remaining testcases, I will take the first 50 based on lexicographic sort.
