@@ -32,6 +32,7 @@ This section specifies the testcase directory structure.
 1. The directory `testcases/your-name` should contain the Decaf source files named with a `.decaf` file name suffix.
 1. The directory `references/your-name` should contain the Decaf source files named with a `.out` file name suffix.
 1. You can create the contents of directory `references/your-name` by running `python zipout.py -t answer/testcases` and copying over the `.out` files to your references (sub)directory.
+1. An example of what `unzip -l contest.zip` should look like in terms of the directory structure is shown [in this gist](https://gist.github.com/anoopsarkar/a68e0e2249373da4be03dd0498c8bc0b). This directory structure is important for the contest auto-grading scripts to be able to read your `contest.zip` correctly.
 
 ### Validation Phase
 
