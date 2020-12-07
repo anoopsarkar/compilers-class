@@ -212,7 +212,7 @@
       video: "https://youtu.be/3d9zfdWXGh0"
 - title: "Week 10 - Creating SSA Form"
   tag: week10
-  current: true
+  current: false
   notes:
     - title: "SSA2: Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
@@ -249,6 +249,9 @@
       url: "https://github.com/nael8r/How-To-Write-An-LLVM-Register-Allocator/blob/master/HowToWriteAnLLVMRegisterAllocator.rst"
     - title: "Loop optimization in LLVM"
       url: "https://www.youtube.com/watch?v=CEVznqrzVVI"
+  extra:
+    - title: "Garbage Collection by Keith Schwarz"
+      url: "assets/lectures/keithschwarzgc.pdf"
 - title: "Week 12 - Top Down Parsing"
   tag: week12
   current: false
@@ -257,6 +260,8 @@
       url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
+    - title: "TD3: PEG and Packrat parsing"
+      url: "assets/lectures/td3-peg.pdf"
   extra:
     - title: "TD3: Syntax Directed Translation for LL Parsers"
       url: "assets/lectures/sdt.pdf"
@@ -265,10 +270,7 @@
       url: "assets/distrib/nltk-left-recursion.py.txt"
 - title: "Week 13 - Conclusion"
   tag: week13
-  current: false
+  current: true
   notes:
     - title: "Conclusion"
       url: "assets/lectures/conclusion.pdf"
-  extra:
-    - title: "Garbage Collection by Keith Schwarz"
-      url: "assets/lectures/keithschwarzgc.pdf"
