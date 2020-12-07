@@ -260,11 +260,12 @@
       url: "assets/lectures/td1-recursive-descent.pdf"
     - title: "TD2: LL(1) parsing"
       url: "assets/lectures/td2-ll_1-parsing.pdf"
-    - title: "TD3: PEG and Packrat parsing"
-      url: "assets/lectures/td3-peg.pdf"
-  extra:
     - title: "TD3: Syntax Directed Translation for LL Parsers"
       url: "assets/lectures/sdt.pdf"
+  extra:
+    - title: "PEG and Packrat parsing"
+      author: "O. Nierstrasz and B. Ford POPL 2004 presentation"
+      url: "assets/distrib/10PEGs.pptx.pdf"
   links:
     - title: "Eliminate general left recursion in Python using NLTK"
       url: "assets/distrib/nltk-left-recursion.py.txt"
