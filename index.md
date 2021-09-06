@@ -7,7 +7,7 @@ title: Course Information
 active_tab: main_page 
 ---
 
-## Compilers <span class="text-muted">Fall 2020</span>
+## Compilers <span class="text-muted">Fall 2021</span>
 
 As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-food.html), "If you don't know how compilers work, then you don't know how computers work."  This is a course for those who are interested in the design and implementation of programming languages. Compilers let us use a high-level programming language by translating programs into low-level machine code. Understanding how compilers work is essential if you want to be a good programmer. In this course, you will build a working compiler using lex, yacc and LLVM (it's ok if you don't know what those terms mean).
 
