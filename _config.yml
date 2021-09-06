@@ -1,8 +1,8 @@
 exclude: ['README.md','assets/latex','assets/ppt']
 timezone: US/Pacific
 markdown: kramdown
-coursys: "https://coursys.sfu.ca/2020fa-cmpt-379-d1/"
-semcode: 1207
+coursys: "https://coursys.sfu.ca/2021fa-cmpt-379-d1/"
+semcode: 1217
 calendar: "https://calendar.google.com/calendar/ical/qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com/public/basic.ics"
 lastday: "Dec 7, 2020"
 midterm: "TBD"
@@ -10,8 +10,8 @@ finalexam: "TBD"
 instructor: anoop
 llvmver: "10.0.1"
 tas:
-  - name: "Navid Rahimi"
-    email: navidr
+  - name: "Logan Born"
+    email: loborn
     officehour: "TBD on Zoom"
 hwdates:
   - hw: "0"
