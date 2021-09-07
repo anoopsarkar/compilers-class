@@ -11,22 +11,22 @@ active_tab: faq
 
 ### Email policy
 
-* We will be using the [discussion board on Coursys]({{ site.coursys }}discussion/) exclusively for **all** discussions including asking for help. 
+* We will be using the [discussion forum on Coursys]({{ site.coursys }}forum/) exclusively for **all** discussions including asking for help. 
 * For syllabus, practice, homeworks, exams, or other clarification emails **do not** email me (the instructor) or the TA(s) directly.
-* If you email the instructor directly for personal matters that are inappropriate for the discussion board, use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
+* If you email the instructor directly for personal matters that are inappropriate for the discussion forum, use your SFU email address to send the email (do not use any other provider), and use <code>cmpt379:</code> as the prefix in your subject line.
 * Do not email the TAs directly (without cc:ing the instructor) under any circumstance.
-* Before you email or post to the discussion board **read this FAQ**.
+* Before you email or post to the discussion forum **read this FAQ**.
 
 ### How to ask a question
 
-How to ask a question on the [discussion board on Coursys]({{ site.coursys }}discussion/):
+How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}forum/):
 
 * Do not ask two or more questions about different issues in the same topic. Ask each question as a separate topic.
 * First check your code on a CSIL Linux machine. If the problem goes away then the issue is with your development environment.
 * Describe your computing environment, e.g. Running Ubuntu Linux 16.04 and gcc version 5.4 on a VirtualBox VM. Depending on the complexity of your problem, more details might be required. If you are using a CSIL Linux machine just the hostname is sufficient.
 * If you are using a Windows machine then installing Ubuntu on a virtual machine as using that as your dev environment is a good idea. We cannot offer help debugging your home computing environment.
 * Do tell us what steps you take to invoke the problem, as well as what you've tried so far to fix it.
-* Do not open a new issue if there already exists an older one that asks the same question. First read through any issues that seem related to your own question before you post on the discussion board. This will save everybody time.
+* Do not open a new issue if there already exists an older one that asks the same question. First read through any issues that seem related to your own question before you post on the discussion forum. This will save everybody time.
 * One skill to develop is how to ask a question that has a higher chance of being answered. In any situation, no matter how frustrated you might feel, it does not hurt to ask your question politely.  Read what you have written before you hit "Post" or "Reply". Add one polite word to one sentence if there are none. This will always help you in the long run.
 
 ### Grading

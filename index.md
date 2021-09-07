@@ -16,12 +16,12 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 
 #### Time and place
 * Mon-Wed-Fri 09:30-10:20am PST in-person in room <a href="{{site.baseurl}}/assets/img/c9002_map.png">C9002</a>.
-* Sometimes we might be on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
+* Sometimes we might be on Zoom (link will be posted on the course <a href="{{ site.coursys }}forum/">discussion forum</a>).
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants
 <ul>
-<li> Do <b>not</b> email TAs directly. Use the <a href="{{ site.coursys }}discussion/">discussion board</a> only.</li>
+<li> Do <b>not</b> email TAs directly. Use the <a href="{{ site.coursys }}forum/">discussion forum</a> only.</li>
 {% for ta in site.tas %}
 <li>{{ ta.name }}, <code>{{ ta.email }}</code>, Office hour: {{ ta.officehour }}</li>
 {% endfor %}
@@ -36,9 +36,9 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Subscribe to the URL in your calendaring app rather than saving the file and adding it manually.
 
 #### Asking for help
-* Ask for help on [the discussion board]({{ site.coursys }}/discussion)
+* Ask for help on [the discussion forum]({{ site.coursys }}/forum)
 * TA office hours listed above
-* Use the discussion board for all interaction with the instructor and TAs (except personal issues)
+* Use the discussion forum for all interaction with the instructor and TAs (except personal issues)
 * Do **not** email the TAs directly (without cc:ing the instructor) under any circumstance. 
 * Use only SFU email address while sending emails and use `cmpt379:` as subject prefix
 
@@ -55,7 +55,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
     * HW2 on {{ site.hwdates[2].deadline }} [with grace days: {{ site.hwdates[2].gracedays }}] (12%), 
     * HW3 on {{ site.hwdates[3].deadline }} [with grace days: {{ site.hwdates[3].gracedays }}] (14%), 
     * HW4 on {{ site.hwdates[4].deadline }} [with grace days: {{ site.hwdates[4].gracedays }}] (20%) 
-* Participation: Helping other students **on the discussion board** in a positive way (5%)
+* Participation: Helping other students **on the discussion forum** in a positive way (5%)
 * Online quiz performance. (18% total; Best 4 out of 5; Each quiz is worth 4.5%)
     * Quiz 0 on {{ site.quiz[0].date }} (practice quiz; no marks)
     * Quiz 1 on {{ site.quiz[1].date }}
