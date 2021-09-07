@@ -15,7 +15,8 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * [Anoop Sarkar](https://anoopsarkar.github.io) 
 
 #### Time and place
-* Mon-Wed-Fri 09:30-10:20am PST on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
+* Mon-Wed-Fri 09:30-10:20am PST in-person C-9002.
+* Sometimes we might be on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants
@@ -46,6 +47,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * [List of reference books](textbook.html)
 
 #### Grading
+* _All dates are still tentative_
 * Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
 * Programming setup homework: HW0 due on {{ site.hwdates[0].deadline }} (1%)
 * Four programming homeworks. (56% total)
