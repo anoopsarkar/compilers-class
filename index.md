@@ -15,7 +15,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * [Anoop Sarkar](https://anoopsarkar.github.io) 
 
 #### Time and place
-* Mon-Wed-Fri 09:30-10:20am PST in-person at <img alt="C9002 is in the Chemistry building" src="{{site.baseurl}}/assets/img/c9002_map.png"/>
+* Mon-Wed-Fri 09:30-10:20am PST in-person in room <a href="{{site.baseurl}}/assets/img/c9002_map.png">C9002</a>.
 * Sometimes we might be on Zoom (link will be posted on the course <a href="{{ site.coursys }}discussion/">discussion board</a>).
 * Last day of classes: {{ site.lastday }}
 
