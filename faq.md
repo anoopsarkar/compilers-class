@@ -107,12 +107,6 @@ Just a heads up about the directory `$HOME/sfuhome` on CSIL machines.
 You should clone your repo inside your `$HOME` directory. You should not work inside your
 `$HOME/sfuhome` directory.
 
-### Exams
-
-* If you must miss a quiz or exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox and you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf).
-* If you miss an exam due to valid medical reasons you will be graded on your performance on the rest of the course. 
-* **Make up exams will not be given under any circumstances**. 
-
 ### Academic Honesty
 
 * Some examples of unacceptable behaviour:
@@ -133,11 +127,13 @@ You should clone your repo inside your `$HOME` directory. You should not work in
 
 ### Exams and Tests
 
-* If you miss a test or exam, you must present a note from a doctor to get a mark other than zero.  Arrangements to make up the lost marks will be made on a case-by-case basis by the instructor.  Make-up exams may be given as an oral examination.
+* Disregard the requirement for a official medical note for this semester due to the pandemic.
+* If you must miss a quiz or exam because of a medical problem, you should make an attempt to contact me prior to the exam either by email or a message in my mailbox and you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf).
+* If you miss an exam due to valid medical reasons you will be graded on your performance on the rest of the course. 
+* **Make up exams will not be given under any circumstances**. The grade will be moved to the final.
 * You must get a pass on the weighted average of the exams to pass the course.
-* Disregard the following for this semester which has all activities online.
 * For in-person exams:
-    * Midterms may be in different rooms than the lectures.  You will be notified by email.
+    * Midterms and/or finals may be in different rooms than the lectures.  You will be notified by email.
     * In person exams may be written in either pen or pencil.  Calculators or other aids are not allowed unless explicitly stated.
     * Midterm exams and other tests may or may not be returned, depending on the course.  If they are returned, you can get them from the instructor's office hours. You can not dispute the marking of your exam after you have taken it out of the instructor's office. 
     * Final exams are not returned to students by University policy; they are kept by the instructor.
