@@ -43,7 +43,7 @@ send2 (register char *to, register char *from, register int count)
 {
   int n = (count+7)/8;
   switch (count % 8) {
-  case 0: while(n-- > 0) { *to++ = *from++;
+  case 0: while(--n > 0) { *to++ = *from++;
   case 7:                  *to++ = *from++;
   case 6:                  *to++ = *from++;
   case 5:                  *to++ = *from++;
