@@ -57,12 +57,13 @@ How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}for
 * Each homework comes with 2 grace days unless otherwise specified. However the grace days only apply to those who have a valid submission on the due date. The default is usually a valid submission. For example, if your homework deadline is Monday 11:59PM and you submit a valid solution then you have until Wednesday night 11:59PM to modify your homework submission.
 * We will make every attempt to release grades for each homework as soon as possible. However, this means that after we review the source code we might have to lower your official grade. If you cheated in some way, such as copying your submission or you have violated the ground rules for each homework, your grades will be decreased from the initial value.
 * To request an extension of the due date due to a medical problem, you must submit the [official SFU Certificate of Illness](http://www.sfu.ca/content/dam/sfu/students/pdf/certificate-of-illness.pdf). Depending on the circumstances you may still lose part of your marks if your medical problem was only for a small portion of the entire homework duration.
+* The above requirement for a medical certificate is waived this semester to reduce the load on the healthcare system during the covid-19 pandemic.
 
 ### CSIL
     
 * [Remote access to CSIL](http://www.sfu.ca/computing/about/support/csil/unix/how-to-use-csil-linux-cpu-server.html) is allowed.
 * CSIL computers accept SSH connections on port 24 (rather than the usual port 22) so use `ssh -p 24 csil-cpu1.csil.sfu.ca` to connect.
-* If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: username`sfu.ca), then prefix the SFU username to the ssh or scp command. `ssh (username)@fraser.sfu.ca`.
+* If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: `your_username@sfu.ca`), then prefix the SFU username to the ssh or scp command. `ssh your_username@fraser.sfu.ca`.
 * You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html).
 *  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
 
