@@ -66,7 +66,8 @@ How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}for
 * If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: `your_username@sfu.ca`), then prefix the SFU username to the ssh or scp command. `ssh your_username@fraser.sfu.ca`.
 * You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html).
 *  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
-### Remote Access to CSIL 
+
+### Remote Access to CSIL (Fall 2021)
 
 Accessing CSIL machines is now a two-step process:
 
@@ -197,7 +198,7 @@ If you're concerned about your mark at the end of the course, you can see the in
 * This is a good reason:
     * There's a marking irregularity on my final or some other piece of work.
 * The marking scheme is fixed.  If you did badly on a midterm, you can't weight the final more heavily.
-   
+
 ### Disclaimers about this web page
 
 * All course information on this web page is tentative and could be in error. It can also change at any time. Confirm crucial dates or information with me in person during class. Double check with SFU calendar or schedule information for official class times and final exams time and location. 
@@ -205,4 +206,4 @@ If you're concerned about your mark at the end of the course, you can see the in
 
 ### Easter egg
 
-<img src="{{ site.baseurl }}/assets/img/puzzle.png" alt="Easter egg image" width="400"/>
+<!-- <img src="{{ site.baseurl }}/assets/img/puzzle.png" alt="Easter egg image" width="400"/> -->
