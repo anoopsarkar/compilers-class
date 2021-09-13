@@ -26,4 +26,5 @@ clean:
 	/bin/rm -f hello hello.o
 	/bin/rm -f mult mult.o
 	/bin/rm -f quine quine2 quine.c
+	/bin/rm -f send send2
 	/bin/rm -f *.rtf
