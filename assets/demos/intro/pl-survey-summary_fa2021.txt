@@ -1,0 +1,40 @@
+C/C++	33	12.94%
+Java	30	11.76%
+Python	33	12.94%
+Haskell	14	5.49%
+Ruby	3	1.18%
+Perl	1	0.39%
+C#	14	5.49%
+F#	1	0.39%
+Swift	6	2.35%
+Matlab	20	7.84%
+Golang	10	3.92%
+Lisp/Scheme	4	1.57%
+Clojure	1	0.39%
+Objective C	5	1.96%
+Javascript	28	10.98%
+Dart	1	0.39%
+Kotlin	5	1.96%
+Fortran	0	0.00%
+R	9	3.53%
+Julia	6	2.35%
+Rust	12	4.71%
+Prolog	1	0.39%
+Smalltalk	0	0.00%
+Scala	7	2.75%
+Zig	1	0.39%
+Brainf**k	2	0.78%
+Whitespace	0	0.00%
+Other	8	3.14%
+
+Other
+
+PHP
+TypeScript
+gdScript
+Typescript
+ActionScript
+Assembly
+Typescript
+SystemVerilog
+
