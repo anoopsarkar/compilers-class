@@ -66,6 +66,37 @@ How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}for
 * If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: `your_username@sfu.ca`), then prefix the SFU username to the ssh or scp command. `ssh your_username@fraser.sfu.ca`.
 * You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html).
 *  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
+### Remote Access to CSIL 
+
+Accessing CSIL machines is now a two-step process:
+
+1. SSH into the gateway server
+   - `ssh -p 24 COMPUTING_ID@gateway.csil.sfu.ca`
+   - requires your password and OTP code
+   - does not support logging in with SSH keys last I checked (beginning of summer semester)
+2. Once connected to the gateway server, then SSH *from the gateway server* into the CSIL machine you want to access
+   - e.g. `ssh -p 24 COMPUTING_ID@csil-cpuN.csil.sfu.ca`
+   - only requires your password
+   - here you can access your `sfuhome` directory + run programs, etc.
+
+If you don't want to have to do this in a two-step process, you can add something like this to your `~/.ssh/config` file (assuming you are using macOS, Linux or WSL):
+
+```
+Host sfugateway
+        HostName gateway.csil.sfu.ca
+        User COMPUTING_ID
+        Port 24
+
+Host csil8
+        HostName csil-cpu8.csil.sfu.ca
+        User COMPUTING_ID
+        Port 24
+        ProxyJump sfugateway
+```
+
+Then you can type `ssh csil8` to connect to CSIL CPU 8. It'll ask you for your password, OTP code and then your password again.
+
+> Thanks to Ethan Hinchliff for his post above on the discussion forum.
 
 #### Using the computer from the command line shell
 
