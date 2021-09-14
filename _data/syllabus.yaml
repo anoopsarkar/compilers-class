@@ -1,6 +1,6 @@
 - title: "Week 1 - Introduction to Compilers"
   tag: week1
-  current: false
+  current: true
   notes:
     - title: "IN1: Evangelize Compilers"
       url: "assets/lectures/in1-evangelize-compilers.pdf"
