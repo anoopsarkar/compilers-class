@@ -72,11 +72,11 @@ How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}for
 Accessing CSIL machines is now a two-step process:
 
 1. SSH into the gateway server
-   - `ssh -p 24 COMPUTING_ID@gateway.csil.sfu.ca`
+   - `ssh -p 24 SFU_COMPUTING_ID@gateway.csil.sfu.ca`
    - requires your password and OTP code
    - does not support logging in with SSH keys last I checked (beginning of summer semester)
 2. Once connected to the gateway server, then SSH *from the gateway server* into the CSIL machine you want to access
-   - e.g. `ssh -p 24 COMPUTING_ID@csil-cpuN.csil.sfu.ca`
+   - e.g. `ssh -p 24 SFU_COMPUTING_ID@csil-cpuN.csil.sfu.ca`
    - only requires your password
    - here you can access your `sfuhome` directory + run programs, etc.
 
@@ -84,20 +84,45 @@ If you don't want to have to do this in a two-step process, you can add somethin
 
 ```
 Host sfugateway
-        HostName gateway.csil.sfu.ca
-        User COMPUTING_ID
-        Port 24
+    HostName gateway.csil.sfu.ca
+    User SFU_COMPUTING_ID
+    Port 24
 
 Host csil8
-        HostName csil-cpu8.csil.sfu.ca
-        User COMPUTING_ID
-        Port 24
-        ProxyJump sfugateway
+    HostName csil-cpu8.csil.sfu.ca
+    User SFU_COMPUTING_ID
+    Port 24
+    ProxyJump sfugateway
 ```
 
-Then you can type `ssh csil8` to connect to CSIL CPU 8. It'll ask you for your password, OTP code and then your password again.
+Then you can type `ssh csil8` to connect to CSIL CPU 8. It'll ask
+you for your password, OTP code and then your password again.
+
+Once you have the ssh config set up as above you can also `scp`
+files to CSIL machines: `scp file csil8:.` (using the config above)
 
 > Thanks to Ethan Hinchliff for his post above on the discussion forum.
+
+#### Access to sfuhome
+
+If you ssh into a CSIL machine and your sfuhome directory is empty
+that means it was not "mounted" (in Unix, "mount" is used to make
+a network filesystem available locally).
+
+You can try to manually mount SFU home by entering this at the Linux
+command line:
+
+```
+/usr/local/bin/mount.sfuhome
+```
+
+It will prompt you for your password and if successful will mount
+your sfuhome directory. Note that if you clone your gitlab repository
+to sfuhome you don't need to clone it everytime for each machine.
+If you use $HOME as the location for your git clone directory then
+you will need to clone a fresh copy of your git repository in each
+machine you log into. Make sure you commit and push any changes
+before you logout.
 
 #### Using the computer from the command line shell
 
@@ -110,35 +135,7 @@ to prove to yourself that you really know how to use the command shell.
 
 Stop! We know that students skip over links! If you are
 new to Linux, you really need to read up on some basics.
-Read [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/unix.html){:target="_blank"} now!
-
-#### Logging in to CSIL
-
-It's time to get yourself set up in the CSIL Lab.
-
-CSIL is open starting the second week
-of the semester, 24 hours a day, 7 days a week. 
-Log in to the **Linux** machines.  
-
-If you use the terminal server to login to Linux, you should see a familiar desktop interface.
-In order to manipulate most of your work, you will need a terminal
-window which runs the "shell". Your default shell will be "bash".
-
-If you are using the terminal server, click the launcher in the upper-left corner of the desktop interface
-and start the "Terminal Emulator" application, or Terminal for short.
-It should be under the Accessories submenu.  If you can't find it,
-then try searching for `Terminal` in the search box.
-
-If you are using `ssh` to log into Linux at CSIL you will automatically
-be on a Terminal, typically running `bash` as your shell.
-
-The Terminal will allow you to type commands to manipulate, run and
-test programs in your labs.  But there will be no programming in this lab.
-In this lab you are going to use Git.
-
-Just a heads up about the directory `$HOME/sfuhome` on CSIL machines. 
-You should clone your repo inside your `$HOME` directory. You should not work inside your
-`$HOME/sfuhome` directory.
+Read [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/unix.html){:target="_blank"} now! 
 
 ### Academic Honesty
 
