@@ -14,6 +14,8 @@
     - title: "IN4: Stages of a Compiler"
       url: "assets/lectures/in4-stages-of-a-compiler.pdf"
       video: "https://youtu.be/-Ov9k_mrGgI"
+    - title: "Homework 0"
+      url: "hw0.html"
   links:
     - title: "Quines"
       url: "assets/demos/intro/myquine.c"
@@ -61,8 +63,6 @@
       video: "https://youtu.be/4SkNvwMyVtg"
     - title: "Read the course FAQ!"
       url: "faq.html"
-    - title: "Homework 0"
-      url: "hw0.html"
   links:
     - title: "Adhoc Scanner"
       url: "assets/demos/lex//adhocScanner.c"
