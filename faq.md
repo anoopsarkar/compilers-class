@@ -60,11 +60,10 @@ How to ask a question on the [discussion forum on Coursys]({{ site.coursys }}for
 * The above requirement for a medical certificate is waived this semester to reduce the load on the healthcare system during the covid-19 pandemic.
 
 ### CSIL
-    
+
 * [Remote access to CSIL](http://www.sfu.ca/computing/about/support/csil/unix/how-to-use-csil-linux-cpu-server.html) is allowed.
 * CSIL computers accept SSH connections on port 24 (rather than the usual port 22) so use `ssh -p 24 csil-cpu1.csil.sfu.ca` to connect.
 * If your local machine (e.g your laptop) has a different username from your SFU username (your username can be found by examining your SFU email address: `your_username@sfu.ca`), then prefix the SFU username to the ssh or scp command. `ssh your_username@fraser.sfu.ca`.
-* You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html).
 *  On some CSIL Linux machines, in some rare cases, you might have to extend your CPU time limit for a process. If you are using tcsh then run the command "limit cputime 1800" to extend CPU time to 1800 secs or 30 mins. If you are using bash then use the command "ulimit -t 1800".
 
 ### Remote Access to CSIL (Fall 2021)
@@ -130,8 +129,12 @@ In the instructions that follow, you will operate the computer using
 the text-based command-line interface, known as the "shell". Start
 off by reading [the CSIL guide to Linux](http://www.sfu.ca/computing/about/support/csil/unix.html){:target="_blank"}
 
+You may want to refer to a quick Unix tutorial. There are several on the web. The following one covers most of what you need to use the Linux shell effectively: [Quick Unix Tutorial](http://www.ee.surrey.ac.uk/Teaching/Unix/index.html).
+
 Are you confident you know how to use the shell? Do [the shell challenge](shell_fu.txt)
 to prove to yourself that you really know how to use the command shell.
+
+There is also the classic tutorial called [Unix for poets](https://web.stanford.edu/class/cs124/kwc-unix-for-poets.pdf) for your reading pleasure.
 
 Stop! We know that students skip over links! If you are
 new to Linux, you really need to read up on some basics.
