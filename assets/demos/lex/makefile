@@ -2,7 +2,7 @@
 lexlib=l
 bindir=.
 rm=/bin/rm -f
-targets=matchre smash-gcc-lex
+targets=matchre smash-gcc-lex tokenizer2
 cpptargets=
 
 all: $(targets) $(cpptargets)

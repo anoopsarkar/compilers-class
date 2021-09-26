@@ -27,7 +27,9 @@ if __name__ == "__main__":
   sys.stdout.write("#include <stdio.h>\nint main() { int ")
   #for i in xrange(n): sys.stdout.write('x')
   sys.stdout.write('x' * n)
-  sys.stdout.write(r' = 1; printf("yes\n"); }')
+  sys.stdout.write(r' = 1; printf("%d yes\n", ')
+  sys.stdout.write('x' * n)
+  sys.stdout.write('); }')
   print()
   #print("finished generating C code ...", file=sys.stderr)
 
