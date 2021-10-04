@@ -8,7 +8,7 @@ lastday: "Dec 7, 2021"
 midterm: "TBD"
 finalexam: "TBD"
 instructor: anoop
-llvmver: "10.0.1"
+llvmver: "12.0.1"
 tas:
   - name: "Logan Born"
     email: loborn
