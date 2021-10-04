@@ -135,7 +135,7 @@ Make sure you obey the following requirements:
 1. Note that the token names and lexeme values should be identical to the sample output provided to you in the `testcases` directory. 
 1. You must use the token names provided in the List of Tokens section of the Decaf specification.
 1. You must include a special whitespace and comment token. The whitespace token should have a lexeme value that includes all the whitespace characters. The whitespace and comment lexemes should convert the newline character into the literal string `\n` so that the line number and character number of each token can be recovered from the lexical analyzer output.
-1. [Provide appropriate error reporting with the line number and location in the line where the error was detected](https://gist.github.com/anoopsarkar/33ea6b0374578ec8b168860f0fdd4190).
+1. [Provide appropriate error reporting with the line number and location in the line where the error was detected](https://gist.github.com/anoopsarkar/33ea6b0374578ec8b168860f0fdd4190). Note that `check.py` does not check for the contents of the error message, only the return value from your lexer.
 
 ## Development and upload procedure
 
