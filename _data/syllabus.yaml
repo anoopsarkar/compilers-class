@@ -271,7 +271,7 @@
       url: "assets/distrib/nltk-left-recursion.py.txt"
 - title: "Week 13 - Conclusion"
   tag: week13
-  current: true
+  current: false
   notes:
     - title: "Conclusion"
       url: "assets/lectures/conclusion.pdf"
