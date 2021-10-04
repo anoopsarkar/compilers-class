@@ -53,7 +53,7 @@
       citation: "Invited Keynote Talk, SSST-3, NAACL HLT, 2009."
 - title: "Week 2 - Lexical Analysis 1"
   tag: week2
-  current: true
+  current: false
   notes:
     - title: "LEX1: Intro to Regexps"
       url: "assets/lectures/lex1-regexp-intro.pdf"
@@ -120,7 +120,7 @@
       url: "http://regex.inginf.units.it/"
 - title: "Week 4 - Context-Free Grammars"
   tag: week4
-  current: false
+  current: true
   notes:
     - title: "CFG1: Introduction"
       url: "assets/lectures/cfg1-intro.pdf"
