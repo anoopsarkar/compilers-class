@@ -134,8 +134,8 @@ Make sure you obey the following requirements:
 1. If your program succeeds in parsing the input you should exit from your program using `exit(EXIT_SUCCESS)`. And if your program finds a lexical error you should exit using `exit(EXIT_FAILURE)`. The definitions of `EXIT_SUCCESS` and `EXIT_FAILURE` are in `cstdlib` (for C++) and in `stdlib.h` (for C).
 1. Note that the token names and lexeme values should be identical to the sample output provided to you in the `testcases` directory. 
 1. You must use the token names provided in the List of Tokens section of the Decaf specification.
-1. You must include a special whitespace and comment token. The whitespace token should have a lexeme value that includes all the whitespace characters including any valid characters that should be escaped. The whitespace and comment lexemes should convert the newline character into the literal string `\n` so that the line number and character number of each token can be recovered from the lexical analyzer output. The literal tab character should be printed as `\t`.
-1. [Provide appropriate error reporting with the line number and location in the line where the error was detected](https://gist.github.com/anoopsarkar/33ea6b0374578ec8b168860f0fdd4190). The auto grading script does not check your error message just the return value. 
+1. You must include a special whitespace and comment token. The whitespace token should have a lexeme value that includes all the whitespace characters. The whitespace and comment lexemes should convert the newline character into the literal string `\n` so that the line number and character number of each token can be recovered from the lexical analyzer output.
+1. [Provide appropriate error reporting with the line number and location in the line where the error was detected](https://gist.github.com/anoopsarkar/33ea6b0374578ec8b168860f0fdd4190).
 
 ## Development and upload procedure
 
