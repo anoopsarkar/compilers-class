@@ -136,7 +136,7 @@
       url: "yacc-practice.html"
 - title: "Week 5 - Parsing 1"
   tag: week5
-  current: true
+  current: false
   notes:
     - title: "LR1: Shift-Reduce parsing"
       url: "assets/lectures/lr1-shift-reduce-parsing.pdf"
@@ -151,7 +151,7 @@
       url: "assets/distrib/json.zip"
 - title: "Week 6 - Parsing 2"
   tag: week6
-  current: false
+  current: true
   notes:
     - title: "LR3: SLR(1) parsing"
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
