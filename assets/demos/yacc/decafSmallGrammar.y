@@ -1,16 +1,17 @@
-%token CLASS ID LCB RCB ID ASSIGN INTCONSTANT SEMICOLON LPAREN RPAREN VOID INT BOOL
+%token PACKAGE ID LCB RCB VAR INT ASSIGN INTCONSTANT SEMICOLON FUNC LPAREN RPAREN VOID BOOL
 %%
-program: CLASS ID LCB field_decl_list method_decl_list RCB
+program: PACKAGE ID LCB field_decl_list method_decl_list RCB
 field_decl_list: field_decl field_decl_list
-     |
-     ;
+|
+;
 method_decl_list: method_decl method_decl_list
-     |
-     ;
-field_decl: type ID ASSIGN INTCONSTANT SEMICOLON
-method_decl: return_type ID LPAREN RPAREN
+|
+;
+field_decl: VAR type ID ASSIGN INTCONSTANT SEMICOLON
+method_decl: FUNC ID LPAREN RPAREN return_type
 return_type: type
-return_type: VOID
+| VOID
+;
 type: INT
-type: BOOL
-%%
+| BOOL
+;
