@@ -9,6 +9,7 @@ midterm: "TBD"
 finalexam: "TBD"
 instructor: anoop
 llvmver: "12.0.1"
+llvmconfig: "llvm-config-12"
 tas:
   - name: "Logan Born"
     email: loborn

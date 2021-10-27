@@ -70,7 +70,7 @@ There is an incomplete solution to this homework in the `answer` directory. You 
 binary on CSIL machines as follows:
 
     cd your-repo-name/answer
-    make llvmconfig=llvm-config-10 default
+    make llvmconfig={{ site.llvmconfig }}
 
 If you have your own installation of LLVM on your home machine then just use:
 
@@ -214,7 +214,7 @@ Your solution must be compiled in the `answer` directory and must be called `dec
 Run against all testcases as follows:
 
     # on CSIL machines you should set the following environment variable
-    export LLVMCONFIG=llvm-config-10
+    export LLVMCONFIG={{ site.llvmconfig }}
     # go to the directory with the file zipout.py
     python3 zipout.py
 

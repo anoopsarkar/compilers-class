@@ -30,14 +30,14 @@ Then go to the `llvm-practice` directory
 
 Here is how to use the `makefile` in different environments:
 
-1. On CSIL Linux machines: use `make llvmconfig=llvm-config-10 all`
+1. On CSIL Linux machines: use `make llvmconfig={{ site.llvmconfig }} all`
 2. On your local macos or other installation: use `make all`
 
 ### Installation 
 
 We will be using LLVM version {{ site.llvmver }}  for the homeworks in this course offering.
 LLVM {{ site.llvmver }} has already been installed in the CSIL Linux machines. You can use
-this version on CSIL by using `llvm-config-10` in your makefile or using `llvm-config` on your
+this version on CSIL by using `{{ site.llvmconfig }}` in your makefile or using `llvm-config` on your
 local machine LLVM installation.
 
 You can also install LLVM on your own machine by following the links on
@@ -99,7 +99,7 @@ Except for the `getelementptr` instruction the rest is easy to follow. The next
 question explains the use of the `getelementptr` to access global constants.
 The LLVM assembly file can be run directly using the `lli` command:
 
-    llvmconfig=llvm-config-8
+    llvmconfig={{ site.llvmconfig }}
     lli_bin=`$llvmconfig --bindir`/lli
     $lli_bin helloworld.ll
 
@@ -149,7 +149,7 @@ the Decaf standard library functions: `print_int` and `print_string`.
 The LLVM assembly in `add.ll` can be converted into executable machine code using the
 following steps (also in the shell script `run-llvm-code.sh`). 
 
-    llvmconfig=llvm-config-8
+    llvmconfig={{ site.llvmconfig }}
     `$llvmconfig --bindir`/llvm-as add.ll  # convert LLVM assembly to bitcode
     `$llvmconfig --bindir`/llc add.bc   # convert LLVM bitcode to x86 assembly
     clang add.s decaf-stdlib.c -o add 
