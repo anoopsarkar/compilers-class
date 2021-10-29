@@ -10,59 +10,78 @@ active_tab: homework
 # Compiler Contest 
 
 <p class="text-muted">Start on {{ site.hwdates[5].startdate }}</p>
-<p class="text-muted">Due on {{ site.hwdates[5].deadline }}</p>
-<p class="text-muted">With grace days due on {{ site.hwdates[5].gracedays }}</p>
+<p class="text-muted">Part 1 due on {{ site.hwdates[5].deadline }}</p>
+<p class="text-muted">With grace days, Part 1 due on {{ site.hwdates[5].gracedays }}</p>
+<p class="text-muted">Part 2 due on {{ site.hwdates[6].deadline }}</p>
 
 ## Your Task
 
-1. Create at least 10 new testcases and at most 50 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).
-1. Your testcases must pass and are expected to produce valid LLVM output that when compiled to binary produce some output after execution of the binary. 
-1. Testcases expected to fail cannot be submitted to the contest. (_this rule might be dropped_)
-1. The submission file for the Compiler Contest will be uploaded to Coursys.
+1. **Part 1.** Create at least 10 new testcases and at most 20 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).
+  1. Your testcases should be valid Decaf code which is not expected to crash. Each one should produce some output when it is executed.
+  1. Your grade for part 1 depends on how many of your testcases pass validation.
+1. **Part 2.** After the testcases have been validated, you will receive a zipfile containing all of the submitted testcases which passed validation. You must run your compiler on these cases and submit the output to Coursys.
+  1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
+
+Please note:
+1. Grace days are only available for Part 1. There is a hard deadline on December 10 for the submission of Part 2.
+1. Both parts will be submitted to Coursys. 
+1. Testcases expected to fail cannot be submitted to the contest.
 1. No fuzzing allowed. The testcases are expected to be hand checked or sanitized even if you used an automated method to generate them.
 
 ## The Contest
 
-### Testcase format
+### Part 1: Testcase format
 
 This section specifies the testcase directory structure.
 
 1. The testcase format must be identical to the format for the homeworks, particularly [hw3](hw3.html) and [hw4](hw4.html). 
-1. In your answer directory create two new directories: `testcases/your-name` and `references/your-name` where `your-name` is the name you have been using for the leaderboard.
+1. In your answer directory create two new directories: `testcases/your-name` and `references/your-name` where `your-name` is your SFU username.
 1. The directory `testcases/your-name` should contain the Decaf source files named with a `.decaf` file name suffix.
-1. The directory `references/your-name` should contain the Decaf source files named with a `.out` file name suffix.
+1. The directory `references/your-name` should contain the outputs from running your testcases, named with a `.out` file name suffix.
 1. You can create the contents of directory `references/your-name` by running `python zipout.py -t answer/testcases` and copying over the `.out` files to your references (sub)directory.
+1. Running `python3 zipcontest.py` will produce `contest.zip` which is the file you will submit for this part of the contest.
 1. An example of what `unzip -l contest.zip` should look like in terms of the directory structure is shown [in this gist](https://gist.github.com/anoopsarkar/a68e0e2249373da4be03dd0498c8bc0b). This directory structure is important for the contest auto-grading scripts to be able to read your `contest.zip` correctly.
 
 ### Validation Phase
 
+After you have submitted your testcases, I will validate them for use in Part 2:
 1. Each testcase must be in the right format (see "Testcase format" section above).
-1. The first phase of the contest will be a validation phase where I examine your output and make a decision about your program and the output being consistent with the Decaf spec.
-1. I can remove any testcases from your submission if they are invalid or they produce the wrong output when compared to an existing Decaf compiler written by me. 
+1. I will validate your testcases by running them through a reference implementation of the Decaf compiler. A testcase will pass just in case the expected output in your `.out` file matches the output from our reference compiler.
+  1. All testcases must compile within 1 minute and may not require more than 256 MB memory. Cases which exceed these limits will not pass validation.
+1. I can remove any testcases from your submission if they do not follow the Decaf specification or if they produce the wrong output. 
 1. My decision on accepting testcases is final and cannot be contested.
 1. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
-1. If there are more than 50 remaining testcases, I will take the first 50 based on lexicographic sort.
+1. If you submit more than 20 testcases which pass validation, I will take only the first 20 based on lexicographic sort.
+1. You will earn 1 point for each testcase which passes validation, to a maximum of 10 points.
+
+### Part 2: Testing Phase
+
+1. On the morning of December 9th, I will distribute a zipfile containing all of the testcases which passed validation. Check the Coursys discussion for a pinned post with a link to the download.
+1. Unzip the provided zipfile to your `testcases` directory. This will create a directory `testcases/contest` containing the (anonymized) submissions to Part 1.
+1. Your only task is to run your compiler on these testcases and upload the outputs to Coursys. If you unzip the new cases to `testcases/contest`, you can run them by calling `python3 zipout.py` as usual.
+1. Like the `dev` cases for past homeworks, you will not have access to the expected output for these testcases. (Except for those cases that you submitted.)
+1. This part of the contest is meant to test your compiler, and not as an opportunity to improve your compiler. You are not to modify your code, and there will be no grace days. 
+1. You will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 2 bonus points for each of your testcases which causes another student's compiler to crash or produce the wrong output (max two points per testcase, no matter how many compilers it breaks).
 
 ### Grace Days
 
-1. There are two grace days for the compiler contest. 
-1. These will be used to provide some feedback on the quality of the testcases.
-1. However, the submitted testcases and compiler will not be run against the entire set of testcases to provide a full auto-grade of the contest. Only the number of testcases that passed the "Validation Phase" (see above) will be reported for each submission.
+1. There are two grace days for Part 1 (creating the testcases). There are no grace days for Part 2 (running your code on the testcases).
+1. The grace days for Part 1 will be used to provide feedback on the quality of the testcases. If your initial submission does not contain 10 valid testcases, you can revise your testcases during the grace period.
 
 ## Ground Rules
 
 * The scripts `zipsrc.py`, `zipout.py` and `zipcontest.py` are available in the `decafcomp` directory from my `compilers-class-hw` repository. See the "Getting Started" section in [hw4](hw4.html) for details on the repository.
-* You must turn in three things:
-    * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}).
-    * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
-    * Your testcases for the Compiler Contest which is the file `contest.zip` produced by running `python3 zipcontest.py` must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the default program to get any marks.
-* Your source code from `source.zip` must be on your gitlab repository.
+* For Part 1, you must turn in one thing:
+    * Your testcases for the Compiler Contest (the file `contest.zip` produced by running `python3 zipcontest.py`) must be uploaded to the `Project testcases` submission page on [Coursys]({{ site.coursys }}).
+* For Part 2, you must turn in two things:
+    * Your source code from the `answer` directory as a zip file `source.zip` (produced by running `python3 zipsrc.py`) must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}).
+    * Your output on the contest testcases (which is the file `output.zip` produced by running `python3 zipout.py` after unzipping the new cases) must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}). 
+* Your source code from `source.zip` must also be pushed to your gitlab repository.
 * Make sure that we can run `make decafcomp` in your answer directory to create the `decafcomp` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For the written description of your submission and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
 ### Grading
 
-1. The compiler from each participating submission will be run on all the collected testcases. 
-1. Your compiler will be graded based on how many testcases were successfully passed and how many of your testcases were failed by other compilers in the contest.
-
+1. In Part 1, you will earn 1 point for each testcase which passes validation, to a maximum of 10 points.
+1. In Part 2, you will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 2 bonus points for each of your testcases which causes another student's compiler to crash or produce the wrong output (max two points per testcase, no matter how many compilers it breaks).
