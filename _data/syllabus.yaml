@@ -151,7 +151,7 @@
       url: "assets/distrib/json.zip"
 - title: "Week 6 - Parsing 2"
   tag: week6
-  current: true
+  current: false
   notes:
     - title: "LR3: SLR(1) parsing"
       url: "assets/lectures/lr3-slr_1-parsing.pdf"
@@ -189,7 +189,7 @@
       url: "llvm-practice.html"
 - title: "Week 8 - Semantics and Runtime Support"
   tag: week8
-  current: false
+  current: true
   notes:
     - title: "SEM1: Scoping and Symbol Tables"
       url: "assets/lectures/sem1-scoping.pdf"
