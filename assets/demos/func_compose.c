@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+int pl(int x, int y);
+
 int foo(int f(int,int), int g(int,int), int x) {
   printf("foo: %d\n", x);
   int y = g(x,x);
