@@ -196,7 +196,7 @@ For example, the following are integer literals:
     0xBadFace
     170141183460469231731687303715884105727
 
-For integer literals, the semantics of range checking occurs later, so that a long sequence of digits such as the last example above which is clearly out of range is still scanned as a single token. The semantic analyzer will come in later and reject this lexeme value as a valid integer constant.
+Values which fall outside the range of an `int32` (-2147483648 to 2147483647) should simply over- or underflow without causing an error: for example, `var x int; x = 2147483649;` should store the value `-2147483647` in `x`. 
 
 ### Character literals
 
