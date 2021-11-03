@@ -19,7 +19,7 @@ active_tab: homework
 1. **Part 1.** Create at least 10 new testcases and at most 20 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).
   1. Your testcases should be valid Decaf code which is not expected to crash. Each one should produce some output when it is executed.
   1. Your grade for part 1 depends on how many of your testcases pass validation.
-1. **Part 2.** After the testcases have been validated, you will receive a zipfile containing all of the submitted testcases which passed validation. You must run your compiler on these cases and submit the output to Coursys.
+1. **Part 2.** After the testcases have been validated, you will receive a zipfile containing anonymized versions all of the submitted testcases which passed validation. You must run your compiler on these cases and submit the output to Coursys.
   1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
 
 Please note:
@@ -35,8 +35,8 @@ Please note:
 This section specifies the testcase directory structure.
 
 1. The testcase format must be identical to the format for the homeworks, particularly [hw3](hw3.html) and [hw4](hw4.html). 
-1. In your answer directory create two new directories: `testcases/your-name` and `references/your-name` where `your-name` is your SFU username.
-1. The directory `testcases/your-name` should contain the Decaf source files named with a `.decaf` file name suffix.
+1. In your `testcases/` directory create two new subdirectories: `testcases/your-name` and `references/your-name` where `your-name` is your SFU username.
+1. The directory `testcases/your-name` should contain your new Decaf source files named with a `.decaf` file name suffix. If your programs require user input, also include `.in` files containing the inputs that will be piped to your programs.
 1. The directory `references/your-name` should contain the outputs from running your testcases, named with a `.out` file name suffix.
 1. You can create the contents of directory `references/your-name` by running `python zipout.py -t answer/testcases` and copying over the `.out` files to your references (sub)directory.
 1. Running `python3 zipcontest.py` will produce `contest.zip` which is the file you will submit for this part of the contest.
@@ -44,7 +44,7 @@ This section specifies the testcase directory structure.
 
 ### Validation Phase
 
-After you have submitted your testcases, I will validate them for use in Part 2:
+After you have submitted your testcases, we will validate them for use in Part 2:
 1. Each testcase must be in the right format (see "Testcase format" section above).
 1. I will validate your testcases by running them through a reference implementation of the Decaf compiler. A testcase will pass just in case the expected output in your `.out` file matches the output from our reference compiler.
   1. All testcases must compile within 1 minute and may not require more than 256 MB memory. Cases which exceed these limits will not pass validation.
@@ -61,7 +61,7 @@ After you have submitted your testcases, I will validate them for use in Part 2:
 1. Your only task is to run your compiler on these testcases and upload the outputs to Coursys. If you unzip the new cases to `testcases/contest`, you can run them by calling `python3 zipout.py` as usual.
 1. Like the `dev` cases for past homeworks, you will not have access to the expected output for these testcases. (Except for those cases that you submitted.)
 1. This part of the contest is meant to test your compiler, and not as an opportunity to improve your compiler. You are not to modify your code, and there will be no grace days. 
-1. You will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 2 bonus points for each of your testcases which causes another student's compiler to crash or produce the wrong output (max two points per testcase, no matter how many compilers it breaks).
+1. You will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 1 bonus point each time one of your testcases causes another student's compiler to crash or produce the wrong output. The maximum number of bonus points you can earn is 10% of the overall grade.
 
 ### Grace Days
 
