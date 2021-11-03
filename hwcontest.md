@@ -84,4 +84,4 @@ After you have submitted your testcases, we will validate them for use in Part 2
 ### Grading
 
 1. In Part 1, you will earn 1 point for each testcase which passes validation, to a maximum of 10 points.
-1. In Part 2, you will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 2 bonus points for each of your testcases which causes another student's compiler to crash or produce the wrong output (max two points per testcase, no matter how many compilers it breaks).
+1. In Part 2, you will earn 1 point for each testcase on which your compiler produces the correct output. You will earn 1 bonus point each time one of your testcases causes another student's compiler to crash or produce the wrong output. The maximum number of bonus points you can earn is 10% of the overall grade.
