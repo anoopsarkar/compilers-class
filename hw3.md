@@ -171,24 +171,12 @@ identifier.
 
 When entering a new block you should make sure to insert a new symbol table so
 that local re-definitions of a variable will shadow higher level definitions.
-In order to do this in yacc the easiest way is to add a new non-terminal that
-can be used to trigger the action you want to do: either insertion of a new
-symbol table or removal of a symbol table for an out of scope block. For
-example, let's take a single CFG rule in a yacc program:
 
-    block: '{' var_decl_list statement_list '}'
-
-If we wish to create a new scope region when we scan the `{` it is easier if
-the grammar is changed to the equivalent form below:
-
-    block: begin_block var_decl_list statement_list end_block
-    begin_block: '{'
-    end_block: '}'
-
-But now `begin_block` and `end_block` can support actions such
-as creation of a new scope or removal of an old scope.[^1]
-
-[^1]: A more advanced version of the solution to this task is to do the scoping over the entire AST that is created by the parser. Implement the scoping by adding and removing new scopes in your symbol table by doing a top-down pass over the AST. This way of solving it is closer to the top-down code generation in Step 2 of this homework.
+You should modify your AST generation code from HW2. Implement the
+scoping by adding and removing new scopes in your symbol table by
+doing a top-down pass over the AST _after_ the entire AST is
+constructed. This way of solving it is closer to the top-down code
+generation in Step 2 of this homework.
 
 Here is an example of what Step 1 should do. For input Decaf program:
 
