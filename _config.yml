@@ -39,6 +39,8 @@ hwdates:
     startdate: "Nov 22, 2021"
     deadline: "Dec 6, 2021"
     gracedays: "Dec 8, 2021"
+  - hw: "6"
+    deadline: "Dec 10, 2021"
 quiz:
   - quiz: "0"
     date: "Sep 15, 2021"
