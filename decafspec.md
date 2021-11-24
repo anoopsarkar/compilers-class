@@ -705,7 +705,7 @@ These are semantic errors that can occur when using statements in Decaf.
 - The following produce undefined behaviour, but must not produce compile time semantic errors:
     - Using the value of any uninitialized scalar variable or array element (this is allowed in the reference implementation)
     - A function with no return statement is equivalent to ending the function with a return statement that has no expression: `return;` (this is allowed in the reference implementation)
-- Assigning to an array cell at an invalid index can either produce a compile-time or runtime error.
+- Assigning to an array cell at an invalid index produces undefined behaviour. You can either produce a compile-time or runtime error or a segfault.
 - Any bool argument to a integer parameter must be converted while keeping its value, not just for `print_int`.
 - Passing a argument to a function parameter with a different type is a semantic error except for the special case of passing a `bool` as an `int`.
 - Declaring an array of size less than or equal to zero is a semantic error.
