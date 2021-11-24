@@ -17,7 +17,7 @@ active_tab: homework
 ## Your Task
 
 1. **Part 1.** Create at least 10 new testcases and at most 20 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).
-  1. Your testcases should be valid Decaf code which is not expected to crash. Each one should produce some output when it is executed.
+  1. Your testcases should be valid Decaf code which is not expected to crash. Each one should produce some output when it is executed. Each main method must return `int` and not `void`.
   1. Your grade for part 1 depends on how many of your testcases pass validation.
 1. **Part 2.** After the testcases have been validated, you will receive a zipfile containing anonymized versions all of the submitted testcases which passed validation. You must run your compiler on these cases and submit the output to Coursys.
   1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
@@ -46,13 +46,14 @@ This section specifies the testcase directory structure.
 
 After you have submitted your testcases, we will validate them for use in Part 2:
 1. Each testcase must be in the right format (see "Testcase format" section above).
-1. I will validate your testcases by running them through a reference implementation of the Decaf compiler. A testcase will pass just in case the expected output in your `.out` file matches the output from our reference compiler.
+2. Each testcase must have a `main` method that returns `int`, not `void`.
+3. I will validate your testcases by running them through a reference implementation of the Decaf compiler. A testcase will pass just in case the expected output in your `.out` file matches the output from our reference compiler.
   1. All testcases must compile within 1 minute and may not require more than 256 MB memory. Cases which exceed these limits will not pass validation.
-1. I can remove any testcases from your submission if they do not follow the Decaf specification or if they produce the wrong output. 
-1. My decision on accepting testcases is final and cannot be contested.
-1. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
-1. If you submit more than 20 testcases which pass validation, I will take only the first 20 based on lexicographic sort.
-1. You will earn 1 point for each testcase which passes validation, to a maximum of 10 points.
+4. I can remove any testcases from your submission if they do not follow the Decaf specification or if they produce the wrong output. 
+5. My decision on accepting testcases is final and cannot be contested.
+6. After I remove bad testcases, each submission that has at least 10 testcases remaining will be tested in the contest.
+7. If you submit more than 20 testcases which pass validation, I will take only the first 20 based on lexicographic sort.
+8. You will earn 1 point for each testcase which passes validation, to a maximum of 10 points.
 
 ### Part 2: Testing Phase
 
