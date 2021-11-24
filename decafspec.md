@@ -540,7 +540,7 @@ Binary operators are split into boolean binary operators and arithmetic binary o
 
 The boolean connectives `&&` and `||` are interpreted using [short circuit evaluation](http://en.wikipedia.org/wiki/Short-circuit_evaluation). This means: the second operand is not evaluated if the result of the first operand determines the value of the whole expression. For example, if the result is `false` for `&&` or `true` for `||`.
 
-Binary `%` computes the modulus of two numbers. Given two operands of type `int`, `a` and `b`: If `b` is positive, then `a % b` is a minus the largest multiple of `b` that is not greater than `a`. If `b` is negative, then `a % b` is `a` minus the smallest multiple of `b` that is not less than `a` (in this case the result will be less than or equal to zero).
+Binary `%` computes the signed remainder of integer division between `a` and `b`. The behaviour of `%` should match that of LLVM's [srem](https://llvm.org/docs/LangRef.html#srem-instruction) instruction. 
 
 ### Operators and Precedence
 
