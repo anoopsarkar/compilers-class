@@ -417,7 +417,7 @@ Functions or methods in Decaf start with the reserved word `func`, then the name
     MethodDecls = { MethodDecl } .
     MethodDecl  = func identifier "(" [ { identifier Type }+, ] ")" MethodType Block .
 
-The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be of type `int`, `bool`, or `void`. Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return statement of type `MethodType` explicitly or implicitly defined, e.g. if your `main` function which does not have an explicit return statement can either have a `ret i32 0`, `ret i1 0`, or `ret void` in LLVM assembly depending on the return type of the `main` function, `int`, `bool`, or `void` respectively. 
+The program must contain a declaration for a method called `main` that has no parameters. The return type of the method `main` can be of type `int`, `bool`, or `void`. Execution of a Decaf program starts at this method `main`. Methods defined as part of a package can have zero or more parameters and must have a return statement of type `MethodType` explicitly or implicitly defined, e.g. if your `main` function which does not have an explicit return statement can either have a `ret i32 0`, `ret i1 1`, or `ret void` in LLVM assembly depending on the return type of the `main` function, `int`, `bool`, or `void` respectively. 
 
 ### Blocks
 
