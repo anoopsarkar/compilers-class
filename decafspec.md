@@ -9,11 +9,6 @@ active_tab: homework
 
 ## Decaf Programming Language Specification <span class="text-muted">Fall 2021</span>
 
-Changelog
----------
-
-The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.[
-
 Introduction
 ------------
 
@@ -715,4 +710,9 @@ These are semantic errors that can occur when using statements in Decaf.
 - Passing a argument to a function parameter with a different type is a semantic error except for the special case of passing a `bool` as an `int`.
 - Declaring an array of size less than or equal to zero is a semantic error.
 - Assignment to a function parameter is valid and should change the value as for a local variable.
+
+Changelog
+---------
+
+The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.[
 
