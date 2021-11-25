@@ -9,6 +9,11 @@ active_tab: homework
 
 ## Decaf Programming Language Specification <span class="text-muted">Fall 2021</span>
 
+Changelog
+---------
+
+The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.[
+
 Introduction
 ------------
 
