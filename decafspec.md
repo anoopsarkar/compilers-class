@@ -714,5 +714,5 @@ These are semantic errors that can occur when using statements in Decaf.
 Changelog
 ---------
 
-The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.[
+The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.
 
