@@ -212,7 +212,7 @@
       video: "https://youtu.be/3d9zfdWXGh0"
 - title: "Week 10 - Creating SSA Form"
   tag: week10
-  current: true
+  current: false
   notes:
     - title: "SSA2: Creating SSA Form"
       url: "assets/lectures/ssaform2.pdf"
@@ -222,7 +222,7 @@
       video: "https://youtu.be/hm2BQyrZ0l4"
 - title: "Week 11 - Register Allocation and Code Optimization"
   tag: week11
-  current: false
+  current: true
   notes:
     - title: "OPT1: Register Allocation as Graph Coloring"
       url: "assets/lectures/opt1-regalloc-graph.pdf"
