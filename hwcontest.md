@@ -23,9 +23,9 @@ active_tab: homework
   1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
 
 Please note:
-1. Grace days are only available for Part 1. There is a hard deadline on December 10 for the submission of Part 2.
+1. Grace days are only available for Part 1. There is a hard deadline on {{ site.hwdates[6].deadline }} for the submission of Part 2.
 1. Both parts will be submitted to Coursys. 
-1. Testcases expected to fail cannot be submitted to the contest.
+1. Testcases should be valid Decaf code that returns 0 on success.
 1. No fuzzing allowed. The testcases are expected to be hand checked or sanitized even if you used an automated method to generate them.
 
 ## The Contest
@@ -57,7 +57,7 @@ After you have submitted your testcases, we will validate them for use in Part 2
 
 ### Part 2: Testing Phase
 
-1. On the morning of December 9th, I will distribute a zipfile containing all of the testcases which passed validation. Check the Coursys discussion for a pinned post with a link to the download.
+1. On the morning after {{ site.hwdates[5].deadline }}, I will distribute a zipfile containing all of the testcases which passed validation. Check the Coursys discussion for a pinned post with a link to the download.
 1. Unzip the provided zipfile to your `testcases` directory. This will create a directory `testcases/contest` containing the (anonymized) submissions to Part 1.
 1. Your only task is to run your compiler on these testcases and upload the outputs to Coursys. If you unzip the new cases to `testcases/contest`, you can run them by calling `python3 zipout.py` as usual.
 1. Like the `dev` cases for past homeworks, you will not have access to the expected output for these testcases. (Except for those cases that you submitted.)
