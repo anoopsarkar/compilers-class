@@ -222,7 +222,7 @@
       video: "https://youtu.be/hm2BQyrZ0l4"
 - title: "Week 11 - Register Allocation and Code Optimization"
   tag: week11
-  current: true
+  current: false
   notes:
     - title: "OPT1: Register Allocation as Graph Coloring"
       url: "assets/lectures/opt1-regalloc-graph.pdf"
