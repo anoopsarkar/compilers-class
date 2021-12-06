@@ -35,7 +35,7 @@ Please note:
 This section specifies the testcase directory structure.
 
 1. The testcase format must be identical to the format for the homeworks, particularly [hw3](hw3.html) and [hw4](hw4.html). 
-1. In your `testcases/` directory create two new subdirectories: `testcases/your-name` and `references/your-name` where `your-name` is your SFU username.
+1. In your `testcases/` and `references/` directories, create the subdirectories `testcases/your-name` and `references/your-name` where `your-name` is your SFU username.
 1. The directory `testcases/your-name` should contain your new Decaf source files named with a `.decaf` file name suffix. If your programs require user input, also include `.in` files containing the inputs that will be piped to your programs.
 1. The directory `references/your-name` should contain the outputs from running your testcases, named with a `.out` file name suffix.
 1. You can create the contents of directory `references/your-name` by running `python zipout.py -t testcases` and copying over the `.out` files to your references (sub)directory.
