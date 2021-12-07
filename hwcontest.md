@@ -57,7 +57,7 @@ After you have submitted your testcases, we will validate them for use in Part 2
 
 ### Part 2: Testing Phase
 
-1. On the morning after {{ site.hwdates[5].deadline }}, I will distribute a zipfile containing all of the testcases which passed validation. Check the Coursys discussion for a pinned post with a link to the download.
+1. On the morning after {{ site.hwdates[5].gracedays }}, I will distribute a zipfile containing all of the testcases which passed validation. Check the Coursys discussion for a pinned post with a link to the download.
 1. Unzip the provided zipfile to your `testcases` directory. This will create a directory `testcases/contest` containing the (anonymized) submissions to Part 1.
 1. Your only task is to run your compiler on these testcases and upload the outputs to Coursys. If you unzip the new cases to `testcases/contest`, you can run them by calling `python3 zipout.py` as usual.
 1. Like the `test` cases for past homeworks, you will not have access to the expected output for these testcases. (Except for those cases that you submitted.)
