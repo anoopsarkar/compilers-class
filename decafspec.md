@@ -716,3 +716,16 @@ Changelog
 
 The [Changelog](decafspec-changelog.html) contains the important changes since you last read the specifiction below.
 
+Changes for future offerings
+----------------------------
+
+These are changes that should be made for future offerings of this course to make things consistent in HW4 and the compiler contest.
+
+- Rethink extern shadowing. Allowing shadowing by fields but not by methods is easy; allowing shadowing by neither is also feasible. Allowing shadowing by both requires reworking the linking process and will be hardest for students.
+- Remove this from HW4: `You can optionally include any other semantic checks that seem reasonable based on your analysis of the language`. We want consistent behaviors for the contest.
+- Rethink array indexing. Current rules are `Assigning to an array cell at an invalid index produces undefined behaviour.` Should we (*can* we?) require a particular behaviour to make sure everyone's compiler is consistent for the contest? 
+- Consider allowing negative global variables? `var x int = -10;` is currently forbidden but `var x int = 10;` is ok. This may add too much complexity since -10 is technically an expression and we don't want to allow arbitrary expressions in global assignments.
+- When and how does range checking occur for integers? We want to avoid undefined behaviors from methods like `atoi`.
+- Rethink raising of `bool`s? Currently only happens in function calls, which leads to kludges like "func raise(int x) int { return x; }" in the contest testcases. Should raising be allowed in more contexts?
+- `main` should only return `int`. `void` produces undefined behaviour and the default return value for`bool` looks like an error code. All testcases should be modified to remove any instance of `void` or `bool` return values for `main`.
+
