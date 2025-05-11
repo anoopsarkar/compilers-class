@@ -4,19 +4,18 @@ img: llvm
 img_link: "http://llvm.org/"
 caption: "The LLVM Project is a collection of modular and reusable compiler and toolchain technologies. "
 title: Course Information
-active_tab: main_page 
+active_tab: main_page
 ---
 
-## Compilers <span class="text-muted">Fall 2021</span>
+## Compilers <span class="text-muted">Summer 2025</span>
 
 As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-food.html), "If you don't know how compilers work, then you don't know how computers work."  This is a course for those who are interested in the design and implementation of programming languages. Compilers let us use a high-level programming language by translating programs into low-level machine code. Understanding how compilers work is essential if you want to be a good programmer. In this course, you will build a working compiler using lex, yacc and LLVM (it's ok if you don't know what those terms mean).
 
 #### Instructor
-* [Anoop Sarkar](https://anoopsarkar.github.io) 
+* [Anoop Sarkar](https://anoopsarkar.github.io)
 
 #### Time and place
-* Mon-Wed-Fri 09:30-10:20am PST in-person in room <a href="{{site.baseurl}}/assets/img/c9002_map.png">C9002</a>.
-* Sometimes we might be on Zoom (link will be posted on the course <a href="{{ site.coursys }}forum/">discussion forum</a>).
+* Mondays 12:30pm-2:20pm in <a href="{{site.baseurl}}/assets/img/wmc3520_map.png">WMC3520</a> and Wednesdays 12:30pm-1:20pm in <a href="{{site.baseurl}}/assets/img/c9002_map.png">C9002</a>.
 * Last day of classes: {{ site.lastday }}
 
 #### Teaching Assistants
@@ -32,14 +31,14 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 
 #### Calendar
 * [View Calendar](https://coursys.sfu.ca/calendar/)
-* [Subscribe](https://coursys.sfu.ca/news/75221d0252e1cdacf94dac56b78600e9/anoop)
+* [Subscribe](https://calendar.google.com/calendar/embed?src=qgs97od9ef8t1582k2rqomv5ho%40group.calendar.google.com&ctz=America%2FVancouver)
 * Subscribe to the URL in your calendaring app rather than saving the file and adding it manually.
 
 #### Asking for help
 * Ask for help on [the discussion forum]({{ site.coursys }}/forum)
 * TA office hours listed above
 * Use the discussion forum for all interaction with the instructor and TAs (except personal issues)
-* Do **not** email the TAs directly (without cc:ing the instructor) under any circumstance. 
+* Do **not** email the TAs directly (without cc:ing the instructor) under any circumstance.
 * Use only SFU email address while sending emails and use `cmpt379:` as subject prefix
 
 #### Textbook
@@ -51,10 +50,10 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
 * Programming setup homework: HW0 due on {{ site.hwdates[0].deadline }} (1%)
 * Four programming homeworks. (56% total)
-    * HW1 on {{ site.hwdates[1].deadline }} [with grace days: {{ site.hwdates[1].gracedays }}] (10%), 
-    * HW2 on {{ site.hwdates[2].deadline }} [with grace days: {{ site.hwdates[2].gracedays }}] (12%), 
-    * HW3 on {{ site.hwdates[3].deadline }} [with grace days: {{ site.hwdates[3].gracedays }}] (14%), 
-    * HW4 on {{ site.hwdates[4].deadline }} [with grace days: {{ site.hwdates[4].gracedays }}] (20%) 
+    * HW1 on {{ site.hwdates[1].deadline }} [with grace days: {{ site.hwdates[1].gracedays }}] (10%),
+    * HW2 on {{ site.hwdates[2].deadline }} [with grace days: {{ site.hwdates[2].gracedays }}] (12%),
+    * HW3 on {{ site.hwdates[3].deadline }} [with grace days: {{ site.hwdates[3].gracedays }}] (14%),
+    * HW4 on {{ site.hwdates[4].deadline }} [with grace days: {{ site.hwdates[4].gracedays }}] (20%)
 * Participation: Helping other students **on the discussion forum** in a positive way (5%)
 * Online quiz performance. (18% total; Best 4 out of 5; Each quiz is worth 4.5%)
     * Quiz 0 on {{ site.quiz[0].date }} (practice quiz; no marks)
@@ -63,5 +62,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
     * Quiz 3 on {{ site.quiz[3].date }}
     * Quiz 4 on {{ site.quiz[4].date }}
     * Quiz 5 on {{ site.quiz[5].date }}
-* Final: [Compiler Contest](hwcontest.html) {{ site.hwdates[5].deadline }} [with grace days: {{ site.hwdates[5].gracedays }}] (20%)
+* Final: [Compiler Contest](hwcontest.html)
+    * Testcases due {{ site.hwdates[5].deadline }} [with grace days: {{ site.hwdates[5].gracedays }}] (2%)
+    * Final submission due {{ site.hwdates[6].deadline }} [with grace days: {{ site.hwdates[6].gracedays }}] (20%)
 

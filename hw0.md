@@ -12,129 +12,205 @@ active_tab: homework
 <p class="text-muted">Start on {{ site.hwdates[0].startdate }}</p>
 <p class="text-muted">Due on {{ site.hwdates[0].deadline }}</p>
 
-Your task for this homework is to setup your gitlab repository and
-get used to the routine we will be using in this course. This
-homework will have the following steps:
+## Setup on Coursys
 
-* set up your [gitlab repository](http://gitlab.cs.sfu.ca) for the course
-* get the homework files to get started on your homework, 
-* to write your solution for each homework, 
-* to test your solution, and 
-* to submit your homework solution for grading.
+Find a group to work with for the homework assignments and the final
+course project. The group size is 3 people or less.
+We will be checking that all group members are contributing equally
+to the homework submission and the final project.
 
-## Getting Started
+Along with your group members, register yourself as part of a group on [Coursys]({{ site.coursys }}).
 
-### Set up your repository
+Create a memorable name for your group. If you need help, [seek help](https://www.wordlab.com/name-generators/team-name-generator/).
+Make sure there is no whitespace in your group name or anything that might cause a mojibake (please use plain ascii).
 
-Go to [the SFU Gitlab server](http://gitlab.cs.sfu.ca){:target="_blank"} which is on the web at [gitlab.cs.sfu.ca](http://gitlab.cs.sfu.ca){:target="_blank"}.
-Log in with your SFU username and password, the same one you use to check your
-e-mail on SFU Mail. For the rest of this page we will refer to your SFU username 
-as `YOUR_USERNAME`.
+> **_Important:_** Do not use any obscene words in your group name. Be mature about your choice of group name. That does not mean it cannot be funny, just be aware that your choice of group name may offend someone else so be considerate of others.
 
-Once logged in, you will see a list of your existing repos. You may
-have some from previous courses or you may have none right now, so
-let's create one for CMPT379 by clicking the `New Project` button
-at the top right of the page.
+Go to the [Course Discussion Page]({{ site.coursys }}/forum) and select `[Activity Digest]`.
+Change the `Digest Email Frequency:` to a setting that send you email notifications, like so:
 
-On the `New Project` page, give your repo a name to the right of
-the `Project name` field. Name your repo: `CMPT379-{{ site.semcode }}-YOUR_USERNAME`
+![Coursys Subscription](assets/img/coursys_subscription.png)
 
-It's important to name the repo exactly as you see here. Leave all
-other settings as they are and click the `Create Project`
-button at the bottom left of the page.
+## Setup Git Repository
 
-Make sure you do not change the default setting of
-`Private`. Your repo must be visible only to yourself.
-In other words, no other student can access it by default.
-**You must not give access to your repo to any other students - plagiarism is a serious
-academic offense, which applies as much to code as it
-does to essays and exams.**
+### Git Basics
 
-Your repo has now been created. You will be taken to a web page for
-your newly created repo.
+In this course, your programs will be managed and archived using
+[Git](https://git-scm.com). The basic idea is as follows:
 
-### Add instructor and TAs to your repository
+* Every student and group gets a private storage area called a
+  repository on the SFU server machines, or "repo" for short.
+* Your code is stored in your repo. Every time you make a change
+  to your code, you *commit* a new *revision* of your code to the
+  repo for permanent storage. All revisions you ever commit are kept,
+  and you can retrieve any committed revision any time. This means
+  you have a combined backup and means to undo any changes you ever
+  make. This is how software engineers manage their code projects.
 
-The course instructor needs access to your repository in order to view
-code. Add the instructor as a member of your
-repo by clicking on the Settings menu which looks like a gear icon <i class="fa fa-gear"></i>
-and selecting `Members` from the dropdown menu. On the page that loads up
-type in `{{ site.instructor }}` {% for ta in site.tas %} and `{{ ta.email }}` {% endfor %}
- in the `Add new user` box and then change the role permissions from
-`Guest` to `Developer` in the dropdown menu. Click on `Add to Project` to add
-the instructor and the TAs to your gitlab project for this course. 
+### Create new repository on SFU Github Enterprise
 
-**This step is crucial. If you do not provide Developer access to
-the instructor and the TAs you will earn zero marks for your
-homeworks.**
+Decide in your group the person that will create the repository on
+[SFU Github Enterprise](https://github.sfu.ca/){:target="_blank"}
+and invite the other group members as a
+Developer with write/admin permissions. The main maintainer in the
+group should follow the instructions in this section.
 
-### Set up SSH keys on gitlab
+Go to [SFU Github Enterprise](https://github.sfu.ca/){:target="_blank"}
+and log in with your SFU username and password, the same one you use to
+check your e-mail on the SFU Outlook mail server. You should
+enable 2FA if you have not done so already and also go through
+the 2FA authentication.
+
+Once logged in, you will see a list of your existing repos if you
+have created any in the past. Create a new **Private** repository for
+this class by clicking the `New Repository` button (if this is your
+first repository on SFU Github) or the `New` button to create a new
+repository for the homework assignments for this course.
+
+On the `Create a new repository` page, select a `Repository name`.
+You must name your repo: `CMPT379-{{ site.semcode }}-g-GROUP` where
+`GROUP` is the group you registered on [Coursys]({{ site.coursys }}) (see above).
+For example, a repository name might be `CMPT379-{{ site.semcode }}-g-ethicsgradient`.
+Make sure you add the `g-` before your group
+name. **It is important to name the repo exactly as you see here.**
+
+Write an optional `Description`.
+
+> **_Important:_** You **must** choose this repository to be
+`Private`. We will not accept any repository for the homeworks in
+this course that is marked as `Public`.  Your repo must be visible
+only to yourself and your group members. **You must not give access
+to your repo to any other students except your group members, the
+TA(s) and the instructor.**.
+
+Plagiarism is a serious academic offense.
+
+At any point in the future you are also not allowed to either mark
+this repository as Public or copy the code to a different public
+repository (on Github or elsewhere).
+
+The other initialization choices are optional (there is more about
+setting up your `.gitignore` file below).
+
+Then click on the `Create repository` button.
+
+Your repo has now been created. You will be taken to the web page
+for your newly created repo.
+
+### Add the instructor and TA as Developers
+
+**This is the most important step in the setup of your GitHub repository**
+
+The course instructor and the TAs need access to your repo in order to test
+and  grade your code. Add the instructor and TAs as a member of your
+repo by clicking on the Settings menu and choosing `Add People` which looks like this:
+
+![Members](assets/img/github-add-people.png)
+
+On the page that loads up type in (or individually copy/paste) each of the
+following list of names: <code>{{ site.instructor }}</code>,
+{%- for ta in site.tas -%}
+<code>{{ ta.email }}</code>,
+{%- endfor -%}
+and invite them as a Collaborator.
+
+### Set up notifications
+
+You should be automatically set up to "Watch" changes to your
+repository, but ensure that you are watching changes.
+
+Set up your notifications by going to your personal settings
+accessed through your user icon on the upper right corner:
+
+![Settings](assets/img/github-personal-settings.png)
+
+Then select `Notifications` (with the bell icon) and make
+sure you are notified about changes to the repository:
+
+![Notifications](assets/img/github-notifications.png)
+
+Make sure you are notified about Github Issues.
+
+### Setup SSH Key
 
 Next we will set up the Secure Shell (ssh) keys so you can access
-your repo without a password. First follow [the instructions on
-setting up your SSH key pair](https://csil-git1.cs.surrey.sfu.ca/help/ssh/README)
-available at [csil-git1.cs.surrey.sfu.ca/help/ssh/README](https://csil-git1.cs.surrey.sfu.ca/help/ssh/README).
-Follow the instructions for Linux.
-
-Now we have to copy your public key to the GitLab server.
-The [instructions](https://csil-git1.cs.surrey.sfu.ca/help/ssh/README) ask
-you to use `xclip` which may not be installed on all the CSIL machines.
-If you cannot find `xclip` ("Command not found") then do the
-following steps.
+your repo without a password. If you do not already have an SSH key then first [generate a new ssh key](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent).
 
 If you have set up your SSH key correctly then you will have a public key. View it
 
-    cat ~/.ssh/id_rsa.pub
+    cat ~/.ssh/id_*.pub
 
-This will show you the public key. Use the `Terminal` copy command to copy
-this into your clipboard.
+Then add your public SSH key to the GitHub server using [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account).
+.
+### Clone your Repository
 
-Then go to [this page](https://csil-git1.cs.surrey.sfu.ca/profile): [csil-git1.cs.surrey.sfu.ca/profile](https://csil-git1.cs.surrey.sfu.ca/profile)
-and select `SSH Keys` from the left menu.
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+Make sure you are connected to the SFU VPN before you interact with github.sfu.ca using ssh.
+</div>
 
-Use the web browser to paste command to paste your public key into the `Key`
-box and give it a `Title` (e.g. 'CSIL' is a reasonable title) and then `Add key`.
+Download a copy of your repo to your CSIL machine.  The action of
+making a local copy of your online repo is known as a "clone".
 
-### Using git
+In the terminal window, enter the commands
 
-If you have not set up your git configuration then in a terminal window, enter the following commands:
-
-    git config --global user.name YOUR_USERNAME
-    git config --global user.email YOUR_USERNAME@sfu.ca
-    git config --global core.editor nano
+    git config --global user.name USER
+    git config --global user.email USER@sfu.ca
+    git config --global core.editor nano         # or set it to your favourite editor
     git config --global push.default current
     cd $HOME
+    git clone git@github.sfu.ca:GROUPUSER/CMPT379-{{ site.semcode }}-g-GROUP.git
 
-If you prefer another editor instead of `nano` set up that one as the default editor.
+where `USER` is your SFU username, `GROUPUSER` is the SFU username of
+the person who created the group repository and `GROUP` is the name of the
+group you have already setup on [Coursys]({{ site.coursys }}). If
+you skipped any of the above steps in setting up your GitHub repo
+this command will not work.  The system might prompt you for a
+username/password combo. Supply the usual answers. To avoid entering
+your username/password over and over again you can set up [passwordless
+ssh](http://www.linuxproblem.org/art_9.html).
 
-You should use the following command to clone your git repository for this course:
+Your repo will be cloned into a new directory (also known as a folder)
+called `CMPT379-{{ site.semcode }}-g-GROUP`.
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
+### Create your Homework 0 directory
 
-(copy and paste might be helpful here) and press return. If you did
-skipped any of the above steps in setting up your GitLab repo this command will not work.
-The system might prompt you for a username/password combo.  Supply the usual
-answers. To avoid entering your username/password over and over again you can
-set up [passwordless ssh](http://www.linuxproblem.org/art_9.html).
+After cloning your repository, make sure you are inside your
+repository and at the top level. Create a directory for Homework 0:
 
-The project page itself gives more complete instructions for the first interactions with the repository: you get a very empty repository that requires some bootstrapping.
+    mkdir hw0
+    cd hw0
+    pwd
 
-A Git manual is beyond the scope of this page, but here are the bare basics:
+When you print your working directory it should look like this:
 
-    git pull                     # get changes from the gitlab server
-    text_editor some/file.txt    # do some work
-    git add some/file.txt        # stage those changes for commit
-    text_editor other/file.txt   # do some more work
-    git add other/file.txt       # stage more changes for commit
-    git commit                   # commit the changes
-    git push                     # push to the remote server to save your work
+    CMPT379-{{ site.semcode }}-g-GROUP/hw0
 
-Here are some Git tutorials for more information:
+Add a file `README.md` to this directory using your favourite editor
+and then `git add README.md` and `git commit -m "Initial hw0 commit"`
+and then `git push` to send your new directory and file to the
+GitHub server. Open up GitHub on a web browser to check that you
+can see `hw0/README.md` in your repository on the web browser.
 
-* [The standard Git tutorial](https://git-scm.com/docs/gittutorial)
-* [Interactive Git basics](http://try.github.io)
-* [Pro Git book](https://git-scm.com/book/en/v2), which has a good intro (and more)
-* [Writing better commit messages](http://lbrandy.com/blog/2009/03/writing-better-commit-messages/)
+Add a `.gitignore` file at the top level of your git repository
+to avoid committing and pushing useless files to the GitHub
+server. Here is a typical `.gitignore` file for C++ projects.
+
+    # Compiled Object files
+    *.slo
+    *.lo
+    *.o
+    *.obj
+
+    # Compiled Dynamic libraries
+    *.so
+    *.dylib
+    *.dll
+
+    # Compiled Static libraries
+    *.lai
+    *.la
+    *.a
+    *.lib
 
 ### Getting homework files
 
@@ -160,10 +236,10 @@ To get started with your homework do the following steps.
 
 ### Copy over files
 
-Clone your gitlab repository and enter that directory and copy over the files:
+Clone your git repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
+    git clone git@github.sfu.ca:GROUPUSER/CMPT379-{{ site.semcode }}-g-GROUP.git
+    cd CMPT379-{{ site.semcode }}-g-GROUP
     mkdir -p rmprefix
     cd rmprefix
     cp -r /your-path-to/compilers-class-hw/rmprefix/* .
@@ -181,7 +257,7 @@ Your solution must be compiled in the `answer` directory and must be called `rmp
 There is an incomplete solution to this homework in `answer/default.cc`. Copy
 it over as your initial solution:
 
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME/rmprefix/answer
+    cd CMPT379-{{ site.semcode }}-g-GROUP/rmprefix/answer
     cp default.cc rmprefix.cc
     make rmprefix
 
@@ -229,7 +305,7 @@ C).
 
 Remember to push your solution source code to your git repository:
 
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME/rmprefix/answer
+    cd CMPT379-{{ site.semcode }}-g-GROUP/rmprefix/answer
     git add rmprefix.cc
     git commit -m 'initial solution'
     git push
@@ -292,7 +368,7 @@ If you add any testcases of your own please put them in the directories `answer/
 * You must turn in two things:
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw0` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the `default.cc` program to get any marks.
-* Your source code from `source.zip` must be on your gitlab repository. Please commit and push often in order to get feedback on your code.
+* Your source code from `source.zip` must be in your git repository. Please commit and push often in order to get feedback on your code.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For future homeworks, for the written description of your solution and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
 
