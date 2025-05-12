@@ -23,6 +23,7 @@ Along with your group members, register yourself as part of a group on [Coursys]
 
 Create a memorable name for your group. If you need help, [seek help](https://www.wordlab.com/name-generators/team-name-generator/).
 Make sure there is no whitespace in your group name or anything that might cause a mojibake (please use plain ascii).
+Please use an underscore to join together words instead of hyphens.
 
 > **_Important:_** Do not use any obscene words in your group name. Be mature about your choice of group name. That does not mean it cannot be funny, just be aware that your choice of group name may offend someone else so be considerate of others.
 
