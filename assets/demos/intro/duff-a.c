@@ -1,21 +1,21 @@
 
-/* The Duff device 
+/* The Duff device
  *
  * An infamous example of how a compiler can accept code that appears
  * to be illegal as per the language definition. To add insult to
  * injury, the "illegal" code actually runs faster.
  *
  * The functions send and send2 accomplish the same goal (copying a
- * string from one location to another). 
+ * string from one location to another).
  *
  * send2 looks like it has an obvious syntax error, but most C
  * compilers will actually create an executable for this code, and it
  * will actually run much faster (on most CPU architectures).
- * 
+ *
  * What looks like a syntax error in function send2 is actually valid
  * as per the C grammar. Why? Hint: think of the infamous "goto"
  * statement.
- * 
+ *
  * This strange piece of code is named after the programmer who
  * discovered this 'optimization' technique.
  *
@@ -39,39 +39,20 @@ send (register char *to, register char *from, register int count)
 }
 
 void send2 (char *to, char *from, int count)
-{  
-    int n = (count+7)/8;  
-    switch (count % 8) {  
-    case 0: do { *to++ = *from++;  
-    case 7:      *to++ = *from++;  
-    case 6:      *to++ = *from++;  
-    case 5:      *to++ = *from++;  
-    case 4:      *to++ = *from++;  
-    case 3:      *to++ = *from++;  
-    case 2:      *to++ = *from++;  
+{
+    int n = (count+7)/8;
+    switch (count % 8) {
+    case 0: do { *to++ = *from++;
+    case 7:      *to++ = *from++;
+    case 6:      *to++ = *from++;
+    case 5:      *to++ = *from++;
+    case 4:      *to++ = *from++;
+    case 3:      *to++ = *from++;
+    case 2:      *to++ = *from++;
     case 1:      *to++ = *from++;
-    	  } while(--n > 0);  
+    	  } while(--n > 0);
     }
 }
-
-/*
-void
-send2 (register char *to, register char *from, register int count)
-{
-  int n = (count+7)/8;
-  switch (count % 8) {
-  case 0: while(--n > 0) { *to++ = *from++;
-  case 7:                  *to++ = *from++;
-  case 6:                  *to++ = *from++;
-  case 5:                  *to++ = *from++;
-  case 4:                  *to++ = *from++;
-  case 3:                  *to++ = *from++;
-  case 2:                  *to++ = *from++;
-  case 1:                  *to++ = *from++;
-          }
-  }
-}
-*/
 
 /* Reason why send2 works:
 
@@ -136,3 +117,21 @@ main (int argc, char **argv)
 
   return(0);
 }
+
+void
+send3 (register char *to, register char *from, register int count)
+{
+  int n = (count+7)/8;
+  switch (count % 8) {
+  case 0: while(--n > 0) { *to++ = *from++;
+  case 7:                  *to++ = *from++;
+  case 6:                  *to++ = *from++;
+  case 5:                  *to++ = *from++;
+  case 4:                  *to++ = *from++;
+  case 3:                  *to++ = *from++;
+  case 2:                  *to++ = *from++;
+  case 1:                  *to++ = *from++;
+          }
+  }
+}
+
