@@ -17,14 +17,14 @@ active_tab: homework
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
 <ol>
 <li>Form Your Group and Register on Coursys (upto 3 members).</li>
-<li>Create a private git repository on SFU GitHub named `CMPT379-1254-g-GROUP`, replacing `GROUP` with your registered group name.</li>
+<li>Create a private git repository on SFU GitHub named <code>CMPT379-1254-g-GROUP</code>, replacing <code>GROUP</code> with your registered group name.</li>
 <li>Set Up git and SSH access. Clone your repository and set up homework directory.</li>
 <li>Obtain homework files from the official homework repository and copy into your repository.</li>
-<li>Implement the `rmprefix` code.</li>
-<li>Run your code using `python3 zipout.py` to create `output.zip`.</li>
-<li>Check your output using `python check.py`.</li>
-<li>Prepare your submission for Coursys using `python zipsrc.py`.</li>
-<li>Upload your `output.zip` and `source.zip` to HW0 submission on Coursys.</li>
+<li>Implement the <code>rmprefix</code> code.</li>
+<li>Run your code using <code>python3 zipout.py</code> to create <code>output.zip</code>.</li>
+<li>Check your output using <code>python check.py</code>.</li>
+<li>Prepare your submission for Coursys using <code>python zipsrc.py</code>.</li>
+<li>Upload your <code>output.zip</code> and <code>source.zip</code> to HW0 submission on Coursys.</li>
 </ol>
 </div>
 
