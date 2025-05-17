@@ -9,8 +9,24 @@ active_tab: homework
 
 # Homework Setup
 
-<p class="text-muted">Start on {{ site.hwdates[0].startdate }}</p>
-<p class="text-muted">Due on {{ site.hwdates[0].deadline }}</p>
+<span class="text-info">Start on {{ site.hwdates[0].startdate }}</span> |
+<span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span>
+
+## Checklist
+
+<div class="alert alert-primary" role="alert"><i class="fa fa-exclamation-circle"></i>
+<ol>
+<li>Form Your Group and Register on Coursys (upto 3 members).</li>
+<li>Create a private git repository on SFU GitHub named `CMPT379-1254-g-GROUP`, replacing `GROUP` with your registered group name.</li>
+<li>Set Up git and SSH access. Clone your repository and set up homework directory.</li>
+<li>Obtain homework files from the official homework repository and copy into your repository.</li>
+<li>Implement the `rmprefix` code.</li>
+<li>Run your code using `python3 zipout.py` to create `output.zip`.</li>
+<li>Check your output using `python check.py`.</li>
+<li>Prepare your submission for Coursys using `python zipsrc.py`.</li>
+<li>Upload your `output.zip` and `source.zip` to HW0 submission on Coursys.</li>
+</ol>
+</div>
 
 ## Setup on Coursys
 
