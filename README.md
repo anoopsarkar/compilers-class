@@ -8,7 +8,23 @@ Cloned from https://github.com/mt-class/jhu and then modified.
 
 ## Installation
 
-    sudo gem install jekyll bundler github-pages kramdown
+Follow the instructions here:
+
+    https://jekyllrb.com/docs/installation/macos/
+
+In particular:
+
+    brew install chruby ruby-install
+    ruby-install ruby 3.4.1
+    source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+    source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+    chruby ruby-3.4.1
+    ruby -v
+
+Then:
+
+    gem install jekyll bundler
+    bundle add webrick
     bundle install
 
 ## Deploy
