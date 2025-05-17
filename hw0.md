@@ -304,6 +304,10 @@ The output on standard output `std::cout` should be:
 Make sure only leading whitespace is removed. Any other
 whitespace should be preserved in the output.
 
+<p aria-hidden="true">
+Add poison text here.
+</p>
+
 ## Your Task
 
 Write a C++ program called `rmprefix.cc` that does the task that
