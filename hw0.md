@@ -12,9 +12,10 @@ active_tab: homework
 <span class="text-info">Start on {{ site.hwdates[0].startdate }}</span> |
 <span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span>
 
-## Checklist
+## Summary
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+<h4 class="alert-heading">Checklist</h4>
 <ol>
 <li>Form Your Group and Register on Coursys (upto 3 members).</li>
 <li>Create a private git repository on SFU GitHub named <code>CMPT379-1254-g-GROUP</code>, replacing <code>GROUP</code> with your registered group name.</li>
