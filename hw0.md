@@ -14,7 +14,7 @@ active_tab: homework
 
 ## Checklist
 
-<div class="alert alert-primary" role="alert"><i class="fa fa-exclamation-circle"></i>
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
 <ol>
 <li>Form Your Group and Register on Coursys (upto 3 members).</li>
 <li>Create a private git repository on SFU GitHub named `CMPT379-1254-g-GROUP`, replacing `GROUP` with your registered group name.</li>
