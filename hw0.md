@@ -12,8 +12,6 @@ active_tab: homework
 <span class="text-info">Start on {{ site.hwdates[0].startdate }}</span> |
 <span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span>
 
-## Summary
-
 <div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Checklist</h4>
 <ol>
