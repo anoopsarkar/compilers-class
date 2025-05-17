@@ -14,26 +14,6 @@ active_tab: homework
 
 ## Summary
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <h5 class="card-title">Summary</h5>
-    <h6 class="card-subtitle mb-2 text-muted">Checklist</h6>
-    <p class="card-text">
-    <ol>
-    <li>Form Your Group and Register on Coursys (upto 3 members).</li>
-    <li>Create a private git repository on SFU GitHub named <code>CMPT379-1254-g-GROUP</code>, replacing <code>GROUP</code> with your registered group name.</li>
-    <li>Set Up git and SSH access. Clone your repository and set up homework directory.</li>
-    <li>Obtain homework files from the official homework repository and copy into your repository.</li>
-    <li>Implement the <code>rmprefix</code> code.</li>
-    <li>Run your code using <code>python3 zipout.py</code> to create <code>output.zip</code>.</li>
-    <li>Check your output using <code>python check.py</code>.</li>
-    <li>Optionally add your own testcases and then prepare your submission for Coursys using <code>python zipsrc.py</code>.</li>
-    <li>Upload your <code>output.zip</code> and <code>source.zip</code> to HW0 submission on Coursys.</li>
-    </ol>
-    </p>
-  </div>
-</div>
-
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
 <h4 class="alert-heading">Checklist</h4>
 <ol>
