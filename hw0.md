@@ -15,9 +15,9 @@ active_tab: homework
 <div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Checklist</h4>
 <div markdown="1">
-* Form Your Group and Register on Coursys (upto 3 members).
+* Form a group and register on Coursys (max 3 members; solo groups ok).
 * Create a private git repository on SFU GitHub named `CMPT379-1254-g-GROUP`, replacing `GROUP` with your registered group name.
-* Set Up git and SSH access. Clone your repository and set up homework directory.
+* Set up git and SSH access. Clone your repository and set up homework directory.
 * Obtain homework files from the official homework repository and copy into your repository.
 * Implement the `rmprefix` code.
 * Run your code using `python3 zipout.py` to create `output.zip`.
