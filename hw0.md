@@ -24,7 +24,7 @@ active_tab: homework
 <li>Implement the <code>rmprefix</code> code.</li>
 <li>Run your code using <code>python3 zipout.py</code> to create <code>output.zip</code>.</li>
 <li>Check your output using <code>python check.py</code>.</li>
-<li>Prepare your submission for Coursys using <code>python zipsrc.py</code>.</li>
+<li>Optionally add your own testcases and then prepare your submission for Coursys using <code>python zipsrc.py</code>.</li>
 <li>Upload your <code>output.zip</code> and <code>source.zip</code> to HW0 submission on Coursys.</li>
 </ol>
 </div>
