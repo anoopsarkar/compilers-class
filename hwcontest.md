@@ -9,10 +9,13 @@ active_tab: homework
 
 # Compiler Contest 
 
-<p class="text-muted">Start on {{ site.hwdates[5].startdate }}</p>
-<p class="text-muted">Part 1 due on {{ site.hwdates[5].deadline }}</p>
-<p class="text-muted">With grace days, Part 1 due on {{ site.hwdates[5].gracedays }}</p>
-<p class="text-muted">Part 2 due on {{ site.hwdates[6].deadline }}</p>
+<span class="text-info">Start on {{ site.hwdates[5].startdate }}</span>
+
+<span class="text-warning">Part 1 due on {{ site.hwdates[5].deadline }}</span> |
+<span class="text-warning">Part 1 with grace days {{ site.hwdates[5].gracedays }}</span>
+
+<span class="text-warning">Part 2 due on {{ site.hwdates[6].deadline }}</span> |
+<span class="text-warning">Part 2 with grace days {{ site.hwdates[6].gracedays }}</span>
 
 ## Your Task
 
@@ -79,7 +82,7 @@ After you have submitted your testcases, we will validate them for use in Part 2
 * For Part 2, you must turn in two things:
     * Your source code from the `answer` directory as a zip file `source.zip` (produced by running `python3 zipsrc.py`) must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the contest testcases (which is the file `output.zip` produced by running `python3 zipout.py` after unzipping the new cases) must be uploaded to the `Final Project` submission page on [Coursys]({{ site.coursys }}). 
-* Your source code from `source.zip` must also be pushed to your gitlab repository.
+* Your source code from `source.zip` must also be pushed to your GitHub repository.
 * Make sure that we can run `make decafcomp` in your answer directory to create the `decafcomp` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For the written description of your submission and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.

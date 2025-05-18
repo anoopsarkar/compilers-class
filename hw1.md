@@ -9,9 +9,9 @@ active_tab: homework
 
 # Lexical Analyzer for Decaf
 
-<p class="text-muted">Start on {{ site.hwdates[1].startdate }}</p>
-<p class="text-muted">Due on {{ site.hwdates[1].deadline }}</p>
-<p class="text-muted">With grace days due on {{ site.hwdates[1].gracedays }}</p>
+<span class="text-info">Start on {{ site.hwdates[1].startdate }}</span> |
+<span class="text-warning">Due on {{ site.hwdates[1].deadline }}</span> |
+<span class="text-warning">With grace days {{ site.hwdates[1].gracedays }}</span>
 
 Your task for this homework is to write a lexical analyzer (lexer
 for short) for the [Decaf programming language](decafspec.html)
@@ -47,7 +47,7 @@ To get started with your homework do the following steps.
 
 ### Set up your repository
 
-Make sure you have already followed the [instructions in HW0](hw0.html) to set up your gitlab repository.
+Make sure you have already followed the [instructions in HW0](hw0.html) to set up your GitHub repository.
 
 ### Copy over files
 
@@ -196,7 +196,7 @@ If you add any testcases of your own please put them in the directories `answer/
 * You must turn in two things:
     * Your source code from the `answer` directory as a zip file `source.zip` produced by running `python3 zipsrc.py` must be uploaded to the `hw1` submission page on [Coursys]({{ site.coursys }}).
     * Your output on the testcases which is the file `output.zip` produced by running `python3 zipout.py` must be uploaded to the `hw1` submission page on [Coursys]({{ site.coursys }}). When we run `check.py` on the public testcases it should have a value higher than the output from the `default.lex` program to get any marks.
-* Your source code from `source.zip` must be on your gitlab repository. Please commit and push often in order to get feedback on your code.
+* Your source code from `source.zip` must be on your GitHub repository.
 * Make sure that we can run `make decaflex` in your answer directory to create the `decaflex` binary.
 * You cannot use data or code resources outside of what is provided to you. If you use external code snippets provide citations in the `answer/README.md` file.
 * For the written description of your submission and supporting documentation, you can use plain ASCII but for math equations it is better to use kramdown. Do not use any proprietary or binary file formats such as Microsoft Word.
@@ -204,7 +204,7 @@ If you add any testcases of your own please put them in the directories `answer/
 ## Grading
 
 * Score for testcases both dev and test.
-* Code review by TAs. Please check for comments on your code on [gitlab](http://gitlab.cs.sfu.ca).
+* Code review by TAs. Please check for comments on your code on GitHub.
 
 If you have any questions or you’re confused about anything, just ask.
 

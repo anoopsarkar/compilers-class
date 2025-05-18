@@ -10,7 +10,8 @@ active_tab: homework
 # Homework Setup
 
 <span class="text-info">Start on {{ site.hwdates[0].startdate }}</span> |
-<span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span>
+<span class="text-warning">Due on {{ site.hwdates[0].deadline }}</span> |
+<span class="text-warning">With grace days {{ site.hwdates[0].gracedays }}</span>
 
 <div class="alert alert-warning" role="alert">
 <h4 class="alert-heading">Checklist</h4>
