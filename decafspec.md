@@ -7,7 +7,7 @@ title: Decaf Specification
 active_tab: homework
 ---
 
-## Decaf Programming Language Specification <span class="text-muted">Fall 2021</span>
+## Decaf Programming Language Specification <span class="text-muted">Summer 2025</span>
 
 Introduction
 ------------
