@@ -53,7 +53,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
     * HW1 on {{ site.hwdates[1].deadline }} [with grace days: {{ site.hwdates[1].gracedays }}] (10%),
     * HW2 on {{ site.hwdates[2].deadline }} [with grace days: {{ site.hwdates[2].gracedays }}] (12%),
     * HW3 on {{ site.hwdates[3].deadline }} [with grace days: {{ site.hwdates[3].gracedays }}] (14%),
-    * HW4 on {{ site.hwdates[4].deadline }} [with grace days: {{ site.hwdates[4].gracedays }}] (20%)
+    * HW4 on {{ site.hwdates[4].deadline }} [with grace days: {{ site.hwdates[4].gracedays }}] (18%)
 * Participation: Helping other students **on the discussion forum** in a positive way (5%)
 * Online quiz performance. (18% total; Best 4 out of 5; Each quiz is worth 4.5%)
     * Quiz 0 on {{ site.quiz[0].date }} (practice quiz; no marks)
