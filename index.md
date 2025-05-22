@@ -49,7 +49,7 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * _All dates are still tentative_
 * Submit homework source code and check your grades on [Coursys]({{ site.coursys }})
 * Programming setup homework: HW0 due on {{ site.hwdates[0].deadline }} (1%)
-* Four programming homeworks. (56% total)
+* Four programming homeworks. (54% total)
     * HW1 on {{ site.hwdates[1].deadline }} [with grace days: {{ site.hwdates[1].gracedays }}] (10%),
     * HW2 on {{ site.hwdates[2].deadline }} [with grace days: {{ site.hwdates[2].gracedays }}] (12%),
     * HW3 on {{ site.hwdates[3].deadline }} [with grace days: {{ site.hwdates[3].gracedays }}] (14%),
@@ -65,4 +65,3 @@ As [Steve Yegge said](http://steve-yegge.blogspot.ca/2007/06/rich-programmer-foo
 * Final: [Compiler Contest](hwcontest.html)
     * Testcases due {{ site.hwdates[5].deadline }} [with grace days: {{ site.hwdates[5].gracedays }}] (2%)
     * Final submission due {{ site.hwdates[6].deadline }} [with grace days: {{ site.hwdates[6].gracedays }}] (20%)
-
