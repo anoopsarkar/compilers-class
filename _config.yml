@@ -13,13 +13,13 @@ llvmconfig: "llvm-config-12"
 tas:
   - name: Mahmoud Abumandour
     email: mam47
-    officehour: "TBD"
+    officehour: "Thursdays 09:00-10:00 ASB 9810"
   - name: Sara Babaee Khanehsar
     email: sba236
-    officehour: "TBD"
+    officehour: "Fridays 16:00-17:00 ASB 9810"
   - name: Yuehao Hu
-    email: yha274@sfu.ca
-    officehour: "TBD"
+    email: yha274
+    officehour: "Tuesdays 10:00-11:00 ASB 9810"
 hwdates:
   - hw: "0"
     startdate: "May 19, 2025"
