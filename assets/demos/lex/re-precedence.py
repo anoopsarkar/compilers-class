@@ -1,4 +1,5 @@
 import re
+from pathlib import Path
 
 def compile_regexps(regexps):
     regexp_dict = {}
@@ -37,14 +38,28 @@ def interactive_disambiguate_regexp(regexps):
 
 if __name__ == '__main__':
     import sys
-    # define the regexps as strings
-    interactive_disambiguate_regexp([
-        "^((a((b*)|c))*)$",
-        "^((((ab)*)|c)*)$",
-        "^(((a(b*))|c)*)$",
-        "^(a(((b*)|c)*))$",
-        "^(a((b*)|(c*)))$",
-        "^(((ab)*)|(c*))$",
-        "^((a(b*))|(c*))$",
-        "^ab*|c*$"
-    ])
+    input_regexps = []
+    for line in Path(sys.argv[1]).read_text().split('\n'):
+        line = line.strip()
+        if line:
+            input_regexps.append(f"^{line}$")
+    interactive_disambiguate_regexp(input_regexps)
+
+#    interactive_disambiguate_regexp([
+#        "^(((ac)|b)c)$",
+#        "^(a((c|b)c))$",
+#        "^(a(c|(bc)))$",
+#        "^((a(c|b))c)$",
+#        "^((ac)|(bc))$",
+#        "^ac|bc$"
+#    ])
+#    interactive_disambiguate_regexp([
+#        "^((a((b*)|c))*)$",
+#        "^((((ab)*)|c)*)$",
+#        "^(((a(b*))|c)*)$",
+#        "^(a(((b*)|c)*))$",
+#        "^(a((b*)|(c*)))$",
+#        "^(((ab)*)|(c*))$",
+#        "^((a(b*))|(c*))$",
+#        "^ab*|c*$"
+#    ])
