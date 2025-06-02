@@ -53,8 +53,8 @@ Make sure you have already followed the [instructions in HW0](hw0.html) to set u
 
 Clone your repository and enter that directory and copy over the files:
 
-    git clone git@csil-git1.cs.surrey.sfu.ca:YOUR_USERNAME/CMPT379-{{ site.semcode }}-YOUR_USERNAME.git
-    cd CMPT379-{{ site.semcode }}-YOUR_USERNAME
+    git clone git@github.sfu.ca:GROUPUSER/CMPT379-{{ site.semcode }}-g-GROUP.git
+    cd CMPT379-{{ site.semcode }}-g-GROUP
     mkdir -p decaflex
     cd decaflex
     cp -r /your-path-to/compilers-class-hw/decaflex/* .
