@@ -3,4 +3,4 @@
 (a(c|(bc)))
 ((a(c|b))c)
 ((ac)|(bc))
-ac|bc$
+ac|bc
