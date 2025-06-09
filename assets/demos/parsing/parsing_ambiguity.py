@@ -14,5 +14,5 @@ for line in sys.stdin:
     parser = nltk.ChartParser(grammar)
     for tree in parser.parse(text):
         print(tree)
-    trees = parser.parse(text)
-    draw_trees(*trees)
+    #trees = parser.parse(text)
+    #draw_trees(*trees)

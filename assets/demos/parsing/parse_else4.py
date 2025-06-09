@@ -21,5 +21,5 @@ parser = nltk.ChartParser(grammar)
 trees = parser.parse(text)
 for tree in trees:
     print(tree)
-trees = parser.parse(text)
-draw_trees(*trees)
+#trees = parser.parse(text)
+#draw_trees(*trees)
