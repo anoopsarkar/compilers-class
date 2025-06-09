@@ -1,9 +1,8 @@
 import sys
-import nltk, string
+import nltk
 import draw
-from nltk import CFG
 
-grammar = CFG.fromstring("""
+grammar = nltk.CFG.fromstring("""
 E -> E '+' T
 E -> T
 T -> T '*' F
@@ -15,6 +14,7 @@ ID -> 'a' | 'b' | 'c'
 """)
 
 inp = '- a + b'
+#inp = '- ( a + b )'
 print(inp)
 print("Start:", grammar.start(), file=sys.stderr)
 print("Productions:", grammar.productions(), file=sys.stderr)

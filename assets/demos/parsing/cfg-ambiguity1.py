@@ -1,9 +1,8 @@
 import sys
-import nltk, string
+import nltk
 import draw
-from nltk import CFG
 
-grammar = CFG.fromstring("""
+grammar = nltk.CFG.fromstring("""
 E -> E '-' E | E '/' E | '(' E ')' | ID
 ID -> 'a' | 'b' | 'c'
 """)
