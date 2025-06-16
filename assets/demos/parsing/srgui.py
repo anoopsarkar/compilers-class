@@ -34,31 +34,31 @@ class InteractiveShiftReduceGUI:
     def create_widgets(self):
         # Title
         title = tk.Label(self.root, text="Interactive Shift-Reduce Parser", 
-                        font=("Arial", 16, "bold"))
+                        font=("Arial", 24, "bold"))
         title.pack(pady=10)
         
         # Sentence display
         sent_frame = tk.Frame(self.root)
         sent_frame.pack(pady=5)
-        tk.Label(sent_frame, text="Sentence:", font=("Arial", 12, "bold")).pack(side=tk.LEFT)
-        tk.Label(sent_frame, text=" ".join(self.sentence), font=("Arial", 12)).pack(side=tk.LEFT)
+        tk.Label(sent_frame, text="Sentence:", font=("Arial", 18, "bold")).pack(side=tk.LEFT)
+        tk.Label(sent_frame, text=" ".join(self.sentence), font=("Arial", 18)).pack(side=tk.LEFT)
         
         # Current state display
         state_frame = tk.LabelFrame(self.root, text="Current Parser State", 
-                                   font=("Arial", 12, "bold"))
+                                   font=("Arial", 18, "bold"))
         state_frame.pack(pady=10, padx=10, fill=tk.X)
         
         # Stack display with detailed visualization
         stack_frame = tk.Frame(state_frame)
         stack_frame.pack(fill=tk.X, pady=5)
         
-        tk.Label(stack_frame, text="Stack:", font=("Arial", 11, "bold")).pack(side=tk.LEFT)
+        tk.Label(stack_frame, text="Stack:", font=("Arial", 14, "bold")).pack(side=tk.LEFT)
         
         # Stack contents with position numbers
         stack_display_frame = tk.Frame(stack_frame)
         stack_display_frame.pack(side=tk.LEFT, padx=10, fill=tk.X, expand=True)
         
-        self.stack_label = tk.Label(stack_display_frame, text="[ ]", font=("Courier", 11),
+        self.stack_label = tk.Label(stack_display_frame, text="[ ]", font=("Courier", 14),
                                    bg="lightblue", relief=tk.SUNKEN, anchor=tk.W)
         self.stack_label.pack(fill=tk.X)
         
@@ -71,12 +71,12 @@ class InteractiveShiftReduceGUI:
         buffer_frame = tk.Frame(state_frame)
         buffer_frame.pack(fill=tk.X, pady=5)
         
-        tk.Label(buffer_frame, text="Input:", font=("Arial", 11, "bold")).pack(side=tk.LEFT)
+        tk.Label(buffer_frame, text="Input:", font=("Arial", 12, "bold")).pack(side=tk.LEFT)
         
         buffer_display_frame = tk.Frame(buffer_frame)
         buffer_display_frame.pack(side=tk.LEFT, padx=10, fill=tk.X, expand=True)
         
-        self.buffer_label = tk.Label(buffer_display_frame, text="", font=("Courier", 11),
+        self.buffer_label = tk.Label(buffer_display_frame, text="", font=("Courier", 16),
                                     bg="lightgreen", relief=tk.SUNKEN, anchor=tk.W)
         self.buffer_label.pack(fill=tk.X)
         
@@ -90,7 +90,7 @@ class InteractiveShiftReduceGUI:
         action_frame.pack(fill=tk.X, pady=5)
         
         tk.Label(action_frame, text="Action:", font=("Arial", 11, "bold")).pack(side=tk.LEFT)
-        self.action_label = tk.Label(action_frame, text="", font=("Arial", 11),
+        self.action_label = tk.Label(action_frame, text="", font=("Arial", 14),
                                     bg="lightyellow", relief=tk.SUNKEN, anchor=tk.W)
         self.action_label.pack(side=tk.LEFT, padx=10, fill=tk.X, expand=True)
         
@@ -99,13 +99,13 @@ class InteractiveShiftReduceGUI:
         step_frame.pack(fill=tk.X, pady=5)
         
         tk.Label(step_frame, text="Step:", font=("Arial", 11, "bold")).pack(side=tk.LEFT)
-        self.step_label = tk.Label(step_frame, text="0", font=("Arial", 11, "bold"),
+        self.step_label = tk.Label(step_frame, text="0", font=("Arial", 14, "bold"),
                                   fg="blue")
         self.step_label.pack(side=tk.LEFT, padx=10)
         
         # Add visual stack representation
         visual_stack_frame = tk.LabelFrame(self.root, text="Visual Stack Representation", 
-                                          font=("Arial", 10, "bold"))
+                                          font=("Arial", 12, "bold"))
         visual_stack_frame.pack(pady=5, padx=10, fill=tk.X)
         
         self.visual_stack_canvas = tk.Canvas(visual_stack_frame, height=100, bg="white")
@@ -131,10 +131,10 @@ class InteractiveShiftReduceGUI:
         
         # Grammar display
         grammar_frame = tk.LabelFrame(self.root, text="Grammar Rules", 
-                                     font=("Arial", 10, "bold"))
+                                     font=("Arial", 14, "bold"))
         grammar_frame.pack(pady=10, padx=10, fill=tk.BOTH)
         
-        grammar_text = tk.Text(grammar_frame, height=6, font=("Courier", 9))
+        grammar_text = tk.Text(grammar_frame, height=6, font=("Courier", 16))
         grammar_scrollbar = tk.Scrollbar(grammar_frame, orient=tk.VERTICAL, 
                                        command=grammar_text.yview)
         grammar_text.configure(yscrollcommand=grammar_scrollbar.set)

@@ -2,13 +2,16 @@ import nltk
 from srgui import InteractiveShiftReduceGUI
 
 grammar = nltk.CFG.fromstring("""
-    T -> F
-    T -> T TIMES F
-    F -> LPAREN T RPAREN
-    F -> ID
+    E -> T PLUS E
+    E -> T
+    T -> ID
+    T -> ID TIMES T
+    T -> LPAREN E RPAREN
+    PLUS -> '+'
     TIMES -> '*'
     LPAREN -> '('
     RPAREN -> ')'
+    ID -> 'id'
     ID -> 'a'
     ID -> 'b'
     ID -> 'c'
@@ -17,6 +20,6 @@ grammar = nltk.CFG.fromstring("""
 for prod in grammar.productions():
     print(prod)
 
-sent = 'a * b * c'.split()
+sent = 'id * id + id'.split()
 app = InteractiveShiftReduceGUI(grammar, sent)
 app.mainloop()

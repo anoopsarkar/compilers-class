@@ -134,6 +134,8 @@
   links:
     - title: "YACC Practice"
       url: "yacc-practice.html"
+    - title: "Demo: CFG ambiguity and interactive shift-reduce parser"
+      url: "assets/distrib/parsing_demos.zip"
 - title: "Week 5 - Parsing 1"
   tag: week5
   current: false

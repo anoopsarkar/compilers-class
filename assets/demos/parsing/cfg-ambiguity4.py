@@ -9,12 +9,11 @@ T -> T '*' F
 T -> F
 F -> '(' E ')'
 F -> ID
-F -> '-' F
+F -> '-' E
 ID -> 'a' | 'b' | 'c'
 """)
 
 inp = '- a + b'
-#inp = '- ( a + b )'
 print(inp)
 print("Start:", grammar.start(), file=sys.stderr)
 print("Productions:", grammar.productions(), file=sys.stderr)

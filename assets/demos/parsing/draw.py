@@ -8,7 +8,7 @@ def measure_tree_width(tree, node_width=60, spacing=20):
     return max(node_width, sum(child_widths) + spacing * (len(tree) - 1))
 
 def draw_node(canvas, x, y, text, padx=10, pady=5):
-    font = ('Helvetica', 12)
+    font = ('Helvetica', 24)
     temp_id = canvas.create_text(x, y, text=text, font=font, anchor='center')
     bbox = canvas.bbox(temp_id)
     canvas.delete(temp_id)

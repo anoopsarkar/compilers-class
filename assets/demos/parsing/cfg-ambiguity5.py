@@ -3,13 +3,18 @@ import nltk
 import draw
 
 grammar = nltk.CFG.fromstring("""
-E -> E '-' E | T
-T -> T '/' T | F
-F -> '(' E ')' | ID
+E -> E '+' T
+E -> T
+T -> T '*' F
+T -> F
+F -> '(' E ')'
+F -> ID
+F -> '-' F
 ID -> 'a' | 'b' | 'c'
 """)
 
-inp = 'a - b - c'
+inp = '- a + b'
+#inp = '- ( a + b )'
 print(inp)
 print("Start:", grammar.start(), file=sys.stderr)
 print("Productions:", grammar.productions(), file=sys.stderr)
