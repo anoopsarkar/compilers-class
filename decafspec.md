@@ -544,7 +544,7 @@ Binary `%` computes the signed remainder of integer division between `a` and `b`
 
 ### Operators and Precedence
 
-Unary operators have the highest precedence. For the other binary operators the precedence is defined as follows. All operators at the same precedence level get equal precedence. All operators with equal precedence associate left. The `UnaryMinus` operator associates to the right.
+Unary operators have the highest precedence. For the other binary operators the precedence is defined as follows. All operators at the same precedence level get equal precedence. All operators with equal precedence associate left. The `UnaryMinus` and `UnaryNot` operator associates to the right.
 
 | Precedence | Operator          |
 |------------|-------------------|
