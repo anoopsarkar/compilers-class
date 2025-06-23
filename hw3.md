@@ -43,11 +43,11 @@ they can be found.
 
 <div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
 On CSIL machines you can access LLVM {{ site.llvmver }} by using the following
-installation of LLVM: `/usr/shared/CMPT/faculty/anoop/llvm`.
+installation of LLVM: <code>/usr/shared/CMPT/faculty/anoop/llvm</code>.
 
 You can activate the following virtual environment to access the
-right versions of the compiler toolchain by running: `source
-/usr/shared/CMPT/faculty/anoop/base/env745/bin/activate`
+right versions of the compiler toolchain by running: <code>source
+/usr/shared/CMPT/faculty/anoop/base/env745/bin/activate</code>
 </div>
 
 

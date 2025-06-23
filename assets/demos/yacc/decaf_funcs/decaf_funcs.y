@@ -34,7 +34,7 @@ start: func
     }
 func: FUNC_KW ID '(' params ')' type '{' body '}'
     { 
-        //$$ = "Method(($2, $6, $4, $8)"; 
+        //$$ = "Method($2, $6, $4, $8)";
     }
 params: has_params 
     { 
