@@ -8,8 +8,8 @@ lastday: "Aug 8, 2025"
 midterm: "NA"
 finalexam: "NA"
 instructor: anoop
-llvmver: "12.0.1"
-llvmconfig: "llvm-config-12"
+llvmver: "20.1.4"
+llvmconfig: "llvm-config-20"
 tas:
   - name: Mahmoud Abumandour
     email: mam47
