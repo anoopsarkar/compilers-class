@@ -26,6 +26,13 @@ We will be using a code generation and compiler toolkit called
 Before you start programming for this homework it is very important you work
 through the [LLVM practice problems](llvm-practice.html) first.
 
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+On macos if you installed using <code>brew install llvm</code>
+then make sure that <code>/usr/local/opt/llvm/bin</code> is in your
+<code>$PATH</code> shell variable.
+</div>
+
+
 We will be using various LLVM tools such as `llvm-as` and `llc`.
 The easiest way to access the right version of these binaries is
 to use `llvm-config --bindir` and add this directory as a
