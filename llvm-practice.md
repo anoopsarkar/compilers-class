@@ -40,10 +40,26 @@ LLVM {{ site.llvmver }} has already been installed in the CSIL Linux machines. Y
 this version on CSIL by using `{{ site.llvmconfig }}` in your makefile or using `llvm-config` on your
 local machine LLVM installation.
 
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+On CSIL machines you can access LLVM {{ site.llvmver }} by using the following
+installation of LLVM: <code>/usr/shared/CMPT/faculty/anoop/llvm</code>.
+
+You can activate the following virtual environment to access the
+right versions of the compiler toolchain by running: <code>source
+/usr/shared/CMPT/faculty/anoop/base/env745/bin/activate</code>
+</div>
+
 You can also install LLVM on your own machine by following the links on
 this page:
 
     http://llvm.org/releases/download.html
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+On macos if you installed using <code>brew install llvm</code>
+then make sure that <code>/usr/local/opt/llvm/bin</code> is in your
+<code>$PATH</code> shell variable.
+</div>
+
 
 ### Decaf standard library
 
