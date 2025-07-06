@@ -28,11 +28,6 @@ Then go to the `llvm-practice` directory
 
     cd /your-path-to/compilers-class-hw/llvm-practice
 
-Here is how to use the `makefile` in different environments:
-
-1. On CSIL Linux machines: use `make llvmconfig={{ site.llvmconfig }} all`
-2. On your local macos or other installation: use `make all`
-
 ### Installation 
 
 We will be using LLVM version {{ site.llvmver }}  for the homeworks in this course offering.
@@ -60,6 +55,10 @@ then make sure that <code>/usr/local/opt/llvm/bin</code> is in your
 <code>$PATH</code> shell variable.
 </div>
 
+Here is how to use the `makefile` in different environments:
+
+1. On CSIL Linux machines: use `make -f makefile.csil all` after you set your virtual environment
+2. On your local macos or other installation: use `make all`
 
 ### Decaf standard library
 
