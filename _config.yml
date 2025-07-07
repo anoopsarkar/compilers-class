@@ -8,7 +8,7 @@ lastday: "Aug 8, 2025"
 midterm: "NA"
 finalexam: "NA"
 instructor: anoop
-llvmver: "20.1.4"
+llvmver: "20.1.x"
 llvmconfig: "llvm-config-20"
 tas:
   - name: Mahmoud Abumandour
