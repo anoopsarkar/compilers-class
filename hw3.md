@@ -55,6 +55,10 @@ installation of LLVM: <code>/usr/shared/CMPT/faculty/anoop/llvm</code>.
 You can activate the following virtual environment to access the
 right versions of the compiler toolchain by running: <code>source
 /usr/shared/CMPT/faculty/anoop/base/env745/bin/activate</code>
+
+If you are using the above virtual environment please use
+<code>g++</code> instead of <code>clang++</code>. Use the
+<code>makefile.csil</code> by running <code>make -f makefile.csil</code>.
 </div>
 
 
