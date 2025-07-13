@@ -265,7 +265,7 @@ below that return a `llvm::Type*`
 | void | Builder.getVoidTy() | just a void type | 
 | int | Builder.getInt32Ty() | assume 32 bit integers |
 | bool | Builder.getInt1Ty() | a one bit integer |
-| string | Builder.getInt8PtrTy() | pointer to array of bytes (int8) |
+| string | llvm::PointerType::getUnqual(Builder.getInt8Ty()) | pointer to array of bytes (int8) |
 {: .table}
 
 Here is a helper function that returns the correct LLVM type for
@@ -277,7 +277,7 @@ each Decaf type:
             case voidTy: return Builder.getVoidTy();
             case intTy: return Builder.getInt32Ty();
             case boolTy: return Builder.getInt1Ty();
-            case stringTy: return Builder.getInt8PtrTy(); default: throw runtime_error("unknown type");
+            case stringTy: return llvm::PointerType::getUnqual(Builder.getInt8Ty()); default: throw runtime_error("unknown type");
         } 
     }
 
