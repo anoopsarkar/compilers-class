@@ -26,6 +26,25 @@ We will be using a code generation and compiler toolkit called
 Revisit the [LLVM practice problems](llvm-practice.html) before starting
 on this homework.
 
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+On macos if you installed using <code>brew install llvm</code>
+then make sure that <code>/usr/local/opt/llvm/bin</code> is in your
+<code>$PATH</code> shell variable.
+</div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i>
+On CSIL machines you can access LLVM {{ site.llvmver }} by using the following
+installation of LLVM: <code>/usr/shared/CMPT/faculty/anoop/llvm</code>.
+
+You can activate the following virtual environment to access the
+right versions of the compiler toolchain by running: <code>source
+/usr/shared/CMPT/faculty/anoop/base/env745/bin/activate</code>
+
+If you are using the above virtual environment please use
+<code>g++</code> instead of <code>clang++</code>. Use the
+<code>makefile.csil</code> by running <code>make -f makefile.csil</code>.
+</div>
+
 ## Getting Started
 
 You must have git and python (3.x) on your system to run the assignments.
