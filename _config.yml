@@ -9,7 +9,7 @@ midterm: "NA"
 finalexam: "NA"
 instructor: anoop
 llvmver: "20.1.x"
-llvmconfig: "llvm-config-20"
+llvmconfig: "llvm-config"
 tas:
   - name: Mahmoud Abumandour
     email: mam47
