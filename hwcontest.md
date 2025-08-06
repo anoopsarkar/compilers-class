@@ -28,9 +28,9 @@ active_tab: homework
   1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
 
 Please note:
-1. Grace days are only available for Part 1. There is a hard deadline on {{ site.hwdates[6].deadline }} for the submission of Part 2.
+1. There is a hard deadline on {{ site.hwdates[6].gracedays }} for the submission of Part 2.
 1. Both parts will be submitted to Coursys. 
-1. Testcases should be valid Decaf code that returns 0 on success.
+1. Testcases should be valid Decaf code that returns 0 on success and produces some output on stdout.
 1. No fuzzing allowed. The testcases are expected to be hand checked or sanitized even if you used an automated method to generate them.
 
 ## The Contest
