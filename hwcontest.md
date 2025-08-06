@@ -22,7 +22,7 @@ active_tab: homework
 1. **Part 1.** Create at least 10 new testcases and at most 20 testcases that are distinct from the provided testcases for the homeworks (hw1-hw4). They must pass validation (see below).
    1. Your testcases should be valid Decaf code which is not expected to crash.
    1. Each testcase should produce some output to stdout when it is executed using `print_int` or `print_string`.
-   1. **Each main method must return `int`** (cannot have return type `void` or `bool`). Return `0` on success and `1` on failure.
+   1. **Each main method must return `int`** (cannot have return type `void` or `bool`). Always return `0` since we assume that all your submitted testcases should be successful.
    1. Your grade for part 1 depends on how many of your testcases pass validation.
 1. **Part 2.** After the testcases have been validated, you will receive a zipfile containing anonymized versions all of the submitted testcases which passed validation. You must run your compiler on these cases and submit the output to Coursys.
    1. Your grade for part 2 depends on how many of the testcases your compiler passes, and how difficult your testcases are for other students' compilers.
