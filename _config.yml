@@ -46,7 +46,7 @@ hwdates:
     deadline: "Aug 11, 2025"
     gracedays: "Aug 13, 2025"
   - hw: "6"
-    deadline: "Aug 13, 2025"
+    deadline: "Aug 14, 2025"
     gracedays: "Aug 15, 2025"
 quiz:
   - quiz: "0"
