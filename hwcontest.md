@@ -40,10 +40,10 @@ Please note:
 This section specifies the testcase directory structure.
 
 1. The testcase format must be identical to the format for the homeworks, particularly [hw3](hw3.html) and [hw4](hw4.html). 
-1. In your `testcases/` and `references/` directories, create the subdirectories `testcases/your-name` and `references/your-name` where `your-name` is your group name.
-1. The directory `testcases/your-name` should contain your new Decaf source files named with a `.decaf` file name suffix. If your programs require user input, also include `.in` files containing the inputs that will be piped to your programs.
-1. The directory `references/your-name` should contain the outputs from running your testcases, named with a `.out` file name suffix.
-1. You can create the contents of directory `references/your-name` by running `python zipout.py -t testcases` and copying over the `.out` files to your references (sub)directory.
+1. In your `testcases/` and `references/` directories, create the subdirectories `testcases/g-GROUPNAME` and `references/g-GROUPNAME` where `g-GROUPNAME` is your Coursys group name.
+1. The directory `testcases/g-GROUPNAME` should contain your new Decaf source files named with a `.decaf` file name suffix. If your programs require user input, also include `.in` files containing the inputs that will be piped to your programs.
+1. The directory `references/g-GROUPNAME` should contain the outputs from running your testcases, named with a `.out` file name suffix.
+1. You can create the contents of directory `references/g-GROUPNAME` by running `python zipout.py -t testcases` and copying over the `.out` files to your references (sub)directory.
 1. Running `python3 zipcontest.py` will produce `contest.zip` which is the file you will submit for this part of the contest.
 1. An example of what `unzip -l contest.zip` should look like in terms of the directory structure is shown [in this gist](https://gist.github.com/anoopsarkar/a68e0e2249373da4be03dd0498c8bc0b). This directory structure is important for the contest auto-grading scripts to be able to read your `contest.zip` correctly.
 
